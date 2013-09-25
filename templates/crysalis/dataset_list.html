@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script type="text/javascript">
+ $(document).ready(function(){
+   $("#hide_exp").click(function(event){
+     $(".pre,.other,").fadeToggle("slow");
+   });
+ });
+</script>
+{% endblock %}
+
+{% block title %}List of datasets{% endblock %}
+
+{% block content %}
+	<div id="main">
+		{% for p in page_range %}
+				<a href="./?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% if object_list %}
+		<table>
+		{% for dataset in object_list %}
+		
+		<tr><img src="{{dataset.img_url}}" alt=""></a>
+		<td><a href="{{ dataset.get_absolute_url }}">{{dataset.name}}</a></td>
+		<td>{{ dataset.start|timesince }} ago</td>
+		<td>{{ dataset.folder}}</td>
+		<td>{{ dataset.log}} </td>
+		</tr>
+		{% endfor %}
+		</table>
+		{% for p in page_range %}
+				<a href="?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% else %}
+		<p>No datasets found!</p>
+	{% endif %}
+	</div>
+{% endblock %}

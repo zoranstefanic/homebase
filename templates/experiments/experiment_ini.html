@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ exp.name }}{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<h1>{{ exp.name }}</h1>
+		<img src="/media{{exp.get_absolute_url}}/animated.gif">
+		<div class="ini_links">
+		<li><a href ='../rrp'>rrp</a>
+		<li><a href ='../coverage'>coverage</a>
+		<li><a href ='../crystal'>crystal</a>
+		<li><a href ='../settings'>settings</a>
+		<li><a href ='../auto'>auto</a>
+		<li><a href ='../datared'>datared</a>
+		<li><a href ='../datacoll'>datacoll</a>
+		</div>
+		{% for k,v in dic.items %}
+			<h3>{{ k }}</h3> 
+			<table>
+			{% for i in v %}
+				<tr><td>{{ i.0 }}</td><td>{{ i.1 }}</td></tr>
+			{% endfor %}
+			</table>
+		{% endfor %}
+	</div>
+{% endblock %}

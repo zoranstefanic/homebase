@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="main">
+<p><strong>Username:</strong><br>{{ profile.user }}</p>
+<p><strong>User since:</strong><br>{{ profile.user.date_joined|timesince }}</p>
+<p><strong>Full name:</strong><br>{{ profile.user.get_full_name }}</p>
+
+<p><strong>Type:</strong><br>{{ profile.user_type }}</p>
+<p><strong>Address:</strong><br>{{ profile.address }}</p>
+<p><strong>Laboratory</strong><br>{{ profile.lab }}</p>
+<p><strong>Telephone:</strong><br>{{ profile.telephone }}</p>
+<p><strong>Email:</strong><br>{{ profile.user.email }}</p>
+</div>
+{% endblock %}

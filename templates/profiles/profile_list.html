@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Profile list{% endblock %}
+
+{% block content %}
+<div id="main">
+		<table>
+			<tr>
+			<th>username</th>
+			<th>full name</th>
+			</tr>
+				{% for p in object_list  %}
+				<tr>
+				<td><a href="{% url profiles_profile_detail p.user %}">{{ p.user.username }}</a></td>
+				<td><a href="{% url profiles_profile_detail p.user %}">{{ p.user.get_full_name }}</a></td>
+				</tr>
+				{% endfor %}
+		</table>
+</div>
+{% endblock %}
+

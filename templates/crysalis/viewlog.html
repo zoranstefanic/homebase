@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}LOGFILE{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<div class="crysalis_log"><p>{{ lines|safe|linebreaks }}</p></div>
+	</div>
+{% endblock %}

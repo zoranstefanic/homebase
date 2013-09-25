@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}New sample{% endblock %}
+{% block content %}
+		<p>method = {{ request.method }}</p>
+		<h1>New sample</h1>
+		<form action='.' name="SampleForm" method="post">
+			{{ form.as_p }}
+			<input TYPE=BUTTON VALUE="save" on_click="submit()">
+		</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}List of sample owners{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<h1>List of sample owners</h1>
+	<p><a href="/owners/new/">Add new owner</a></p>
+	{% if object_list %}
+		<table>
+			<tr>
+			<th>Name</th>
+			<th></th>
+			<th>Institution</th>
+			<th>E-mail</th>
+			</tr>
+		{% for owner in object_list %}
+			{%comment%}<tr class="{% cycle 'even' 'odd' %}">{%endcomment%}
+			<tr>
+			<td><a href="./{{ owner.id }}">{{ owner.name }}</a></td>
+			<td><a href="./{{ owner.id }}/edit/">Edit</a></td>
+			<td>{{ owner.institution}}</td>
+			<td><a href="mailto:{{ owner.e_mail }}">{{owner.e_mail}}</a></td>
+			</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<p>No cutomers yet!</p>
+	{% endif %}
+	</div>
+	
+{% endblock %}

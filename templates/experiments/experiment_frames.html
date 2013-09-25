@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ exp.name }}{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<h1>Frames for {{ exp.name }}</h1>
+	<h1>Num of runs {{ runs|length }}</h1>
+		{% if runs %}
+			{%for run in runs %}
+				<object>
+				<embed src="{{ exp.frames_url }}/{{ run }}" height="307" width="307"></embed>
+				</object>
+			{%endfor%}
+		{% else %}
+			<p> No movies! </p>
+		{% endif %}
+	</div>
+{% endblock %}

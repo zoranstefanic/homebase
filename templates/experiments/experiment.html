@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load  colorramp %}
+
+{% block title %}{{ object.name }}{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<h1>{{ object.name }}</h1>
+		<img src="/media{{object.get_absolute_url}}/animated.gif">
+		{%if object.has_movies %}
+			<a href="{{ object.get_absolute_url }}/frames"><img class="movie_jpg" src=/media/movie.jpg></img></a>
+		{%endif%}
+		<div class="ini_links">
+		<li>ini files:</li>
+		<li><a href ='./rrp'>rrp</a>
+		<li><a href ='./coverage'>coverage</a>
+		<li><a href ='./crystal'>crystal</a>
+		<li><a href ='./settings'>settings</a>
+		<li><a href ='./auto'>auto</a>
+		<li><a href ='./datared'>datared</a>
+		<li><a href ='./datacoll'>datacoll</a>
+		</div>
+		<div class="ini_links">
+		<li><a href ='./stats/resolutionstats'>statistics</a>
+		</div>
+		<table>
+			<tr>
+			<td><b>User</b></td>
+			<td>{{ object.user.username }}</td>
+			</tr>
+			<tr>
+			<td><b>Started on</b></td>
+			<td class="time_since">{{ object.start|date:"jS F Y H:i" }}</td>
+			</tr>
+			<tr>
+			<td><b>Ended on</b></td>
+			<td class="time_since">{{ object.end|date:"jS F Y H:i" }}</td>
+			</tr>
+			<tr>
+			<td><b>Duration</b></td>
+			<td><b>{{ object.duration.0 }}</b> day{{object.duration.0|pluralize}}
+				<b>{{ object.duration.1 }}</b> hour{{object.duration.1|pluralize}}
+				<b>{{ object.duration.2 }}</b> minute{{object.duration.2|pluralize}}
+			</td>
+			</tr>
+			<tr>
+			<td><b>Type of data collection</b></td>
+			<td>{{ object.type}}</td>
+			</tr>
+			<tr>
+			<td><b>Original directory</b></td>
+			<td>{{ object.origdir}}</td>
+			</tr>
+			<tr>
+			<td><b>Notes</b></td>
+			<td>{{ object.notes}}</td>
+			</tr>
+			<tr>
+			<td><b>Space group</b></td>
+			<td>{{ object.sg}}</td>
+			</tr>
+			<tr>
+			<td><b>Unit cell</b></td>
+			<td>
+			<table>
+			<tr>
+			<td><font color={{ object.a|colorramp:"30"}}> {{ object.a }}</td>
+			<td><font color={{ object.b|colorramp:"30"}}> {{ object.b }}</td>
+			<td><font color={{ object.c|colorramp:"30"}}> {{ object.c }}</td>
+			<td>{{ object.alpha}}</td>
+			<td>{{ object.beta}}</td>
+			<td>{{ object.gamma}}</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+		</table>
+		<p> <a href="../searchcells/?a={{object.a}}&b={{object.b}}&c={{object.c}}&tolerance=5">Similar unit cells?</a></p>
+			<h1>Possibly related:</h1>
+			<table>
+			{% for exp,score in possibly_related %}
+				<tr>
+				<td><a href="{{ exp.get_absolute_url }}">{{ exp.name }}</a><td>
+				<td><b><font color={{ score|colorramp:"1"}}>{{ score|floatformat:"3" }}</b><td>
+				<td><font color={{ exp.a|colorramp:"30"}}> {{ exp.a }}</td>
+				<td><font color={{ exp.b|colorramp:"30"}}> {{ exp.b }}</td>
+				<td><font color={{ exp.c|colorramp:"30"}}> {{ exp.c}}</td>
+				<td>{{ exp.alpha}}</td>
+				<td>{{ exp.beta}}</td>
+				<td>{{ exp.gamma}}</td>
+				<td><font color={{ exp.volumen|colorramp:"3000"}}>{{ exp.volumen }}<td>
+				</tr>
+			{% endfor %}
+			</table>
+	</div>
+{% endblock %}

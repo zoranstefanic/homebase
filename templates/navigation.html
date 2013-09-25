@@ -1,0 +1,24 @@
+<div id="navigation">
+{% if user.is_authenticated %}
+	<ul>
+	<li><a href="/">HOME</a></li>
+	<hr>
+	{% if user.get_profile.is_operator %}
+	<li><a href="/crysalis/current">current</a></li>
+	<li><a href="/crysalis/ccdlogs">ccdlogs</a></li>
+	<li><a href="/crysalis/historylog">Xcalibur history</a></li>
+	<li><a href="/experiments/">experiments</a></li>
+	<li><a href="/experiments/cells/">by_cell</a></li>
+	<li><a href="/experiments/search/">search</a></li>
+	<li><a href="/schedule/calendar/2011/">calendar</a></li>
+	<li><a href="/schedule/">schedule</a></li>
+	<li><a href="/schedule/S">waiting</a></li>
+	<li><a href="/schedule/F">finished</a></li>
+	<li><a href="/schedule/X">on X rays</a></li>
+	{% endif %}
+	<li><a href="/samples/">samples</a></li>
+	<li><a href="/samples/new_small/">small molecule</a></li>
+	<li><a href="/samples/new_protein/">protein</a></li>
+	</ul>
+ {% endif %}
+</div>

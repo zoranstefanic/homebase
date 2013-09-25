@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Experiments in | {{ year }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ year }} archive</h1>
+
+<div id="main">
+<ul>
+{% for date in date_list %}
+<li><a href="{{ date|date:"M"|lower }}/">{{ date|date:"F" }}</a></li>
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="experiment_search_form">
+	<p>Search experiments</p>
+	<form method="get" action="/experiments/search/">
+		<p><label for="type">type:</label> <select name="type" id="type">
+		<option selected value="">any</option>
+		{% for type in exp_types %}
+		{% comment %}<option {% ifequal type "full exp" %} selected {% endifequal %} value="{{ type }}">{{ type }}</option>{%endcomment%}
+		<option value="{{ type }}">{{ type }}</option>
+		{% endfor %}
+		</select></p>
+
+		<p><label for="name">name starts with:</label>
+		<input type="text" name="name__startswith" class="textbox" id="name" /></p>
+
+		<p><label for="user">user:</label>
+		<input type="text" name="origdir__icontains" class="textbox" id="user" /></p>
+
+		<p><input type="submit" value="Limit to these choices"/></p>
+	</form>
+</div>
+<div id="cell_search_form">
+	<p>Search by unit cell</p>
+	<form method="get" action="/experiments/searchcells/">
+
+	<p><label for="a">a:</label>
+	<input type="text" name="a" class="textbox" id="a" /></p>
+	<p><label for="b">b:</label>
+	<input type="text" name="b" class="textbox" id="b" /></p>
+	<p><label for="c">c:</label>
+	<input type="text" name="c" class="textbox" id="c" /></p>
+	<p><label for="tolerance">tolerance:</label> <select name="tolerance" id="tolerance">
+	<option value="2">2%</option>
+	<option value="3">3%</option>
+	<option value="5">5%</option>
+	<option value="10">10%</option>
+	<option selected value="15">15%</option>
+	<option value="20">20%</option>
+	<option value="30">30%</option>
+	</select></p>
+
+	<p><input type="submit" value="Search"/></p>
+	</form>
+</div>
+{% endblock %}

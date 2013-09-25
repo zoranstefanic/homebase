@@ -1,0 +1,20 @@
+		<h1>New sample form</h1>
+		<script LANGUAGE="JavaScript1.1" SRC="marvin/marvin.js"></script>
+		<script>
+		<!--
+		msketch_name = "MSketch";
+		msketch_begin("marvin",800,800); // arguments: codebase, width, height
+		msketch_end();
+		//-->
+		</script>
+		<form name=MolForm onSubmit="return false">
+				<input TYPE=BUTTON VALUE="Clean 2D" onClick="clean2D()">
+		</form>
+		<form action='.' name="SampleForm" method="post">
+			{{ form.as_p }}
+			<input TYPE=hidden name="mol" value="" >
+			<input TYPE=hidden name="formula" value="" >
+			<input TYPE=hidden name="mass" value="" >
+			<input TYPE=hidden name="atomcount" value="" >
+		</form>
+		</div>

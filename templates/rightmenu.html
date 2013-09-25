@@ -1,0 +1,17 @@
+<div id="rightmenu">
+	{% if user.is_authenticated %}
+	<p>Welcome {{ user.username|capfirst }}</p>
+	<p>Last login: {{ user.last_login|timesince }} ago. <a href="/accounts/logout/">logout</a> </p>
+	<hr>
+	{% if user.get_profile.is_operator %}
+	<li><a href="/experiments/{{ user.username }}">my experiments:</a>: {{ user.experiment_set.count }}</li>
+	{% endif %}
+	<li><a href="/samples/added_by/{{user.username}}">samples_added_by {{user.username}}</a>: {{ user.added_samples.count }}</li>
+	<li><a href="/samples/added_by/{{user.username}}">samples</a>: {{ user.samples.count }}</li>
+	{% else %}
+	<p><a href="/accounts/login/">login</a></p>
+	<p>If you are not registered yet please <a href="/accounts/register/">register</a></p>
+	 {% endif %}
+	<hr>
+	<a id="hide_exp">HIDE/SHOW PRE EXPERIMENTS!</a>
+</div>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}List of samples{% endblock %}
+
+{% block content %}
+	<div id="main">
+		<h1>Samples for owner {{ name }}</h1>
+	{% if object_list %}
+		<table>
+			<tr>
+			<th>label</th>
+			<th>structural formula</th>
+		{% if user.is_authenticated %}
+			<th>edit</th>
+		{% endif %}
+			<th>owner</th>
+			<th>added on</th>
+			<th>modified</th>
+			<th>added by</th>
+			</tr>
+		{% for sample in object_list %}
+			{%comment%}<tr class="{% cycle 'even' 'odd' %}">{%endcomment%}
+			<tr>
+			<td><a href="./{{sample.id}}">{{ sample.label }}</a></td>
+			<td><a href="./{{sample.id}}/"><img src="/media/samples/{{sample.id}}/sketch.png"></img></a></td>
+		{% if user.is_authenticated %}
+			<td><a href="./{{sample.id}}/edit/">Edit</a></td>
+		{% endif %}
+			<td><a href="/samples/owners/c{{sample.owner.id}}">{{ sample.owner|default_if_none:'No owner! Please add!' }}</a></td>
+			<td>{{ sample.date_added|date:"D d-M-Y" }}</td>
+			<td>{{ sample.date_modified|timesince }}</td>
+			<td>{{ sample.user }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<p>No samples found!</p>
+	{% endif %}
+	</div>
+{% endblock %}

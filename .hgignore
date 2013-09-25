@@ -1,0 +1,14 @@
+# use glob syntax.
+syntax: glob
+html
+*.pyc
+*.swp
+*.swf
+*.gif
+*.jpg
+*.png
+*.pickle
+*.pkl
+*.log
+*.tmp
+*.gz

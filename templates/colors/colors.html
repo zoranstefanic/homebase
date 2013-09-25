@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load webdesign %}
+{% block extrahead %}
+<style>
+body {
+background: {{ list.1 }};
+color: {{ list.10 }};
+}
+.main {
+background: {{ list.2 }};
+}
+#main {
+background: {{ list.3 }};
+}
+#header {
+background: {{ list.2 }};
+padding: 1px -5px 1px 5px;
+}
+#footer {
+margin-left:15%;
+margin-right:15%;
+background: {{ list.4}};
+}
+#menu {
+background: {{ list.0}};
+}
+</style>
+{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<h1>Experiments</h1>
+	
+		<table border=1px>
+			<thead>
+			<tr><th></th> <th>Experiment</td><th>Date</td><th>Duration</td></tr>
+			</thead>
+			<tbody>
+
+			
+			<tr class="full-exp">
+			<td><a href="599"><img class="small" alt="No photo" src="/media/experiments/599/crystal.jpg"></a></td>
+			<td><a href="599">CA-AMID-1</a></td>
+			<td>17 Jun 2010 10:06</td>
+			<td><b>0</b> days
+				<b>2</b> hours
+				<b>28</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="full-exp">
+			<td><a href="597"><img class="small" alt="No photo" src="/media/experiments/597/crystal.jpg"></a></td>
+			<td><a href="597">zdz-11-037</a></td>
+			<td>16 Jun 2010 11:06</td>
+			<td><b>0</b> days
+				<b>6</b> hours
+				<b>37</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="569"><img class="small" alt="No photo" src="/media/experiments/569/crystal.jpg"></a></td>
+			<td><a href="569">oc1</a></td>
+			<td>20 May 2010 01:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>12</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="572"><img class="small" alt="No photo" src="/media/experiments/572/crystal.jpg"></a></td>
+			<td><a href="572">oc</a></td>
+			<td>20 May 2010 12:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>12</b> minutes
+			</td>
+
+			</tr>
+			<tr class="full-exp">
+			<td><a href="595"><img class="small" alt="No photo" src="/media/experiments/595/crystal.jpg"></a></td>
+			<td><a href="595">filip-fp02070410</a></td>
+			<td>11 Jun 2010 04:06</td>
+			<td><b>1</b> day
+				<b>13</b> hours
+				<b>58</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="584"><img class="small" alt="No photo" src="/media/experiments/584/crystal.jpg"></a></td>
+			<td><a href="584">lidija-110610</a></td>
+			<td>11 Jun 2010 10:06</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>13</b> minutes
+			</td>
+
+			</tr>
+			<tr class="pre-exp-only">
+			<td><a href="569"><img class="small" alt="No photo" src="/media/experiments/569/crystal.jpg"></a></td>
+			<td><a href="569">oc1</a></td>
+			<td>20 May 2010 01:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>12</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="572"><img class="small" alt="No photo" src="/media/experiments/572/crystal.jpg"></a></td>
+			<td><a href="572">oc</a></td>
+			<td>20 May 2010 12:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>12</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="571"><img class="small" alt="No photo" src="/media/experiments/571/crystal.jpg"></a></td>
+			<td><a href="571">cryo1</a></td>
+			<td>20 May 2010 11:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>3</b> minutes
+			</td>
+
+			</tr>
+			
+			<tr class="pre-exp-only">
+			<td><a href="565"><img class="small" alt="No photo" src="/media/experiments/565/crystal.jpg"></a></td>
+			<td><a href="565">manda-1novi-plocica2</a></td>
+			<td>17 May 2010 02:05</td>
+			<td><b>0</b> days
+				<b>0</b> hours
+				<b>13</b> minutes
+			</td>
+
+			</tr>
+			
+			</tbody>
+		</table>
+	</div>
+{% endblock %} 

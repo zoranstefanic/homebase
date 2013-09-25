@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}List of samples{% endblock %}
+
+{% block content %}
+	<div id="main">
+	{% if sched %}
+		<table>
+		{% for sched_date,sample in sched %}
+			<tr>
+			<td>Scheduled in <b>{{ sched_date|timeuntil }}</b> on {{ sched_date|date:'d-M-Y'}}</td>
+			<td><b>{{ sample.label }}</b></td>
+			<td><a href="/samples/{{sample.id}}/"><img src="/media/samples/{{sample.id}}/sketch.png"></img></a></td>
+			<td><b>{{ sample.status }}</b></td>
+			</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<p>No samples to be scheduled. All of the samples have at least one experiment.</p>
+	{% endif %}
+	</div>
+{% endblock %}

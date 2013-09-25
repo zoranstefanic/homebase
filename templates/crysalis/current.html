@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Current data collection {{ last.name }}{% endblock %}
+
+{% block content %}
+	<div id="main">
+	{%if last %}
+		<h1>{{ last.name }}</h1>
+		<h2>Started {{ last.date }}, since {{ last.date|timesince }}.</h2>
+		<h2>Folder: <b>{{ last.fullpath }}.</b></h2>
+		<hr>
+		<div class="crysalis_log">
+		<p> Last lines of the logfile: </p>
+		<p> {{ tail|safe|linebreaks }} <p>
+		</div>
+	{%else%}
+		<h1> Currently no data collections! </h1>
+	{%endif%}
+			<table>
+				{% for ds in datasets %}
+				<tr class="{{ ds.ended|default_if_none:'not finished' }}">
+				<td><b>{{ ds.name}}</b></td>
+				<td><b>{{ ds.pre|yesno:"preexp,full,?" }}</b></td>
+				<td><b>{{ ds.valid|yesno:"valid,not,?" }}</b></td>
+				<td>{{ ds.finish|timesince }}</td>
+				<td>{{ ds.ended|default_if_none:'not finished' }}</td>
+				</tr>
+			{% endfor %}
+			</table>
+	</div>
+{% endblock %}

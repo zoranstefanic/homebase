@@ -1,0 +1,45 @@
+<div id="topmenu">
+{% if user.is_authenticated %}
+<ul id="topmenu_dropdown">
+	<li><a href="/">home</a>
+	</li>
+	<li><a href="#">logs</a>
+        <ul>
+			<li><a href="/crysalis/current">current</a></li>
+			<li><a href="/crysalis/ccdlogs">ccdlogs</a></li>
+			<li><a href="/crysalis/historylog">history</a></li>
+			<li><a href="/crysalis/datasets">datasets</a></li>
+			<li><a href="/crysalis/duplicates">duplicates</a></li>
+        </ul>
+	</li>
+	<li><a href="/experiments/">experiments</a>
+        <ul>
+			<li><a href="/experiments/cells/">by_cell</a></li>
+			<li><a href="/experiments/search/">search</a></li>
+			<li><a href="/schedule/calendar/2013/">calendar</a></li>
+        </ul>
+	</li>
+	<li><a href="/samples/">samples</a>
+        <ul>
+			<li><a href="/samples/new_small/">small molecule</a></li>
+			<li><a href="/samples/new_protein/">protein</a></li>
+			<li><a href="/schedule/">schedule</a></li>
+			<li><a href="/schedule/S">waiting</a></li>
+			<li><a href="/schedule/F">finished</a></li>
+			<li><a href="/schedule/X">on X rays</a></li>
+        </ul>
+	</li>
+	<li><a href="/profiles">users</a>
+        <ul>
+		<li><a href="/accounts/register">register</a></li>
+		<li><a href="/admin/">admin</a></li>
+        </ul>
+	</li>
+	<li><a href="/colors">colors</a>
+        <ul>
+		<li><a href="/colors">:-))</a></li>
+        </ul>
+	</li>
+</ul>
+{% endif %}
+</div>

@@ -1,0 +1,7527 @@
+.
+|-- CCDchiller_problems
+|   |-- plots
+|   `-- screenshots
+|-- CRYO_data_collections
+|   `-- ServiceFri-May-21-10-27-31-2010
+|-- IJS
+|   |-- miha
+|   |   |-- cryo1
+|   |   |   |-- ServiceThu-May-20-11-26-16-2010
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_cryo1_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- ctsb
+|   |   |-- ctsb_no_cryo_oc
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_ctsb_no_cryo_oc_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- ctsb_pcb
+|   |   |-- dolgsoak_fuka_oc
+|   |   |   |-- dolgsoak_fuka_oc_ccd.sum
+|   |   |   |-- dolgsoak_fuka_oc_red.sum
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_dolgsoak_fuka_oc_ccd.sum
+|   |   |   |-- pre_dolgsoak_fuka_oc_red.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- pre_dolgsoak_fuka_oc_red.sum
+|   |   |   `-- tmp
+|   |   |-- fuka1_cryo_3vrsta
+|   |   |-- oc
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_oc_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- oc1
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_oc1_ccd.sum
+|   |   |   `-- tmp
+|   |   `-- oc2
+|   |       |-- expinfo
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- plots_dc
+|   |       |-- plots_red
+|   |       |-- pre_oc2_ccd.sum
+|   |       `-- tmp
+|   `-- no_cryo_fuka1a
+|-- LOG_files
+|-- dalibor
+|   |-- AGT-1-C7
+|   |   `-- AGT-1-C7_ccd.sum
+|   |-- AGT-1-H7
+|   |   `-- AGT-1-H7_ccd.sum
+|   |-- AGT1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_AGT1.sum
+|   |   `-- tmp
+|   |-- AGT3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_AGT3.sum
+|   |   `-- tmp
+|   |-- AGT4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_AGT4.sum
+|   |   `-- tmp
+|   |-- AGT5
+|   |   |-- AGT5.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_AGT5.sum
+|   |   `-- tmp
+|   |-- AGT_D-Ala_soaking
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_AGT_D-Ala_soaking.sum
+|   |   `-- tmp
+|   |-- AGT_D-Ala_soaking_2
+|   |   |-- AGT_D-Ala_soaking_2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_AGT_D-Ala_soaking_2.sum
+|   |   `-- tmp
+|   |-- AGT_L-Ala_soaking
+|   |   |-- AGT_L-Ala_soaking.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- odbmp
+|   |   |-- pre_AGT_L-Ala_soaking.sum
+|   |   `-- tmp
+|   |-- APO_AGT
+|   |   |-- APO_AGT
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_APO_AGT.sum
+|   |   |   `-- tmp
+|   |   `-- APO_AGT1
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- pre_APO_AGT1.sum
+|   |       `-- tmp
+|   |-- C9
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_C9.sum
+|   |   `-- tmp
+|   |-- E4
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_E4.sum
+|   |   `-- tmp
+|   |-- F11
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_F11.sum
+|   |   `-- tmp
+|   |-- G11
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G11.sum
+|   |   `-- tmp
+|   |-- G12
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G12.sum
+|   |   `-- tmp
+|   |-- G8
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G8.sum
+|   |   `-- tmp
+|   |-- G8_2
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G8_2.sum
+|   |   `-- tmp
+|   |-- G9
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G9.sum
+|   |   `-- tmp
+|   |-- G9_2
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_G9_2.sum
+|   |   `-- tmp
+|   |-- H11
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H11.sum
+|   |   `-- tmp
+|   |-- H11_2
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H11_2.sum
+|   |   `-- tmp
+|   |-- H12
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H12.sum
+|   |   `-- tmp
+|   |-- H9
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H9.sum
+|   |   `-- tmp
+|   |-- H9_2
+|   |   `-- pre_H9_2.sum
+|   |-- H9_3
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H9_3.sum
+|   |   `-- tmp
+|   |-- H9_4
+|   |   |-- frames
+|   |   |   `-- MOSFLM
+|   |   |-- log
+|   |   |-- pre_H9_4.sum
+|   |   `-- tmp
+|   |-- agt2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_agt2.sum
+|   |   `-- tmp
+|   |-- apoAGT-2.6-C2
+|   |   `-- apoAGT-2.6-C2_ccd.sum
+|   |-- apoAGT-2.6-C5
+|   |   `-- apoAGT-2.6-C5_ccd.sum
+|   |-- apoAGT-2.6-C6
+|   |   `-- apoAGT-2.6-C6_ccd.sum
+|   |-- apoAGT-2.8-D2
+|   |   |-- apoAGT-2.8_ccd.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- apoTf
+|   |   |-- apoTf-1-1-A5
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_apoTf-1-1-A5.sum
+|   |   |   `-- tmp
+|   |   |-- apoTf-1-2-C1_2
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_apoTf-1-2-C1_2.sum
+|   |   |   `-- tmp
+|   |   |-- apoTf-1-2-D5
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_apoTf-1-2-D5.sum
+|   |   |   `-- tmp
+|   |   |-- apoTf-1-2-c1
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_apoTf-1-2-c1.sum
+|   |   |   `-- tmp
+|   |   `-- apoTf-2-2-B6
+|   |-- eprofilin_v1.2_C1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_eprofilin_v1.2_C1_ccd.sum
+|   |   `-- tmp
+|   |-- exp_1219
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_exp_1219_ccd.sum
+|   |   `-- tmp
+|   |-- ins-Br
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ins-Br_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- ins-I
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ins-I_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- ins-V-Br
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ins-V-Br_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- ins_Co
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ins-Co_1_ccd.sum
+|   |   |-- ins-Co_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- profilin_V21.2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_profilin_V21.2_ccd.sum
+|   |   `-- tmp
+|   |-- profilin_v1.2_B6
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_profilin_v1.2_B6_ccd.sum
+|   |   `-- tmp
+|   |-- profilin_v1.2_C1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- profilin_v1.2_C1_ccd.sum
+|   |   |-- profilin_v1.2_C1_red.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- profilin_v1.2_C1_red.sum
+|   |   `-- tmp
+|   |-- profilin_v5
+|   |   |-- profilin_v5_D2
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_profilin_v5_D2_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- profilin_v5_D3
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_profilin_v5_D3_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- profilin_v5_D6
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_profilin_v5_D6_ccd.sum
+|   |   |   |-- profilin_v5_D6_ccd.sum
+|   |   |   |-- profilin_v5_D6_red.sum
+|   |   |   `-- tmp
+|   |   `-- profilin_v5_c4
+|   |       |-- expinfo
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- plots_dc
+|   |       |-- plots_red
+|   |       |-- pre_profilin_v5_c4_ccd.sum
+|   |       `-- tmp
+|   `-- protein
+|       `-- protein_ccd.sum
+|-- dubravka
+|   |-- exp_1046
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_exp_1046_ccd.sum
+|   |   `-- tmp
+|   |-- fum1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum1_ccd.sum
+|   |   `-- tmp
+|   |-- fum3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum3_ccd.sum
+|   |   `-- tmp
+|   |-- fum4
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum4_ccd.sum
+|   |   `-- tmp
+|   |-- fum5
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum5_ccd.sum
+|   |   `-- tmp
+|   |-- fum6
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- fum6_ccd.sum
+|   |   |-- fum6_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum6_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- fum6_red.sum
+|   |   `-- tmp
+|   |-- fum8
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum8_ccd.sum
+|   |   `-- tmp
+|   |-- fum9
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- fum9_ccd.sum
+|   |   |-- fum9_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum9_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- fum9_red.sum
+|   |   `-- tmp
+|   |-- ins_mo_i
+|   |   |-- exp_930
+|   |   |   |-- exp_930.sum
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_930.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_930.sum
+|   |   |   `-- tmp
+|   |   |-- frames
+|   |   |-- ins_mo_i.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ins_mo_i.sum
+|   |   `-- tmp
+|   |-- ins_v_br_c4
+|   |   |-- New Folder
+|   |   |-- New_Folder
+|   |   |-- exp_926
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_exp_926.sum
+|   |   |   `-- tmp
+|   |   `-- exp_927
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- pre_exp_927.sum
+|   |       `-- tmp
+|   |-- ins_v_br_c6
+|   |   |-- frames
+|   |   |-- ins_v_br_c6.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ins_v_br_c6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ins_v_br_c6.sum
+|   |   `-- tmp
+|   |-- uzorak
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_uzorak_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- uzorak_red.sum
+|   |   |-- tmp
+|   |   |-- uzorak_ccd.sum
+|   |   `-- uzorak_red.sum
+|   `-- uzorak2
+|       |-- expinfo
+|       |-- frames
+|       |-- log
+|       |-- movie
+|       |-- odbmp
+|       |-- plots_dc
+|       |-- plots_red
+|       |-- pre_uzorak2_ccd.sum
+|       |-- report
+|       |   |-- html
+|       |   `-- pic
+|       |-- struct
+|       |   `-- tmp
+|       |       `-- uzorak2_red.sum
+|       |-- tmp
+|       |-- uzorak2_ccd.sum
+|       `-- uzorak2_red.sum
+|-- goga
+|   |-- 14
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_14.sum
+|   |   `-- tmp
+|   |-- AA-150
+|   |   |-- AA-150_ccd.sum
+|   |   |-- AA-150_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_AA-150_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- AA-150_red.sum
+|   |   `-- tmp
+|   |-- AMD-1
+|   |   |-- AMD-1_ccd.sum
+|   |   |-- AMD-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_AMD-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- AMD-1_red.sum
+|   |   `-- tmp
+|   |-- CH3-CN-3x
+|   |   |-- CH3-CN-3x.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CH3-CN-3x.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CH3-CN-3x.sum
+|   |   `-- tmp
+|   |-- CX1000
+|   |   |-- CX1000.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CX1000.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CX1000.sum
+|   |   `-- tmp
+|   |-- CX531
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_CX531.sum
+|   |   `-- tmp
+|   |-- CX858
+|   |   |-- CX858.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CX858.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CX858.sum
+|   |   `-- tmp
+|   |-- Cl-acikl
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_Cl-acikl.sum
+|   |   `-- tmp
+|   |-- Cl-cikl
+|   |   |-- Cl-cikl.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Cl-cikl.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Cl-cikl.sum
+|   |   `-- tmp
+|   |-- LP
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_LP.sum
+|   |   `-- tmp
+|   |-- MM-K
+|   |   |-- MM-K_ccd.sum
+|   |   |-- MM-K_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MM-K_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MM-K_red.sum
+|   |   `-- tmp
+|   |-- Me3Sn-amacet
+|   |   |-- Me3Sn-amacet_ccd.sum
+|   |   |-- Me3Sn-amacet_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Me3Sn-amacet_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Me3Sn-amacet_red.sum
+|   |   `-- tmp
+|   |-- Me3Sn-ampyr2
+|   |   |-- Me3Sn-ampyr2_ccd.sum
+|   |   |-- Me3Sn-ampyr2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Me3Sn-ampyr2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Me3Sn-ampyr2_red.sum
+|   |   `-- tmp
+|   |-- ND857
+|   |   |-- ND857.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ND857.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ND857.sum
+|   |   `-- tmp
+|   |-- NO2_acikl
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NO2_acikl.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- NP-9-1
+|   |   |-- NP-9-1_ccd.sum
+|   |   |-- NP-9-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NP-9-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NP-9-1_red.sum
+|   |   `-- tmp
+|   |-- NP-9-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NP-9-2_ccd.sum
+|   |   `-- tmp
+|   |-- NiBi
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NiBi.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NiBi.sum
+|   |   `-- tmp
+|   |-- PdCl4-BI-CH2OH
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_PdCl4-BI-CH2OH.sum
+|   |   `-- tmp
+|   |-- Ph3Sn-amacet
+|   |   |-- Ph3Sn-amacet_ccd.sum
+|   |   |-- Ph3Sn-amacet_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Ph3Sn-amacet_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Ph3Sn-amacet_red.sum
+|   |   `-- tmp
+|   |-- Ph3Sn-ampyr2
+|   |   |-- Ph3Sn-ampyr2_ccd.sum
+|   |   |-- Ph3Sn-ampyr2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Ph3Sn-ampyr2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Ph3Sn-ampyr2_red.sum
+|   |   `-- tmp
+|   |-- V-BIGVAN
+|   |   |-- V-BIGVAN.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_V-BIGVAN.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- V-BIGVAN.sum
+|   |   `-- tmp
+|   |-- V-BIGVAN-2x
+|   |   |-- V-BIGVAN-2x.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_V-BIGVAN-2x.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- V-BIGVAN-2x.sum
+|   |   `-- tmp
+|   |-- en-dpq
+|   |   |-- en-dpq_ccd.sum
+|   |   |-- en-dpq_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_en-dpq_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- en-dpq_red.sum
+|   |   `-- tmp
+|   |-- exp_1208
+|   `-- tzl2k2full
+|       |-- expinfo
+|       |-- frames
+|       |-- log
+|       |-- movie
+|       |-- plots_dc
+|       |-- plots_red
+|       |-- pre_tzl2k2full_ccd.sum
+|       |-- struct
+|       |   `-- tmp
+|       |       `-- tzl2k2full_red.sum
+|       |-- tmp
+|       |-- tzl2k2full_ccd.sum
+|       `-- tzl2k2full_red.sum
+|-- goran
+|   |-- PNP-1_d1
+|   |   |-- frames
+|   |   |-- kristal1
+|   |   |   |-- frames
+|   |   |   |-- kristal1.sum
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_kristal1.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- kristal1.sum
+|   |   |   `-- tmp
+|   |   |-- kristal2
+|   |   |   `-- movie
+|   |   |-- kristal3
+|   |   |-- log
+|   |   |-- pre_PNP-1_d1.sum
+|   |   `-- tmp
+|   `-- PNP-1_d4
+|       |-- frames
+|       |-- log
+|       |-- pre_PNP-1_d4.sum
+|       `-- tmp
+|-- kreso
+|   |-- 2-MePy-1
+|   |   |-- 2-MePy-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-1.sum
+|   |   `-- tmp
+|   |-- 2-MePy-10
+|   |   |-- 2-MePy-10.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-10.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-10.sum
+|   |   `-- tmp
+|   |-- 2-MePy-11
+|   |   |-- 2-MePy-11.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-11.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-11.sum
+|   |   `-- tmp
+|   |-- 2-MePy-12
+|   |   |-- 2-MePy-12.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-12.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-12.sum
+|   |   `-- tmp
+|   |-- 2-MePy-13
+|   |   |-- 2-MePy-13.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-13.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-13.sum
+|   |   `-- tmp
+|   |-- 2-MePy-14
+|   |   |-- 2-MePy-14.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-14.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-14.sum
+|   |   `-- tmp
+|   |-- 2-MePy-15
+|   |   |-- 2-MePy-15.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-15.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-15.sum
+|   |   `-- tmp
+|   |-- 2-MePy-16
+|   |   |-- 2-MePy-16.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-16.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-16.sum
+|   |   `-- tmp
+|   |-- 2-MePy-2
+|   |   |-- 2-MePy-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-2.sum
+|   |   `-- tmp
+|   |-- 2-MePy-3
+|   |   |-- 2-MePy-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-3.sum
+|   |   `-- tmp
+|   |-- 2-MePy-4
+|   |   |-- 2-MePy-4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-4.sum
+|   |   `-- tmp
+|   |-- 2-MePy-5
+|   |   |-- 2-MePy-5.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-5.sum
+|   |   `-- tmp
+|   |-- 2-MePy-6
+|   |   |-- 2-MePy-6.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-6.sum
+|   |   `-- tmp
+|   |-- 2-MePy-7
+|   |   |-- 2-MePy-7.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-7.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-7.sum
+|   |   `-- tmp
+|   |-- 2-MePy-8
+|   |   |-- 2-MePy-8.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-8.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-8.sum
+|   |   `-- tmp
+|   |-- 2-MePy-9
+|   |   |-- 2-MePy-9.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_2-MePy-9.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 2-MePy-9.sum
+|   |   `-- tmp
+|   |-- 28K_Wed-Apr-29-14-18-41-2009
+|   |   |-- 28K.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- 28L-laser_Wed-Apr-29-11-58-02-2009
+|   |   |-- 28L-laser.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- 28S_Wed-Apr-29-13-15-44-2009
+|   |   `-- frames
+|   |-- 28S_Wed-Apr-29-13-15-58-2009
+|   |   |-- 28S.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- Bj1+Gly_1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_Bj1+Gly_1.sum
+|   |   `-- tmp
+|   |-- Br4Q-1
+|   |   |-- Br4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Br4Q-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Br4Q-1.sum
+|   |   `-- tmp
+|   |-- Bu4N-HCA-1
+|   |   |-- Bu4N-HCA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Bu4N-HCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Bu4N-HCA-1.sum
+|   |   `-- tmp
+|   |-- Bu4N-HCA-2
+|   |   |-- Bu4N-HCA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Bu4N-HCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Bu4N-HCA-2.sum
+|   |   `-- tmp
+|   |-- CA-1
+|   |   |-- CA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CA-1.sum
+|   |   `-- tmp
+|   |-- CA-AMID-1
+|   |   |-- CA-AMID-1_ccd.sum
+|   |   |-- CA-AMID-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_CA-AMID-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CA-AMID-1_red.sum
+|   |   `-- tmp
+|   |-- CA-NH2OH-1
+|   |   |-- CA-NH2OH-1_ccd.sum
+|   |   |-- CA-NH2OH-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_CA-NH2OH-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CA-NH2OH-1_red.sum
+|   |   `-- tmp
+|   |-- Cs2DHQ-1
+|   |   |-- Cs2DHQ-1_ccd.sum
+|   |   |-- Cs2DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Cs2DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Cs2DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- CsBA-1
+|   |   |-- CsBA-1_ccd.sum
+|   |   |-- CsBA-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_CsBA-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsBA-1_red.sum
+|   |   `-- tmp
+|   |-- CsCA-1
+|   |   |-- CsCA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CsCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsCA-1.sum
+|   |   `-- tmp
+|   |-- CsCA-2
+|   |   |-- CsCA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CsCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsCA-2.sum
+|   |   `-- tmp
+|   |-- CsCA-3
+|   |   |-- CsCA-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CsCA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsCA-3.sum
+|   |   `-- tmp
+|   |-- CsCA-4
+|   |   |-- CsCA-4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CsCA-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsCA-4.sum
+|   |   `-- tmp
+|   |-- CsHBA-1
+|   |   |-- CsHBA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CsHBA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CsHBA-1.sum
+|   |   `-- tmp
+|   |-- Dragana-DR-374-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Dragana-DR-374-1_ccd.sum
+|   |   `-- tmp
+|   |-- H2BA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_H2BA-1.sum
+|   |   `-- tmp
+|   |-- H2CA+KLORANILAMID
+|   |   |-- H2CA+KLORANILAMID_ccd.sum
+|   |   |-- H2CA+KLORANILAMID_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_H2CA+KLORANILAMID_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- H2CA+KLORANILAMID_red.sum
+|   |   `-- tmp
+|   |-- IS-1
+|   |   |-- IS-1_ccd.sum
+|   |   |-- IS-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_IS-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- IS-1_red.sum
+|   |   `-- tmp
+|   |-- ISK-1-1
+|   |   |-- ISK-1-1_ccd.sum
+|   |   |-- ISK-1-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ISK-1-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ISK-1-1_red.sum
+|   |   `-- tmp
+|   |-- ISK-5
+|   |   |-- ISK-5_ccd.sum
+|   |   |-- ISK-5_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ISK-5_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ISK-5_red.sum
+|   |   `-- tmp
+|   |-- ISK-6
+|   |   |-- ISK-6_ccd.sum
+|   |   |-- ISK-6_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ISK-6_ccd.sum
+|   |   `-- tmp
+|   |-- Irena-1
+|   |   |-- Irena-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Irena-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Irena-1.sum
+|   |   `-- tmp
+|   |-- K-DHQ-1
+|   |   |-- K-DHQ-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_K-DHQ-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- K-DHQ-1.sum
+|   |   `-- tmp
+|   |-- K2DHQ-1
+|   |   |-- K2DHQ-1_ccd.sum
+|   |   |-- K2DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_K2DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- K2DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- K2DHQ-2
+|   |   |-- K2DHQ-2_ccd.sum
+|   |   |-- K2DHQ-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_K2DHQ-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- K2DHQ-2_red.sum
+|   |   `-- tmp
+|   |-- K3CA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_K3CA-1.sum
+|   |   `-- tmp
+|   |-- KBr4Q-1
+|   |   |-- KBr4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KBr4Q-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KBr4Q-1.sum
+|   |   `-- tmp
+|   |-- KCA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KCA-1.sum
+|   |   `-- tmp
+|   |-- KCA-10
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KCA-10.sum
+|   |   `-- tmp
+|   |-- KCA-100
+|   |   |-- KCA-100.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-100.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-100.sum
+|   |   `-- tmp
+|   |-- KCA-11
+|   |   |-- KCA-11-abs.sum
+|   |   |-- KCA-11.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-11.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- KCA-11-abs.sum
+|   |   |       `-- KCA-11.sum
+|   |   `-- tmp
+|   |-- KCA-12
+|   |   |-- KCA-12.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-12.sum
+|   |   |-- struct
+|   |   |   |-- KCA-12.sum
+|   |   |   |-- tmp
+|   |   |   |   `-- KCA-12.sum
+|   |   |   `-- wingx_KCA-12
+|   |   `-- tmp
+|   |-- KCA-13
+|   |   |-- KCA-13.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-13.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-13.sum
+|   |   `-- tmp
+|   |-- KCA-14
+|   |   |-- KCA-14.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-14.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-14.sum
+|   |   `-- tmp
+|   |-- KCA-15
+|   |   |-- KCA-15.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-15.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-15.sum
+|   |   `-- tmp
+|   |-- KCA-16
+|   |   |-- KCA-16.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-16.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-16.sum
+|   |   `-- tmp
+|   |-- KCA-17
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KCA-17.sum
+|   |   `-- tmp
+|   |-- KCA-18
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KCA-18.sum
+|   |   `-- tmp
+|   |-- KCA-19
+|   |   |-- KCA-19.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-19.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-19.sum
+|   |   `-- tmp
+|   |-- KCA-2
+|   |   |-- KCA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-2.sum
+|   |   `-- tmp
+|   |-- KCA-20
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KCA-20.sum
+|   |   `-- tmp
+|   |-- KCA-3
+|   |   |-- KCA-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-3.sum
+|   |   `-- tmp
+|   |-- KCA-4
+|   |   |-- KCA-4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-4.sum
+|   |   `-- tmp
+|   |-- KCA-5
+|   |   |-- KCA-5.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-5.sum
+|   |   `-- tmp
+|   |-- KCA-6
+|   |   |-- KCA-6.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-6.sum
+|   |   `-- tmp
+|   |-- KCA-7
+|   |   |-- KCA-7.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-7.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-7.sum
+|   |   `-- tmp
+|   |-- KCA-8
+|   |   |-- KCA-8.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-8.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCA-8.sum
+|   |   `-- tmp
+|   |-- KCA-9
+|   |   |-- KCA-9-ag.sum
+|   |   |-- KCA-9.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCA-9.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- KCA-9-ag.sum
+|   |   |       `-- KCA-9.sum
+|   |   `-- tmp
+|   |-- KCl4Q-1
+|   |   |-- KCl4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KCl4Q-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCl4Q-1.sum
+|   |   `-- tmp
+|   |-- KCl4Q-MeCOEt
+|   |   |-- KCl4Q-MeCOEt_ccd.sum
+|   |   |-- KCl4Q-MeCOEt_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_KCl4Q-MeCOEt_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KCl4Q-MeCOEt_red.sum
+|   |   `-- tmp
+|   |-- KCl4Q-hidrat
+|   |   |-- KCl4Q-hidrat_ccd.sum
+|   |   |-- KCl4Q-hidrat_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_KCl4Q-hidrat_ccd.sum
+|   |   `-- tmp
+|   |-- KClQ-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_KClQ-1.sum
+|   |   `-- tmp
+|   |-- KHBA-1
+|   |   |-- KHBA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_KHBA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KHBA-1.sum
+|   |   `-- tmp
+|   |-- Li2DHQ-1
+|   |   |-- Li2DHQ-1_ccd.sum
+|   |   |-- Li2DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Li2DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Li2DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- Li2DHQ-2
+|   |   |-- Li2DHQ-2_ccd.sum
+|   |   |-- Li2DHQ-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Li2DHQ-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Li2DHQ-2_red.sum
+|   |   `-- tmp
+|   |-- Li2DHQ-3
+|   |   |-- Li2DHQ-3_ccd.sum
+|   |   |-- Li2DHQ-3_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Li2DHQ-3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Li2DHQ-3_red.sum
+|   |   `-- tmp
+|   |-- LiBr4Q-1
+|   |   |-- New Folder
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_LiBr4Q-1_ccd.sum
+|   |   `-- tmp
+|   |-- LiDHQ-1
+|   |   |-- LiDHQ-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_LiDHQ-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- LiDHQ-1.sum
+|   |   `-- tmp
+|   |-- LiHBA-1
+|   |   |-- LiHBA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_LiHBA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- LiHBA-1.sum
+|   |   `-- tmp
+|   |-- LiHCA-1
+|   |   |-- LiHCA-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_LiHCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- LiHCA-1.sum
+|   |   `-- tmp
+|   |-- LiHCA-2
+|   |   |-- log
+|   |   |-- pre_LiHCA-2.sum
+|   |   `-- tmp
+|   |-- MB-25
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MB-25_ccd.sum
+|   |   `-- tmp
+|   |-- MB-27-100K
+|   |   |-- MB-27-100K_ccd.sum
+|   |   |-- MB-27-100K_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MB-27-100K_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MB-27-100K_red.sum
+|   |   `-- tmp
+|   |-- MB-27-100K-2
+|   |   |-- MB-27-100K-2_ccd.sum
+|   |   |-- MB-27-100K-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MB-27-100K-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MB-27-100K-2_red.sum
+|   |   `-- tmp
+|   |-- MB-39_1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MB-39_1_ccd.sum
+|   |   `-- tmp
+|   |-- MB-39_2
+|   |   |-- MB-39_2_ccd.sum
+|   |   |-- MB-39_2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_MB-39_2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MB-39_2_red.sum
+|   |   `-- tmp
+|   |-- Manda1
+|   |   |-- Manda1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Manda1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Manda1.sum
+|   |   `-- tmp
+|   |-- NH2CA-1
+|   |   |-- NH2CA-1_ccd.sum
+|   |   |-- NH2CA-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH2CA-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH2CA-1_red.sum
+|   |   `-- tmp
+|   |-- NH2CA-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- NH2CA-3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- NH2CA-4
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- NH2CA-5
+|   |   |-- NH2CA-5_ccd.sum
+|   |   |-- NH2CA-5_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH2CA-5_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH2CA-5_red.sum
+|   |   `-- tmp
+|   |-- NH3OHDHQ
+|   |   |-- NH3OHDHQ_ccd.sum
+|   |   |-- NH3OHDHQ_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH3OHDHQ_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH3OHDHQ_red.sum
+|   |   `-- tmp
+|   |-- NH4-CA-1
+|   |   |-- NH4-CA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NH4-CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH4-CA-1.sum
+|   |   `-- tmp
+|   |-- NH4-CA-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_NH4-CA-2.sum
+|   |   `-- tmp
+|   |-- NH4BA-1
+|   |   |-- NH4BA-1_ccd.sum
+|   |   |-- NH4BA-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH4BA-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH4BA-1_red.sum
+|   |   `-- tmp
+|   |-- NH4BA-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH4BA-2_ccd.sum
+|   |   `-- tmp
+|   |-- NH4Br4Q-1
+|   |   |-- NH4Br4Q-1_ccd.sum
+|   |   |-- NH4Br4Q-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH4Br4Q-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH4Br4Q-1_red.sum
+|   |   `-- tmp
+|   |-- NH4CA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_NH4CA-1.sum
+|   |   `-- tmp
+|   |-- NH4Cl4Q-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_exp_679.sum
+|   |   `-- tmp
+|   |-- NH4DHQ
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_NH4DHQ.sum
+|   |   `-- tmp
+|   |-- NH4DHQ-1
+|   |   |-- NH4DHQ-1_ccd.sum
+|   |   |-- NH4DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH4DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH4DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- NH4DHQ-2
+|   |   |-- NH4DHQ-2_ccd.sum
+|   |   |-- NH4DHQ-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NH4DHQ-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NH4DHQ-2_red.sum
+|   |   `-- tmp
+|   |-- NH4KCl4Q-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_NH4KCl4Q-2.sum
+|   |   `-- tmp
+|   |-- Na2DHQ-1
+|   |   |-- Na2DHQ-1_ccd.sum
+|   |   |-- Na2DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Na2DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Na2DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- Na2DHQ-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Na2DHQ-2_ccd.sum
+|   |   `-- tmp
+|   |-- NaBA-1
+|   |   |-- NaBA-1_ccd.sum
+|   |   |-- NaBA-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NaBA-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaBA-1_red.sum
+|   |   `-- tmp
+|   |-- NaBA-2
+|   |   |-- NaBA-2_ccd.sum
+|   |   |-- NaBA-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NaBA-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaBA-2_red.sum
+|   |   `-- tmp
+|   |-- NaBA-3
+|   |   |-- NaBA-3_ccd.sum
+|   |   |-- NaBA-3_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_NaBA-3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaBA-3_red.sum
+|   |   `-- tmp
+|   |-- NaBr4Q-1
+|   |   |-- NaBr4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaBr4Q-1.sum
+|   |   |-- struct
+|   |   |   |-- NaBr4Q-1.sum
+|   |   |   `-- tmp
+|   |   |       |-- NaBr4Q-1.sum
+|   |   |       `-- NaBr4Qkjj-1.sum
+|   |   `-- tmp
+|   |-- NaCA-1
+|   |   |-- NaCA-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaCA-1.sum
+|   |   `-- tmp
+|   |-- NaCA-100
+|   |   |-- log
+|   |   |-- odbmp
+|   |   |-- pre_NaCA-100.sum
+|   |   `-- tmp
+|   |-- NaCA-2
+|   |   |-- NaCA-2.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaCA-2.sum
+|   |   `-- tmp
+|   |-- NaCl4Q-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_NaCl4Q-1.sum
+|   |   `-- tmp
+|   |-- NaHBA-1
+|   |   |-- NaHBA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaHBA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaHBA-1.sum
+|   |   `-- tmp
+|   |-- NaHBA-2
+|   |   |-- NaHBA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaHBA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaHBA-2.sum
+|   |   `-- tmp
+|   |-- NaHBA-3
+|   |   |-- NaHBA-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_NaHBA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- NaHBA-3.sum
+|   |   `-- tmp
+|   |-- Rb2DHQ-1
+|   |   |-- Rb2DHQ-1_ccd.sum
+|   |   |-- Rb2DHQ-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Rb2DHQ-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Rb2DHQ-1_red.sum
+|   |   `-- tmp
+|   |-- Rb2DHQ-2
+|   |   |-- Rb2DHQ-2_ccd.sum
+|   |   |-- Rb2DHQ-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Rb2DHQ-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Rb2DHQ-2_red.sum
+|   |   `-- tmp
+|   |-- RbBA-1
+|   |   |-- RbBA-1_ccd.sum
+|   |   |-- RbBA-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_RbBA-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbBA-1_red.sum
+|   |   `-- tmp
+|   |-- RbBr4Q-1
+|   |   |-- RbBr4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbBr4Q-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbBr4Q-1.sum
+|   |   `-- tmp
+|   |-- RbBr4Q-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- RbCA-1
+|   |   |-- RbCA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCA-1.sum
+|   |   `-- tmp
+|   |-- RbCA-2
+|   |   |-- RbCA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCA-2.sum
+|   |   `-- tmp
+|   |-- RbCA-3
+|   |   |-- RbCA-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCA-3.sum
+|   |   `-- tmp
+|   |-- RbCA-4
+|   |   |-- RbCA-4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCA-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCA-4.sum
+|   |   `-- tmp
+|   |-- RbCl4Q-1
+|   |   |-- RbCl4Q-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCl4Q-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCl4Q-1.sum
+|   |   `-- tmp
+|   |-- RbCl4Q-2
+|   |   |-- RbCl4Q-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbCl4Q-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbCl4Q-2.sum
+|   |   `-- tmp
+|   |-- RbHBA-1
+|   |   |-- RbHBA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbHBA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbHBA-1.sum
+|   |   `-- tmp
+|   |-- RbHBA-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- RbHCA-1
+|   |   |-- RbHCA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbHCA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbHCA-1.sum
+|   |   `-- tmp
+|   |-- RbHCA-2
+|   |   |-- RbHCA-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_RbHCA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- RbHCA-2.sum
+|   |   `-- tmp
+|   |-- RbHCA-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_RbHCA-3.sum
+|   |   `-- tmp
+|   |-- amin-1
+|   |   |-- amin-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin-1.sum
+|   |   `-- tmp
+|   |-- amin-2
+|   |   |-- amin-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin-2.sum
+|   |   `-- tmp
+|   |-- amin-3
+|   |   |-- amin-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin-3.sum
+|   |   `-- tmp
+|   |-- amin-jk-17
+|   |   |-- amin-jk-17_ccd.sum
+|   |   |-- amin-jk-17_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_amin-jk-17_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin-jk-17_red.sum
+|   |   `-- tmp
+|   |-- amin-karbonil
+|   |   |-- amin-karbonil_ccd.sum
+|   |   |-- amin-karbonil_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_amin-karbonil_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin-karbonil_red.sum
+|   |   `-- tmp
+|   |-- amin01-100K
+|   |   |-- amin01-100K.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin01-100K.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin01-100K.sum
+|   |   `-- tmp
+|   |-- amin01-2
+|   |   |-- amin01-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin01-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin01-2.sum
+|   |   `-- tmp
+|   |-- amin04-2
+|   |   |-- amin04-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin04-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin04-2.sum
+|   |   `-- tmp
+|   |-- amin09-1
+|   |   |-- amin09-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin09-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin09-1.sum
+|   |   `-- tmp
+|   |-- amin09-ponovo
+|   |   |-- amin09-ponovo
+|   |   |   |-- amin09-ponovo.sum
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_amin09-ponovo.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- amin09-ponovo.sum
+|   |   |   `-- tmp
+|   |   |-- amin09-ponovo.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_amin09-ponovo.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- amin09-ponovo.sum
+|   |   `-- tmp
+|   |-- black
+|   |   |-- adbkgr.sum
+|   |   |-- black.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_black.sum
+|   |   |-- struct
+|   |   |   |-- tmp
+|   |   |   |   |-- adbkgr.sum
+|   |   |   |   `-- black.sum
+|   |   |   `-- wingx_black
+|   |   `-- tmp
+|   |-- bobo-1
+|   |   |-- bobo-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_bobo-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- bobo-1.sum
+|   |   `-- tmp
+|   |-- bobo-2-IO4
+|   |   |-- bobo-2-IO4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_bobo-2-IO4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- bobo-2-IO4.sum
+|   |   `-- tmp
+|   |-- borat-1
+|   |   |-- borat-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_borat-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- borat-1.sum
+|   |   `-- tmp
+|   |-- borat-2
+|   |   |-- borat-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_borat-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- borat-2.sum
+|   |   `-- tmp
+|   |-- calib_r_20_Thu-Oct-21-16-13-52-2010
+|   |   `-- Cu
+|   |       |-- Far120mm
+|   |       |   |-- Cu_Far120mm_ccd.sum
+|   |       |   |-- Cu_Far120mm_red.sum
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- struct
+|   |       |   |   `-- tmp
+|   |       |   |       `-- Cu_Far120mm_red.sum
+|   |       |   `-- tmp
+|   |       `-- Near55mm
+|   |           |-- Cu_Near55mm_ccd.sum
+|   |           |-- expinfo
+|   |           |-- frames
+|   |           |-- log
+|   |           |-- plots_dc
+|   |           |-- plots_red
+|   |           `-- tmp
+|   |-- cetina-1
+|   |   |-- cetina-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_cetina-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- cetina-1.sum
+|   |   `-- tmp
+|   |-- cimi01
+|   |   |-- cimi01.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_cimi01.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- cimi01.sum
+|   |   `-- tmp
+|   |-- danijela-nemoguci
+|   |   |-- danijela-nemoguci_ccd.sum
+|   |   |-- danijela-nemoguci_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_danijela-nemoguci_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- danijela-nemoguci_red.sum
+|   |   `-- tmp
+|   |-- danijela-onaj_nemoguci
+|   |   |-- danijela-onaj_nemoguci_ccd.sum
+|   |   |-- danijela-onaj_nemoguci_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_danijela-onaj_nemoguci_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- danijela-onaj_nemoguci_red.sum
+|   |   `-- tmp
+|   |-- danijela-prah-1_Fri-Jul-18-13-22-58-2008
+|   |   |-- danijela-prah-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- db-2q-novi-Br
+|   |   |-- db-2q-novi-Br_ccd.sum
+|   |   |-- db-2q-novi-Br_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_db-2q-novi-Br_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- db-2q-novi-Br_red.sum
+|   |   `-- tmp
+|   |-- dijana-1
+|   |   |-- frames
+|   |   |   `-- ImageCtrl_Mon-Apr-07-16-17-20-2008
+|   |   |-- log
+|   |   |-- pre_dijana-1.sum
+|   |   `-- tmp
+|   |-- dimetilamonij-CA-1
+|   |   |-- dimetilamonij-CA-1.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dimetilamonij-CA-1.sum
+|   |   |-- struct
+|   |   |   |-- tmp
+|   |   |   |   `-- dimetilamonij-CA-1.sum
+|   |   |   `-- wingx_dimetilamonij-CA-1
+|   |   `-- tmp
+|   |-- dpph-2
+|   |   |-- dpph-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dpph-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dpph-2.sum
+|   |   `-- tmp
+|   |-- dpph-3
+|   |   |-- dpph-3.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dpph-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dpph-3.sum
+|   |   `-- tmp
+|   |-- dpph-4
+|   |   |-- dpph-4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dpph-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dpph-4.sum
+|   |   `-- tmp
+|   |-- dpph-5
+|   |   |-- dpph-5.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dpph-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dpph-5.sum
+|   |   `-- tmp
+|   |-- dragana-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_dragana-1.sum
+|   |   `-- tmp
+|   |-- dragana-165H
+|   |   |-- dragana-165H.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dragana-165H.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-165H.sum
+|   |   `-- tmp
+|   |-- dragana-277
+|   |   |-- dragana-277.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dragana-277.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-277.sum
+|   |   `-- tmp
+|   |-- dragana-DR-256
+|   |   |-- dragana-DR-256_ccd.sum
+|   |   |-- dragana-DR-256_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dragana-DR-256_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-DR-256_red.sum
+|   |   `-- tmp
+|   |-- dragana-DR-325
+|   |   |-- dragana-DR-325.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dragana-DR-325.sum
+|   |   `-- tmp
+|   |-- dragana-DR-325-2
+|   |   |-- dragana-DR-325-2_ccd.sum
+|   |   |-- dragana-DR-325-2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dragana-DR-325-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-DR-325-2_red.sum
+|   |   `-- tmp
+|   |-- dragana-DR-374
+|   |   |-- dragana-DR-374.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dragana-DR-374.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   |-- dragana-DR-374-2
+|   |   |-- dragana-DR-374-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_dragana-DR-374-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-DR-374-2.sum
+|   |   `-- tmp
+|   |-- dragana-DR-380-1
+|   |   |-- dragana-DR-380-1_ccd.sum
+|   |   |-- dragana-DR-380-1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dragana-DR-380-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dragana-DR-380-1_red.sum
+|   |   `-- tmp
+|   |-- exp_1399
+|   |-- exp_713
+|   |   |-- exp_713.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_exp_713.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- exp_713.sum
+|   |   `-- tmp
+|   |-- filip-fp02070410
+|   |   |-- expinfo
+|   |   |-- filip-fp02070410_ccd.sum
+|   |   |-- filip-fp02070410_red.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_filip-fp02070410_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- filip-fp02070410_red.sum
+|   |   `-- tmp
+|   |-- fum2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_fum2_ccd.sum
+|   |   `-- tmp
+|   |-- gp-1
+|   |   |-- frames
+|   |   |-- gp-1-abs.sum
+|   |   |-- gp-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_gp-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- gp-1-abs.sum
+|   |   |       `-- gp-1.sum
+|   |   `-- tmp
+|   |-- gp-2
+|   |   |-- frames
+|   |   |-- gp-2.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_gp-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- gp-2.sum
+|   |   `-- tmp
+|   |-- gp-3
+|   |   |-- frames
+|   |   |-- gp-3.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_gp-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- gp-3.sum
+|   |   `-- tmp
+|   |-- gp-4
+|   |   |-- frames
+|   |   |-- gp-4.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_gp-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- gp-4.sum
+|   |   `-- tmp
+|   |-- habus-1_Fri-May-23-10-42-14-2008
+|   |   |-- frames
+|   |   |-- habus-1.sum
+|   |   |-- log
+|   |   `-- tmp
+|   |-- habus6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_habus6.sum
+|   |   `-- tmp
+|   |-- ines26-1
+|   |   |-- ines26-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ines26-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ines26-1.sum
+|   |   `-- tmp
+|   |-- ines27
+|   |   |-- ines27.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ines27.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ines27.sum
+|   |   `-- tmp
+|   |-- inozin-CA-1
+|   |   |-- frames
+|   |   |-- gvanozin-CA-1.sum
+|   |   |-- inozin-CA-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_inozin-CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- gvanozin-CA-1.sum
+|   |   |       `-- inozin-CA-1.sum
+|   |   `-- tmp
+|   |-- inozin-CA-2
+|   |   |-- frames
+|   |   |-- inozin-CA-2.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_inozin-CA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- inozin-CA-2.sum
+|   |   `-- tmp
+|   |-- inozin-CA-3
+|   |   |-- frames
+|   |   |-- inozin-CA-3.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_inozin-CA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- inozin-CA-3.sum
+|   |   `-- tmp
+|   |-- inozin-CA-4
+|   |   |-- frames
+|   |   |-- inozin-CA-4.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_inozin-CA-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- inozin-CA-4.sum
+|   |   `-- tmp
+|   |-- iran-J-19
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-J-19_ccd.sum
+|   |   `-- tmp
+|   |-- iran-Mo-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-1_ccd.sum
+|   |   |-- iran-Mo-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-1_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-11
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-11_ccd.sum
+|   |   |-- iran-Mo-11_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-11_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-11_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-11-ponovo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-11-ponovo_ccd.sum
+|   |   |-- iran-Mo-11-ponovo_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-11-ponovo_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-11-ponovo_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-17
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-17_ccd.sum
+|   |   |-- iran-Mo-17_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-17_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-17_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-19
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-19_ccd.sum
+|   |   |-- iran-Mo-19_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-19_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-19_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-33-blue
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-33-blue_ccd.sum
+|   |   |-- iran-Mo-33-blue_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-33-blue_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-33-blue_red.sum
+|   |   `-- tmp
+|   |-- iran-Mo-33-colourless
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Mo-33-colourless_ccd.sum
+|   |   |-- iran-Mo-33-colourless_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Mo-33-colourless_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Mo-33-colourless_red.sum
+|   |   `-- tmp
+|   |-- iran-Ra21
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Ra21_ccd.sum
+|   |   |-- iran-Ra21_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Ra21_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Ra21_red.sum
+|   |   `-- tmp
+|   |-- iran-Th-o-14-blue
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Th-o-14-blue_ccd.sum
+|   |   |-- iran-Th-o-14-blue_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Th-o-14-blue_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Th-o-14-blue_red.sum
+|   |   `-- tmp
+|   |-- iran-Th-o-14-blue2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Th-o-14-blue2_ccd.sum
+|   |   `-- tmp
+|   |-- iran-Th-o-14-blue3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- iran-Th-o-14-blue3_ccd.sum
+|   |   |-- iran-Th-o-14-blue3_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Th-o-14-blue3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- iran-Th-o-14-blue3_red.sum
+|   |   `-- tmp
+|   |-- iran-Th-o-14-turquise
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_iran-Th-o-14-turquise_ccd.sum
+|   |   `-- tmp
+|   |-- irena-2
+|   |   |-- Irena-2.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Irena-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Irena-2.sum
+|   |   `-- tmp
+|   |-- irena-IB-14
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- irena-IB-14_ccd.sum
+|   |   |-- irena-IB-14_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_irena-IB-14_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- irena-IB-14_red.sum
+|   |   `-- tmp
+|   |-- irena-termicki-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_irena-termicki-2.sum
+|   |   `-- tmp
+|   |-- irena-termicki-3
+|   |   |-- frames
+|   |   |-- irena-termicki-3.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_irena-termicki-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- irena-termicki-3.sum
+|   |   `-- tmp
+|   |-- irena-triciklicki
+|   |   |-- frames
+|   |   |-- irena-triciklicki.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_irena-triciklicki.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- irena-triciklicki.sum
+|   |   `-- tmp
+|   |-- irena-triciklicki-1
+|   |   |-- frames
+|   |   |-- irena-triciklicki-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_irena-triciklicki-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- irena-triciklicki-1.sum
+|   |   `-- tmp
+|   |-- isk-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_isk-2_ccd.sum
+|   |   `-- tmp
+|   |-- isk3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- isk3_ccd.sum
+|   |   |-- isk3_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_isk3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- isk3_red.sum
+|   |   `-- tmp
+|   |-- ivana-11-03-09
+|   |   |-- frames
+|   |   |-- ivana-11-03-09.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ivana-11-03-09.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-11-03-09.sum
+|   |   `-- tmp
+|   |-- ivana-930
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-930_ccd.sum
+|   |   |-- ivana-930_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-930_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-930_red.sum
+|   |   `-- tmp
+|   |-- ivana-931
+|   |   |-- frames
+|   |   |-- ivana-931.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ivana-931.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-931.sum
+|   |   `-- tmp
+|   |-- ivana-AmPheOH
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-AmPheOH_ccd.sum
+|   |   |-- ivana-AmPheOH_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-AmPheOH_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-AmPheOH_red.sum
+|   |   `-- tmp
+|   |-- ivana-ISK-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-ISK-2_ccd.sum
+|   |   `-- tmp
+|   |-- ivana-MB-25
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-MB-25_ccd.sum
+|   |   |-- ivana-MB-25_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-MB-25_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-MB-25_red.sum
+|   |   `-- tmp
+|   |-- ivana-MB-25-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-MB-25-2_ccd.sum
+|   |   |-- ivana-MB-25-2_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-MB-25-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-MB-25-2_red.sum
+|   |   `-- tmp
+|   |-- ivana-MB-27-ponovo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-MB-27-ponovo_ccd.sum
+|   |   |-- ivana-MB-27-ponovo_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-MB-27-ponovo_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-MB-27-ponovo_red.sum
+|   |   `-- tmp
+|   |-- ivana-MB-39-EtOH
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-MB-39-EtOH_ccd.sum
+|   |   |-- ivana-MB-39-EtOH_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-MB-39-EtOH_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-MB-39-EtOH_red.sum
+|   |   `-- tmp
+|   |-- ivana-MB27
+|   |   |-- frames
+|   |   |-- ivana-MB27.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ivana-MB27.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-MB27.sum
+|   |   `-- tmp
+|   |-- ivana-diCOOH
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- ivana-diCOOH_ccd.sum
+|   |   |-- ivana-diCOOH_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_ivana-diCOOH_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-diCOOH_red.sum
+|   |   `-- tmp
+|   |-- ivana-mb29
+|   |   |-- frames
+|   |   |-- ivana-mb29.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ivana-mb29.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ivana-mb29.sum
+|   |   `-- tmp
+|   |-- jda-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-1_ccd.sum
+|   |   |-- jda-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-1_red.sum
+|   |   `-- tmp
+|   |-- jda-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-2_ccd.sum
+|   |   |-- jda-2_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-2_red.sum
+|   |   `-- tmp
+|   |-- jda-3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-3_ccd.sum
+|   |   |-- jda-3_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-3_red.sum
+|   |   `-- tmp
+|   |-- jda-4
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-4_ccd.sum
+|   |   |-- jda-4_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-4_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-4_red.sum
+|   |   `-- tmp
+|   |-- jda-5
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-5_ccd.sum
+|   |   |-- jda-5_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-5_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-5_red.sum
+|   |   `-- tmp
+|   |-- jda-6
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jda-6_ccd.sum
+|   |   |-- jda-6_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jda-6_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jda-6_red.sum
+|   |   `-- tmp
+|   |-- jelica-48-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jelica-48-2_ccd.sum
+|   |   |-- jelica-48-2_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-48-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jelica-48-2_red.sum
+|   |   `-- tmp
+|   |-- jelica-A-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-A-1_ccd.sum
+|   |   `-- tmp
+|   |-- jelica-A-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-A-2_ccd.sum
+|   |   `-- tmp
+|   |-- jelica-A-47
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jelica-A-47_ccd.sum
+|   |   |-- jelica-A-47_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-A-47_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jelica-A-47_red.sum
+|   |   `-- tmp
+|   |-- jelica-A48
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jelica-A48_ccd.sum
+|   |   |-- jelica-A48_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-A48_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jelica-A48_red.sum
+|   |   `-- tmp
+|   |-- jelica-B-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jelica-B-1_ccd.sum
+|   |   |-- jelica-B-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-B-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jelica-B-1_red.sum
+|   |   `-- tmp
+|   |-- jelica-C-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- jelica-C-1_ccd.sum
+|   |   |-- jelica-C-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_jelica-C-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- jelica-C-1_red.sum
+|   |   `-- tmp
+|   |-- jelica-amin-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_jelica-amin-1.sum
+|   |   `-- tmp
+|   |-- keti-1
+|   |   |-- frames
+|   |   |-- keti-1.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_keti-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- keti-1.sum
+|   |   `-- tmp
+|   |-- keti-2
+|   |   |-- frames
+|   |   |-- keti-2.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_keti-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- keti-2.sum
+|   |   `-- tmp
+|   |-- keti-3
+|   |   |-- frames
+|   |   |-- keti-3.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_keti-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- keti-3.sum
+|   |   `-- tmp
+|   |-- keti-4
+|   |   |-- frames
+|   |   |-- keti-4.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_keti-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- keti-4.sum
+|   |   `-- tmp
+|   |-- khba-2
+|   |   |-- frames
+|   |   |-- kristal2
+|   |   |   |-- frames
+|   |   |   |-- kristal2.sum
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_kristal2.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- kristal2.sum
+|   |   |   `-- tmp
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_khba-2.sum
+|   |   `-- tmp
+|   |-- kloranilamid-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- kloranilamid-1_ccd.sum
+|   |   |-- kloranilamid-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kloranilamid-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- kloranilamid-1_red.sum
+|   |   `-- tmp
+|   |-- kloranilamid-Cl-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kloranilamid-Cl-1_ccd.sum
+|   |   `-- tmp
+|   |-- kloranilamid-I-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- kloranilamid-I-1_ccd.sum
+|   |   |-- kloranilamid-I-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kloranilamid-I-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- kloranilamid-I-1_red.sum
+|   |   `-- tmp
+|   |-- kloranilamid-sulfat-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- kloranilamid-sulfat-1_ccd.sum
+|   |   |-- kloranilamid-sulfat-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kloranilamid-sulfat-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- kloranilamid-sulfat-1_red.sum
+|   |   `-- tmp
+|   |-- knjige
+|   |-- lidija-110610
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-110610_ccd.sum
+|   |   |-- lidija-110610_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-110610_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-110610_red.sum
+|   |   `-- tmp
+|   |-- lidija-205-prah_Wed-Feb-10-13-26-38-2010
+|   |   |-- dcinfo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-205-prah_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- lidija-257
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-257_ccd.sum
+|   |   `-- tmp
+|   |-- lidija-309-prah_Wed-Feb-10-11-23-41-2010
+|   |   |-- dcinfo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-309-prah_ccd.sum
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   `-- tmp
+|   |-- lidija-318
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-318_ccd.sum
+|   |   `-- tmp
+|   |-- lidija-336
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-336_ccd.sum
+|   |   |-- lidija-336_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-336_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-336_red.sum
+|   |   `-- tmp
+|   |-- lidija-336-plocica
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-336-plocica_ccd.sum
+|   |   `-- tmp
+|   |-- lidija-336-stapic
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-336-stapic_ccd.sum
+|   |   `-- tmp
+|   |-- lidija-344
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-344_ccd.sum
+|   |   |-- lidija-344_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-344_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-344_red.sum
+|   |   `-- tmp
+|   |-- lidija-368-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-368-1_ccd.sum
+|   |   |-- lidija-368-1_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-368-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-368-1_red.sum
+|   |   `-- tmp
+|   |-- lidija-372
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-372_ccd.sum
+|   |   `-- tmp
+|   |-- lidija-374
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-374_ccd.sum
+|   |   |-- lidija-374_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-374_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-374_red.sum
+|   |   `-- tmp
+|   |-- lidija-379
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-379_ccd.sum
+|   |   |-- lidija-379_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-379_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-379_red.sum
+|   |   `-- tmp
+|   |-- lidija-396
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-396_ccd.sum
+|   |   |-- lidija-396_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-396_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-396_red.sum
+|   |   `-- tmp
+|   |-- lidija-406
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-406_ccd.sum
+|   |   |-- lidija-406_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-406_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-406_red.sum
+|   |   `-- tmp
+|   |-- lidija-72
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- lidija-72_ccd.sum
+|   |   |-- lidija-72_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-72_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- lidija-72_red.sum
+|   |   `-- tmp
+|   |-- lidija-celija
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_lidija-celija_ccd.sum
+|   |   `-- tmp
+|   |-- manda-1novi-iglica1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-1novi-iglica1_ccd.sum
+|   |   `-- tmp
+|   |-- manda-1novi-plocica1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-1novi-plocica1_ccd.sum
+|   |   |-- manda-1novi-plocica1_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-1novi-plocica1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-1novi-plocica1_red.sum
+|   |   `-- tmp
+|   |-- manda-1novi-plocica2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-1novi-plocica2_ccd.sum
+|   |   `-- tmp
+|   |-- manda-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-2.sum
+|   |   |-- movie
+|   |   |-- pre_manda-2.sum
+|   |   `-- tmp
+|   |-- manda-2-D14
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-2-D14_ccd.sum
+|   |   |-- manda-2-D14_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-2-D14_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-2-D14_red.sum
+|   |   `-- tmp
+|   |-- manda-2-D14-drugi
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-2-D14-drugi_ccd.sum
+|   |   |-- manda-2-D14-drugi_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-2-D14-drugi_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-2-D14-drugi_red.sum
+|   |   `-- tmp
+|   |-- manda-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-3.sum
+|   |   |-- movie
+|   |   |-- pre_manda-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-3.sum
+|   |   `-- tmp
+|   |-- manda-3-D12
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-3-D12_ccd.sum
+|   |   `-- tmp
+|   |-- manda-3-D12-heksagon
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-3-D12-heksagon_ccd.sum
+|   |   |-- manda-3-D12-heksagon_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-3-D12-heksagon_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-3-D12-heksagon_red.sum
+|   |   `-- tmp
+|   |-- manda-3-D12_uzorak2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-3-D12_uzorak2_ccd.sum
+|   |   |-- manda-3-D12_uzorak2_red.sum
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-3-D12_uzorak2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-3-D12_uzorak2_red.sum
+|   |   `-- tmp
+|   |-- manda-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-4.sum
+|   |   |-- movie
+|   |   |-- pre_manda-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-4.sum
+|   |   `-- tmp
+|   |-- manda-4-TTP-dmf-100K
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-4-TTP-dmf-100K_ccd.sum
+|   |   `-- tmp
+|   |-- manda-4a-D12
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-4a-D12_ccd.sum
+|   |   |-- manda-4a-D12_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-4a-D12_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-4a-D12_red.sum
+|   |   `-- tmp
+|   |-- manda-4a-D12-ponovo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-4a-D12-ponovo_ccd.sum
+|   |   |-- manda-4a-D12-ponovo_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-4a-D12-ponovo_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-4a-D12-ponovo_red.sum
+|   |   `-- tmp
+|   |-- manda-5
+|   |   |-- frames
+|   |   |   `-- ImageCtrl_Tue-Apr-29-10-27-09-2008
+|   |   |-- log
+|   |   |-- manda-5.sum
+|   |   |-- movie
+|   |   |-- pre_manda-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-5.sum
+|   |   `-- tmp
+|   |-- manda-6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-6.sum
+|   |   |-- movie
+|   |   |-- pre_manda-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-6.sum
+|   |   `-- tmp
+|   |-- manda-7
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-7.sum
+|   |   |-- movie
+|   |   |-- pre_manda-7.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-7.sum
+|   |   `-- tmp
+|   |-- manda-C2AAB-BP-DMSO
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_manda-C2AAB-BP-DMSO.sum
+|   |   `-- tmp
+|   |-- manda-C2AABBP
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2AABBP.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2AABBP.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2AABBP.sum
+|   |   `-- tmp
+|   |-- manda-C2AABTPP+TPP
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-C2AABTPP+TPP_ccd.sum
+|   |   `-- tmp
+|   |-- manda-C2AABTPP-dmf
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2AABTPP-dmf_ccd.sum
+|   |   |-- manda-C2AABTPP-dmf_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-C2AABTPP-dmf_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2AABTPP-dmf_red.sum
+|   |   `-- tmp
+|   |-- manda-C2AABTTP-DMF
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_manda-C2AABTTP-DMF.sum
+|   |   `-- tmp
+|   |-- manda-C2AABTTPP-1-2-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2AABTTPP-1-2-1.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2AABTTPP-1-2-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2AABTTPP-1-2-1.sum
+|   |   `-- tmp
+|   |-- manda-C2ABCl-DMF
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2ABCl-DMF.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2ABCl-DMF.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2ABCl-DMF.sum
+|   |   `-- tmp
+|   |-- manda-C2ABDHN
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2ABDHN.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2ABDHN.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2ABDHN.sum
+|   |   `-- tmp
+|   |-- manda-C2ABTPP
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2ABTPP.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2ABTPP.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2ABTPP.sum
+|   |   `-- tmp
+|   |-- manda-C2AB_TPP_-dmf-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-C2AB_TPP_-dmf-1_ccd.sum
+|   |   `-- tmp
+|   |-- manda-C2DMANAB-BP-DMSO
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_manda-C2DMANAB-BP-DMSO.sum
+|   |   `-- tmp
+|   |-- manda-C2DMANAB-DMF
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2DMANAB-DMF.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2DMANAB-DMF.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2DMANAB-DMF.sum
+|   |   `-- tmp
+|   |-- manda-C2DMANABTTP-dmf-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2DMANABTTP-dmf-1_ccd.sum
+|   |   |-- manda-C2DMANABTTP-dmf-1_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-C2DMANABTTP-dmf-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2DMANABTTP-dmf-1_red.sum
+|   |   `-- tmp
+|   |-- manda-C2MABBP-powder_Thu-Mar-05-13-09-01-2009
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2MABBP-powder.sum
+|   |   `-- tmp
+|   |-- manda-C2MABP-DMF
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2MABP-DMF.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2MABP-DMF.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2MABP-DMF.sum
+|   |   `-- tmp
+|   |-- manda-C2MABTTP
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2MABTTP_ccd.sum
+|   |   |-- manda-C2MABTTP_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-C2MABTTP.sum
+|   |   |-- pre_manda-C2MABTTP_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2MABTTP_red.sum
+|   |   `-- tmp
+|   |-- manda-C2mabbp
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2mabbp.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2mabbp.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2mabbp.sum
+|   |   `-- tmp
+|   |-- manda-C2mabbp-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-C2mabbp-2.sum
+|   |   |-- movie
+|   |   |-- pre_manda-C2mabbp-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-C2mabbp-2.sum
+|   |   `-- tmp
+|   |-- manda-DMANAB-BP
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-DMANAB-BP.sum
+|   |   |-- movie
+|   |   |-- pre_manda-DMANAB-BP.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-DMANAB-BP.sum
+|   |   `-- tmp
+|   |-- manda-DMANAB-DMSO
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-DMANAB-DMSO.sum
+|   |   |-- movie
+|   |   |-- pre_manda-DMANAB-DMSO.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-DMANAB-DMSO.sum
+|   |   `-- tmp
+|   |-- manda-DMANAB-DMSO-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-DMANAB-DMSO-2.sum
+|   |   |-- movie
+|   |   |-- pre_manda-DMANAB-DMSO-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-DMANAB-DMSO-2.sum
+|   |   `-- tmp
+|   |-- manda-narancasti
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- manda-narancasti_ccd.sum
+|   |   |-- manda-narancasti_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_manda-narancasti_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-narancasti_red.sum
+|   |   `-- tmp
+|   |-- manda-nekaj
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_manda-nekaj.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- manda-nekaj.sum
+|   |   `-- tmp
+|   |-- manda-zmrznuti
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_manda-zmrznuti.sum
+|   |   `-- tmp
+|   |-- mare-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-1.sum
+|   |   |-- movie
+|   |   |-- pre_mare-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-1.sum
+|   |   `-- tmp
+|   |-- mare-161208
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-161208.sum
+|   |   |-- movie
+|   |   |-- pre_mare-161208.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-161208.sum
+|   |   `-- tmp
+|   |-- mare-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-2.sum
+|   |   |-- movie
+|   |   |-- pre_mare-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-2.sum
+|   |   `-- tmp
+|   |-- mare-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-3.sum
+|   |   |-- movie
+|   |   |-- pre_mare-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-3.sum
+|   |   `-- tmp
+|   |-- mare-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-4.sum
+|   |   |-- movie
+|   |   |-- pre_mare-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-4.sum
+|   |   `-- tmp
+|   |-- mare-5
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-5.sum
+|   |   |-- movie
+|   |   |-- pre_mare-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-5.sum
+|   |   `-- tmp
+|   |-- mare-6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-6.sum
+|   |   |-- movie
+|   |   |-- pre_mare-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-6.sum
+|   |   `-- tmp
+|   |-- mare-kapalica
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mare-kapalica.sum
+|   |   |-- movie
+|   |   |-- pre_mare-kapalica.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mare-kapalica.sum
+|   |   `-- tmp
+|   |-- margareta-NC-112
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_margareta-NC-112_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-1.sum
+|   |   |-- marijana-1_red.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-1.sum
+|   |   `-- tmp
+|   |-- marijana-15DMSO
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-15DMSO.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-15DMSO.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-15DMSO.sum
+|   |   `-- tmp
+|   |-- marijana-17052010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-17052010_ccd.sum
+|   |   |-- marijana-17052010_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-17052010_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-17052010_red.sum
+|   |   `-- tmp
+|   |-- marijana-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-2.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-2.sum
+|   |   `-- tmp
+|   |-- marijana-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-3.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-3.sum
+|   |   `-- tmp
+|   |-- marijana-38-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-38-1_ccd.sum
+|   |   |-- marijana-38-1_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-38-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-38-1_red.sum
+|   |   `-- tmp
+|   |-- marijana-38-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-38-2_ccd.sum
+|   |   |-- marijana-38-2_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-38-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-38-2_red.sum
+|   |   `-- tmp
+|   |-- marijana-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-4.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-4.sum
+|   |   `-- tmp
+|   |-- marijana-41-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-41-1_ccd.sum
+|   |   |-- marijana-41-1_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-41-1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-41-1_red.sum
+|   |   `-- tmp
+|   |-- marijana-5
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-5.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-5.sum
+|   |   `-- tmp
+|   |-- marijana-7
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-7.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-7.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-7.sum
+|   |   `-- tmp
+|   |-- marijana-70
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-70.sum
+|   |   |-- movie
+|   |   |-- pre_marijana-70.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-70.sum
+|   |   `-- tmp
+|   |-- marijana-Cu-Zn-prah_Fri-Jul-18-14-09-54-2008
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-Cu-Zn-prah.sum
+|   |   `-- tmp
+|   |-- marijana-celija-160410
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-celija-160410_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-crveni-apsolutna
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-crveni-apsolutna_ccd.sum
+|   |   |-- marijana-crveni-apsolutna_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-crveni-apsolutna_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-crveni-apsolutna_red.sum
+|   |   `-- tmp
+|   |-- marijana-crveni-apsolutna2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-crveni-apsolutna2_ccd.sum
+|   |   |-- marijana-crveni-apsolutna2_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-crveni-apsolutna2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-crveni-apsolutna2_red.sum
+|   |   `-- tmp
+|   |-- marijana-crveni-dijamant
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-crveni-dijamant_ccd.sum
+|   |   |-- marijana-crveni-dijamant_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-crveni-dijamant_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-crveni-dijamant_red.sum
+|   |   `-- tmp
+|   |-- marijana-dijamant
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-dijamant_ccd.sum
+|   |   |-- marijana-dijamant_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-dijamant_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-dijamant_red.sum
+|   |   `-- tmp
+|   |-- marijana-prah_Wed-Aug-27-13-01-04-2008
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-prah.sum
+|   |   `-- tmp
+|   |-- marijana-tirkizni
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-tirkizni_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-zeleni
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-zeleni_ccd.sum
+|   |   |-- marijana-zeleni_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zeleni_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-zeleni_red.sum
+|   |   `-- tmp
+|   |-- marijana-zeleni-oktaedar-ABS
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-zeleni-oktaedar-ABS_ccd.sum
+|   |   |-- marijana-zeleni-oktaedar-ABS_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zeleni-oktaedar-ABS_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-zeleni-oktaedar-ABS_red.sum
+|   |   `-- tmp
+|   |-- marijana-zeleni-poliedar
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-zeleni-poliedar_ccd.sum
+|   |   |-- marijana-zeleni-poliedar_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zeleni-poliedar_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-zeleni-poliedar_red.sum
+|   |   `-- tmp
+|   |-- marijana-zeleni2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-zeleni2_ccd.sum
+|   |   |-- marijana-zeleni2_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zeleni2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-zeleni2_red.sum
+|   |   `-- tmp
+|   |-- marijana-zuta-plocica
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zuta-plocica_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-zuta-plocica1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zuta-plocica1_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-zuti-dijamant
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zuti-dijamant_ccd.sum
+|   |   `-- tmp
+|   |-- marijana-zuti-poliedar
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marijana-zuti-poliedar_ccd.sum
+|   |   |-- marijana-zuti-poliedar_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marijana-zuti-poliedar_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marijana-zuti-poliedar_red.sum
+|   |   `-- tmp
+|   |-- marina-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-1.sum
+|   |   |-- movie
+|   |   |-- pre_marina-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-1.sum
+|   |   `-- tmp
+|   |-- marina-100210
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-100210_ccd.sum
+|   |   |-- marina-100210_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-100210_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-100210_red.sum
+|   |   `-- tmp
+|   |-- marina-10092010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-10092010_ccd.sum
+|   |   |-- marina-10092010_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-10092010_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-10092010_red.sum
+|   |   `-- tmp
+|   |-- marina-12052010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-12052010_ccd.sum
+|   |   |-- marina-12052010_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-12052010_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-12052010_red.sum
+|   |   `-- tmp
+|   |-- marina-19022008
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-19022008.sum
+|   |   |-- movie
+|   |   |-- pre_marina-19022008.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-19022008.sum
+|   |   `-- tmp
+|   |-- marina-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-2.sum
+|   |   |-- movie
+|   |   |-- pre_marina-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-2.sum
+|   |   `-- tmp
+|   |-- marina-24022010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-24022010_ccd.sum
+|   |   |-- marina-24022010_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-24022010_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-24022010_red.sum
+|   |   `-- tmp
+|   |-- marina-28022010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-28022010_ccd.sum
+|   |   |-- marina-28022010_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-28022010_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-28022010_red.sum
+|   |   `-- tmp
+|   |-- marina-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-3.sum
+|   |   |-- movie
+|   |   |-- pre_marina-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-3.sum
+|   |   `-- tmp
+|   |-- marina-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-4.sum
+|   |   |-- movie
+|   |   |-- pre_marina-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-4.sum
+|   |   `-- tmp
+|   |-- marina-5
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-5.sum
+|   |   |-- movie
+|   |   |-- pre_marina-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-5.sum
+|   |   `-- tmp
+|   |-- marina-6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-6.sum
+|   |   |-- movie
+|   |   |-- pre_marina-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-6.sum
+|   |   `-- tmp
+|   |-- marina-7
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-7.sum
+|   |   |-- movie
+|   |   |-- pre_marina-7.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-7.sum
+|   |   `-- tmp
+|   |-- marina-8
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-8.sum
+|   |   |-- movie
+|   |   |-- pre_marina-8.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-8.sum
+|   |   `-- tmp
+|   |-- marina-9
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-9.sum
+|   |   |-- movie
+|   |   |-- pre_marina-9.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-9.sum
+|   |   `-- tmp
+|   |-- marina-amid-Cl
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-amid-Cl_ccd.sum
+|   |   |-- marina-amid-Cl_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-amid-Cl_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-amid-Cl_red.sum
+|   |   `-- tmp
+|   |-- marina-bd-2q-Br
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-bd-2q-Br.sum
+|   |   |-- movie
+|   |   |-- pre_marina-bd-2q-Br.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-bd-2q-Br.sum
+|   |   `-- tmp
+|   |-- marina-d3q-Cl-HCl
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_marina-d3q-Cl-HCl.sum
+|   |   `-- tmp
+|   |-- marina-db-2q-Br
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-db-2q-Br.sum
+|   |   |-- movie
+|   |   |-- pre_marina-db-2q-Br.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-db-2q-Br.sum
+|   |   `-- tmp
+|   |-- marina-db-3q-Cl
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-db-3q-Cl.sum
+|   |   |-- movie
+|   |   |-- pre_marina-db-3q-Cl.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-db-3q-Cl.sum
+|   |   `-- tmp
+|   |-- marina-de-2q-260810
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-de-2q-260810_ccd.sum
+|   |   |-- marina-de-2q-260810_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-de-2q-260810_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-de-2q-260810_red.sum
+|   |   `-- tmp
+|   |-- marina-de-2q-Cl
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-de-2q-Cl.sum
+|   |   |-- movie
+|   |   |-- pre_marina-de-2q-Cl.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-de-2q-Cl.sum
+|   |   `-- tmp
+|   |-- marina-de-2q-novi
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- marina-de-2q-novi.sum
+|   |   |-- movie
+|   |   |-- pre_marina-de-2q-novi.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- marina-de-2q-novi.sum
+|   |   `-- tmp
+|   |-- marina-de-3q-28092009
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-de-3q-28092009_ccd.sum
+|   |   `-- tmp
+|   |-- marina-zuti-150310
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_marina-zuti-150310_ccd.sum
+|   |   `-- tmp
+|   |-- matkovicka-U-153
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- matkovicka-U-153_ccd.sum
+|   |   |-- matkovicka-U-153_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-U-153_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- matkovicka-U-153_red.sum
+|   |   `-- tmp
+|   |-- matkovicka-U-154
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- matkovicka-U-154_ccd.sum
+|   |   |-- matkovicka-U-154_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-U-154_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- matkovicka-U-154_red.sum
+|   |   `-- tmp
+|   |-- matkovicka-U-48-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- matkovicka-U-48-2_ccd.sum
+|   |   |-- matkovicka-U-48-2_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-U-48-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- matkovicka-U-48-2_red.sum
+|   |   `-- tmp
+|   |-- matkovicka-U-48.2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-U-48.2_ccd.sum
+|   |   `-- tmp
+|   |-- matkovicka-onaj-tanki
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- matkovicka-onaj-tanki_ccd.sum
+|   |   |-- matkovicka-onaj-tanki_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-onaj-tanki_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- matkovicka-onaj-tanki_red.sum
+|   |   `-- tmp
+|   |-- matkovicka-onaj-tanki-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- matkovicka-onaj-tanki-2_ccd.sum
+|   |   |-- matkovicka-onaj-tanki-2_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_matkovicka-onaj-tanki-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- matkovicka-onaj-tanki-2_red.sum
+|   |   `-- tmp
+|   |-- mmatk-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mmatk-1.sum
+|   |   |-- movie
+|   |   |-- pre_mmatk-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mmatk-1.sum
+|   |   `-- tmp
+|   |-- mo18
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- mo18_ccd.sum
+|   |   |-- mo18_red.sum
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_mo18_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- mo18_red.sum
+|   |   `-- tmp
+|   |-- o-KLA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-1.sum
+|   |   |-- pre_o-KLA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-1.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba.sum
+|   |   |-- pre_o-KLA-proba.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba-5
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba-5.sum
+|   |   |-- pre_o-KLA-proba-5.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba-5.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba-6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba-6.sum
+|   |   |-- pre_o-KLA-proba-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba-6.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba2.sum
+|   |   |-- pre_o-KLA-proba2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba2.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba3.sum
+|   |   |-- pre_o-KLA-proba3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba3.sum
+|   |   `-- tmp
+|   |-- o-KLA-proba4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- o-KLA-proba4.sum
+|   |   |-- pre_o-KLA-proba4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- o-KLA-proba4.sum
+|   |   `-- tmp
+|   |-- padma
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- padma-corr.sum
+|   |   |-- padma-corr2.sum
+|   |   |-- padma.sum
+|   |   |-- pre_padma.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- padma-corr.sum
+|   |   |       |-- padma-corr2.sum
+|   |   |       `-- padma.sum
+|   |   `-- tmp
+|   |-- padma-2
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- padma-2.sum
+|   |   |-- pre_padma-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- padma-2.sum
+|   |   `-- tmp
+|   |-- pirimidin-CA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pirimidin-CA-1.sum
+|   |   |-- pre_pirimidin-CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- pirimidin-CA-1.sum
+|   |   `-- tmp
+|   |-- portabl1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- portabl1_ccd.sum
+|   |   |-- portabl1_red.sum
+|   |   |-- pre_portabl1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- portabl1_red.sum
+|   |   `-- tmp
+|   |-- powder-Manda-C2AABBP-3_Mon-May-25-13-09-59-2009
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- powder-Manda-C2ABBP-1_Mon-May-25-10-00-27-2009
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- powder-Manda-C2DMANABBP-4_Mon-May-25-12-07-12-2009
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- powder_Wed-Oct-31-10-17-24-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_Wed-Oct-31-11-32-28-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_marijana700-Thu-Nov-08-13-23-07-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_marijana850-Thu-Nov-08-15-13-29-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_orto-kloranilna-Mon-Nov-19-10-37-19-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- quinone-red-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_quinone-red-1_ccd.sum
+|   |   |-- quinone-red-1_ccd.sum
+|   |   |-- quinone-red-1_red.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- quinone-red-1_red.sum
+|   |   `-- tmp
+|   |-- quinone-yellow-1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_quinone-yellow-1_ccd.sum
+|   |   |-- quinone-yellow-1_ccd.sum
+|   |   |-- quinone-yellow-1_red.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- quinone-yellow-1_red.sum
+|   |   `-- tmp
+|   |-- radikal-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal-1.sum
+|   |   |-- radikal-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal-1.sum
+|   |   `-- tmp
+|   |-- radikal-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal-2.sum
+|   |   |-- radikal-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal-2.sum
+|   |   `-- tmp
+|   |-- radikal-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal-3.sum
+|   |   |-- radikal-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal-3.sum
+|   |   `-- tmp
+|   |-- radikal-Cs-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal-Cs-1.sum
+|   |   |-- radikal-Cs-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal-Cs-1.sum
+|   |   `-- tmp
+|   |-- radikal-Na-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal-Na-1.sum
+|   |   |-- radikal-Na-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal-Na-1.sum
+|   |   `-- tmp
+|   |-- radikal2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_radikal2.sum
+|   |   |-- radikal2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- radikal2.sum
+|   |   `-- tmp
+|   |-- srki
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_srki.sum
+|   |   |-- srki.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- srki.sum
+|   |   `-- tmp
+|   |-- trp-CA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_trp-CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- trp-CA-1.sum
+|   |   |-- tmp
+|   |   `-- trp-CA-1.sum
+|   |-- trp-CA-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_trp-CA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- trp-CA-2.sum
+|   |   |-- tmp
+|   |   `-- trp-CA-2.sum
+|   |-- trp-CA-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- trp-CA-3.sum
+|   |   |-- tmp
+|   |   `-- trp-CA-3.sum
+|   |-- urea-CA-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_urea-CA-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- urea-CA-3.sum
+|   |   |-- tmp
+|   |   `-- urea-CA-3.sum
+|   |-- urea-CA-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_urea-CA-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- urea-CA-4.sum
+|   |   |-- tmp
+|   |   `-- urea-CA-4.sum
+|   |-- urea-CA-5
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_urea-CA-5.sum
+|   |   `-- tmp
+|   |-- urea-CA-6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_urea-CA-6.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- urea-CA-6.sum
+|   |   |-- tmp
+|   |   `-- urea-CA-6.sum
+|   |-- ureja-CA-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ureja-CA-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ureja-CA-1.sum
+|   |   |-- tmp
+|   |   `-- ureja-CA-1.sum
+|   |-- ureja-CA-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_ureja-CA-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- ureja-CA-2.sum
+|   |   |-- tmp
+|   |   `-- ureja-CA-2.sum
+|   |-- vesna-11052010
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-11052010_ccd.sum
+|   |   `-- tmp
+|   |-- vesna-69-ponovo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-69-ponovo_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-69-ponovo_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-69-ponovo_ccd.sum
+|   |   `-- vesna-69-ponovo_red.sum
+|   |-- vesna-76-ponovo
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-76-ponovo_ccd.sum
+|   |   `-- tmp
+|   |-- vesna-V-67
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vesna-V-67.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-V-67.sum
+|   |   |-- tmp
+|   |   `-- vesna-V-67.sum
+|   |-- vesna-acetat-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vesna-acetat-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-acetat-1.sum
+|   |   |-- tmp
+|   |   `-- vesna-acetat-1.sum
+|   |-- vesna-fluorid-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vesna-fluorid-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-fluorid-1.sum
+|   |   |-- tmp
+|   |   `-- vesna-fluorid-1.sum
+|   |-- vesna-fosfat-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vesna-fosfat-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-fosfat-1.sum
+|   |   |-- tmp
+|   |   `-- vesna-fosfat-1.sum
+|   |-- vesna-rec-7-Cl
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-rec-7-Cl_ccd.sum
+|   |   `-- tmp
+|   |-- vesna-rec-7-H2PO4-plocica
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-rec-7-H2PO4-plocica_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-rec-7-H2PO4-plocica_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-rec-7-H2PO4-plocica_ccd.sum
+|   |   `-- vesna-rec-7-H2PO4-plocica_red.sum
+|   |-- vesna-rec-7-H2PO4-stapic
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-rec-7-H2PO4-stapic_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-rec-7-H2PO4-stapic_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-rec-7-H2PO4-stapic_ccd.sum
+|   |   `-- vesna-rec-7-H2PO4-stapic_red.sum
+|   |-- vesna-rec-7-NO3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-rec-7-NO3_ccd.sum
+|   |   `-- tmp
+|   |-- vesna-rec-7-NO3_2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-rec-7-NO3_2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-rec-7-NO3_2_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-rec-7-NO3_2_ccd.sum
+|   |   `-- vesna-rec-7-NO3_2_red.sum
+|   |-- vesna-sol1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-sol1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-sol1_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-sol1_ccd.sum
+|   |   `-- vesna-sol1_red.sum
+|   |-- vesna-v-67-2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-v-67-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-v-67-2_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-v-67-2_ccd.sum
+|   |   `-- vesna-v-67-2_red.sum
+|   |-- vesna-v-67-240310
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-v-67-240310_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-v-67-240310_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-v-67-240310_ccd.sum
+|   |   `-- vesna-v-67-240310_red.sum
+|   |-- vesna-v-67-2A
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-v-67-2A_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-v-67-2A_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-v-67-2A_ccd.sum
+|   |   `-- vesna-v-67-2A_red.sum
+|   |-- vesna-v-67-2_a
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-v-67-2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-v-67-2_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-v-67-2-abs_red.sum
+|   |   |-- vesna-v-67-2-novi_red.sum
+|   |   |-- vesna-v-67-2-zadnji_red.sum
+|   |   |-- vesna-v-67-2_ccd.sum
+|   |   `-- vesna-v-67-2_red.sum
+|   |-- vesna-v-99
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vesna-v-99_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vesna-v-99_red.sum
+|   |   |-- tmp
+|   |   |-- vesna-v-99_ccd.sum
+|   |   `-- vesna-v-99_red.sum
+|   |-- vls-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vls-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vls-1.sum
+|   |   |-- tmp
+|   |   `-- vls-1.sum
+|   |-- vls-2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vls-2.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vls-2.sum
+|   |   |-- tmp
+|   |   `-- vls-2.sum
+|   |-- vls-3
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vls-3.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vls-3.sum
+|   |   |-- tmp
+|   |   `-- vls-3.sum
+|   |-- vls-4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vls-4.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vls-4.sum
+|   |   |-- tmp
+|   |   `-- vls-4.sum
+|   |-- vrsna-v-99
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_vrsna-v-99_ccd.sum
+|   |   `-- tmp
+|   |-- vtf-1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_vtf-1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- vtf-1.sum
+|   |   |-- tmp
+|   |   `-- vtf-1.sum
+|   `-- zbacnik-1
+|       |-- expinfo
+|       |-- frames
+|       |-- log
+|       |-- movie
+|       |-- plots_dc
+|       |-- plots_red
+|       |-- pre_zbacnik-1_ccd.sum
+|       |-- struct
+|       |   `-- tmp
+|       |       `-- zbacnik-1_red.sum
+|       |-- tmp
+|       |-- zbacnik-1_ccd.sum
+|       `-- zbacnik-1_red.sum
+|-- meri
+|   |-- 28F (biba)
+|   |   |-- 28F (biba).sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_28F (biba).sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 28F (biba).sum
+|   |   `-- tmp
+|   |-- 28F-biba
+|   |   |-- 28F-biba.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_28F-biba.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 28F-biba.sum
+|   |   `-- tmp
+|   |-- 28F__biba_
+|   |   |-- 28F__biba_.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_28F__biba_.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 28F__biba_.sum
+|   |   `-- tmp
+|   |-- 30xIV (biba)
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_30xIV (biba).sum
+|   |   `-- tmp
+|   |-- 30xIV__biba_
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_30xIV__biba_.sum
+|   |   `-- tmp
+|   |-- powder_29-Thu-Nov-08-10-18-01-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_30-Thu-Nov-08-11-03-04-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_TSCPd-1b-Tue-Nov-06-09-50-24-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   |-- powder_TsC-Tue-Nov-06-10-34-11-2007
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- powder.sum
+|   |   `-- tmp
+|   `-- powder_Wed-Oct-31-11-34-50-2007
+|       |-- frames
+|       |   `-- ImageCtrl_Wed-Oct-31-13-30-26-2007
+|       |-- log
+|       |-- powder.sum
+|       `-- tmp
+|-- nives
+|   |-- At
+|   |   `-- 1b-d5
+|   |       |-- expinfo
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- plots_dc
+|   |       |-- plots_red
+|   |       |-- pre_1b-d5_ccd.sum
+|   |       `-- tmp
+|   |-- Bj1
+|   |   `-- exp_470
+|   |       |-- Bj1.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- pre_exp_470.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- Bj1.sum
+|   |       `-- tmp
+|   |-- Bj1+ATP+Gly
+|   |   |-- kokristal
+|   |   |   `-- exp_817
+|   |   |       |-- exp_817.sum
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- movie
+|   |   |       |-- pre_exp_817.sum
+|   |   |       |-- struct
+|   |   |       |   `-- tmp
+|   |   |       |       `-- exp_817.sum
+|   |   |       `-- tmp
+|   |   `-- naaaaajveci
+|   |       |-- NAJVECI.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- odbmp
+|   |       |-- pre_naaaaajveci.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       |-- NAJVECI.sum
+|   |       |       `-- zoran.sum
+|   |       |-- tmp
+|   |       `-- zoran.sum
+|   |-- Bj1+CP
+|   |   |-- +ATP+Gly
+|   |   |   |-- danijela-onaj_nemoguci
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_danijela-onaj_nemoguci_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1456
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1456_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1457
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1457_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1458
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1458_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   `-- exp_1459
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1459_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- +GlyAms
+|   |   |   |-- exp_1447
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1447_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   `-- exp_1448
+|   |   |       |-- exp_1448_ccd.sum
+|   |   |       |-- exp_1448_red.sum
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- movie
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1448_ccd.sum
+|   |   |       |-- struct
+|   |   |       |   `-- tmp
+|   |   |       |       `-- exp_1448_red.sum
+|   |   |       `-- tmp
+|   |   |-- crosslinking
+|   |   |   |-- exp_1465
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1465_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1466
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1466_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1467
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1467_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1468
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1468_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   `-- exp_1469
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1469_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- deh_1
+|   |   |   `-- exp_1454
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1454_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- deh_2
+|   |   |   |-- exp_1450
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1450_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   |-- exp_1451
+|   |   |   |   |-- expinfo
+|   |   |   |   |-- frames
+|   |   |   |   |-- log
+|   |   |   |   |-- plots_dc
+|   |   |   |   |-- plots_red
+|   |   |   |   |-- pre_exp_1451_ccd.sum
+|   |   |   |   `-- tmp
+|   |   |   `-- exp_1452
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1452_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- deh_3
+|   |   |   `-- exp_1453
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1453_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- deh_4
+|   |   |   `-- exp_1455
+|   |   |       |-- expinfo
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- plots_dc
+|   |   |       |-- plots_red
+|   |   |       |-- pre_exp_1455_ccd.sum
+|   |   |       `-- tmp
+|   |   |-- exp_1404
+|   |   |   |-- exp_1404_ccd.sum
+|   |   |   |-- exp_1404_red.sum
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_exp_1404_ccd.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_1404_red.sum
+|   |   |   `-- tmp
+|   |   |-- exp_1407
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_exp_1407_ccd.sum
+|   |   |   `-- tmp
+|   |   |-- exp_1408
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_exp_1408_ccd.sum
+|   |   |   `-- tmp
+|   |   `-- exp_1409
+|   |       |-- expinfo
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- plots_dc
+|   |       |-- plots_red
+|   |       |-- pre_exp_1409_ccd.sum
+|   |       `-- tmp
+|   |-- Bj1+CoA
+|   |   `-- exp_690
+|   |       |-- exp_690.sum
+|   |       |-- frames
+|   |       |   `-- XDS
+|   |       |       |-- run1
+|   |       |       |-- run2
+|   |       |       `-- run3
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_690.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_690.sum
+|   |       `-- tmp
+|   |-- Bj1+Gly
+|   |   |-- +Gly-kokristalizacija1
+|   |   |   |-- frames
+|   |   |   |-- kokristalGly1.sum
+|   |   |   |-- log
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- kokristalGly1.sum
+|   |   |   `-- tmp
+|   |   |-- exp_687
+|   |   |   |-- exp_687.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       `-- run2
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_687.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_687.sum
+|   |   |   `-- tmp
+|   |   `-- odbmp
+|   |-- Bj1+Gly+ATP+CoA
+|   |   |-- exp_689
+|   |   |   |-- exp_689.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       `-- run2
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_689.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_689.sum
+|   |   |   `-- tmp
+|   |   `-- exp_832
+|   |       |-- exp_832.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_832.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_832.sum
+|   |       `-- tmp
+|   |-- Bj1+Gly+CoA
+|   |   `-- exp_688
+|   |       |-- exp_688.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- pre_exp_688.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_688.sum
+|   |       `-- tmp
+|   |-- Bj1+GlyAMS
+|   |   |-- 180
+|   |   |   |-- 180.sum
+|   |   |   |-- New Folder
+|   |   |   |-- New_Folder
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       `-- run1
+|   |   |   |-- log
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- 180.sum
+|   |   |   `-- tmp
+|   |   `-- exp_904
+|   |       |-- New Folder
+|   |       |-- New_Folder
+|   |       |-- bez_leda.sum
+|   |       |-- exp_904.sum
+|   |       |-- frames
+|   |       |   `-- XDS
+|   |       |       |-- run1
+|   |       |       |-- run2
+|   |       |       |-- run3
+|   |       |       |-- run4
+|   |       |       `-- run5
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_904.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       |-- bez_leda.sum
+|   |       |       `-- exp_904.sum
+|   |       `-- tmp
+|   |-- Bj1+GlyAMS+CoA
+|   |   |-- 180_120sec.sum
+|   |   |-- 90sec
+|   |   |   |-- 180_90sec.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       `-- run1
+|   |   |   |-- log
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- 180_90sec.sum
+|   |   |   `-- tmp
+|   |   |-- frames
+|   |   |-- log
+|   |   `-- tmp
+|   |-- Bj1-16-d4
+|   |   |-- Bj1-16-d4.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_Bj1-16-d4.sum
+|   |   `-- tmp
+|   |-- Bj1_ATP
+|   |   |-- NaCA-100
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_NaCA-100.sum
+|   |   |   `-- tmp
+|   |   |-- New Folder
+|   |   |   `-- exp_636
+|   |   |       |-- exp_636.sum
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- movie
+|   |   |       |-- pre_exp_636.sum
+|   |   |       |-- struct
+|   |   |       |   `-- tmp
+|   |   |       |       `-- exp_636.sum
+|   |   |       `-- tmp
+|   |   |-- New_Folder
+|   |   |   `-- exp_636
+|   |   |       |-- exp_636.sum
+|   |   |       |-- frames
+|   |   |       |-- log
+|   |   |       |-- movie
+|   |   |       |-- pre_exp_636.sum
+|   |   |       |-- struct
+|   |   |       |   `-- tmp
+|   |   |       |       `-- exp_636.sum
+|   |   |       `-- tmp
+|   |   |-- cut.sum
+|   |   |-- exp_827
+|   |   |   |-- exp_827.sum
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_827.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_827.sum
+|   |   |   `-- tmp
+|   |   |-- exp_931
+|   |   |   |-- exp_931.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       |-- run2
+|   |   |   |       `-- run3
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_931.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_931.sum
+|   |   |   `-- tmp
+|   |   |-- frames
+|   |   |-- kristal4a.sum
+|   |   |-- kristal_iz_Bj1-5_A1.sum
+|   |   |-- log
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       |-- cut.sum
+|   |   |       `-- kristal_iz_Bj1-5_A1.sum
+|   |   `-- tmp
+|   |-- Bj1_kokrist_Ala
+|   |   |-- exp_811
+|   |   |   |-- exp_811.sum
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_811.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_811.sum
+|   |   |   `-- tmp
+|   |   `-- exp_821
+|   |       |-- exp_821.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_821.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_821.sum
+|   |       `-- tmp
+|   |-- SSBm-tripsin
+|   |   |-- Sm18-B2.sum
+|   |   |-- exp_686
+|   |   |   |-- exp_686.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       |-- run2
+|   |   |   |       `-- run3
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_686.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_686.sum
+|   |   |   `-- tmp
+|   |   |-- exp_815
+|   |   |   |-- exp_815.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       |-- run2
+|   |   |   |       |-- run3
+|   |   |   |       |-- run4
+|   |   |   |       |-- run5
+|   |   |   |       `-- run6
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_815.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_815.sum
+|   |   |   `-- tmp
+|   |   |-- exp_834
+|   |   |   |-- exp_834.sum
+|   |   |   |-- frames
+|   |   |   |   `-- XDS
+|   |   |   |       |-- run1
+|   |   |   |       |-- run2
+|   |   |   |       |-- run3
+|   |   |   |       `-- run4
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_exp_834.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- exp_834.sum
+|   |   |   `-- tmp
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Sm18-B2.sum
+|   |   `-- tmp
+|   |-- Sm
+|   |   |-- exp_1135
+|   |   |   |-- expinfo
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- plots_dc
+|   |   |   |-- plots_red
+|   |   |   |-- pre_exp_1135_ccd.sum
+|   |   |   `-- tmp
+|   |   `-- exp_1136
+|   |       |-- exp_1136_ccd.sum
+|   |       |-- exp_1136_red.sum
+|   |       |-- expinfo
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- plots_dc
+|   |       |-- plots_red
+|   |       |-- pre_exp_1136_ccd.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_1136_red.sum
+|   |       `-- tmp
+|   |-- Sm-dT
+|   |   `-- 5-A6
+|   |       |-- exp_1124
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1124_ccd.sum
+|   |       |   `-- tmp
+|   |       |-- exp_1125
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1125_ccd.sum
+|   |       |   `-- tmp
+|   |       |-- exp_1126
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1126_ccd.sum
+|   |       |   `-- tmp
+|   |       |-- exp_1127
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1127_ccd.sum
+|   |       |   `-- tmp
+|   |       |-- exp_1128
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1128_ccd.sum
+|   |       |   `-- tmp
+|   |       |-- exp_1129
+|   |       |   |-- expinfo
+|   |       |   |-- frames
+|   |       |   |-- log
+|   |       |   |-- plots_dc
+|   |       |   |-- plots_red
+|   |       |   |-- pre_exp_1129_ccd.sum
+|   |       |   `-- tmp
+|   |       `-- exp_1130
+|   |           |-- expinfo
+|   |           |-- frames
+|   |           |-- log
+|   |           |-- plots_dc
+|   |           |-- plots_red
+|   |           |-- pre_exp_1130_ccd.sum
+|   |           `-- tmp
+|   |-- Sm_bez_tripsina
+|   |   |-- Sm_bez_tripsina_ccd.sum
+|   |   |-- Sm_bez_tripsina_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_Sm_bez_tripsina_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- Sm_bez_tripsina_red.sum
+|   |   `-- tmp
+|   |-- TesA_1
+|   |   |-- exp_409
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_exp_409.sum
+|   |   |   `-- tmp
+|   |   `-- exp_410
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- pre_exp_410.sum
+|   |       `-- tmp
+|   |-- exp_699
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_exp_699.sum
+|   |   `-- tmp
+|   |-- lizozim
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_lizozim.sum
+|   |   |-- sesti
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- movie
+|   |   |   |-- pre_sesti.sum
+|   |   |   |-- sesti.sum
+|   |   |   |-- struct
+|   |   |   |   `-- tmp
+|   |   |   |       `-- sesti.sum
+|   |   |   `-- tmp
+|   |   `-- tmp
+|   `-- o-KLA-provjera
+|       |-- frames
+|       |-- log
+|       |-- pre_o-KLA-provjera.sum
+|       `-- tmp
+|-- sasa
+|   |-- 15MSTS
+|   |   |-- 15MSTS.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_15MSTS.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- 15MSTS.sum
+|   |   `-- tmp
+|   |-- 4-TOSC
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_4-TOSC.sum
+|   |   `-- tmp
+|   |-- AV1K2
+|   |   |-- AV1K2_ccd.sum
+|   |   |-- AV1K2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_AV1K2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- AV1K2_red.sum
+|   |   `-- tmp
+|   |-- AV5K2
+|   |   |-- AV5K2_ccd.sum
+|   |   |-- AV5K2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_AV5K2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- AV5K2_red.sum
+|   |   `-- tmp
+|   |-- AV9
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_AV9_ccd.sum
+|   |   `-- tmp
+|   |-- C9K9
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_C9K9_ccd.sum
+|   |   `-- tmp
+|   |-- CoMSC
+|   |   |-- CoMSC.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_CoMSC.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- CoMSC.sum
+|   |   `-- tmp
+|   |-- CoTSC2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_CoTSC2.sum
+|   |   `-- tmp
+|   |-- CuTSC6
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_CuTSC6.sum
+|   |   `-- tmp
+|   |-- KGPT2
+|   |   |-- KGPT2_ccd.sum
+|   |   |-- KGPT2_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_KGPT2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KGPT2_red.sum
+|   |   `-- tmp
+|   |-- KGPT2_abscorr
+|   |   |-- KGPT2_abscorr_ccd.sum
+|   |   |-- KGPT2_abscorr_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_KGPT2_abscorr_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- KGPT2_abscorr_red.sum
+|   |   `-- tmp
+|   |-- L1
+|   |   |-- L1_ccd.sum
+|   |   |-- L1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_L1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- L1_red.sum
+|   |   `-- tmp
+|   |-- L17
+|   |   |-- L17_ccd.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_L17_ccd.sum
+|   |   `-- tmp
+|   |-- L171
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_L171_ccd.sum
+|   |   `-- tmp
+|   |-- L172
+|   |   |-- L172_ccd.sum
+|   |   |-- L172_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_L172_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- L172_red.sum
+|   |   `-- tmp
+|   |-- L1_celija_problem
+|   |   |-- L1_celija_problem_ccd.sum
+|   |   |-- L1_celija_problem_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_L1_celija_problem_ccd.sum
+|   |   |-- struct
+|   |   |   |-- odshell_L1_celija_problem
+|   |   |   `-- tmp
+|   |   |       `-- L1_celija_problem_red.sum
+|   |   `-- tmp
+|   |-- L1_exp_1477
+|   |-- MSC
+|   |   |-- MSC.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_MSC.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MSC.sum
+|   |   `-- tmp
+|   |-- MSCCu
+|   |   |-- MSCCu.sum
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_MSCCu.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- MSCCu.sum
+|   |   `-- tmp
+|   |-- New Folder
+|   |-- New Folder (2)
+|   |   |-- exp_787
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_exp_787.sum
+|   |   |   `-- tmp
+|   |   `-- exp_788
+|   |       |-- exp_788.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_788.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_788.sum
+|   |       `-- tmp
+|   |-- New_Folder
+|   |-- New_Folder__2_
+|   |   |-- exp_787
+|   |   |   |-- frames
+|   |   |   |-- log
+|   |   |   |-- pre_exp_787.sum
+|   |   |   `-- tmp
+|   |   `-- exp_788
+|   |       |-- exp_788.sum
+|   |       |-- frames
+|   |       |-- log
+|   |       |-- movie
+|   |       |-- pre_exp_788.sum
+|   |       |-- struct
+|   |       |   `-- tmp
+|   |       |       `-- exp_788.sum
+|   |       `-- tmp
+|   |-- T1
+|   |   |-- T1_ccd.sum
+|   |   |-- T1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_T1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- T1_red.sum
+|   |   `-- tmp
+|   |-- T7
+|   |   |-- T7_ccd.sum
+|   |   |-- T7_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_T7_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- T7_red.sum
+|   |   `-- tmp
+|   |-- TSCCo2
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_TSCCo2.sum
+|   |   `-- tmp
+|   |-- TSCCuP1
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- pre_TSCCuP1.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- TSCCuP1.sum
+|   |   `-- tmp
+|   |-- TZL2K1
+|   |   |-- TZL2K1_ccd.sum
+|   |   |-- TZL2K1_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_TZL2K1_ccd.sum
+|   |   |-- report
+|   |   |   |-- html
+|   |   |   `-- pic
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- TZL2K1_red.sum
+|   |   `-- tmp
+|   |-- TZL2K1_a
+|   |   |-- TZL2K1_a_ccd.sum
+|   |   |-- TZL2K1_a_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_TZL2K1_a_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- TZL2K1_a_red.sum
+|   |   `-- tmp
+|   |-- av12
+|   |   |-- av12_ccd.sum
+|   |   |-- av12_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_av12_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- av12_red.sum
+|   |   `-- tmp
+|   |-- av2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_av2_ccd.sum
+|   |   `-- tmp
+|   |-- av3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_av3_ccd.sum
+|   |   `-- tmp
+|   |-- c9-6
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_c9-6_ccd.sum
+|   |   `-- tmp
+|   |-- danijela-nemoguci
+|   |   |-- danijela-nemoguci_ccd.sum
+|   |   |-- danijela-nemoguci_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_danijela-nemoguci_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- danijela-nemoguci_red.sum
+|   |   `-- tmp
+|   |-- dijana12
+|   |   |-- dijana12_ccd.sum
+|   |   |-- dijana12_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dijana12_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dijana12_red.sum
+|   |   `-- tmp
+|   |-- dijana12a
+|   |   |-- dijana12a_ccd.sum
+|   |   |-- dijana12a_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dijana12a_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dijana12a_red.sum
+|   |   `-- tmp
+|   |-- dijana8
+|   |   |-- dijana8_ccd.sum
+|   |   |-- dijana8_red.sum
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_dijana8_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- dijana8_red.sum
+|   |   `-- tmp
+|   |-- exp_1087
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_exp_1087_ccd.sum
+|   |   `-- tmp
+|   |-- exp_1205
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_exp_1205_ccd.sum
+|   |   `-- tmp
+|   |-- exp_1476
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_exp_1476_ccd.sum
+|   |   `-- tmp
+|   |-- hamit61
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- hamit61_ccd.sum
+|   |   |-- hamit61_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_hamit61_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- hamit61_red.sum
+|   |   `-- tmp
+|   |-- kgpdgly
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kgpdgly_ccd.sum
+|   |   `-- tmp
+|   |-- kgpt3
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- kgpt3_ccd.sum
+|   |   |-- kgpt3_red.sum
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_kgpt3_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- kgpt3_red.sum
+|   |   `-- tmp
+|   |-- sasax
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_sasax_ccd.sum
+|   |   |-- sasax_ccd.sum
+|   |   |-- sasax_red.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- sasax_red.sum
+|   |   `-- tmp
+|   |-- sasaxfull
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_sasaxfull_ccd.sum
+|   |   |-- sasaxfull_ccd.sum
+|   |   |-- sasaxfull_red.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- sasaxfull_red.sum
+|   |   `-- tmp
+|   |-- tr4
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- pre_tr4.sum
+|   |   `-- tmp
+|   |-- tscco2p
+|   |   |-- frames
+|   |   |   `-- ImageCtrl_Wed-Mar-11-16-44-53-2009
+|   |   |-- log
+|   |   |-- pre_tscco2p.sum
+|   |   `-- tmp
+|   |-- tzl1k2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_tzl1k2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- tzl1k2_red.sum
+|   |   |-- tmp
+|   |   |-- tzl1k2_ccd.sum
+|   |   `-- tzl1k2_red.sum
+|   |-- tzl2k2
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_tzl2k2_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- tzl2k2_red.sum
+|   |   |-- tmp
+|   |   |-- tzl2k2_ccd.sum
+|   |   `-- tzl2k2_red.sum
+|   |-- tzl2k2full
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_tzl2k2full_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- tzl2k2full_red.sum
+|   |   |-- tmp
+|   |   |-- tzl2k2full_ccd.sum
+|   |   `-- tzl2k2full_red.sum
+|   |-- zolek1
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_zolek1_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- zolek1_red.sum
+|   |   |-- tmp
+|   |   |-- zolek1_ccd.sum
+|   |   `-- zolek1_red.sum
+|   |-- zolekcd
+|   |   |-- expinfo
+|   |   |-- frames
+|   |   |-- log
+|   |   |-- movie
+|   |   |-- plots_dc
+|   |   |-- plots_red
+|   |   |-- pre_zolekcd_ccd.sum
+|   |   |-- struct
+|   |   |   `-- tmp
+|   |   |       `-- zolekcd_red.sum
+|   |   |-- tmp
+|   |   |-- zolekcd_ccd.sum
+|   |   `-- zolekcd_red.sum
+|   `-- zolekzn
+|       |-- expinfo
+|       |-- frames
+|       |-- log
+|       |-- movie
+|       |-- plots_dc
+|       |-- plots_red
+|       |-- pre_zolekzn_ccd.sum
+|       |-- struct
+|       |   `-- tmp
+|       |       `-- zolekzn_red.sum
+|       |-- tmp
+|       |-- zolekzn_ccd.sum
+|       `-- zolekzn_red.sum
+`-- zoran
+    |-- 3DP-EtOH
+    |   |-- 3DP-EtOH.sum
+    |   |-- 3DP-EtOH_p31_red.sum
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- odbmp
+    |   |-- pre_3DP-EtOH.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       |-- 3DP-EtOH.sum
+    |   |       `-- 3DP-EtOH_p31_red.sum
+    |   |-- tmp
+    |   `-- unwarp
+    |-- Ag-kolat
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_Ag-kolat_ccd.sum
+    |   `-- tmp
+    |-- Ag-kolat_LT
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_Ag-kolat_LT_ccd.sum
+    |   `-- tmp
+    |-- BR-4-b2
+    |   |-- BR-4-b2_ccd.sum
+    |   |-- BR-4-b2_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_BR-4-b2_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- BR-4-b2_red.sum
+    |   `-- tmp
+    |-- BR-4-c6
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_BR-4-c6_ccd.sum
+    |   `-- tmp
+    |-- BR-5-a6
+    |   |-- exp_1121
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1121_ccd.sum
+    |   |   `-- tmp
+    |   `-- exp_1122
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_exp_1122_ccd.sum
+    |       `-- tmp
+    |-- BR-5-d5
+    |   |-- br-5-d5_1
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_br-5-d5_1_ccd.sum
+    |   |   `-- tmp
+    |   `-- exp_1110
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_exp_1110_ccd.sum
+    |       `-- tmp
+    |-- DDPyP
+    |   |-- DDPyP
+    |   |   |-- DDPyP_ccd.sum
+    |   |   |-- DDPyP_red.sum
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_DDPyP_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- DDPyP_red.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_DDPyP_ccd.sum
+    |   `-- tmp
+    |-- DDPyP_2
+    |   |-- DDPyP_2_ccd.sum
+    |   |-- DDPyP_2_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_DDPyP_2_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- DDPyP_2_red.sum
+    |   `-- tmp
+    |-- DTAB-Ch
+    |   |-- DTAB-Ch_ccd.sum
+    |   |-- DTAB-Ch_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_DTAB-Ch_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- DTAB-Ch_red.sum
+    |   `-- tmp
+    |-- LSIB
+    |   |-- TDA-Ch
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_TDA-Ch_ccd.sum
+    |   |   `-- tmp
+    |   |-- TDAB_Ac
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_TDAB_Ac_ccd.sum
+    |   |   `-- tmp
+    |   |-- exp_1139
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1139_ccd.sum
+    |   |   `-- tmp
+    |   |-- exp_1225
+    |   |-- exp_1226
+    |   `-- lsib01
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- lsib01_ccd.sum
+    |       |-- lsib01_red.sum
+    |       |-- movie
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_lsib01_ccd.sum
+    |       |-- struct
+    |       |   `-- tmp
+    |       |       `-- lsib01_red.sum
+    |       `-- tmp
+    |-- LSNK84
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_LSNK84_ccd.sum
+    |   `-- tmp
+    |-- LSPSOM-11
+    |   |-- LSPSOM-11_ccd.sum
+    |   |-- LSPSOM-11_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_LSPSOM-11_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- LSPSOM-11_red.sum
+    |   `-- tmp
+    |-- New Folder
+    |-- PNP-1-d3
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-1-d3_ccd.sum
+    |   `-- tmp
+    |-- PNP-1-soakiing
+    |   |-- PNP-1-c2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-c2_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-c2-soak
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-c2-soak_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-c2_dc
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-c2_dc_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-c2_dc1
+    |   |   |-- PNP-1-c2_dc1_ccd.sum
+    |   |   |-- PNP-1-c2_dc1_red.sum
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |   `-- XDS
+    |   |   |       |-- run1
+    |   |   |       |-- run2
+    |   |   |       `-- run3
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-c2_dc1_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- PNP-1-c2_dc1_red.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-c2_no_soak
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-c2_no_soak_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-d3_4days_soak
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-d3_4days_soak_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-d3_4days_soak_kristal_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-d3_4days_soak_kristal_2_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-1-d3_no_soak
+    |   |   |-- PNP-1-d3_no_soak_ccd.sum
+    |   |   |-- PNP-1-d3_no_soak_red.sum
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-1-d3_no_soak_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- PNP-1-d3_no_soak_red.sum
+    |   |   `-- tmp
+    |   |-- exp_1261
+    |   `-- kristal_24-2
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_kristal_24-2_ccd.sum
+    |       `-- tmp
+    |-- PNP-11-a2
+    |   |-- PNP-11-a2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-11-a2_ccd.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-11-a2_ccd.sum
+    |   `-- tmp
+    |-- PNP-11-b6
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-11-b6_ccd.sum
+    |   `-- tmp
+    |-- PNP-11-c4
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pnp-11-c4
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pnp-11-c4_ccd.sum
+    |   |   |-- pnp-11-c4_red.sum
+    |   |   |-- pre_pnp-11-c4_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- pnp-11-c4_red.sum
+    |   |   `-- tmp
+    |   |-- pre_PNP-11-c4_ccd.sum
+    |   `-- tmp
+    |-- PNP-15-b5
+    |   |-- PNP-15-b5_ccd.sum
+    |   |-- PNP-15-b5_red.sum
+    |   |-- datared_only_1_run_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-15-b5_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       |-- PNP-15-b5_red.sum
+    |   |       `-- datared_only_1_run_red.sum
+    |   `-- tmp
+    |-- PNP-16-c5
+    |   |-- exp_1133
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1133_ccd.sum
+    |   |   `-- tmp
+    |   |-- exp_1134
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1134_ccd.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-16-c5_ccd.sum
+    |   `-- tmp
+    |-- PNP-7-c6
+    |   |-- distance_80_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_distance_80_2_ccd.sum
+    |   |   `-- tmp
+    |   |-- distance_80mm
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_distance_80mm_ccd.sum
+    |   |   |-- pre_distance_80mm_red.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_PNP-7-c6_ccd.sum
+    |   |-- pre_PNP-7-c6_red.sum
+    |   `-- tmp
+    |-- PNP-R24A-ph7
+    |   |-- PNP-24-a4_uzorak_1
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-24-a4_uzorak_1_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-24-a4_uzorak_2
+    |   |   |-- ServiceTue-Aug-31-15-57-37-2010
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-24-a4_uzorak_2_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-24-a5_no_cryo
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-24-a5_no_cryo_ccd.sum
+    |   |   `-- tmp
+    |   |-- PNP-24-a5_uzorak_1
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_PNP-24-a5_uzorak_1_ccd.sum
+    |   |   `-- tmp
+    |   `-- PNP-24-a5_uzorak_2
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_PNP-24-a5_uzorak_2_ccd.sum
+    |       `-- tmp
+    |-- SAHH
+    |   `-- cryo_screen
+    |       |-- A10
+    |       |   |-- expinfo
+    |       |   |-- frames
+    |       |   |-- log
+    |       |   |-- plots_dc
+    |       |   |-- plots_red
+    |       |   |-- pre_A10_ccd.sum
+    |       |   `-- tmp
+    |       |-- B3
+    |       |   |-- expinfo
+    |       |   |-- frames
+    |       |   |-- log
+    |       |   |-- plots_dc
+    |       |   |-- plots_red
+    |       |   |-- pre_B3_ccd.sum
+    |       |   `-- tmp
+    |       `-- F1
+    |           |-- expinfo
+    |           |-- frames
+    |           |-- log
+    |           |-- plots_dc
+    |           |-- plots_red
+    |           |-- pre_F1_ccd.sum
+    |           `-- tmp
+    |-- SR-I1-b2
+    |   |-- SR-I1-b2_ccd.sum
+    |   |-- SR-I1-b2_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_SR-I1-b2_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- SR-I1-b2_red.sum
+    |   `-- tmp
+    |-- SSBm
+    |   |-- CP100_zamrznuti
+    |   |   |-- Sm-2
+    |   |   `-- exp_968
+    |   |       |-- expinfo
+    |   |       |-- frames
+    |   |       |-- log
+    |   |       |-- plots_dc
+    |   |       |-- plots_red
+    |   |       |-- pre_exp_968_ccd.sum
+    |   |       `-- tmp
+    |   |-- SSBm-dT35-5-b6
+    |   |   `-- movie
+    |   |-- exp_964
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_964_ccd.sum
+    |   |   `-- tmp
+    |   |-- exp_968
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_968_ccd.sum
+    |   |   `-- tmp
+    |   |-- kristal1
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_kristal1_ccd.sum
+    |   |   `-- tmp
+    |   |-- kristal2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_kristal2_ccd.sum
+    |   |   `-- tmp
+    |   |-- kristal3
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_kristal3_ccd.sum
+    |   |   `-- tmp
+    |   |-- kristal4
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_kristal4_ccd.sum
+    |   |   `-- tmp
+    |   |-- kristal5
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- kristal5_ccd.sum
+    |   |   |-- kristal5_red.sum
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_kristal5_ccd.sum
+    |   |   `-- tmp
+    |   `-- kristal6
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- kristal6_ccd.sum
+    |       |-- kristal6_red.sum
+    |       |-- log
+    |       |-- movie
+    |       |-- odbmp
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_kristal6_ccd.sum
+    |       |-- struct
+    |       |   `-- tmp
+    |       |       `-- kristal6_red.sum
+    |       `-- tmp
+    |-- SSBm_test_is_it_protein
+    |   `-- movie
+    |-- TesA
+    |   |-- frames
+    |   |-- log
+    |   |-- pre_TesA.sum
+    |   `-- tmp
+    |-- br-5-c4
+    |   |-- exp_1114
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1114_ccd.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_br-5-c4_ccd.sum
+    |   `-- tmp
+    |-- dzolic
+    |   |-- dzolic_ccd.sum
+    |   |-- dzolic_red.sum
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_dzolic_ccd.sum
+    |   |-- struct
+    |   |   `-- tmp
+    |   |       `-- dzolic_red.sum
+    |   `-- tmp
+    |-- dzolic2
+    |   |-- exp_1170
+    |   |   |-- exp_1170_ccd.sum
+    |   |   |-- exp_1170_red.sum
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_exp_1170_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- exp_1170_red.sum
+    |   |   `-- tmp
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_dzolic2_ccd.sum
+    |   `-- tmp
+    |-- exp_1044
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_exp_1044_ccd.sum
+    |   `-- tmp
+    |-- exp_1045
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_exp_1045_ccd.sum
+    |   `-- tmp
+    |-- exp_1079
+    |-- exp_1131
+    |-- exp_1167
+    |-- exp_1364
+    |-- exp_961
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_exp_961_ccd.sum
+    |   `-- tmp
+    |-- lsnk
+    |   |-- lsnk81
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk81_ccd.sum
+    |   |   |-- lsnk81_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk81_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk81_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk81_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk81_2_ccd.sum
+    |   |   |-- lsnk81_2_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk81_2_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk81_2_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk82
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk82_ccd.sum
+    |   |   |-- lsnk82_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk82_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk82_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk82_1
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk82_1_ccd.sum
+    |   |   |-- lsnk82_1_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk82_1_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk82_1_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk84
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk84_ccd.sum
+    |   |   `-- tmp
+    |   |-- lsnk85
+    |   |   |-- exp_1079
+    |   |   |   |-- exp_1079_ccd.sum
+    |   |   |   |-- exp_1079_red.sum
+    |   |   |   |-- expinfo
+    |   |   |   |-- frames
+    |   |   |   |-- log
+    |   |   |   |-- movie
+    |   |   |   |-- plots_dc
+    |   |   |   |-- plots_red
+    |   |   |   |-- pre_exp_1079_ccd.sum
+    |   |   |   |-- struct
+    |   |   |   |   `-- tmp
+    |   |   |   |       `-- exp_1079_red.sum
+    |   |   |   `-- tmp
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk85_ccd.sum
+    |   |   |-- lsnk85_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk85_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk85_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk85_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk85_2_ccd.sum
+    |   |   |-- lsnk85_2_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk85_2_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk85_2_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk85_second
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk85_2_second_ccd.sum
+    |   |   |-- lsnk85_2_second_red.sum
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk85_2_second_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk86
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk86_ccd.sum
+    |   |   `-- tmp
+    |   |-- lsnk86_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk86_2_ccd.sum
+    |   |   `-- tmp
+    |   |-- lsnk87
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk87_ccd.sum
+    |   |   |-- lsnk87_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk87_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk87_red.sum
+    |   |   `-- tmp
+    |   |-- lsnk87_2
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk87_2_ccd.sum
+    |   |   `-- tmp
+    |   |-- lsnk87_3
+    |   |   |-- expinfo
+    |   |   |-- frames
+    |   |   |-- log
+    |   |   |-- lsnk87_3_ccd.sum
+    |   |   |-- lsnk87_3_red.sum
+    |   |   |-- movie
+    |   |   |-- plots_dc
+    |   |   |-- plots_red
+    |   |   |-- pre_lsnk87_3_ccd.sum
+    |   |   |-- struct
+    |   |   |   `-- tmp
+    |   |   |       `-- lsnk87_3_red.sum
+    |   |   `-- tmp
+    |   `-- vesna-rec-7-NO3
+    |       |-- expinfo
+    |       |-- frames
+    |       |-- log
+    |       |-- plots_dc
+    |       |-- plots_red
+    |       |-- pre_vesna-rec-7-NO3_ccd.sum
+    |       `-- tmp
+    |-- lsnk53_novi
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- movie
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   |-- pre_lsnk53_novi_ccd.sum
+    |   `-- tmp
+    |-- manda-3-D12
+    |   |-- expinfo
+    |   |-- frames
+    |   |-- log
+    |   |-- plots_dc
+    |   |-- plots_red
+    |   `-- tmp
+    `-- zdz-11-037
+        |-- expinfo
+        |-- frames
+        |-- log
+        |-- movie
+        |-- plots_dc
+        |-- plots_red
+        |-- pre_zdz-11-037_ccd.sum
+        |-- report
+        |   |-- html
+        |   `-- pic
+        |-- struct
+        |   `-- tmp
+        |       `-- zdz-11-037_red.sum
+        |-- tmp
+        |-- zdz-11-037_ccd.sum
+        `-- zdz-11-037_red.sum
+
+5641 directories, 1883 files

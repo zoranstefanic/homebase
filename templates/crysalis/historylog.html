@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}History log{% endblock %}
+
+{% block content %}
+	<div id="main">
+		<h1>Crysalis history log</h1>
+		<table>
+			<tr>
+			<th>date</th>
+			<th>since</th>
+			<th>folder</th>
+			<th>duration</th>
+			</tr>
+		{% for dc in dcs %}
+			<tr>
+			<td>{{ dc.0 }}</td>
+			<td>{{ dc.0|timesince }}</td>
+			<td>{{ dc.1 }}</td>
+			<td>{{ dc.2 }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+{% endblock %}

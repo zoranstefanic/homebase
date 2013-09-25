@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Experiments for | {{ month|date:"F" }}{% endblock %}
+
+{% block content %}
+<h1>{{ month|date:"F Y" }} archive</h1>
+
+<div id="main">
+{% for object in object_list %}
+<p class="small date">{{ object.start|date:"F j, Y" }}</p>
+<a href="{{ object.get_absolute_url }}"><img class="small" src="{{ object.img_url }}" alt=""></a>
+<h2><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></h2>
+{% endfor %}
+</div>
+
+{% endblock %}

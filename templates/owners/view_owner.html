@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Customer {{ owner.name }}{% endblock %}
+
+{% block content %}
+<div id="main">
+<p> <a href='..'>back</a>!
+	<h1> {{ owner.name }} </h1>
+		<table border=1px>
+			<tr> <td><b>Name</b></td> <td>{{ owner.name }}</td> </tr>
+			<tr> <td><b>telephone</b></td> <td>{{ owner.telephone }}</td> </tr>
+			<tr> <td><b>lab</b></td> <td>{{ owner.lab }}</td> </tr>
+			<tr> <td><b>institution</b></td> <td>{{ owner.institution }}</td> </tr>
+			<tr> <td><b>address</b></td> <td>{{ owner.address }}</td> </tr>
+			<tr> <td><b>e_mail</b></td> <td>{{ owner.e_mail }}</td> </tr>
+		</table>
+	<h1> Samples for this owner :</h1>
+	{% for sample in owner.samples.all %}
+	<a href="/samples/{{sample.id}}/"><img src="/media/samples/{{sample.id}}/sketch.png"></img></a>
+	<a href="/samples/{{sample.id}}/">{{sample.label}}</a><br>
+	{% endfor %}
+</div>
+
+{% endblock %}

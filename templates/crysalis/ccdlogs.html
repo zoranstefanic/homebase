@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}List of crysalis ccd log files{% endblock %}
+
+{% block content %}
+	<div id="main">
+		<h1>Crysalis ccd log files</h1>
+		<table>
+			<tr>
+			<th>ccd_log</th>
+			<th>date</th>
+			<th>time since</th>
+			<th>last modified</th>
+			</tr>
+		{% for log in ccds %}
+			<tr>
+			<td><a href='./{{ log }}'>{{ log }}</a></td>
+			<td>{{ log.date }}</td>
+			<td>{{ log.date|timesince }}</td>
+			<td>{{ log.modified|timesince }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}New sample form{% endblock %}
+{% block extrahead %}
+<script LANGUAGE="JavaScript1.1" SRC="/media/js/marvin/marvin.js"></script>
+			<script LANGUAGE="JavaScript1.1">
+				function clean2D() {
+					if(document.MSketch != null) {
+						document.MSketch.clean2D();
+					}
+				}
+				function post_mol() {
+					var m = document.MSketch.getMol("mrv");
+					var cf = document.MSketch.getMolFormula();
+					var mass = document.MSketch.getMolMass();
+					var atomcount = document.MSketch.getAtomCount();
+					if(m != null) {
+						document.SampleForm.mol.value = m;
+						document.SampleForm.formula.value = cf;
+						document.SampleForm.mass.value = mass;
+						document.SampleForm.atomcount.value = atomcount;
+						document.SampleForm.submit();
+					} else {
+						alert("No molecule to post.");
+					}
+					return;
+				}
+			</script>
+{% endblock %}
+{% block content %}
+		<div id="main">
+		<h1>New sample form</h1>
+		<form>
+			<script>
+				msketch_name = "MSketch";
+				msketch_begin("/media/js/marvin",600,600); // arguments: codebase, width, height
+				msketch_end();
+			</script>
+			<input TYPE=BUTTON VALUE="Clean 2D" onClick="clean2D()">
+		</form>
+		<div class="sampleform">
+		<form action='.' name="SampleForm" method="post"> {% csrf_token %}
+			{{ form.as_p }}
+			<input type=hidden name="mol" value="" >
+			<input type=hidden name="formula" value="" >
+			<input type=hidden name="mass" value="" >
+			<input type=hidden name="atomcount" value="" >
+			<input type=button value="save" onClick="post_mol()">
+		</form>
+		</div>
+	</div>
+{% endblock %}

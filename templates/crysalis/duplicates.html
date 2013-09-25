@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}List of datasets{% endblock %}
+
+{% block content %}
+	<div id="main">
+		{% for p in page_range %}
+				<a href="./?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% if datasets %}
+		<table>
+		{% for  name,dataset in datasets.items %}
+		<td>{{ name }} </td>
+		<td>{% for d in dataset %}<li><a href={{d.get_absolute_url}}>{{d.name}}</a></li>{%endfor%}</td>
+		</tr>
+		{% endfor %}
+		</table>
+		{% for p in page_range %}
+				<a href="?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% else %}
+		<p>No datasets found!</p>
+	{% endif %}
+	</div>
+{% endblock %}

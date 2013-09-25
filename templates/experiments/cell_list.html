@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load colorramp %}
+{% block extrahead %}
+<script type="text/javascript">
+ $(document).ready(function(){
+   $("#hide_exp").click(function(event){
+     $(".pre-exp-only,.other,").fadeToggle("slow");
+   });
+ });
+</script>
+{% endblock %}
+
+{% block title %}List of cells{% endblock %}
+
+{% block content %}
+	<div id="main">
+		{% for p in page_range %}
+				<a href="./?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% if object_list %}
+	<h1>Total number: {{ paginator.count }}</h1>
+            <table>
+			{% for cell in object_list %}
+            <tr>
+            <td><font color="purple"> {{ cell.7 }} </td>
+            <td><font color={{ cell.0|colorramp:"50"}}> {{ cell.0 }} </td>
+            <td><font color={{ cell.1|colorramp:"50"}}> {{ cell.1 }} </td>
+            <td><font color={{ cell.2|colorramp:"50"}}> {{ cell.2 }} </td>
+            <td>{{ cell.3}}</td>
+            <td>{{ cell.4}}</td>
+            <td>{{ cell.5}}</td>
+            <td>{{ cell.6}}</td>
+            </tr>
+			{% endfor %}
+            </table>
+		{% for p in page_range %}
+				<a href="?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% else %}
+		<p>No cells found!</p>
+	{% endif %}
+	</div>
+{% endblock %}

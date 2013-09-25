@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="/media/logo.png">
+	<link rel="stylesheet" href="/media/css/style.css" type="text/css" />
+	<script src="/media/js/jquery.js" type="text/javascript"></script>
+	<script src="/media/js/jquery.flot.js" type="text/javascript"></script>
+	<script src="/media/js/dropdown/dropdown.js" type="text/javascript"></script>
+	{% block extrahead %}{% endblock %}
+	<title>{% block title %}Homebase{% endblock %}</title>
+</head>
+<body>
+		{% include "header.html" %}
+		{% include "topmenu.html" %}
+		{% include "navigation.html" %}
+		{% block content %} {% endblock %}
+		{% include "rightmenu.html" %}
+	<div id="footer"> <p>Design Zoran :)</p></div>	
+</body>
+</html>

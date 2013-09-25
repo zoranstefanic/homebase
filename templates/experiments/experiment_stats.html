@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ exp.name }}{% endblock %}
+{% block content %}
+	<div id="main">
+	<h1>{{ exp.name }}</h1>
+		<img src="/media{{exp.get_absolute_url}}/animated.gif">
+		{%if exp.has_movies %}
+			<a href="{{ exp.get_absolute_url }}/frames"><img class="movie_jpg" src=/media/movie.jpg></img></a>
+		{%endif%}
+		<div class="ini_links">
+		<li><a href ="{{ exp.get_absolute_url }}">back to experiment</a>
+		</div>
+		<div class="ini_links">
+		<li><a href ='../rint'>rint</a>
+		<li><a href ='../cover'>cover</a>
+		<li><a href ='../absscale'>absscale</a>
+		<li><a href ='../latticeperrun'>latticeperrun</a>
+		<li><a href ='../profiles'>profiles</a>
+		<li><a href ='../resolutionstats'>resolutionstats</a>
+		<li><a href ='../predictaccuracyvsframe'>predictaccuracyvsframe</a>
+		</div>
+		{% for k in d.keys %}
+				<h3>{{ k }} </h3>
+	    <div id="placeholder{{k}}" style="width:600px;height:500px;"></div>
+		{% endfor %}
+		{% for k,v in d.items %}
+				<script id="source" language="javascript" type="text/javascript">
+	$(function () {
+			$.plot($("#placeholder{{k}}"),[ {label:"{{k}}", data:{{ v|safe }}, points: {show:true}, lines: {show:true}  } ] );
+				});
+				</script>
+		{% endfor %}
+	</div>
+{% endblock %}

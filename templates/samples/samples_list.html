@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<script>
+$(document).ready(function(){
+$(function() {
+    $("img")
+        .mouseover(function() { 
+            var src = $(this).attr("src").replace("sketch.png","sketch_big.png");
+            $(this).attr("src", src);
+        })
+        .mouseout(function() {
+            var src = $(this).attr("src").replace("sketch_big.png","sketch.png");
+            $(this).attr("src", src);
+        });
+});
+
+							});
+</script>
+{% endblock %}
+{% block title %}List of samples{% endblock %}
+
+{% block content %}
+	<div id="main">
+		<h1>All samples</h1>
+	{% if object_list %}
+		<table>
+			<tr>
+			<th>label</th>
+			<th>img</th>
+		{% if user.is_authenticated %}
+			<th>edit</th>
+		{% endif %}
+			</tr>
+		{% for sample in object_list %}
+			{%comment%}<tr class="{% cycle 'even' 'odd' %}">{%endcomment%}
+			<tr>
+			<td><a href="./{{sample.id}}">{{ sample.label }}</a></td>
+			<td><a href="./{{sample.id}}"><img src="/media/samples/{{sample.id}}/sketch.png"></a></td>
+		{% if user.is_authenticated %}
+			<td><a href="./{{sample.id}}/edit/">Edit</a></td>
+		{% endif %}
+			</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<p>No samples found!</p>
+	{% endif %}
+	</div>
+{% endblock %}

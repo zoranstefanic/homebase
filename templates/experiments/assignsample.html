@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}New sample form{% endblock %}
+
+{% block content %}
+	<div id="main">
+		<h1>Assign sample to experiment {{exp}}</h1>
+		<form action='.' name="SampleAssignForm" method="post">{% csrf_token %}
+		<table>
+			<tr>
+			<th>label</th>
+			<th>sample</th>
+			<th></th>
+			</tr>
+		{% for sample in samples %}
+			<tr>
+			<td><a href="/samples/{{ sample.id }}">{{ sample.label }}</a></td>
+			<td><img src="/media/samples/{{sample.id}}/sketch.png"></img></td>
+			<td><input type="radio" name="sample_id" value={{ sample.id }}></td>
+			</tr>
+		{% endfor %}
+		</table>
+			<input TYPE=SUBMIT VALUE="assign" action='.'> 
+		</form>
+		</div>
+{% endblock %}

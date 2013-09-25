@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block content %}
+	<div id="main">
+<div><a href= "../../{{ year|add:"-1" }}">{{ year|add:"-1" }}</a> | <a href= "../../{{ year|add:"1" }}"></a>{{ year|add:"1" }}</div>
+<div><a href= "../{{ month|add:"-1" }}">&lt;&lt; Prev</a> <a href= "../{{ month|add:"1" }}">Next &gt;&gt;</a></div>
+		{{ calendar }}
+	</div>
+{% endblock %}

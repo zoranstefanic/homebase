@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+	<div id="main">
+	<a href="{{ current_exp.get_absolute_url }}">{{ current_exp.name }}</a>
+	<a href="{{ current_exp.get_absolute_url }}">{{ current_exp.name }}</a>
+	<a href="{{ current_exp.get_absolute_url }}">{{ current_exp.name }}</a>
+	</div>
+{% endblock %}

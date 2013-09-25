@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}New owner form{% endblock %}
+
+{% block content %}
+		<form action='.' name="OwnerForm" method="post">
+			{{ form.as_p }}
+			<input TYPE=BUTTON VALUE="save" onClick="submit()">
+		</form>
+		</div>
+{% endblock %}

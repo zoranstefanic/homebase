@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Sample {{ sample.label }}{% endblock %}
+
+{% block content %}
+<div id="main">
+<p> <a href='..'>back</a>!
+	<h1>{{ sample.label }}</h1>
+		<div class="sample">
+		<img src="/media/samples/{{sample.id}}/sketch.png/"></img>
+		<table border=1px>
+			<tr> <td><b>Name</b></td> <td>{{ sample.label }}</td> </tr>
+			<tr> <td><b>Formula</b></td> <td>{{ sample.formula }}</td> </tr>
+			<tr> <td><b>Solvent</b> </td> <td>{{ sample.solvents }}</td> </tr>
+			<tr> <td><b>Mass</b> </td> <td>{{ sample.mass }}</td> </tr>
+			<tr> <td><b>Atom count</b> </td> <td>{{ sample.atomcount }}</td> </tr>
+			<tr> <td><b>Sample owner</b> </td> <td>{{ sample.owner }}</td> </tr>
+			<tr> <td><b>Description</b> </td> <td>{{ sample.description}}</td> </tr>
+			<tr> <td><b>Code</b> </td> <td>{{ sample.code}}</td> </tr>
+			<tr> <td><b>Status</b> </td> <td>{{ sample.get_status_display }}</td> </tr>
+			<tr> <td><b>Added by</b> </td> <td>{{ sample.added_by }}</td> </tr>
+		</table>
+		<table border=1px>
+			<tr> <td><b>Sample needs liquid nitrogen?</b></td> <td>{{ sample.low_temp }}</td> </tr>
+			<tr> <td><b>Needs absolute configuration?</b></td> <td>{{ sample.abs_conf }}</td> </tr>
+		</table>
+		</div>
+<div>
+		{% if sample.experiment_set.all %}
+		<h1>Experiments for this sample: </h1>
+		<ol>
+		{% for exp in sample.experiment_set.all %}
+			<li><a href="/experiments/{{exp.id}}"> <b>{{ exp.name }}</b> </a>
+		{% endfor %}
+		</ol>
+		{% else %}
+		<h1 style='color:red'>Currently no experiments for this sample!!</h1>
+		{% endif %}
+</div>
+</div>
+{% endblock %}

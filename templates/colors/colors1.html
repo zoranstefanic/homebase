@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load webdesign %}
+{% block extrahead %}
+<style>
+.full-exp {
+background: {{ list.1 }};
+}
+.pre-exp-only {
+background: {{ list.2 }};
+}
+#main {
+background: white;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+	<div id="main">
+	{%for c in list %}
+	<div class="progressbar" style='width: 500px; height:50px; background: {{c}};'><div class="progressbar1" style='height: 50px; width:120px; background: yellow ; '>{{c}}</div></div>
+	{%endfor%}
+	</div>
+{% endblock %} 

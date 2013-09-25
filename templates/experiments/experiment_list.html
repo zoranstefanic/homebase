@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script type="text/javascript">
+ $(document).ready(function(){
+   $("#hide_exp").click(function(event){
+     $(".pre,.other,").fadeToggle("slow");
+   });
+ });
+</script>
+{% endblock %}
+
+{% block title %}List of experiments{% endblock %}
+
+{% block content %}
+	<div id="main">
+		{% for p in page_range %}
+				<a href="./?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% if object_list %}
+		{% for experiment in object_list %}
+		<div id="{{experiment.id}} "class="{{experiment.type|slugify}}">
+		<a href="{{ experiment.get_absolute_url }}"><img src="{{experiment.img_url}}" alt=""></a>
+		{%if experiment.has_movies %}
+			<a href="{{ experiment.get_absolute_url }}/frames"><img class="movie_jpg" src=/media/movie.jpg></img></a>
+		{%endif%}
+		{%if experiment.sample %}
+			<a href=/samples/{{ experiment.sample.id }}><img class="small" src=/media/samples/{{ experiment.sample.id }}/sketch.png></img></a>
+			<a class="reassign" href=/experiments/assignsample/{{ experiment.id }}>Reassign different sample!</a> 
+		{%else%}
+			<a class="assign" href=/experiments/assignsample/{{ experiment.id }}>Assign sample!</a> 
+		{% endif %}
+		<h3><a href="{{ experiment.get_absolute_url }}">{{experiment.name}}</a></h3>
+		<p class="comment">{{ experiment.comment }}</p>
+		<p>{{ experiment.start|date:"jS F Y H:i"}} ({{ experiment.start|timesince }} ago)
+		<b>{{ experiment.duration.0 }}</b> day{{experiment.duration.0|pluralize}}
+		<b>{{ experiment.duration.1 }}</b> hour{{experiment.duration.1|pluralize}}
+		<b>{{ experiment.duration.2 }}</b> minute{{experiment.duration.2|pluralize}} </p>
+		{{ experiment.user }}
+		</div>
+		{% endfor %}
+		{% for p in page_range %}
+				<a href="?page={{p}}">{{p}}</a> |
+		{% endfor %}
+	{% else %}
+		<p>No experiments found!</p>
+	{% endif %}
+	</div>
+{% endblock %}
