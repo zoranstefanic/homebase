@@ -13,7 +13,7 @@ TIMEFMT = '%a %b %d %H:%M:%S %Y'
 LOGTIMEFMT = '%a-%b-%d-%H-%M-%S-%Y'
 
 regex = {
-#		'LOGSTRT':		re.compile(r"CCD HISTORY LOG started at (?P<time>%s)" %DATE_TIME),
+	#		'LOGSTRT':		re.compile(r"CCD HISTORY LOG started at (?P<time>%s)" %DATE_TIME),
 			'DCPREINFO':	re.compile(r"DC PRE INFO: Experiment C:(?P<folder>.+)?\\pre_(?P<name>.+)\.run" ),
 			'RUNLIST':		re.compile(r"Run list: (?P<folder>.+)\\(?P<pre>pre_)?(?P<name>.+)\r" ),
 			'DCSTRT':		re.compile(r"DC (?P<sr>[SR]) \"(?P<folder>.+)\\(?P<pre>pre_)?(?P<name>.+)\"" ),
@@ -77,7 +77,7 @@ class LogDir(models.Model):
 		"""
 		Goes through the list of log files and creates new ones
 		if not existing
-		"""
+			"""
 		for f in self.logs:
 			try:
 				lf = LogFile.objects.get(name=f)
@@ -139,41 +139,52 @@ class LogFile(models.Model):
 		self.ln = 0  # Current line number
 		self.patterns = regex
 		self.current = None
-		self.datasets = LogDataset.objects.none()
-		self.interval = 20 # sleep interval
+		# self.datasets = LogDataset.objects.none()
+		self.datasets = []	
+		self.interval = 20 # sleep interval	
 		self.save()
 
 	def create_datasets(self):
-		while True:
-			line = self.nextline()
-			if line:
-				if self.matches(line,'DCSTRT','POWDER','CALIBR'):	
-					if self.current:							
-						self.current.update(line)						
-						self.current.save()						
-						self.current = LogDataset()
-						self.current.create(line,self)						
-					if not self.current:							
-						self.current = LogDataset()
-						self.current.create(line,self)						
-						self.current.update(line)						
-				elif self.matches(line,'USRSTOP','FINISH'):			
-					if self.current:							
-						self.current.update(line)						
-						self.current.save()						
-					if not self.current:							
-						print 'None stopped at %s' % line
-					self.current = None						
-				else:												
-					if self.current:							
-						self.current.update(line)				
-					if not self.current:							
-						pass
-			else:
-				if self.current:
-					print 'Log closed with dataset on'
-					self.current.save()
-				break
+			while True:
+				line = self.nextline()
+				if line:
+					if self.matches(line,'DCSTRT','POWDER','CALIBR'):	
+						if self.current:							
+							self.current.update(line)						
+							try:
+								self.current.save()						
+							except:
+								print 'Could not save at %s' %line
+							self.current = LogDataset()
+							self.current.create(line,self)						
+						if not self.current:							
+							self.current = LogDataset()
+							self.current.create(line,self)						
+							self.current.update(line)						
+					elif self.matches(line,'USRSTOP','FINISH'):			
+						if self.current:							
+							self.current.update(line)						
+							try:
+								self.current.save()						
+							except:
+								print 'Could not save at %s' %line
+							self.datasets.append(self.current)
+						if not self.current:							
+							print 'None stopped at %s' % line
+						self.current = None						
+					else:												
+						if self.current:							
+							self.current.update(line)				
+						if not self.current:							
+							pass
+				else:
+					if self.current:
+						print 'Log closed with dataset on'
+						try:
+							self.current.save()						
+						except:
+							print 'Could not save at %s' %line
+					break
 
 	def watch1(self):
 		while True:
@@ -269,8 +280,8 @@ class LogFile(models.Model):
 class LogDataset(models.Model):
 	"""The main model describing one particular experiment """
 	name			= models.CharField(max_length=50)
-	folder			= models.CharField('Original folder', help_text='Directory where original files are collected',max_length=300)
-	local			= models.CharField('Local folder', help_text='Directory where files are rsynced',max_length=300)
+	folder			= models.CharField('Original folder', help_text='Directory where original files are collected',max_length=300, null=True)
+	local			= models.CharField('Local folder', help_text='Directory where files are rsynced',max_length=300,null=True)
 	remote			= models.CharField('Mount of original dir', help_text='Mount of remote dir localy',max_length=300)
 	type			= models.CharField(max_length=10)
 	pre				= models.CharField(max_length=10)
@@ -477,12 +488,12 @@ def test_all_datasets():
 	success = []
 	fail =	[]
 	ld = LogDir()
-	ld.create()
+	ld.update()
 	for ccd in ld.logs:
 		print ccd
 		log = LogFile()
 		log.create(ccd)
-		log.watch1()
+		log.create_datasets()
 		datasets = log.unique_datasets()
 		datasets.reverse()
 		for ds in datasets:
@@ -490,8 +501,8 @@ def test_all_datasets():
 				success.append(ds)
 			if not ds.valid():
 				fail.append(ds)
-	group_datasets_by(success,'folder')
-	group_datasets_by(success,'name')
+	# group_datasets_by(success,'folder')
+	# group_datasets_by(success,'name')
 	return success, fail
 
 if __name__ == '__main__':

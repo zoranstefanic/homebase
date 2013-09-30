@@ -1,8 +1,30 @@
+/* Palette color codes */
+/* Feel free to copy&paste color codes to your application */
+
+.primary-1 { background-color: #386FDD }
+.primary-2 { background-color: #466BB4 }
+.primary-3 { background-color: #1A48A3 }
+.primary-4 { background-color: #90B4FA }
+.primary-5 { background-color: #D0DEFA }
+
+.secondary-a-1 { background-color: #F1FE2B }
+.secondary-a-2 { background-color: #C6CF43 }
+.secondary-a-3 { background-color: #B1BC14 }
+.secondary-a-4 { background-color: #F7FF86 }
+.secondary-a-5 { background-color: #FCFFCF }
+
+.secondary-b-1 { background-color: #F82A52 }
+.secondary-b-2 { background-color: #CA415C }
+.secondary-b-3 { background-color: #B71334 }
+.secondary-b-4 { background-color: #FE869D }
+.secondary-b-5 { background-color: #FECFD8 }
+
+/* end */
 body {
 	margin: 0;
 	padding: 10px;
-	background: url(/media/bg.png);
-	background-repeat: repeat;
+	background: #D0DEFA;
+	/*background: url(/media/bgrounds/bg.jpg);*/
 	/*	background: url(/media/diffraction.jpg);*/
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -72,8 +94,8 @@ a:hover {
 #header {
 	height:80px;
 	padding: 1px 5px 1px 5px;
-	background: #90B4FA;
-	/*background: url(/media/logo.png);*/
+	background: #90B4FA
+	background: url(/media/header.jpg);
 	}
 
 #header img {
@@ -87,8 +109,8 @@ z-index:100;
 position:absolute;
 left:300px;
 top:30px;
-color:white;
-opacity:0.8;
+color:#F82A52;
+opacity:0.6;
 }
 
 /* Top menu */
@@ -208,12 +230,11 @@ opacity:0.8;
 /* Content */
 #main { 
 	float: left;
-	background: #d23445;
-	color: white;
+	background: #D0DEFA;
 	padding:5px; 
 	margin:1px; 
 	width: 60%; 
-	/*box-shadow: 5px 5px 5px #33f;*/
+	box-shadow: 5px 5px 5px #33f;
 	} 
 
 /* Footer */
@@ -451,4 +472,4 @@ h2{
 	background-color: #FECFD8;
 	}
 
-
+@import bootstrap.css
