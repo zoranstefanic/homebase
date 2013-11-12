@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Lo",
+				"LogFile"
+			],
+			[
+				"cre",
+				"create_datasets"
+			],
+			[
 				"t",
 				"type"
 			],
@@ -95,6 +103,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "crysalis/models.py",
+			"settings":
+			{
+				"buffer_size": 16619,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -103,12 +119,16 @@
 		"selected_items":
 		[
 			[
-				"s",
-				"Set Syntax: CSS"
+				"to",
+				"View: Toggle Tabs"
 			],
 			[
 				"",
-				"Emmet: Rename Tag"
+				"View: Toggle Tabs"
+			],
+			[
+				"s",
+				"Set Syntax: CSS"
 			],
 			[
 				"css",
@@ -119,7 +139,7 @@
 				"Set Syntax: YAML"
 			]
 		],
-		"width": 575.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -136,12 +156,17 @@
 	},
 	"file_history":
 	[
+		"/home/zoran/django-projects/homebase/templates/base.html",
+		"/home/zoran/django-projects/homebase/media/css/style.css",
+		"/home/zoran/django-projects/homebase/templates/header.html",
+		"/home/zoran/django-projects/homebase/crysalis/paths.py",
+		"/home/zoran/django-projects/homebase/templates/crysalis/current.html",
+		"/home/zoran/django-projects/homebase/crysalis/views.py",
+		"/home/zoran/django-projects/homebase/templates/crysalis/viewlog.html",
+		"/home/zoran/django-projects/homebase/templates/crysalis/dataset_list.html",
 		"/home/zoran/django-projects/homebase/templates/navbar.html",
 		"/home/zoran/django-projects/homebase/templates/topmenu.html",
 		"/home/zoran/django-projects/homebase/media/css/style.css~",
-		"/home/zoran/django-projects/homebase/media/css/style.css",
-		"/home/zoran/django-projects/homebase/templates/base.html",
-		"/home/zoran/django-projects/homebase/templates/header.html",
 		"/home/zoran/django-projects/homebase/templates/homepage.html",
 		"/home/zoran/django-projects/homebase/templates/site_base.html",
 		"/home/zoran/django-projects/homebase/crysalis/synchronize.py",
@@ -214,6 +239,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"main",
+			"remote_mnt_to_local",
+			"win_to_remote_mnt",
+			"win_to_local",
+			"LOG_FILE_DIR",
 			"sr-only",
 			"icon",
 			" %}\"",
@@ -280,8 +310,36 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "crysalis/models.py",
+					"settings":
+					{
+						"buffer_size": 16619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6934,
+								6934
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3888.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -327,6 +385,42 @@
 		"selected_items":
 		[
 			[
+				"curr",
+				"templates/crysalis/current.html"
+			],
+			[
+				"vie",
+				"crysalis/views.py"
+			],
+			[
+				"css",
+				"media/css/style.css"
+			],
+			[
+				"da",
+				"templates/crysalis/dataset_list.html"
+			],
+			[
+				"data",
+				"templates/crysalis/dataset_list.html"
+			],
+			[
+				"pat",
+				"crysalis/paths.py"
+			],
+			[
+				"head",
+				"templates/header.html"
+			],
+			[
+				"sty",
+				"media/css/style.css"
+			],
+			[
+				"bas",
+				"templates/base.html"
+			],
+			[
 				"homep",
 				"templates/homepage.html"
 			],
@@ -357,10 +451,6 @@
 			[
 				"navbar",
 				"/home/zoran/.virtualenvs/ecm29-symposion/lib/python2.7/site-packages/pinax_theme_bootstrap/templates/theme_bootstrap/base.html"
-			],
-			[
-				"css",
-				"/home/zoran/django-projects/ecm29-new/static/css/bootstrap.css"
 			],
 			[
 				"",
@@ -408,7 +498,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 276.0,
+	"side_bar_visible": false,
+	"side_bar_width": 233.0,
 	"status_bar_visible": true
 }

@@ -8,6 +8,7 @@ REMOTE		=	'/mnt/xcalibur'
 REMOTE_MNT	= 	'/mnt/xcalibur/XcaliburData/'	# This is the same directory mount point on the server machine
 SERVICE 	= 	'/mnt/xcalibur/Xcalibur/Service/'	# Service directory 
 LOG_FILE_DIR = 	'/mnt/xcalibur/Xcalibur/log'		#Log file directory
+#LOG_FILE_DIR = 	'/media/usbdisk/xcalibur/Xcalibur/log'		#Log file directory
 
 LOCAL 		= 	'/media/usbdisk/xcalibur/XcaliburData'	# This is a backup directory on the server machine where the data are rsync-ed
 DATA_DIR	=	'XcaliburData'
