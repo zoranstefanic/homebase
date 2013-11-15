@@ -9,6 +9,7 @@ info_dict = {
 urlpatterns = patterns('',
 	(r'^$',experiment_list),
 	(r'^search/$',experiment_search),
+	(r'^getip/$',getip),
 	(r'^cells/$',cell_list),
 	(r'^searchcells/$',experiment_search_cells),
 	(r'^(?P<user>[a-zA-Z]+)/$',experiment_list),

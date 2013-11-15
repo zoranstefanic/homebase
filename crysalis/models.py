@@ -43,32 +43,24 @@ class LogDir(models.Model):
 	checked		= models.DateTimeField(help_text='When was log dir last checked')
 	numlogs		= models.IntegerField(help_text='Number of ccd log files in log directory')
 	
+	# def __init__(self,*args,**kwargs):
+	# 	#self.update()
+	# 	super(LogDir,self).__init__(*args,**kwargs)
+
 	def __unicode__(self):
 		return "%s" %self.directory
 	
-	def update(self):
-		"""
-		Sets a list of log files sorted by time in the log name
-		then the times dir was modified and the last check time
-		"""
-		self.directory = LOG_FILE_DIR
-		self.patt = re.compile(r"crysalispro_ccdLOG(?P<date>[-\w]+).txt")
-		self.logs = self.get_logs()
-		self.last = self.logs[-1]
-		self.numlogs = len(self.logs)
-		self.checked = datetime.now()
-		mtime = os.path.getmtime(self.directory)
-		self.modified = datetime.fromtimestamp(mtime)
-		self.save()
-
 	def check(self):
 		"""
 		Checks wheather any new ccd log files appeared
 		"""
+		self.patt = re.compile(r"crysalispro_ccdLOG(?P<date>[-\w]+).txt")
 		self.checked = datetime.now()
 		mtime = os.path.getmtime(self.directory)
 		self.modified = datetime.fromtimestamp(mtime)
-		if len(self.get_logs())>self.numlogs:
+		self.logs = self.get_logs()
+		self.save()
+		if len(self.logs)>self.numlogs:
 			self.numlogs = len(self.logs)
 			return True
 		return False
