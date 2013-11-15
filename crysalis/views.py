@@ -50,9 +50,9 @@ def ccdlogs(request):
 def current(request):
 	"""Return a list of ccd log files"""
 	ld = LogDir.objects.get(pk = LOG_FILE_DIR)
-	lfs = ld.logfile_set.all()
-	log = lfs.latest('date')
-	log.create(log.name)
+	ld.update()
+	log = LogFile()
+	log.create(ld.last)
 	log.create_datasets()
 	tail = log.as_pre(num=10)
 	#datasets = ccd.unique_datasets()

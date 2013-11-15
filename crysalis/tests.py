@@ -136,6 +136,6 @@ def group_datasets_by(datasets,what):
 		out.write(s+'\n')
 	out.close()
 
-		
+				
 if __name__ == '__main__':
 	test_all_datasets()
