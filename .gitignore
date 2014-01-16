@@ -1,4 +1,5 @@
 # use glob syntax.
+test_data
 *.pyc
 *.swp
 *.swf

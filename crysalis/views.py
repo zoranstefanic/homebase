@@ -38,7 +38,7 @@ def historylog(request):
 
 def ccdlogs(request):
 	"""Return a list of ccd log files"""
-	ld = LogDir()
+	ld = LogDir.objects.get(pk = LOG_FILE_DIR)
 	ld.update()
 	ccds = ld.logfile_set.all()
 	ccds = ccds.order_by('-date')
@@ -52,7 +52,8 @@ def current(request):
 	ld = LogDir.objects.get(pk = LOG_FILE_DIR)
 	ld.update()
 	log = LogFile()
-	log.create(ld.last)
+	last = ld.logs[-1]
+	log.create(last)
 	log.create_datasets()
 	tail = log.as_pre(num=10)
 	#datasets = ccd.unique_datasets()
