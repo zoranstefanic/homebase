@@ -66,8 +66,11 @@ description see the <a href="http://www.chemaxon.com/jchem/doc/user/query_stereo
 Stereochemistry</a> section of the Query guide in JChem Base.)
 <p>
 The relative stereoconfiguration is stored as &quot;<b>r</b>&quot;. 
-The absolute stereoconfiguration is the default, which is not marked.
+If a reaction contains components with absolute and relative stereo the indexes of the fragments with relative configuration is written.  
+The absolute stereoconfiguration is the default, which is not marked. 
 (Absolute stereoconfiguration known also as "Chiral flag" in MDL molfiles. )
+<br>
+Example: "r:2,4,5"
 </p>
 </li>
 
@@ -97,7 +100,8 @@ The following stereochemical group types are stored:
 Atom labels / aliases are written between &quot;<b>$</b>&quot; characters 
 each label is separated by &quot;;&quot; characters.<br>
 Atom values are written after &quot;<b>$_AV:</b>&quot; separated by 
-semicolon characters and closed with &quot;<b>$</b>&quot; tag.
+semicolon characters and closed with &quot;<b>$</b>&quot; tag. 
+Special chacters are <a href="#escaping">escaped.</a>
 </p>
 </li>
 
@@ -127,7 +131,7 @@ the double bond has the representation a1-a2=a3-a4, where <br>
 </UL>
 The CIS double bond indexes are written after &quot;<b>c:</b>&quot;, <br>
 the TRANS double bond indexes are written after &quot;<b>t:</b>&quot;, <br>
-the double bond indexes with UNSPEC flag are written after &quot;<b>u:</b>&quot;.
+the double bond indexes with UNSPEC flag are written after &quot;<b>ctu:</b>&quot;.
 </li>
 
 <li>Fragment level grouping of reactant, agent and product fragments
@@ -274,7 +278,7 @@ atomic coordinates has priority over the SMILES string.
         &quot;<b>SgD:</b>&quot; followed by 
         field name, data value, query operator, unit, tag
         and coordinates in parenthesis if necessary, separated by
-        colon characters. If atomic coordinates are exported (with
+        colon characters.  The field values with special characters are <a href="#escaping">escaped</a>. If atomic coordinates are exported (with
         <b>c</b> option) (-1) is used in the coordinate field
         for data sgroup attached to the atoms.<br>
             Example: &quot;SgD:3,2,1,0:name:data:like:unit:t:(-1)&quot;
@@ -385,9 +389,80 @@ atomic coordinates has priority over the SMILES string.
        </blockquote>
      </p>
 </li>
+<li>
+	MDL Query features
+	<p> Ring bond count (rb), Substitution count (s) and unstaturated atom (u) are exported in the following form:
+	<br>
+	   rb:atomIndex1:value,atomIndex2:value<br>
+	   s:atomIndex1:value,atomIndex2:value<br>
+	   u:atomIndex1,atomIndex2,atomIndex3<br>
+	   Examples: "rb:1:2,2:*,4:2", "u:3,4,5"
+</li>
+<li>
+	Polymer Sgroups <p>
+	
+	Each Sgroup exported after &quot;<b>Sg:</b>&quot; in  fields separated by a colon.   Fields are:
+	<ol>
+	<li>Sgroup type keyword. 
+		Valid keywords are:
+		<table border="1">
+		<tr>
+		<td>Keyword</td><td>Sgroup Type</td></tr>
+		<tr><td> n</td><td> SRU</td></tr>
+		<tr><td>mon</td><td>monomer</td></tr>
+		<tr><td>mer</td><td>mer</td></tr>
+		<tr><td>co</td><td>copolymer</td></tr>
+		<tr><td>xl</td><td>crosslink</td></tr>
+		<tr><td>mod</td><td>modification</td></tr>
+		<tr><td>mix</td><td>mixture</td></tr>
+		<tr><td>f</td><td>formulation</td></tr>
+		<tr><td>any</td><td>anypolimer</td></tr>
+		<tr><td>gen</td><td>generic</td></tr>
+		<tr><td>c</td><td>component</td></tr>
+		<tr><td>grf</td><td>graft</td></tr>
+		<tr><td>alt</td><td>alternating copolymer</td></tr>
+		<tr><td>ran</td><td>random copolymer</td></tr>
+		<tr><td>blk</td><td>block copolymer</td></tr>
+		</table>
+	</li>
+	<li>
+	Atom indexes separated with commas.
+	</li>
+	<li>
+	Subscript of the Sgroup. If the supscript equals the keyword of the Sgroup this field can be empty. <a href="#escaping">Escaped</a> field.
+	</li>
+	<li>
+	Superscript of the Sgroup. In the superscript only connectivity and flip information is allowed. This field can be empty. <a href="#escaping">Escaped</a> field.
+	</li>
+	<li>
+	Head crossing bond indexes. The indexes of bonds that share a common bracket in case of ladder-type polymers. This field can be empty.
+	</li>
+	<li>
+	Tail crossing bond indexes. The indexes of bonds that share a common bracket in case of ladder-type polymers. This field can be empty.
+	</li>
+	<li>
+	 If the <a href=#option_c>c</a>  export option is present then bracket  orientation,  bracket type followed by the coordinates (4 pair, separated with commas). 
+	 Bracket orientation can be s or d (single or double), bracket type can be b,c,r,s for braces, chevrons, round and square, respectively. The brackets are
+	  written between parentheses and separated with semicolons.
+	</li>
+	</ol>
+	A colon is needed after the last non-empty field. <br>
+	If one needs to retain not only the chemically relevant information, but the whole structure (as drawn), then the <a href=#option_c>c</a>  export option
+	should be used. <br>
+	 
+	Examples: <br>
+		CCCC |Sg:gen:0,1,2:|<br>
+		CCCC |Sg:n:0,1,2:3-6:eu|<br>
+		*CC(*)C(*)N* |$star_e;;;star_e;;star_e;;star_e$,Sg:n:6,1,2,4::hh&amp;#44;f:6,0,:4,2,|<br>
+		C1=CC=CC=C1 |c:0,2,4,(-4.62,1.05,;-3.29,.28,;-3.29,-1.27,;-4.62,-2.04,;-5.95,-1.27,;-5.95,.28,),Sg:mon:0,5,4,3,2,1:::::(d,s,-7.03,2.12,-2.21,2.12,-2.21,-3.11,-7.03,-3.11,)|
+		
 </ul>
 <p>
-
+<h4><a class="anchor" name="escaping">Escaping</a></h4>
+In some places special characters are escaped to '&#<i>code</i>' where <i>code</i> 
+is the ASCII code of the special character. <br>
+Not escaped characters in fields of Sgroups and DataSgroups: 'a'-'z', 'A'-'Z', '0'-'9' and '&gt;&lt;\&quot;!@#$%()[]./\\?-+*^_~=' and the space character <br>
+Not escaped characters in atom labels and atom values: 'a'-'z', 'A'-'Z', '0'-'9' and '&gt;&lt;\&quot;!@#%()[]./\\?-+*^_~=,:' and the space character
 <h3><a class="anchor" NAME="ioptions">Import options</a></h3>
 <blockquote>
 <table CELLSPACING=0 CELLPADDING=5 border="0">
@@ -487,7 +562,19 @@ wiggly bond indexes.
 <tr VALIGN="TOP">
     <td><a class="text" NAME="option_BOM"><strong>BOM</strong></a></td>
     <td>Write the UTF-8 <i>byte order mark</i> (BOM), if the given or the system's encoding is UTF-8.
-    Default value: <i>false</i>.</td></tr>	
+    Default value: <i>false</i>.</td></tr>
+<tr VALIGN="TOP">
+    <td><a class="text" NAME="option_q"><strong>q</strong></a></td>
+    <td>Write MDL query features.
+    Default value: <i>true</i>.</td></tr>
+    <tr VALIGN="TOP">
+    <td><a class="text" NAME="option_P"><strong>P</strong></a></td>
+    <td>Write polymer Sgroups.
+    Default value: <i>true</i>.</td></tr>
+     <tr VALIGN="TOP">
+    <td><a class="text" NAME="option_b"><strong>b</strong></a></td>
+    <td>Write local bicyclo-alkane stereo information.
+    Default value: <i>true</i>.</td></tr>
 </table>
 </blockquote>
 <p>

@@ -437,20 +437,20 @@ R-group definitions as searching.
 User-defined Homology groups should have the same number of connections as in the definitions.</p>
 Customization modes:  
 <ol>
-<li>To define NEW User-defined homology (or Protecting) groups under different file names from the Predefined files in the <i>MarvinBeans-enumeration.jar.</i></li>
-<li>To MODIFY the Predefined User-defined homology (or protecting) groups being in the <i>MarvinBeans-enumeration.jar.</i></li>
+<li>To define NEW User-defined homology (or Protecting) groups under different file names from the Predefined files in the <i>com.chemaxon-enumeration.jar.</i></li>
+<li>To MODIFY the Predefined User-defined homology (or protecting) groups being in the <i>com.chemaxon-enumeration.jar.</i></li>
 </ol>
 Enumeration-only type User-defined groups can be defined by the same way. 
 
 <h4><a class="anchor" name="customizedef">Modifying the Predefined Homology group definitions</a></h4>
 
-The <i>lib</i> directories of the installed MarvinBeans and JChem contain MarvinBeans-enumeration.jar file. The default homology groups are defined there as user-defined groups and as enumeration-only groups. 
+The <i>lib</i> directories of the installed MarvinBeans and JChem contain com.chemaxon-enumeration.jar file. The default homology groups are defined there as user-defined groups and as enumeration-only groups. 
 <dl>
 	<dt>Modifying the Predefined 'Enumeration-only' groups</dt>
-	<dd>Directory <i>chemaxon/enumeration/homology/enumeration_only</i> in the <i>MarvinBeans-enumeration.jar</i> file.
+	<dd>Directory <i>chemaxon/enumeration/homology/enumeration_only</i> in the <i>com.chemaxon-enumeration.jar</i> file.
 These groups are represented by these definitions during enumeration only.</dd>
 	<dt>Modifying the new User-defined groups</dt>
-	<dd>Directory <i>chemaxon/enumeration/homology/user_def_groups</i> in the MarvinBeans-enumeration.jar file.
+	<dd>Directory <i>chemaxon/enumeration/homology/user_def_groups</i> in the com.chemaxon-enumeration.jar file.
 These groups are represented by these definitions during search and enumeration as well.</dd>
 </dl> 
 
@@ -476,7 +476,7 @@ These groups are represented by these definitions during search and enumeration 
 <ol>
 <li>Draw the desired group definition in MarvinSketch and save as mrv; the name of the new group should be specified by 
 the name of the file; the name of the file must be in lower case; <br>See example <i>nucleobase.mrv</i> below:<br>
-<img src="Homology_files/nucleobase.png" width="568" height="374" border="0" alt=""></li>
+<img src="Homology_files/nucleobase.png" width="476" height="363" border="0" alt=""></li>
 <li>copy the mrv file into <i><a href="#chemaxonhome">chemaxon_home</a>/homology/user_def_groups/</i>.</li>
 </ol>
 
@@ -492,11 +492,11 @@ User-defined groups and the enumeration in case of the Predefined groups.
 The modification of these definitions can be executed:
 <ul>
 <li>the same way as described above for the creation of the NEW User-defined Homology (or Protecting) groups, but the name of the mrv file must be the same 
-as the built-in file name within MarvinBeans-enumeration.jar; copy the mrv file into <i><a href="#chemaxonhome">chemaxon_home</a>/homology/user_def_groups/</i> </li> 
-<li>or by modifying the existing default file from MarvinBeans-enumeration.jar</li>
+as the built-in file name within com.chemaxon-enumeration.jar; copy the mrv file into <i><a href="#chemaxonhome">chemaxon_home</a>/homology/user_def_groups/</i> </li> 
+<li>or by modifying the existing default file from com.chemaxon-enumeration.jar</li>
 <ol>
 	<li>Copy protecting group definition to the user's chemaxon library: e.g. from 
-	<i>.../MarvinBeans-enumeration.jar/chemaxon/enumeration/homology/user_def_groups/protecting.mrv</i> to 
+	<i>.../com.chemaxon-enumeration.jar/chemaxon/enumeration/homology/user_def_groups/protecting.mrv</i> to 
 	<i><a href="#chemaxonhome">chemaxon_home</a>/homology/user_def_groups/ </i></li>
 	<li>Open the newly copied file in the user's directory with MarvinSketch.</li>
 	<li>A dialog appears asking the index of molecule to open. Enter 1 because 

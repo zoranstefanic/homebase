@@ -53,7 +53,7 @@
 				</ul>
 			</li>
 			<li><a href="EvaluatorFunctions.html">Functions by categories</a></li>
-			<li><a href="../../examples/evaluator/index.html">Working examples</a></li>
+			<li><a href="http://www.chemaxon.com/marvin/examples/evaluator/index.html">Working examples</a></li>
 		</ul>
 		<p>&nbsp;</p>
 		<div style="margin-left: auto; margin-right: auto; " class="lenia">&nbsp;</div>
@@ -159,7 +159,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="acidicpka"/><a name="acidicpkadesc"/><a name="acidicpkaex"/>acidicpKa<br/>apKa</td>
+				<td><a name="acidicpka"/><a name="acidicpkadesc"/><a name="acidicpkaex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">acidicpKa</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">apKa</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates acidic p<i>K</i><sub>a</sub> values</td>
 				<td>the acidic p<i>K</i><sub>a</sub> values</td>
@@ -186,7 +186,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="acidicpkalargemodel"/><a name="acidicpkalargemodeldesc"/><a name="acidicpkalargemodelex"/>acidicpKaLargeModel</td>
+				<td><a name="acidicpkalargemodel"/><a name="acidicpkalargemodeldesc"/><a name="acidicpkalargemodelex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">acidicpKaLargeModel</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates acidic p<i>K</i><sub>a</sub> values using large model (this model is optimized for a large number of ionizable atoms)</td>
 				<td>the acidic p<i>K</i><sub>a</sub> values</td>
@@ -213,7 +213,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="acidicpkausecorrection"/><a name="acidicpkausecorrectiondesc"/><a name="acidicpkausecorrectionex"/>acidicpKaUseCorrection</td>
+				<td><a name="acidicpkausecorrection"/><a name="acidicpkausecorrectiondesc"/><a name="acidicpkausecorrectionex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">acidicpKaUseCorrection</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates acidic p<i>K</i><sub>a</sub> values using the correction library</td>
 				<td>the acidic p<i>K</i><sub>a</sub> values</td>
@@ -236,6 +236,28 @@
 						<code>"acidicpKaUseCorrection"(ratom(1))</code> returns the acidic p<i>K</i><sub>a</sub> of reactant atom matching map <code>1</code>
 		in the reaction equation <code>"acidicpKaUseCorrection"(product(0), "1")</code> returns the strongest basic p<i>K</i><sub>a</sub> value in
 		the first product
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="agentcount"/><a name="agentcountdesc"/><a name="agentcountex"/>agentCount</td>
+				<td>-</td>
+				<td>counts the agents in the reaction</td>
+				<td>the number of agents in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction</td>
+				<td>-</td>
+				<td>
+					<a class="fakelink" onclick="toggle('agentcountmoleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('agentcountmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="agentcountmoleculecontextexample">
+						<code>agentCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> agents. 
+				<code>agentCount()</code> returns <code>-1</code> if the given molecule is not a reaction.
+					</div>
+
+					<a class="fakelink" onclick="toggle('agentcountreactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('agentcountreactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="agentcountreactioncontextexample" style="display:none;">
+						<code>agentCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> agents. 
+				agentCount(reactant(0)) and agentCount(product(1)) calls does not make sense, and will return <code>-1</code>.
 					</div>
 				</td>
 			</tr>
@@ -469,7 +491,7 @@
 					<a class="fakelink" onclick="toggle('arommoleculecontextexample')">Molecule Context</a>
 <a class="fakelink" onclick="toggleAll('arommoleculecontextexample','moleculecontextexample')">(All)</a><br/>
 					<div id="arommoleculecontextexample">
-						<code>atno(0)</code> returns if the atom <code>0</code> has an aromatic bond
+						<code>arom(0)</code> returns if the atom <code>0</code> has an aromatic bond
 					</div>
 
 					<a class="fakelink" onclick="toggle('aromreactioncontextexample')">Reaction Context</a>
@@ -1067,7 +1089,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="basicpka"/><a name="basicpkadesc"/><a name="basicpkaex"/>basicpKa<br/>bpKa</td>
+				<td><a name="basicpka"/><a name="basicpkadesc"/><a name="basicpkaex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">basicpKa</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">bpKa</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates basic p<i>K</i><sub>a</sub> values</td>
 				<td>the basic p<i>K</i><sub>a</sub> values</td>
@@ -1094,7 +1116,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="basicpkalargemodel"/><a name="basicpkalargemodeldesc"/><a name="basicpkalargemodelex"/>basicpKaLargeModel</td>
+				<td><a name="basicpkalargemodel"/><a name="basicpkalargemodeldesc"/><a name="basicpkalargemodelex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">basicpKaLargeModel</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates basic p<i>K</i><sub>a</sub> values using large model (this model is optimized for a large number of ionizable atoms)</td>
 				<td>the basic p<i>K</i><sub>a</sub> values</td>
@@ -1121,7 +1143,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="basicpkausecorrection"/><a name="basicpkausecorrectiondesc"/><a name="basicpkausecorrectionex"/>basicpKaUseCorrection</td>
+				<td><a name="basicpkausecorrection"/><a name="basicpkausecorrectiondesc"/><a name="basicpkausecorrectionex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">basicpKaUseCorrection</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates basic p<i>K</i><sub>a</sub> values using the correction library</td>
 				<td>the basic p<i>K</i><sub>a</sub> values</td>
@@ -1599,21 +1621,43 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="check"/><a name="checkdesc"/><a name="checkex"/>check</td>
+				<td><a name="check"/><a name="checkdesc"/><a name="checkex"/><a href="http://www.chemaxon.com/marvin/help/structurechecker/checker.html">check</a></td>
 				<td>-</td>
 				<td>checks the structure for errors, according to the configuration</td>
 				<td>the error report</td>
-				<td>Structure checker/fixer configuration string</td>
+				<td>Structure checker/fixer configuration as action string or XML string</td>
 				<td>
 					<a class="fakelink" onclick="toggle('checkmoleculecontextexample')">Molecule Context</a>
 <a class="fakelink" onclick="toggleAll('checkmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
 					<div id="checkmoleculecontextexample">
-						<code>check("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns the error report
+						<ul><li><code>check("aromaticity..valence")</code>, or </li> <li><code>check('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code></li></ul> checks for aromaticity and valence errors, and returns the error report
 					</div>
 
 					<a class="fakelink" onclick="toggle('checkreactioncontextexample')">Reaction Context</a>
 <a class="fakelink" onclick="toggleAll('checkreactioncontextexample','reactioncontextexample')">(All)</a><br/>
 					<div id="checkreactioncontextexample" style="display:none;">
+						<code>check(reactant(0), "aromaticity..valence")</code> checks for aromaticity and valence errors in first reactant, and returns the error report
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="checkerrorcount"/><a name="checkerrorcountdesc"/><a name="checkerrorcountex"/><a href="http://www.chemaxon.com/marvin/help/structurechecker/checker.html">checkErrorCount</a></td>
+				<td>-</td>
+				<td>checks the structure for errors, according to the configuration</td>
+				<td>the total error count</td>
+				<td>Structure checker/fixer configuration as XML or action string</td>
+				<td>
+					<a class="fakelink" onclick="toggle('checkerrorcountmoleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('checkerrorcountmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="checkerrorcountmoleculecontextexample">
+						<code>checkErrorCount('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code> or <br /> <code>checkErrorCount("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns the total error count
+					</div>
+
+					<a class="fakelink" onclick="toggle('checkerrorcountreactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('checkerrorcountreactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="checkerrorcountreactioncontextexample" style="display:none;">
 						<code>check(reactant(0), "aromaticity..valence")</code> checks for aromaticity and valence errors in first reactant, and returns the error report
 					</div>
 				</td>
@@ -2542,22 +2586,23 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="fix"/><a name="fixdesc"/><a name="fixex"/>fix</td>
+				<td><a name="fix"/><a name="fixdesc"/><a name="fixex"/><a href="http://www.chemaxon.com/marvin/help/structurechecker/checker.html">fix</a></td>
 				<td>-</td>
 				<td>checks the structure for errors, according to the configuration, and then fixes the errors</td>
 				<td>the fixed molecule</td>
-				<td>Structure checker/fixer configuration string</td>
+				<td>Structure checker/fixer configuration as action string or XML string</td>
 				<td>
 					<a class="fakelink" onclick="toggle('fixmoleculecontextexample')">Molecule Context</a>
 <a class="fakelink" onclick="toggleAll('fixmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
 					<div id="fixmoleculecontextexample">
-						<code>fix("explicitH..isotope->converttoelementalform")</code> searches for explicit hydrogens and isotopes, and removes them or converts them to elemental form
+						<ul><li><code>fix("chiralflag..isotope->converttoelementalform")</code>, or </li> 
+				<li><code>fix('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;ChiralFlagChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RemoveChiralFlagFixer\"/>&lt;IsotopeChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ConvertToElementalFormFixer\"/>&lt;/checkers>"')</code></li></ul> searches for ciral flags and isotopes, and removes them or converts them to elemental form
 					</div>
 
 					<a class="fakelink" onclick="toggle('fixreactioncontextexample')">Reaction Context</a>
 <a class="fakelink" onclick="toggleAll('fixreactioncontextexample','reactioncontextexample')">(All)</a><br/>
 					<div id="fixreactioncontextexample" style="display:none;">
-						<code>fix(product(1), "explicitH..isotope->converttoelementalform")</code> searches for explicit hydrogens and isotopes in second product, and removes them or converts them to elemental form
+						<code>fix(product(1), "chiralflag..isotope->converttoelementalform")</code> searches for ciral flags and isotopes in second product, and removes them or converts them to elemental form
 					</div>
 				</td>
 			</tr>
@@ -2641,6 +2686,27 @@
 <a class="fakelink" onclick="toggleAll('fragmentsreactioncontextexample','reactioncontextexample')">(All)</a><br/>
 					<div id="fragmentsreactioncontextexample" style="display:none;">
 						<code>fragments(reactant(1))</code> returns the disconnected fragments of the second reactant
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="fsp3"/><a name="fsp3desc"/><a name="fsp3ex"/>fsp3</td>
+				<td>Geometry Plugin Group</td>
+				<td>returns the fsp3 of the molecule</td>
+				<td>the fsp3 value</td>
+				<td>-</td>
+				<td>
+					<a class="fakelink" onclick="toggle('fsp3moleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('fsp3moleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="fsp3moleculecontextexample">
+						<code>fsp3()</code> returns the fsp3 value of the input molecule
+					</div>
+
+					<a class="fakelink" onclick="toggle('fsp3reactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('fsp3reactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="fsp3reactioncontextexample" style="display:none;">
+						<code>fsp3(reactant(0))</code> returns the fsp3 value of the first reactant <code>fsp3(product(1))</code>
+		returns the fsp3 value of the second product
 					</div>
 				</td>
 			</tr>
@@ -3654,16 +3720,17 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="isvalid"/><a name="isvaliddesc"/><a name="isvalidex"/>isValid</td>
+				<td><a name="isvalid"/><a name="isvaliddesc"/><a name="isvalidex"/><a href="http://www.chemaxon.com/marvin/help/structurechecker/checker.html">isValid</a></td>
 				<td>-</td>
 				<td>checks the structure for errors, according to the configuration</td>
 				<td>true, if the structure is valid (has no errors), false otherwise</td>
-				<td>Structure checker/fixer configuration string</td>
+				<td>Structure checker/fixer configuration as action string or XML string</td>
 				<td>
 					<a class="fakelink" onclick="toggle('isvalidmoleculecontextexample')">Molecule Context</a>
 <a class="fakelink" onclick="toggleAll('isvalidmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
 					<div id="isvalidmoleculecontextexample">
-						<code>isValid("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns if the structure is valid
+						<ul><li><code>isValid("aromaticity..valence")</code>, or</li> <li><code>isValid('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code></li></ul> checks for aromaticity and valence errors, and returns if the structure is valid
 					</div>
 
 					<a class="fakelink" onclick="toggle('isvalidreactioncontextexample')">Reaction Context</a>
@@ -3779,7 +3846,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logd"/><a name="logddesc"/><a name="logdex"/>logD</td>
+				<td><a name="logd"/><a name="logddesc"/><a name="logdex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logD</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH</td>
 				<td>the log<i>D</i> value</td>
@@ -3801,7 +3868,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logdklop"/><a name="logdklopdesc"/><a name="logdklopex"/>logDKLOP</td>
+				<td><a name="logdklop"/><a name="logdklopdesc"/><a name="logdklopex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logDKLOP</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH using method "KLOP"</td>
 				<td>the log<i>D</i> value</td>
@@ -3823,7 +3890,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logdphys"/><a name="logdphysdesc"/><a name="logdphysex"/>logDPHYS</td>
+				<td><a name="logdphys"/><a name="logdphysdesc"/><a name="logdphysex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logDPHYS</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH using method "PHYS"</td>
 				<td>the log<i>D</i> value</td>
@@ -3845,7 +3912,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logduser"/><a name="logduserdesc"/><a name="logduserex"/>logDUser</td>
+				<td><a name="logduser"/><a name="logduserdesc"/><a name="logduserex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logDUser</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH using the user defined method</td>
 				<td>the log<i>D</i> value</td>
@@ -3867,7 +3934,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logdvg"/><a name="logdvgdesc"/><a name="logdvgex"/>logDVG</td>
+				<td><a name="logdvg"/><a name="logdvgdesc"/><a name="logdvgex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logDVG</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH using method "VG"</td>
 				<td>the log<i>D</i> value</td>
@@ -3889,7 +3956,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logdweighted"/><a name="logdweighteddesc"/><a name="logdweightedex"/>logDWeighted</td>
+				<td><a name="logdweighted"/><a name="logdweighteddesc"/><a name="logdweightedex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logd">logDWeighted</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>D</i> at specified pH using weighted method</td>
 				<td>the log<i>D</i> value</td>
@@ -3911,7 +3978,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logp"/><a name="logpdesc"/><a name="logpex"/>logP</td>
+				<td><a name="logp"/><a name="logpdesc"/><a name="logpex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logP</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i></td>
 				<td>the log<i>P</i> value</td>
@@ -3942,7 +4009,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpincrement"/><a name="logpincrementdesc"/><a name="logpincrementex"/>logPincrement<br/>logPi</td>
+				<td><a name="logpincrement"/><a name="logpincrementdesc"/><a name="logpincrementex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPincrement</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPi</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates the atomic log<i>P</i> increment</td>
 				<td>the atomic log<i>P</i> increment</td>
@@ -3965,7 +4032,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpklop"/><a name="logpklopdesc"/><a name="logpklopex"/>logPKLOP</td>
+				<td><a name="logpklop"/><a name="logpklopdesc"/><a name="logpklopex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPKLOP</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i> using method "KLOP"</td>
 				<td>the log<i>P</i> value</td>
@@ -3996,7 +4063,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpphys"/><a name="logpphysdesc"/><a name="logpphysex"/>logPPHYS</td>
+				<td><a name="logpphys"/><a name="logpphysdesc"/><a name="logpphysex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPPHYS</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i> using method "PHYS"</td>
 				<td>the log<i>P</i> value</td>
@@ -4027,7 +4094,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpuser"/><a name="logpuserdesc"/><a name="logpuserex"/>logPUser</td>
+				<td><a name="logpuser"/><a name="logpuserdesc"/><a name="logpuserex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPUser</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i> using the user defined method</td>
 				<td>the log<i>P</i> value</td>
@@ -4058,7 +4125,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpvg"/><a name="logpvgdesc"/><a name="logpvgex"/>logPVG</td>
+				<td><a name="logpvg"/><a name="logpvgdesc"/><a name="logpvgex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPVG</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i> using method "VG"</td>
 				<td>the log<i>P</i> value</td>
@@ -4089,7 +4156,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="logpweighted"/><a name="logpweighteddesc"/><a name="logpweightedex"/>logPWeighted</td>
+				<td><a name="logpweighted"/><a name="logpweighteddesc"/><a name="logpweightedex"/><a href="http://www.chemaxon.com/marvin/help/calculations/partitioning.html#logp">logPWeighted</a></td>
 				<td>Partitioning Plugin Group</td>
 				<td>calculates log<i>P</i> using weighted method</td>
 				<td>the log<i>P</i> value</td>
@@ -4141,7 +4208,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="majormicrospecies"/><a name="majormicrospeciesdesc"/><a name="majormicrospeciesex"/>majorMicrospecies<br/>majorMs</td>
+				<td><a name="majormicrospecies"/><a name="majormicrospeciesdesc"/><a name="majormicrospeciesex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">majorMicrospecies</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">majorMs</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates major microspecies at specified pH</td>
 				<td>the major microspecies</td>
@@ -4613,7 +4680,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="microspecies"/><a name="microspeciesdesc"/><a name="microspeciesex"/>microspecies<br/>ms</td>
+				<td><a name="microspecies"/><a name="microspeciesdesc"/><a name="microspeciesex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">microspecies</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">ms</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates microspecies at specified pH</td>
 				<td>the microspecies</td>
@@ -4639,7 +4706,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="microspeciescount"/><a name="microspeciescountdesc"/><a name="microspeciescountex"/>microspeciesCount<br/>msCount</td>
+				<td><a name="microspeciescount"/><a name="microspeciescountdesc"/><a name="microspeciescountex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">microspeciesCount</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">msCount</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates the number of microspecies at specified pH</td>
 				<td>the number of microspecies</td>
@@ -4660,7 +4727,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="microspeciesdistribution"/><a name="microspeciesdistributiondesc"/><a name="microspeciesdistributionex"/>microspeciesDistribution<br/>msDistr</td>
+				<td><a name="microspeciesdistribution"/><a name="microspeciesdistributiondesc"/><a name="microspeciesdistributionex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">microspeciesDistribution</a><br/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#ms">msDistr</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates microspecies distribution at specified pH</td>
 				<td>the microspecies distribution</td>
@@ -5101,7 +5168,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="pka"/><a name="pkadesc"/><a name="pkaex"/>pKa</td>
+				<td><a name="pka"/><a name="pkadesc"/><a name="pkaex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">pKa</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates p<i>K</i><sub>a</sub> values</td>
 				<td>the p<i>K</i><sub>a</sub> values</td>
@@ -5135,7 +5202,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><a name="pkausecorrection"/><a name="pkausecorrectiondesc"/><a name="pkausecorrectionex"/>pKaUseCorrection</td>
+				<td><a name="pkausecorrection"/><a name="pkausecorrectiondesc"/><a name="pkausecorrectionex"/><a href="http://www.chemaxon.com/marvin/help/calculations/protonation.html#pka">pKaUseCorrection</a></td>
 				<td>Protonation Plugin Group</td>
 				<td>calculates p<i>K</i><sub>a</sub> values using the correction library</td>
 				<td>the p<i>K</i><sub>a</sub> values</td>
@@ -5207,6 +5274,28 @@
 <a class="fakelink" onclick="toggleAll('predictreactioncontextexample','reactioncontextexample')">(All)</a><br/>
 					<div id="predictreactioncontextexample" style="display:none;">
 						<code>predict(reactant(1), 'pampa')</code> returns the predicted property of the second reactant
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="productcount"/><a name="productcountdesc"/><a name="productcountex"/>productCount</td>
+				<td>-</td>
+				<td>counts the products in the reaction</td>
+				<td>the number of products in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction</td>
+				<td>-</td>
+				<td>
+					<a class="fakelink" onclick="toggle('productcountmoleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('productcountmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="productcountmoleculecontextexample">
+						<code>productCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> products. 
+				<code>productCount()</code> returns <code>-1</code> if the given molecule is not a reaction.
+					</div>
+
+					<a class="fakelink" onclick="toggle('productcountreactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('productcountreactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="productcountreactioncontextexample" style="display:none;">
+						<code>productCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> products. 
+				productCount(product(0)) and productCount(product(1)) calls does not make sense, and will return <code>-1</code>.
 					</div>
 				</td>
 			</tr>
@@ -5298,6 +5387,28 @@
 					<div id="randommarkushenumerationsdisplayreactioncontextexample" style="display:none;">
 						<code>randomMarkushEnumerationsDisplay(reactant(0), 100)</code> returns 100 randomly constructed enumerated structures of the first reactant, with scaffold alignment and coloring data <code>randomMarkushEnumerationsDisplay(product(1), '3,4,5')</code>
 		returns a randomly constructed enumerated structure of the second product, enumerating atoms 3, 4, 5 (1-based), with scaffold alignment and coloring data
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="reactantcount"/><a name="reactantcountdesc"/><a name="reactantcountex"/>reactantCount</td>
+				<td>-</td>
+				<td>counts the reactants in the reaction</td>
+				<td>the number of reactants in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction</td>
+				<td>-</td>
+				<td>
+					<a class="fakelink" onclick="toggle('reactantcountmoleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('reactantcountmoleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="reactantcountmoleculecontextexample">
+						<code>reactantCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> reactants. 
+				<code>reactantCount()</code> returns <code>-1</code> if the given molecule is not a reaction.
+					</div>
+
+					<a class="fakelink" onclick="toggle('reactantcountreactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('reactantcountreactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="reactantcountreactioncontextexample" style="display:none;">
+						<code>reactantCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> reactants. 
+				reactantCount(reactant(0)) and reactantCount(product(1)) calls does not make sense, and will return <code>-1</code>.
 					</div>
 				</td>
 			</tr>
@@ -5930,6 +6041,27 @@
 				</td>
 			</tr>
 			<tr>
+				<td><a name="sortableformula"/><a name="sortableformuladesc"/><a name="sortableformulaex"/>sortableFormula</td>
+				<td>-</td>
+				<td>returns the fixed digit sortable formula</td>
+				<td>fixed digit sortable molecular formula</td>
+				<td>-</td>
+				<td>
+					<a class="fakelink" onclick="toggle('sortableformulamoleculecontextexample')">Molecule Context</a>
+<a class="fakelink" onclick="toggleAll('sortableformulamoleculecontextexample','moleculecontextexample')">(All)</a><br/>
+					<div id="sortableformulamoleculecontextexample">
+						<code>sortableFormula()</code> returns the sortable formula of the input molecule; sortableFormula('digits:4')
+				returns the 4 digit sortable formula of the input molecule
+					</div>
+
+					<a class="fakelink" onclick="toggle('sortableformulareactioncontextexample')">Reaction Context</a>
+<a class="fakelink" onclick="toggleAll('sortableformulareactioncontextexample','reactioncontextexample')">(All)</a><br/>
+					<div id="sortableformulareactioncontextexample" style="display:none;">
+						N / A (reaction rules are numerical)
+					</div>
+				</td>
+			</tr>
+			<tr>
 				<td><a name="sortasc"/><a name="sortascdesc"/><a name="sortascex"/>sortAsc</td>
 				<td>-</td>
 				<td>sorts an array in ascending order</td>
@@ -6449,14 +6581,18 @@
 			</tr>
 			<tr>
 				<td>ChemicalFingerprint (or CF)</td>
-				<td>Tanimoto<br/>(default)<br/>Euclidean</td>
+				<td>Tanimoto (default)<br/>Euclidean</td>
 			</tr>
 			<tr>
 				<td>PharmacophoreFingerprint (or PF)</td>
-				<td>Tanimoto<br/>(default)<br/>Euclidean</td>
+				<td>Tanimoto (default)<br/>Euclidean</td>
 			</tr>
 			<tr>
-				<td>Burden eigenvalue descriptor (or BCUTTM) (BCUT is a trademark of Tripos, Inc., used with permission)</td>
+				<td>ECFP</td>
+				<td>Tanimoto (default)<br/>Euclidean</td>
+			</tr>
+			<tr>
+				<td>Burden eigenvalue descriptor (or BCUT) (BCUT is a trademark of Tripos, Inc., used with permission)</td>
 				<td>Euclidean</td>
 			</tr>
 			<tr>
@@ -6490,8 +6626,8 @@
 		</table>
 		<p><a href="#contents">Back to Contents</a></p>
 		<h4><a name="predefined"></a>Predefined Molecules and Molecule Sets</h4>
-		<p>It is sometimes easier to refer molecules by names rather than explicit SMARTS strings or molecule file paths. For example, you may want to write <i>nitro</i> or <i>carboxyl</i> as query in a <code>match</code> function. Frequently used queries are pre-defined in the <a href="Evaluator_files/mols.smarts">built-in molecule SMARTS file</a> (<code>chemaxon/jep/mols.smarts</code> within <code>marvinbeans.jar / jchem.jar</code>).</p>
-<p>You can also define your favourite query SMARTS in <code>marvin/config/mols.smarts</code> file and in <code>$HOME/chemaxon/MARVIN_MAJOR_VERSION/mols.smarts</code> (Windows) or <code>$HOME/.chemaxon/MARVIN_MAJOR_VERSION/mols.smarts</code> (UNIX / Linux) file where <code>marvin</code> is the Marvin istallation directory, <code>$HOME</code> is your user home directory, and <code>MARVIN_MAJOR_VERSION</code> is the major version of Marvin (e.g. "5.1").</p>
+		<p>It is sometimes easier to refer molecules by names rather than explicit SMARTS strings or molecule file paths. For example, you may want to write <i>nitro</i> or <i>carboxyl</i> as query in a <code>match</code> function. Frequently used queries are pre-defined in the <a href="Evaluator_files/functionalgroups.cxsmi">built-in functional groups file</a> (<code>chemaxon/marvin/templates/functionalgroups.cxsmi</code> within <code>MarvinBeans-templates.jar</code>).</p>
+<p>You can also define your favourite query SMARTS in <code>marvin/config/marvin/templates/functionalgroups.cxsmi</code> file and in <code>$HOME\chemaxon\marvin\templates\functionalgroups.cxsmi</code> (Windows) or <code>$HOME/.chemaxon/marvin/templates/functionalgroups.cxsmi</code> (UNIX / Linux) file where <code>marvin</code> is the Marvin istallation directory, <code>$HOME</code> is your user home directory.</p>
 		<p><a href="#contents">Back to Contents</a></p>
 		<p>&nbsp;</p>
 		<div style="margin-left: auto; margin-right: auto; " class="lenia">&nbsp;</div>
@@ -6502,7 +6638,7 @@
 			<li><a name="note2"></a><code>match</code>, <code>matchCount</code>, <code>disjointMatchCount</code> and <code>dissimilarity</code> functions are not available in Marvin, they can be used only if JChem software package is installed.</li>
 			<li><a name="note3"></a>Structure based calculations are performed using Calculator Plugins (these calculations are also referred as "plugin calculations").Since Marvin 5.2, all of these functions can have an additional string argument that specifies plugin parameters in "key1:value1 key2:value2 key3:value3 ..." fashion. For example: charge(8, "type:pi pH:3.5") will compute the pi charge of atom 8 in the major microspecies at pH=3.5 of the input molecule, markushEnumerations("code:true max:4","1,2") will generate maximum 4 enumerated structures with enumeration ID, enumerating only atoms 1 and 2 of the input Markush structure. Note, that this feature cannot be combined with the former possibility of specifying the pH in a string argument, for example: charge(8, "type:pi pH:3.5") cannot be written in the form charge(8, "type:pi", "3.5"), while charge("pi", 8, "3.5") is accepted (backward compatibility).</li>
 		</ol>
-		<div style="font-family: Helvetia, Arial, sans-serif; font-size: x-small; text-align: center;">Copyright &copy; 1999-2012
+		<div style="font-family: Helvetia, Arial, sans-serif; font-size: x-small; text-align: center;">Copyright &copy; 1999-2014
 			<a href="http://www.chemaxon.com">ChemAxon Ltd.</a>&nbsp;&nbsp;&nbsp;All rights reserved.
 		</div>
 			</body>

@@ -29,32 +29,58 @@ calculations.</p>
 
 <p>The <b CLASS="buttonName"> p<i>K</i><sub>a</sub> options</b> panel offers different parameters to set: </p>
 <p>
-<table> <tr>
-		<img src="images/pKaoptions.png" width="224" height="439"></tr>
+<table> 
+	<tr>
+		<td><img src="images/pKaoptions.png" width="351" height="381"></td>
+		<td><img src="images/pKaoptions2.png" width="351" height="381"></td>
+	</tr>
 </table>
 </p>
-
+<b>General Options</b>
 <ul>
-	<li><b>Decimal places:</b> setting the number of decimal places with which the result value is given.</li>
-	<li><b>Mode:</b> micro, macro: micro and macro acidic dissociation constants.
-<a href="pKa.html#MultiProtic">Read details.</a></li>
+	<li><b>Mode:</b> micro, macro: micro and macro acidic dissociation constants. <a href="pKa.html#MultiProtic">Read details.</a></li>
 	<li><b>Acid/base prefix:</b>
 		<ul>
-			<li><b>static:</b> submitted ionic forms are converted to their neutral forms
-    (adding or removing protons) and their p<i>K</i><sub>a</sub> is calculated.</li>
-			<li><b>dynamic:</b> the p<i>K</i><sub>a</sub> of ionic forms are calculated,
-    not their conjugated acids or bases.</li>
+			<li><b>static:</b> submitted ionic forms are converted to their neutral forms (adding or 
+			removing protons) and their p<i>K</i><sub>a</sub> is calculated.</li>
+			<li><b>dynamic:</b> the p<i>K</i><sub>a</sub> of ionic forms are calculated, not their 
+			conjugated acids or bases.</li>
 		</ul>
 	</li>
 	<li><b>Min basic p<i>K</i><sub>a</sub>:</b> widens the calculation range because weak bases will have lower p<i>K</i><sub>a</sub> values than the default -10.</li>
 	<li><b>Max acidic p<i>K</i><sub>a</sub>:</b> widens the calculation range because weak acids will have higher p<i>K</i><sub>a</sub> values than the default 20. </li>
 	<li><b>Temperature:</b> setting the temperature in Kelvin.</li>
-	<li><b>Show distribution chart:</b> checking this box, you will have microspecies/macrospecies
-distribution as function of pH calculated and displayed. If not, only the p<i>K</i><sub>a</sub>
-of the drawn molecule will be calculated.</li>
-	<li><b>Distribution chart: pH lower limit, upper limit, step size:</b> you can set the range of displaying the microspecies distribution diagram.</li>
-	<li><b>Use correction library:</b> check this box to use a file with experimental data for the calculation. See the <a href="pka_training.html">detailed guide for training data setup.</a></li>
-	<li><b>Consider tautomerization:</b>Selecting this option, the most feasible tautomer and resonance structures are considered to be subject of the pKa calculation.</li>
+	<li><b>Correction library</b> 
+		<ul>
+			<li><b>Use correction library:</b> check this box to use a file with experimental data for 
+			the calculation. See the <a href="pka_training.html">detailed guide for training data setup.</a></li>
+		</ul>
+	</li>
+	<li><b>Consider tautomerization:</b> checking this option, the most feasible tautomer and resonance 
+	structures are considered as subject of the pKa calculation.</li>
+	<li><b>Show distribution chart:</b> checking this box, you will have microspecies/macrospecies 
+	distribution as function of pH calculated and displayed. Go to <a href="#displayoptions">Display 
+	Options tab</a> for further settings of the distribution chart. Unchecking this box, only the p<i>K</i><sub>a</sub> 
+	of the drawn molecule will be calculated.</li>
+</ul>
+<b><a id="displayoptions"></a>Display Options</b>
+<ul>
+	<li><b>Decimal places:</b> setting the number of decimal places with which the result value is 
+	given.</li>
+	<li><b>Distribution chart:</b> you can set the range of displaying the microspecies distribution 
+	diagram.
+		<ul>
+			<li><b>pH lower limit</b></li>
+			<li><b>pH upper limit</b></li>
+			<li><b>pH step size</b></li>
+		</ul>
+	</li>
+	<li><b>Show log&#91%&#93 - pH distribution:</b> checking this box, the common logarithm of microspecies/macrospecies 
+	distribution is calculated and displayed as function of pH. 
+		<ul>
+			<li><b>log&#91%&#93 - pH distribution lower limit:</b> you can set the lower value of the Y axis ranging from -35 to zero.</li>
+		</ul>
+	</li>
 </ul>
 
 <p>Results are shown in a separate window. When checking the Show microspecies
@@ -65,13 +91,14 @@ next to the protonable groups read <a href="redbluepka.html">this document</a>):
 <p>
 <table>
 	<tr>
-		<td><img src="images/pKa.png" width="600" height="531"></td>
+		<td><a href="images/pKa.png" title="Click to enlarge"/><img src="images/pKa_small.png" width="350" height="312"></a></td>
+		<td><a href="images/pKa_2.png" title="Click to enlarge"/><img src="images/pKa_2small.png" width="350" height="312"></a></td>
 	</tr>
 </table>
 </p>
 
 
-<p>The chart shows the microspecies distribution curves vs. pH. The
+<p>The chart shows the microspecies distribution, or the common logarithm of microspecies distribution curves vs. pH. The
 microspecies images are shown in the legend. When clicking on an image,
 the corresponding microspecies molecule is displayed in the upper-left
 viewer. (The viewer can be detached from the chart panel by double

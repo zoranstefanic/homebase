@@ -13,7 +13,7 @@
     <Group Title="Alignment types">
         <RadioButtonGroup Key="calctype">
             <Choice Value="cxn" Text="Align by extended atom types" Selected="true" ToolTip ="Force field atomtypes are applied to align molecules. Atoms with similar types are tried to overlay."/>
-            <Choice Value="phr" Text="Align by pharmacophore types " ToolTip ="Use H-bond donor acceptor aromatic and hydrophobic and +, - charges."/>
+            <!--   -<Choice Value="phr" Text="Align by pharmacophore types " ToolTip ="Use H-bond donor acceptor aromatic and hydrophobic and +, - charges."/> -->
             <Choice Value="mcs" Text="Align by common scaffold (MCS)" ToolTip ="The atom-atom pairing is obtained from the maximum common substructure. Alignment by extended atom types is applied on the non MCS atoms."/>            
         </RadioButtonGroup>
     </Group>
@@ -23,11 +23,11 @@
         <Number Key="rotBRing" Label="Minimum number of non-barred bonds in flexible rings " ToolTip="Rings are treated flexible in case their non barred bond count exceeds this limit. Barred bonds are aromatic, amide, double, a member of another ring that is not flexible and a single bond that connects two aromatic rings." Range="-1,999" Value="4"/> -->
         <Number Key="confcount" Label="Initial conformation count" ToolTip="Flexible alignment is launched all of these conformations." Range="1,999" Value="2"/> 
 <!--        <Boolean Key="shape" Label="More accurate shape " ToolTip="More smoother shape description but can be slow." Value="false"/>-->
-        <Number Key="mcssize" Label="Common scaffold minimum size"  ToolTip="Minimum number of atoms that are required for the maximum common substructure calculation prior to the alignment." Range="2,999" Value="7">
+        <!--  <Number Key="mcssize" Label="Common scaffold minimum size"  ToolTip="Minimum number of atoms that are required for the maximum common substructure calculation prior to the alignment." Range="2,999" Value="7">
             <Dependencies>
                 <Item Key="calctype" Range="mcs"/>
             </Dependencies>
-        </Number>
+        </Number> -->
         <SingleSelection Key="mode" Label="Accuracy">
             <Choice Value="0" Text="Fast"/>
             <Choice Value="1" Text="Normal" Selected="true"/>

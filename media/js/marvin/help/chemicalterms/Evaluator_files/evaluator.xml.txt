@@ -593,7 +593,7 @@
 				<![CDATA[atom index or MolAtom object]]>
 			</Parameters>
 			<MoleculeContextExample>
-				<![CDATA[<code>atno(0)</code> returns if the atom <code>0</code> has an aromatic bond]]>
+				<![CDATA[<code>arom(0)</code> returns if the atom <code>0</code> has an aromatic bond]]>
 			</MoleculeContextExample>
 			<ReactionContextExample>
 				<![CDATA[<code>arom(patom(2))</code> returns <code>true</code> if the product atom matching map <code>2</code>
@@ -1032,10 +1032,34 @@
 				<![CDATA[the error report]]>
 			</ReturnValue>
 			<Parameters>
-				<![CDATA[Structure checker/fixer configuration string]]>
+				<![CDATA[Structure checker/fixer configuration as action string or XML string]]>
 			</Parameters>
 			<MoleculeContextExample>
-				<![CDATA[<code>check("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns the error report]]>
+				<![CDATA[<ul><li><code>check("aromaticity..valence")</code>, or </li> <li><code>check('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code></li></ul> checks for aromaticity and valence errors, and returns the error report]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[<code>check(reactant(0), "aromaticity..valence")</code> checks for aromaticity and valence errors in first reactant, and returns the error report]]>
+			</ReactionContextExample>
+			<UsersGuideURL>http://www.chemaxon.com/marvin/help/structurechecker/checker.html</UsersGuideURL>
+		</Function>
+		<Function ID="checkErrorCount" Class="chemaxon.jep.function.CheckErrorCount">
+			<UserParam Name="target" Type="Molecule"></UserParam>
+			<UserParam Name="config" Type="String" Mandatory="true"></UserParam>
+			<ReturnType>Integer</ReturnType>
+			<Category>Structure Checker</Category>
+			<Description>
+				<![CDATA[checks the structure for errors, according to the configuration]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[the total error count]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[Structure checker/fixer configuration as XML or action string]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>checkErrorCount('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code> or <br /> <code>checkErrorCount("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns the total error count]]>
 			</MoleculeContextExample>
 			<ReactionContextExample>
 				<![CDATA[<code>check(reactant(0), "aromaticity..valence")</code> checks for aromaticity and valence errors in first reactant, and returns the error report]]>
@@ -1054,10 +1078,11 @@
 				<![CDATA[true, if the structure is valid (has no errors), false otherwise]]>
 			</ReturnValue>
 			<Parameters>
-				<![CDATA[Structure checker/fixer configuration string]]>
+				<![CDATA[Structure checker/fixer configuration as action string or XML string]]>
 			</Parameters>
 			<MoleculeContextExample>
-				<![CDATA[<code>isValid("aromaticity..valence")</code> checks for aromaticity and valence errors, and returns if the structure is valid]]>
+				<![CDATA[<ul><li><code>isValid("aromaticity..valence")</code>, or</li> <li><code>isValid('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;AromaticityErrorChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RearomatizeFixer\" type=\"general\"/>&lt;ValenceErrorChecker allowTraditionalNitrogen=\"false\" fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ValenceFixer\"/>&lt;/checkers>
+"')</code></li></ul> checks for aromaticity and valence errors, and returns if the structure is valid]]>
 			</MoleculeContextExample>
 			<ReactionContextExample>
 				<![CDATA[<code>isValid(reactant(0), "aromaticity..valence")</code> checks for aromaticity and valence errors in first reactant, and returns if it is valid]]>
@@ -1076,16 +1101,80 @@
 				<![CDATA[the fixed molecule]]>
 			</ReturnValue>
 			<Parameters>
-				<![CDATA[Structure checker/fixer configuration string]]>
+				<![CDATA[Structure checker/fixer configuration as action string or XML string]]>
 			</Parameters>
 			<MoleculeContextExample>
-				<![CDATA[<code>fix("explicitH..isotope->converttoelementalform")</code> searches for explicit hydrogens and isotopes, and removes them or converts them to elemental form]]>
+				<![CDATA[<ul><li><code>fix("chiralflag..isotope->converttoelementalform")</code>, or </li> 
+				<li><code>fix('"&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>&lt;checkers>&lt;ChiralFlagChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.RemoveChiralFlagFixer\"/>&lt;IsotopeChecker fixMode=\"fix\" fixerClassName=\"chemaxon.fixers.ConvertToElementalFormFixer\"/>&lt;/checkers>"')</code></li></ul> searches for ciral flags and isotopes, and removes them or converts them to elemental form]]>
 			</MoleculeContextExample>
 			<ReactionContextExample>
-				<![CDATA[<code>fix(product(1), "explicitH..isotope->converttoelementalform")</code> searches for explicit hydrogens and isotopes in second product, and removes them or converts them to elemental form]]>
+				<![CDATA[<code>fix(product(1), "chiralflag..isotope->converttoelementalform")</code> searches for ciral flags and isotopes in second product, and removes them or converts them to elemental form]]>
 			</ReactionContextExample>
 			<UsersGuideURL>http://www.chemaxon.com/marvin/help/structurechecker/checker.html</UsersGuideURL>
-		</Function>	
+		</Function>
+		<Function ID="reactantCount" Class="chemaxon.jep.function.ReactantCount">
+			<UserParam Name="target" Type="Molecule"></UserParam>
+			<ReturnType>int</ReturnType>
+			<Description>
+				<![CDATA[counts the reactants in the reaction]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[the number of reactants in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[-]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>reactantCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> reactants. 
+				<code>reactantCount()</code> returns <code>-1</code> if the given molecule is not a reaction.]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[<code>reactantCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> reactants. 
+				reactantCount(reactant(0)) and reactantCount(product(1)) calls does not make sense, and will return <code>-1</code>.]]>
+			</ReactionContextExample>
+		</Function>
+		<Function ID="productCount" Class="chemaxon.jep.function.ProductCount">
+			<UserParam Name="target" Type="Molecule"></UserParam>
+			<ReturnType>int</ReturnType>
+			<Description>
+				<![CDATA[counts the products in the reaction]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[the number of products in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[-]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>productCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> products. 
+				<code>productCount()</code> returns <code>-1</code> if the given molecule is not a reaction.]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[<code>productCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> products. 
+				productCount(product(0)) and productCount(product(1)) calls does not make sense, and will return <code>-1</code>.]]>
+			</ReactionContextExample>
+		</Function>
+		<Function ID="agentCount" Class="chemaxon.jep.function.AgentCount">
+			<UserParam Name="target" Type="Molecule"></UserParam>
+			<ReturnType>int</ReturnType>
+			<Description>
+				<![CDATA[counts the agents in the reaction]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[the number of agents in the reaction, or <code>-1</code> if the the input (molecule) is not a reaction]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[-]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>agentCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> agents. 
+				<code>agentCount()</code> returns <code>-1</code> if the given molecule is not a reaction.]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[<code>agentCount()</code> returns <code>n</code> if the given molecule is a reaction and contains <code>n</code> agents. 
+				agentCount(reactant(0)) and agentCount(product(1)) calls does not make sense, and will return <code>-1</code>.]]>
+			</ReactionContextExample>
+		</Function>		
 	</Functions>
 
 	<!--    Plugins    -->
@@ -3567,6 +3656,28 @@
 				<![CDATA[N / A (reaction rules are numerical)]]>
 			</ReactionContextExample>
 		</Plugin>
+		<Plugin ID="sortableFormula" Class="chemaxon.marvin.calculations.ElementalAnalyserPlugin" JAR="ElementalAnalyserPlugin.jar">
+			<Param Name="type" Value="formula"></Param>
+			<Param Name="digits" Value="5"></Param>
+			<ReturnType>String</ReturnType>
+			<Category>Elemental Analysis</Category>
+			<Description>
+				<![CDATA[returns the fixed digit sortable formula]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[fixed digit sortable molecular formula]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[-]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>sortableFormula()</code> returns the sortable formula of the input molecule; sortableFormula('digits:4')
+				returns the 4 digit sortable formula of the input molecule]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[N / A (reaction rules are numerical)]]>
+			</ReactionContextExample>
+		</Plugin>
 		<Plugin ID="isotopeFormula" Class="chemaxon.marvin.calculations.ElementalAnalyserPlugin" JAR="ElementalAnalyserPlugin.jar">
 			<Param Name="type" Value="isotopeformula"></Param>
 			<ReturnType>String</ReturnType>
@@ -4086,6 +4197,27 @@
 			<ReactionContextExample>
 				<![CDATA[<code>fragmentCount(reactant(0))</code> returns the number of fragments in the first reactant <code>fragmentCount(product(1))</code>
 		returns the number of fragments in the second product]]>
+			</ReactionContextExample>
+		</Plugin>
+		<Plugin ID="fsp3" Class="chemaxon.marvin.calculations.TopologyAnalyserPlugin" JAR="TopologyAnalyserPlugin.jar">
+			<Param Name="type" Value="fsp3"></Param>
+			<ReturnType>double</ReturnType>
+			<Category>Geometry</Category>
+			<Description>
+				<![CDATA[returns the fsp3 of the molecule]]>
+			</Description>
+			<ReturnValue>
+				<![CDATA[the fsp3 value]]>
+			</ReturnValue>
+			<Parameters>
+				<![CDATA[-]]>
+			</Parameters>
+			<MoleculeContextExample>
+				<![CDATA[<code>fsp3()</code> returns the fsp3 value of the input molecule]]>
+			</MoleculeContextExample>
+			<ReactionContextExample>
+				<![CDATA[<code>fsp3(reactant(0))</code> returns the fsp3 value of the first reactant <code>fsp3(product(1))</code>
+		returns the fsp3 value of the second product]]>
 			</ReactionContextExample>
 		</Plugin>
 
@@ -6878,6 +7010,7 @@
 			<Descriptor Name="LogP" />
 			<Descriptor Name="Mass" />
 			<Descriptor Name="TPSA" />
+			<Descriptor Name="ECFP" />
 		</Descriptors>
 		<ReturnType>double</ReturnType>
 		<Category>Dissimilarity</Category>

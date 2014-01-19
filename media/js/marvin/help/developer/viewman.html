@@ -178,14 +178,14 @@ M  END\n&quot;&gt;&lt;/applet&gt;
 <tr VALIGN=TOP><td><code><a name="parameters.atomNumbersVisible" class="text">atomNumbersVisible</a></code></td>
     <td>Show (true) or hide (false) atom numbers</td>
     <td ALIGN=CENTER><code>false</code></td></tr>
+<tr valign="TOP"><td><a class="text" name="parameters.atomNumberingType"><code>atomNumberingType</code></a></td>
+    <td>Sets the type of atom numbering to Atom numbers (1) or IUPAC numbering (2)
+	</td>
+    <td align="CENTER"><code>&nbsp;</code></td></tr>
 <tr VALIGN="TOP"><td><a class="text" name="parameters.valencePropertyVisible"><code>valencePropertyVisible</code></a></td>
     <td>Show (true) or hide (false) valence properties
 	</td>
     <td ALIGN=CENTER><code>true</code></td></tr>
-<tr VALIGN="TOP"><td><a class="text" name="parameters.ligandErrorVisible"><code>ligandErrorVisible</code></a></td>
-    <td>Show (true) or not (false) ligand error by coloring to red.
-	</td>
-    <td align="CENTER"><code>false</code></td></tr>    
 <tr VALIGN=TOP><td><code><a name="parameters.atomsize" class="text">atomsize</a></code></td>
     <td>Atom symbol font size
 	in C-C bond length units:<br>
@@ -210,6 +210,10 @@ M  END\n&quot;&gt;&lt;/applet&gt;
 	where <em>scale</em> is the current magnification.
 	</td>
     <td ALIGN=CENTER><code>0.18</code></td></tr>
+<tr valign="TOP"><td><a class="text" name="parameters.chargeWithCircle"><code>chargeWithCircle</code></a></td>
+    <td>Charge label (plus or minus sign) is displayed circled(true) or normal(false)
+	</td>
+    <td align="CENTER"><code>false</code></td></tr>
 <tr VALIGN=TOP><td><code><a name="parameters.chiralitySupport" class="text">chiralitySupport</a></code></td>
     <td>When to show atom chirality
 	(R/S).
@@ -221,6 +225,17 @@ M  END\n&quot;&gt;&lt;/applet&gt;
 	</ul>
 	</td>
     <td ALIGN=CENTER><code>off</code></td></tr>
+<tr valign="TOP"><td><a class="text" name="parameters.circledChargeFont"><code>circledChargeFont</code></a></td>
+    <td>Circled charge labels font: any of the fonts installed on the machine
+	</td>
+    <td align="CENTER"><code>SansSerif</code></td></tr>
+<tr valign="TOP"><td><a class="text" name="parameters.circledChargeSize"><code>circledChargeSize</code></a></td>
+    <td>Circled Charge labels font size in C-C bond length units:<br>
+	<center>
+	<em>circledChargeSize</em>*1.54 &Aring; = <em>circledChargeSize</em>*<em>scale</em> points
+	</center>
+	</td>
+    <td align="CENTER"><code>0.4</code></td></tr>
 <tr VALIGN=TOP><td><code><a name="parameters.colorScheme" class="text">colorScheme</a></code></td>
     <td>Color scheme.
 	<ul>
@@ -257,6 +272,10 @@ M  END\n&quot;&gt;&lt;/applet&gt;
 	</ul>
 	</td>
     <td ALIGN=CENTER><code>false</code></td></tr>
+<tr VALIGN="TOP"><td><a class="text" name="parameters.ligandErrorVisible"><code>ligandErrorVisible</code></a></td>
+    <td>Show (true) or not (false) ligand error by coloring to red.
+	</td>
+    <td align="CENTER"><code>false</code></td></tr>    
 <tr VALIGN=TOP><td><code><a name="parameters.lonePairsVisible" class="text">lonePairsVisible</a></code></td>
     <td>Show (true) or hide (false) lone pairs</td>
     <td ALIGN=CENTER><code>false</code></td></tr>
@@ -303,6 +322,12 @@ M  END\n&quot;&gt;&lt;/applet&gt;
     </ul>
     </td>
     <td align="CENTER"><code>auto</code></td></tr>
+<tr valign="TOP"><td><a class="text" name="parameters.zeroBasedAtomIndexing"><code>zeroBasedAtomIndexing</code></a></td>
+    <td>Starts the atom indexing from zero instead of one:
+    <ul>
+    <li><code>true</code> - atom indexes are started from zero</li>
+    <li><code>false</code> - atom indexes are started from one</li>
+    </ul></td><td align="CENTER"><code>false</code></td></tr>
 <tr VALIGN=TOP><td><code><a NAME="parameters.viewAtomMarkEnabled" class="text"
     >viewAtomMarkEnabled</a></code></td>
     <td>Enables (true) or disables (false) atom highlight and atom mark in View.</td>
@@ -903,6 +928,11 @@ See marvinbeans/examples/view-checkbox/MViewExampleWithCheckbox.java.
 	</td>
     <td ALIGN=LEFT><code>chemaxon/marvin/help<br>
 		/sketch.html</code></td></tr>
+    <tr valign="TOP"><td><code><a NAME="parameters.namingWebServiceURL"
+    ></a>namingWebServiceURL</code></td>
+    <td>Specifies the URL of a name recognition and import service for the name import to use.
+    </td>
+    <td align="CENTER"><code>empty</code></td></tr>
 </table>
 </blockquote>
 
@@ -1199,6 +1229,27 @@ the <code>java.beans.PropertyChangeListener</code> interface must be implemented
 <tr VALIGN=TOP><td><code>&quot;draggable&quot;</code></td>
     <td ALIGN=CENTER><code>Boolean</code></td>
     <td>The <a href="#parameters.draggable">draggable</a> property is changed.
+	</td></tr>
+<tr VALIGN=TOP><td><code>&quot;windowOpened&quot;</code></td>
+    <td ALIGN=CENTER><code>String</code></td>
+    <td>A new MarvinView or MarvinSketch window is opened from the viewer. 
+    If a sketcher is opened the value contains sketchInView#cellindex#, when
+    a viewer is opened, the value contains viewframe#cellindex, where #cellindex 
+    is the index of the opened cell in the viewer firing the event.
+	</td></tr>
+<tr VALIGN=TOP><td><code>&quot;windowClosed&quot;</code></td>
+    <td ALIGN=CENTER><code>Boolean</code></td>
+    <td>An MarvinView or MarvinSketch window that was opened from the viewer is being closed. 
+    If a sketcher was opened the value contains sketchInView#cellindex#, when
+    a viewer wass opened, the value contains viewframe#cellindex, where #cellindex 
+    is the index of the opened cell in the viewer firing the event.
+	</td></tr>
+<tr VALIGN=TOP><td><code>&quot;sketchInView&quot;</code></td>
+    <td ALIGN=CENTER><code>MSketchPane</code></td>
+    <td>This event is being fired when a sketcher gets opened from the viewer,
+    or such a sketcher is closing. At open the newValue contains a reference for the
+    opening sketcher, when closing, the newValue is null, and the oldValue contains
+    the reference for the sketcher.
 	</td></tr>
 </table>
 </blockquote>

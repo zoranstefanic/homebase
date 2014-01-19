@@ -4,8 +4,8 @@
 <Group>
     <Precision Key="precision" Label="Decimal places"/>
     <MultipleSelection Key="type" Label="Type" Tooltip="Specifying search for donor or acceptor characteristics.">
-	<Choice Value="donor" Text="Donor" Selected="true"/>
-	<Choice Value="acceptor" Text="Acceptor" Selected="true"/>
+	<Choice Value="donAll" Text="Donor" Selected="true"/>
+	<Choice Value="accAll" Text="Acceptor" Selected="true"/>
     </MultipleSelection>
     <Boolean Key="excludesulfur" Label="Exclude sulfur atoms from acceptors" Toltip="Sets to exclude sulfur atoms from hydrogen bond acceptors." Value="true"/>
     <Boolean Key="excludehalogens" Label="Exclude halogens from acceptors" Toltip="Sets to exclude halogens from hydrogen bond acceptors." Value="true"/>
@@ -29,7 +29,7 @@
     </Number>
 </Group>
 <Group>
-    <Boolean Key="microspecies" Label="Display major microspecies" Tooltip="Rhe structure of the major form at the given pH is displayed." Value="false"/>
+    <Boolean Key="microspecies" Label="Display major microspecies" Tooltip="The structure of the major form at the given pH is displayed." Value="false"/>
     <Number Key="pH" Label="at pH" Range="[0.0,14.0]" Value="7.4">
 	<Dependencies>
 	    <Item Key="microspecies" Range="true"/>

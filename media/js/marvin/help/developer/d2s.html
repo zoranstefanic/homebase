@@ -46,12 +46,11 @@ File document = new File("document.pdf");
 MolImporter importer = new MolImporter(document, "d2s");
 
 // Iterate through the hits
-Molecule m;
-while ((m = importer.read()) != null) {
+for (Molecule m : importer) {
   String smiles = m.toFormat("smiles");
   String name = m.getName();
   String sourceText = m.getProperty(DocumentToStructure.SOURCE_TEXT);
-  ...
+  //...
 }
 </pre>
 <p>
@@ -66,8 +65,8 @@ available as DocumentToStructure.CHARACTER, while this has no value in a binary 
 Note that SOURCE_TEXT contains the name as it appears in the source document. A cleaned version 
 (of possible OCR errors, typos, ...) can be retrieved with <code>m.getName()</code>.
 
-<h2><a name="conf"></a>Processing text directly</h2>
-When the text to convert is given as a String object, the MolImport object can be constructure with:
+<h2><a name="text"></a>Processing text directly</h2>
+When the text to convert is given as a String object, the MolImporter object can be constructed with:
 <pre>
 String text = ...;
 MolImporter importer = DocumentToStructure.process(text);
@@ -89,12 +88,18 @@ Document to Structure has specific options as well:
 <li><strong>cas</strong>: enable the conversion of CAS numbers (uses a webservice, off by default).
 <li><strong>smiles</strong>: enable the conversion of SMILES strings (on by default)
 <li><strong>inchi</strong>: enable the conversion of InChI strings (on by default)
+<li><strong>ocr</strong>: enable the processing of scanned text in PDF documents (on by default)
 <li><strong>OSRA</strong>: enable the conversion of structure drawings by the OSRA external tool (on by default if OSRA is installed)
+<li><strong>filterOSR</strong>: enable the filtering of OSR structures for incomplete recognition (on by default)
 <li><strong>text</strong>: enable the conversion of all text based formats: name, smiles, InChI, CAS (on by default)
+<li><strong>acronyms</strong>: enable the conversion acronyms, such as ATP for Adenosine TriPhosphate (off by default)
+<li><strong>OLE</strong>: enable the conversion of structures embedded in office documents (on by default)
 <li><strong>startPage=N</strong>: start processing document at page N (can be combined with endPage to process a range of pages)
 <li><strong>endPage=N</strong>: stop processing document at page N
 <li><strong>insideTag=&lt;tag&gt;</strong>: for markup formats, enable the conversion only inside the given tag
 (typically <strong>insideTag=body</strong> for HTML). Off by default.
+<li><strong>contextRadius=N</strong>: maximum number of characters of context to include, on each side of the hit (default = 40).
+<li><strong>contextIndex</strong>: whether to include the index of the hit in the context. Off by default.
 </ul>
 Each option can be precedeed by a minus sign <strong>-</strong> (for instance <strong>-smiles</strong>) to disable it.
 Both forms <strong>smiles</strong> and <strong>+smiles</strong> are accepted to enable an option.
@@ -114,12 +119,12 @@ molconvert sdf document.doc -o structures.sdf
 <h2>See also</h2>
 
 <ul>
-<li>An <a href="document-extractor.html">earlier version of the API</a> of the Document to Structure.
 <li>Detailed <a href="../../examples/d2s/index.html">code examples</a> using Document to Structure
 in real-world situations.
 <li><a href="beans/api/chemaxon/formats/MolImporter.html">API documentation of the MolImporter interface</a>
 <li><a href="beans/api/chemaxon/naming/DocumentToStructure.html">API documentation of the DocumentToStructure constants for properties, and helper methods</a>
 <li><a href="../d2s/d2s.html">User documentation for d2s</a></li>
+<li>An <a href="document-extractor.html">earlier version of the API</a> of the Document to Structure.
 </ul>
 </p>
 
@@ -127,7 +132,7 @@ in real-world situations.
 
 <center>
 <font size="-2" face="helvetica">
-Copyright &copy; 1999-2012 
+Copyright &copy; 1999-2013 
 <a href="http://www.chemaxon.com">ChemAxon Ltd.</a>
 &nbsp;&nbsp;&nbsp;All rights reserved.
 </font>

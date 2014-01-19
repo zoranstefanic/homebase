@@ -16,7 +16,8 @@ catalysts of these reactions are acids or bases. In solution a chemical equilibr
 of the tautomers will be reached. Some types of tautomers: ketone-enol, amid-imidic 
 acid, lactam-lactim, enamine-imine. <a href="tautomers.html">Learn more</a> about tautomerization and tautomers.</p>
 <p>Tautomers of a compound can be determined with the help of Tautomer Generator Plugin.<br>
-<b>Note</b>: Tautomer Generator Plugin does not consider the three dimensional structure of molecules during tautomer generation.</p>
+<b>Note</b>: Tautomer Generator Plugin does not consider the three dimensional structure of molecules 
+during tautomer generation, and symmetric structures are filtered out from the generated tautomer set.</p>
 <p>Following options can be adjusted in the Tools &gt; Isomers &gt; Tautomers,  
 <b class="buttonName">Tautomers Options</b> panel:</p>
 <p>
@@ -58,7 +59,8 @@ acid, lactam-lactim, enamine-imine. <a href="tautomers.html">Learn more</a> abou
 		<li><b>All tautomers:</b> calculates all possible tautomers. If any deuterium or tritium is involved in the tautomerization, it moves during enumeration. Rational tautomer generation mode can be activated.</li>
 	</ul> 
 	</li>
-    <li><b>Max. number of structures:</b> maximize the number of structures to display.</li>
+    <li><b>Max. number of structures:</b> maximize the number of structures to display. This number 
+	is the sum of unique tautomeric count and degenerated tautomeric count; however, only unique tautormers are displayed their degenerated tautomeric pairs are not.</li>
     <li><b>Consider pH effect:</b> takes into account the protonation states at given pH. Applicable for
     Major tautomer and Dominant tautomer distribution calculations.</li>
 	<li><b>Rational tautomer generation:</b> the tautomerization products are generated according to empirical rules.  Rational tautomer generation narrows down the possible tautomerization paths and leads to chemically more feasible products.</li>
@@ -69,7 +71,7 @@ acid, lactam-lactim, enamine-imine. <a href="tautomers.html">Learn more</a> abou
 <p>Note: the number of generated tautomers strongly depends on the options chosen.
 <ul>
     <li><b>Decimal places:</b> setting the number of decimal places with which
-    the tautomer distirbution values are given.</li>
+    the tautomer distribution values are given.</li>
     <li><b>Set max. allowed length of the tautomerization path; Path length:</b>
     sets the number of bonds which are considered by displacing a double bond. </li>
     <li><b>Protect aromaticity:</b> if checked (default), the aromaticity will be maintained.</li>
@@ -85,7 +87,7 @@ acid, lactam-lactim, enamine-imine. <a href="tautomers.html">Learn more</a> abou
     stereo information, any other 
     stereo information in the molecule is kept intact.</li>
     <li><b>Protect labeled tetrahedral stereo centers only:</b> if checked, stereocenters 
-            labeled with chiral flag or MDL Enhanced Stereo Represenation flags will 
+            labeled with chiral flag or MDL Enhanced Stereo Representation flags will 
     not be included in tautomerization, other stereocenters will.</li>
     <li><b>Single fragment mode:</b> if checked (default), the results are displayed in
             separate windows, if unchecked, the calculation handles unlinked molecules together and 
@@ -103,7 +105,7 @@ calculated tautomers of 4-amino-6-ethoxypyrimidin-2-ol:</p>
 </td></tr>
              <tr><td>Canonical tautomer</td><td><img src="images/canonicaltautomer.png" width="241" height="289" alt="canonical_tautomer"/>
 </td></tr>
-               <tr><td>Generic tautomer and an isotope labelled example</td> <td><img src="images/generictautomer.png" width="491" height="278" alt="generictautomer"/>
+               <tr><td>Generic tautomer and an isotope labeled example</td> <td><img src="images/generictautomer.png" width="491" height="278" alt="generictautomer"/>
 </td></tr>
                 <tr><td>Major tautomer</td> <td><img src="images/majortautomer.png" width="240" height="275" alt="majortautomer"/>
 </td></tr>

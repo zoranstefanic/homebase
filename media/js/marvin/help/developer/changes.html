@@ -9,6 +9,1884 @@
 <body>
 
 <h1>History of changes: New features and improvements, Bugfixes</h1>
+
+<h3><a id="v60160" class="anchor"></a>January 16th, 2014: Marvin 6.1.6</h3>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Applet</strong>
+		<ul>
+			<li>Missing resources caused issues in applets with bridged structures. For instance, template based cleaning and pasting names did not work in these cases.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v60150" class="anchor"></a>December 18th, 2013: Marvin 6.1.5</h3>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Java Webstart</strong>
+		<ul>
+			<li>Java Webstart did not run on Macintosh computers.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v60140" class="anchor"></a>November 27th, 2013: Marvin 6.1.4</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60140">Marvin for JavaScript</a> 6.1.4 history of changes
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Applet</strong>
+		<ul>
+			<li>The mol property change event was not fired when an empty molecule was set initially for the MarvinSketch applet. This could cause misbehaviour in cases where the client JavaScript code relied 
+					on this marker to know when the applet was initialized.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v60130" class="anchor"></a>October 31st, 2013: Marvin 6.1.3</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60130">Marvin for JavaScript</a> 6.1.3 history of changes
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>MarvinSketch GUI</strong>
+		<ul>
+			<li>MSketchPane <code>setPiece(Molecule)</code> method did not work, it set the molecule on the canvas instead of putting it on the cursor. 
+				<a href="https://www.chemaxon.com/forum/viewpost52621.html&sid=58ef15437ce2c3fc72e289bb505fb7a6">Forum</a></li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li><strong>CXSMILES/CXSMARTS</strong>
+				<ul>
+					<li>CXSMARTS containing valence property information was recognized and read as SMARTS. </li>
+				</ul>
+			</li>	
+			<li><strong>SKC </strong>
+				<ul>
+					<li> Some reaction was read as R-definition from SKC format. </li>
+				</ul>
+			</li>	
+		</ul>
+	</li>
+</ul>
+<h3><a id="v60120" class="anchor"></a>October 17th, 2013: Marvin 6.1.2</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60120">Marvin for JavaScript</a> 6.1.2 history of changes
+<h4>New features and improvements</h4>
+<ul>
+	<li><strong>MarvinSketch Dialog</strong>
+		<ul>
+			<li>'Zoom to scaffold' checkbox option has been added to the "Preferences>Save/Load" tab. <a href="../sketch/gui/dialogs.html#SaveLoad">Documentation</a></li>
+		</ul>
+	</li>
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>External structure checker configuration file URL can be set via Java System Property.</a></li>
+		</ul>
+	</li>
+</ul>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Editing</strong>
+		<ul>
+			<li>Electron-flow arrow could not be drawn from the A-B bond to the incipient A-C bond of an A-B-C structure. <a href="https://www.chemaxon.com/forum/ftopic11405.html">Forum</a></li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li> MolInputStream and MolImporter could have different format options. </li>
+			<li> MolImporter did not close its inputstream when an exception was thrown in the constructor. </li>
+			<li><strong>MOL, SDF, RXN, RDF </strong>
+				<ul>
+					<li>  Molecule type property was allowed in SDF, CSSDF export. </li>
+					<li>  The coordinates of the sequence residue imported from SCSR MOL files were wrong if the residue had three attachment point. </li>
+				</ul>
+			</li>	
+			<li><strong>CDX/CDXML </strong>
+				<ul>
+					<li> Color and text format of atom label is exported to CDX and imported from CDX and CDXML. 
+	           				<a href="https://www.chemaxon.com/forum/ftopic11147.html">Forum</a> </li>
+					<li> Graphical brackets were not imported from CDX files. </li>
+				</ul>
+			</li>	
+			<li><strong>Gaussian Z-matrix input format</strong>
+				<ul>
+					<li> Command line, title line, and extra input properties were not exported to Gaussian Z-matrix input format. 
+	           				<a href="https://www.chemaxon.com/forum/ftopic6968.html">Forum</a>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Clean 2D</strong>
+		<ul>
+			<li> Cleaning of position variation bonds could create overlapping bonds. </li>
+			<li> Cleaning of bridged systems could result in overlapping atoms. 
+	           				<a href="https://www.chemaxon.com/forum/ftopic10624.html">Forum</a></li>
+		</ul>
+	</li>
+    	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Topology Analysis</strong>
+				<ul>
+					<li>Missing method has been added: TopologyAnalyserPlugin.getFsp3().  
+						<a href="http://www.chemaxon.com/marvin/help/developer/beans/api/chemaxon/marvin/calculations/TopologyAnalyserPlugin.html#getFsp3%28%29">API Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>logD</strong>
+				<ul>
+					<li>New logD training documentation has been added.  
+						<a href="../calculations/logd_training.html">Documentation</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<li><strong>Structure Checker</strong>
+		<ul>
+			<li>Fixer options in MarvinSketch are updated with newly defined settings.</li>
+			<li>External checkers can be loaded from JAR file in case the JAR file contains a space.</li>
+		</ul>
+	</li>
+	</li>
+</ul>
+
+<h3><a id="v60110" class="anchor"></a>October 11th, 2013: Marvin 6.1.1</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60110">Marvin for JavaScript</a> 6.1.1 history of changes
+<p>Non-public version
+
+<h3><a id="v60100" class="anchor"></a>September 10th, 2013: Marvin 6.1.0</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60100">Marvin for JavaScript</a> 6.1.0 history of changes
+<h4>New features and improvements</h4>
+<ul>
+	<li><strong>MarvinSketch GUI</strong>
+		<ul>
+			<li>Peptide cycles and bridges can be drawn according to IUPAC recommendations. <a href="../sketch/sketch-basic.html#biomolecule-displaying">Documentation</a></li>
+			<li>IUPAC numbering can be displayed on the atoms of each molecule using the "View &gt; Advanced &gt; Atom Numbering &gt; IUPAC Numbering" menu item.</li>
+			<li>Lone Pair (LP button) was removed from the "Special nodes" group of the "Periodic Table &gt; Advanced" tab, so it cannot be reached from the GUI anymore.</li>
+		</ul>
+	</li>
+	<li><strong>MarvinSketch Menu</strong>
+		<ul>
+			<li>The "Calculations &gt; Predictor" menu option has been removed from the default Marvin menu.</li>
+		</ul>
+	</li> 
+	<li><strong>Painting</strong>
+		<ul>
+			<li>Drawing of electron flow arrows has been changed. Single electron flow arrows can now start either from a radical or from an electron of a lone pair. 
+				Electron pair flow arrows can only start from lone pairs. <a href="../sketch/gui/electronflow.html">Documentation</a></li>
+			<li>Atom property values belonging to the same atom are now separated with semicolons instead of commas.</li>
+	 		<li>When lone pairs were displayed on a structure, the charge symbol was nearly invisible.</li>
+		</ul>
+	</li>
+	<li><strong>Load/Save handling in UI</strong>
+		<ul>
+			<li>The same last-used folder is saved for the "File &gt; Open" and the "File &gt; Insert file" functions.</li>
+		</ul>
+	</li>
+	<li><strong>Graphical object handling</strong>
+		<ul>
+			<li>Electron flow arrows can be started from or targeted to multicenter atoms. <a href="https://www.chemaxon.com/forum/ftopic10426.html&highlight=">Forum</a></li>
+		</ul>
+	</li>
+	<li><strong>MarvinView GUI</strong>
+		<ul>
+			<li>IUPAC numbering can be displayed on the atoms of each molecule using the "View &gt; Misc &gt; Atom Numbers &gt; IUPAC Numbering" menu item.</li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li><strong>MRV/CML</strong>
+				<ul>
+					<li> Namespace has been introduced to mrv format. </li>
+				</ul>
+			</li>
+			<li><strong>MOL, SDF, RXN, RDF</strong>
+				<ul>
+					<li>New export option, cc, is introduced to V2000 export in order to write absolute chiral flag if there are only ABS enhanced stereo labels in the molecule.
+					<a href="../formats/mol-csmol-doc.html#options">Documentation</a></li>
+					<li>New import option, z,  is introduced to MDL import that converts carbon atoms with "Z" label to R-group attachment points. 
+					<a href="../formats/mol-csmol-doc.html#options">Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>SMILES/SMARTS</strong>
+				<ul>
+					<li> [Z] is imported as R-group attachment point from SMILES. 
+					<a href="../formats/smiles-doc.html">Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>CXSMILES/CXSMARTS</strong>
+				<ul>
+					<li> New export option, b, has been introduced to CXSMILES/CXSMARTS in order to turn off the export of bicyclostereo-information.
+					<a href="../formats/cxsmiles-doc.html#options">Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>Name to Structure (n2s)</strong>
+				<ul>
+					<li>Name and corporate ID resolution webservice now supports NTLM authentication.</li>
+					<li>Names with a missing dash before the suffix locants are now recognized.</li>
+					<li>Non-standard IUPAC specification of stereochemistry inside suffix locants is supported.</li>
+					<li>Names with superscript locants of a bridged ring system numbering are denoted by spaces are now supported.</li>
+					<li>As a result of numerous improvements to the systematic name conversion algorithm, more names are converted by n2s and detected by d2s. The accuracy of 
+						structure generation has also increased. (For instance, 5% more names were detected and converted in a large, diverse set of patents.)</li>
+					<li>An example custom dictionary has been added to the documentation. <a href="../naming/naming_customdic.html">Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>Document to Structure (d2s)</strong>
+				<ul>
+					<li>Chinese names are now detected in text documents using an approach which recognizes names in Chinese sentences without the spaces that separate 
+						words in English.</li>
+					<li>In addition to OSRA, the CLiDE and Imago Optical Structure Recognition tools (Chemical OCR) can be used to convert images to structures. These tools 
+						need to be installed separately from Marvin. <a href="../d2s/d2s-osr.html">Documentation</a></li>
+					<li>When processing USPTO patents in XML format, the section in which a name is found is recorded as metadata (title, abstract, citation, description, or claim 
+						number). Additionally, document metadata is extracted (patent title and ID, inventors and assignees, IPCR categories).</li>
+					<li>When processing a USPTO patent XML document, referenced CDX files are imported automatically if they are in the same directory as the XML file.</li>
+					<li>Processing of USPTO XML patents has become faster: an average 20% speed-up, more than ten times faster process for some patents.</li>
+					<li>PDF document pages with images in the JBIG2 format are now supported.</li>
+					<li>PDF documents generated by Adobe Acrobat Paper Capture Plug-In and ExperVision are now handled specially, since they contain both an original scanned image 
+						of text and the text resulting from OCR of the image. This allows much faster processing of such documents, and avoids double hits for the same text.</li>
+					<li>PDF documents with many small high-resolution images are now processed much faster, even when Optical Structure Recognition is used.</li>
+					<li>The document creation date property is stored as a <code>java.util.Date</code> object instead of string.</li>
+					<li>Structures returned by image recognition tools (OSRA, CLiDE, Imago) are better filtered to avoid false positives.</li>
+					<li>OCR processing for scanned texts can be disabled using the <code>-ocr</code> format option. <a href="d2s.html#conf">Documentation</a></li>
+					<li>Processing of PDF documents with scanned black and white images (<i>e.g.</i>, most non-searchable patent documents) has become approximately two times faster.</li>
+				</ul>
+			</li>
+			<li><strong>Structure to Name (s2n)</strong>
+				<ul>
+					<li>When converting a structure to CAS registry number, the InChiKey of the structure is used to search for the structure. This allows more structures to get a CAS 
+						registry number in such cases where several different SMILES with chemically irrelevant differences are associated with the structure.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Molecule Representation</strong>
+		<ul>
+			<li>New method, <code>SelectionMolecule.addAtom(MolAtom, boolean)</code>, is introduced. 
+			<a href="https://www.chemaxon.com/forum/ftopic10497.html">Forum</a></li>
+			<li>New methods, <code>MolAtom.getBondArray()</code> and <code>Sgroup.getBondArray()</code> are introduced. 
+			<a href="https://www.chemaxon.com/forum/ftopic10494.html">Forum</a></li>
+		</ul>
+	</li>
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>NMR (CNMR, HNMR Prediction...)</strong>
+				<ul>
+					<li>Various phosphorus-proton spin-spin coupling parameters have been added to the predictor database.</li>
+				</ul>
+			</li>
+			<li><strong>Geometry (Topology Analysis, Geometrical Descriptors, PSA, MSA)</strong>
+				<ul>
+					<li>"Fsp3" option has been introduced in the Topology Analysis plugin for calculation of sp<sup>3</sup> carbon atom fraction. 
+						<a href="../calculations/geometrygroup.html#topolanal">Documentation</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Elemental Analyzer</strong>
+		<ul>
+			<li>Charge is taken into account in atomic mass calculation.</li>
+		</ul>
+	</li>
+	<li><strong>Chemical Terms</strong>
+		<ul>
+			<li>Chemical Terms's (CT) <a href="http://www.chemaxon.com/marvin/help/chemicalterms/EvaluatorFunctions.html#structure_checker_functions">Structure Checker functions</a> accept XML 
+			configuration as string parameter, thus Structure Checker XML 
+			configurations can be used in JChem Cartridge via CT.</li>
+			<li>New <code>checkErrorCount</code> Chemical Terms function returns 
+			the number of errors/issues found by the checker(s) in the configuration. <a href="http://www.chemaxon.com/marvin/help/chemicalterms/EvaluatorFunctions.html#structure_checker_functions">Documentation</a></li>
+		</ul>
+	</li>
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>Checker "substructure checker" has become available in 
+			Marvin Beans, so installing Marvin Beans will install the fully 
+			functional Structure Checker application. </li>
+			<li>Set Structure Checker configuration can be copied to the clipboard 
+			as action string from Structure Checker GUI and Structure Checker 
+			Editor. <a href="../structurechecker/structurechecker.html#copyas">Documentation</a> </li>
+			<li>The "excluded" list of Structure Checker's Abbreviated Group 
+			Checker accepts quotation marks in command-line. Possible definitions 
+			can be the following: <code>"abbrevgroup:excluded=Ph,Ala,Gly"</code>, 
+			<code>"abbrevgroup:excluded='Ph,Ala,Gly'"</code> or 
+			<code>"abbrevgroup:excluded="Ph,Ala,Gly""</code>.</li>
+			<li>The checkers and fixers can be localized or customized according to individual requirements. <a href="structurechecker/personalize_checkers.html">Documentation</a></li>			
+		</ul>
+	</li>
+	<li><strong>Build/Installation</strong>
+		<ul>
+			<li>Mac OS X installer images were not digitally signed, and GateKeeper in newer OS X versions (10.7.5+) reported our installers as damaged and refused to install them.</li>
+		</ul>
+	</li>
+</ul>
+
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>MarvinSketch GUI</strong>
+		<ul>
+			<li>Aliphatic/Aromatic atom query property had three options ("a", "A", and "A,a") instead of the necessary two ("a" and "A").</li>
+		</ul>
+	</li>
+	<li><strong>MarvinSketch Dialog</strong>
+		<ul>
+			<li>In case of long names, only a part of the whole name appeared on the naming panel.</li>
+		</ul>
+	</li>	
+	<li><strong>Editing</strong>
+		<ul>
+			<li>Deleting an atom having an R-group attachment did not delete the attachment.</li>
+			<li>The end of an arrow did not stick to the midpoint of an existing arrow.</li>
+		</ul>
+	</li>
+	<li><strong>Load/Save handling in UI</strong>
+		<ul>
+			<li>In MarvinView, "File &gt; Save All... &gt; Advanced &gt; Into SEPARATE FILES" did not save the last structure.</li>
+		</ul>
+	</li>
+	<li><strong>History functions</strong>
+		<ul>
+			<li>When the "Stereo" atom property had been changed, Undo/Redo did not work properly and the IUPAC name was not updated.</li>
+		</ul>
+	</li>
+	<li><strong>Graphical object handling</strong>
+		<ul>
+			<li>Labels written in text box were shifted when they were pasted either as an OLE object or as a PNG image.</li>
+		</ul>
+	</li>
+	<li><strong>MarvinView GUI</strong>
+		<ul>
+			<li>When a structure which contained an R-group definition was opened from MarvinView for editing in MarvinSketch, the structure appeared with 0% zoom factor.</li>
+			<li>Text elements (atom labels, atom indices, text box contents, IUPAC name) were not resized in MarvinView while zooming the structure using the 
+				"View &gt; Transform &gt; Zoom" function. <a href="https://www.chemaxon.com/forum/ftopic9798.html">Forum</a></li>
+		</ul>
+	</li>
+	<li><strong>Printing in MarvinView</strong>
+		<ul>
+			<li>When choosing "Print &gt; All Visible", the structures overlapped in the preview, and "Print &gt; All Visible &gt; Print to PDF" resulted in an empty file.</li>
+		</ul>
+	</li>
+	<li><strong>MarvinSpace</strong>
+		<ul>
+			<li>A bug occuring at PDB import has been fixed.</li>
+			<li>The "Edit &gt; Cut" menu option has been fixed in the MarvinSpace menubar.</li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li> Aliphatic and aromatic query property, when they are used together, is not imported and exported any more. 
+			The "no property", no aromatic or aliphatic query property, has the same meaning. </li>
+			<li> Only lower case file extensions were recognized.</li>
+			<li><strong>MRV/CML</strong>
+				<ul>
+					<li> MRV files that contained circular R-group references without attachment point information could not be imported.  </li>
+				</ul>
+			</li>
+			<li><strong>MOL, SDF, RXN, RDF</strong>
+				<ul>
+					<li> Export of structures containing multicenter S-groups to format MOL V2000 resulted in a non-standard file. </li>
+					<li> Newline characters in molecule name were not escaped.</li> 
+					<li> MDL MOL import did not use MDL valence model for non-charged metals. </li>
+					<li> Atom list embedded to atom list in MDL file formats resulted in invalid atom list elements after import. 
+				</ul>
+			</li>
+			<li><strong>CDX/CDXML</strong>
+				<ul>
+					<li> Reactions containing anonymous alternative groups were not imported from CDX format.
+					<a href="https://www.chemaxon.com/forum/ftopic10655.html">Forum</a></li>
+					<li> XML files with complex header could have been recognized as CDXML. 	</li>
+				</ul>
+			</li>
+			<li><strong>SMILES/SMARTS</strong>
+				<ul>
+					<li>Query Hydrogen atom with parity definition confused SMARTS import. </li>
+					<li> SMILES export did not throw exception when the molecule contained not supported reaction stereo information. </li>
+					<li> Newline characters in molecule name were not escaped.</li> 
+					<li> SMILES import read Meitnerium atom (Mt) as any atom (*). </li>
+					<li> Strings containing valence property were recognized and imported as SMILES instead of SMARTS. </li>
+				</ul>
+			</li>
+			<li><strong>CXSMILES/CXSMARTS</strong>
+				<ul>
+					<li> Import of CXSMILES/CXSMARTS strings that describes the coordinates of atoms with option <code>c</code> 
+					added 'CIS OR TRANS' stereo information to double bonds in small rings. </li>
+					<li> Single or aromatic bonds could be lost during CXSMARTS export and import. </li>
+				</ul>
+			</li>
+			<li><strong>InChi/InChiKey</strong>
+				<ul>
+					<li> InChI was not recognized in MolConverter as one line molecular format that can be given as the argument of -s option 
+					without specifying the format. </li>
+				</ul>
+			</li>
+			<li><strong>PDF</strong>
+				<ul>
+					<li> Reactions could not be exported to PDF. </li>
+				</ul>
+			</li>
+			<li><strong>Name to structure (n2s)</strong>
+				<ul>
+					<li>Names with a <i>cis-</i> or <i>trans-</i>imine bond were failing to be converted to structures</li>
+					<li>Ions, such as "bismuth(3+)", were imported with valence property set to 0.</li>
+					<li><i>Ortho</i> substitution on acetophenone generated wrong structures.</li>
+					<li>Some E/Z and R/S stereochemistry was missing in structures imported from names when the locant of the atom or bond with stereochemistry 
+						was not specified explicitly.</li>
+					<li>The "H<sup>-</sup>" ion was missing from names containing "hydride", <i>e.g.</i>, sodium hydride, they only had <i>e.g.</i>, "Na<sup>+</sup> 
+						instead of the correct NaH.</li>
+					<li>Names containing atoms with both a non-standard valence (&lambda;) and a positive charge were converted to structures with an extra implicit 
+						hydrogen on that atom.</li>
+					<li>Primary and secondary amine oxides were represented as N-OH instead of [N<sup>+</sup>]-[O<sup>-</sup>].</li>
+					<li>The "Name" format was not automatically recognized for names with XML/HTML character references, such as "&amp;#946;" or "&amp;alpha;".</li>
+					<li>In some cases, amino acids with &alpha;, &beta;, and &gamma; prefixes were not converted.</li>
+					<li>Using n2s in the applet required the downloading of an unnecessary component. This, in turn, made the first applet usage much slower.</li>
+				</ul>
+			</li>
+			<li><strong>Document to structure (d2s)</strong>
+				<ul>
+					<li>Some common words such as "DUST" or "crank", were recognized as names because, <i>e.g.</i>, DUST is a rare acronym for a chemical structure. 
+						These words are now ignored.</li>
+					<li>The <code>insideTag</code> format option was not working for XML and XHTML documents.</li>
+					<li>Some uppercase words were mistakenly recognized as SMILES strings, such as "CISCO" or "ON-OFF".</li>
+					<li>Some embedded images were returned with 'PNG' type instead of 'OSR', and the usual OSRA options and properties 
+						(<i>e.g.</i>, timeout, confidence filtering) were missing as well.</li>
+					<li>When d2s was interrupted (for instance, by a timeout), an OCR or OSR process could be left running in the background until it was completed. 
+						In similar cases such processes are now stopped immediately.</li>
+					<li>Extracted names sometimes contained some irrelevant characters at the end, such as "4-(trifluoromethyl)-2-((1H-1,2,4-triazol-1-yl)phenyl)-methanamine 2e" 
+						instead of "4-(trifluoromethyl)-2-((1H-1,2,4-triazol-1-yl)phenyl)-methanamine".</li>
+					<li>In some cases, single names separated by space were imported as if they were one compound, for instance, "2-hexanoyloxyethyl 1-formyloxypropyl".</li>
+					<li>Embedded structures in Office documents were always imported with the absolute chiral flag set.</li>
+				</ul>
+			</li>
+			<li><strong>Structure to name (s2n)</strong>
+				<ul>
+					<li>When generating names in parallel in multiple threads, some E/Z stereo bond modifiers were missing from the output.</li>
+					<li>Wrong names were generated for structures with multiple attachment points. These cases are now detected and no name is generated for them. 
+						Generating a name in this case will be implemented in the future.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Molecule Representation</strong>
+		<ul>
+			<li><strong>Valence Check</strong>
+				<ul>
+					<li>Valence check changed standalone Bi to BiH<sub>3</sub>. </li>
+					<li>Valence error was not shown on a Carbon atom having a triple and an aromatic bond.</li>
+					<li>Valence Check accepted Stannane with any number of implicit hydrogens. </li>
+				</ul>
+			</li>
+			<li><strong>Implicit/Explicit Hydrogen Conversion</strong>
+				<ul>
+					<li>Stereoinformation was lost during explicit Hydrogen removal from stereocenter when all ligands of the stereocenter were also stereogenic.</li>
+					<li>Conversion of explicit Hydrogen to implicit one thrown exception when there is only a 
+					    Hydrogen atom in an R-group definition or in a definition member.</li> 				
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Image I/O</strong>
+		<ul>
+			<li>Text box contents, atom labels and atom attributes (<i>e.g.</i>, atom indices, stereo labels), and IUPAC names were not exported to PDF as text. 
+				When the "Save/Load GUI settings" checkbox was checked in the Preferences dialog, text attributes (<i>e.g.</i>, font type, size) were not exported either.</li>
+		</ul>
+	</li>
+	<li><strong>Clean 2D</strong>
+		<ul>
+			<li> Clean removed stereo centers around the contracted superatom S-groups. </li>
+			<li>Clean2D got stuck and error message was thrown for some more complex molecules imported from SMILES.</li>
+		</ul>
+	</li>
+	<li><strong>Stereochemistry</strong>
+		<ul>
+			<li> Cis-Trans stereoisomerizm was recognized on flexible Nitrogen atoms.</li> 
+			<li> Stereo information could lost in symmetric bridged systems with explicit Hydrogen atoms. </li> 
+		</ul>
+	</li>
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Elemental Analysis</strong>
+				<ul>
+					<li>ElementalAnalyser.setMolecule(String) threw exception if the formula contained () brackets (e.g. C6H11N3.2(HCl)). 
+						<a href="http://www.chemaxon.com/marvin/help/developer/beans/api/chemaxon/calculations/ElementalAnalyser.html#setMolecule%28java.lang.String%29">API documentation</a>, 
+						<a href="https://www.chemaxon.com/forum/ftopic11049.html">Forum topic</a></li>
+				</ul>
+			</li>
+			<li><strong>Protonation (pKa, Major Microspecies, Isoelectric Point)</strong>
+				<ul>
+					<li>Minor bug has been fixed on the distribution chart.</li>
+				</ul>
+			</li>
+			<li><strong>Isomers (Tautomers, Stereoisomers)</strong>
+				<ul>
+					<li>Stereoisomers plugin failed to generate all stereoisomers for tricyclic compounds. <a href="https://www.chemaxon.com/forum/ftopic10715.html">Forum topic</a></li>
+					<li>Generic tautomer generation threw exception on some molecules.</li>
+					<li>Some invalid 3D structures were not filtered out during stereoisomer generation although 3D-filter option was turned on. 
+						<a href="https://www.chemaxon.com/forum/ftopic10035.html">Forum topic</a>
+					<li>Some cycloolefine stereoisomers were mistakenly filtered out as duplicates, so they were missing from the generated list of stereoisomers. 
+						<a href="https://www.chemaxon.com/forum/viewpost27522.html">Forum topic</a>
+				</ul>
+			</li>
+		</ul>	
+	</li>
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>In Structure Checker GUI, the scroll bar was missing in the 
+			report tab if the report contained four to six structures. </li>
+			<li>When the Structure Checker configuration contained multiple 
+			substructure checkers, their order would change during structure checking process.</li>			
+		</ul>
+	</li>
+</ul>
+<h4>Deprecated and removed methods</h4>
+	<ul>
+	<li><a HREF="deprecatedObjects.html">Deprecated and removed methods</a></li>
+	</ul>
+
+<h3><a id="v60060" class="anchor"></a>November 25th, 2013: Marvin 6.0.6</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60060">Marvin for JavaScript</a> 6.0.6 history of changes
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Applet</strong>
+		<ul>
+			<li>The mol property change event was not fired when an empty molecule was set initially for the MarvinSketch applet. This could cause misbehaviour in cases where the client JavaScript code relied 
+					on this marker to know when the applet was initialized.</li>
+		</ul>
+	</li>
+</ul>	
+	
+<h3><a id="v60050" class="anchor"></a>August 27th, 2013: Marvin 6.0.5</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60040">Marvin for JavaScript</a> 6.0.5 history of changes
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>MarvinView GUI</strong>
+		<ul>
+			<li>Opening a structure for editing in MView was opened with 0% zoom factor in the MSketch window, when the structure contained an R-group.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v60040" class="anchor"></a>August 6th, 2013: Marvin 6.0.4</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60040">Marvin for JavaScript</a> 6.0.4 history of changes
+<ul>
+	<li><strong>MarvinSpace</strong>
+		<ul>
+			<li>Transferring 3D molecules from MarvinSpace to MarvinSketch resulted in 2D structures in the sketcher. <a href="https://www.chemaxon.com/forum/ftopic10900.html">Forum topic</a></li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v60030" class="anchor"></a>July 23th, 2013: Marvin 6.0.3</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60030">Marvin for JavaScript</a> 6.0.3 history of changes
+<p>No changes.</p>
+
+<h3><a id="v60020" class="anchor"></a>June 25th, 2013: Marvin 6.0.2</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60020">Marvin for JavaScript</a> 6.0.2 history of changes
+<p>No changes.</p>
+
+<h3><a id="v60010" class="anchor"></a>June 21st, 2013: Marvin 6.0.1</h3>
+<a href="../marvin4js/changes_Marvin4JS.html#v60010">Marvin for JavaScript</a> 6.0.1 history of changes
+<h4>New features and improvements</h4>
+<ul>
+	<li><strong>Image I/O</strong>
+		<ul>
+			<li>The following file extensions were removed from the "Files of Type" list on the Import Image dialog: *.ps, *.pdf, and "All Files". PDF files can be imported through the "File &gt; Open" menu.</li>
+		</ul>
+	</li>
+	<li><strong>Calculations</strong> 
+		<ul>
+			<li><strong>Services</strong>
+				<ul>
+					<li>SOAP webservices: 
+						<ul>
+							<li>SOAP version 1.2 webservices are supported.</li>
+						</ul>	
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Painting</strong>
+		<ul>
+			<li>R/S stereo labels were not displayed when there was an R-group on the canvas.</li>
+			<li>S-groups, created from structures containing a position variation bond, retained the grey patch of the position variation bond when the group was contracted.</li>
+		</ul>
+	</li>
+	<li><strong>Editing</strong>
+		<ul>
+			<li>An atom of an expanded S-group could not be replaced with an S-group correctly</li>
+		</ul>
+	</li>
+	<li><strong>Clipboard handling</strong>
+		<ul>
+			<li>On Mac OS X, copy-paste (from MarvinSketch to, <i>e.g.</i>, TextEdit) did not transfer the atom colors. 
+				<a href="https://www.chemaxon.com/forum/ftopic10144.html">Forum topic</a></li>
+		</ul>
+	</li>
+	<li><strong>Graphical object handling</strong>
+		<ul>
+			<li>Formatting the head of a graphical arrow to a half-left arrow using the Document Style dialog crashed the display of the arrow.</li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li><strong>MRV/CML</strong>
+				<ul>
+					<li>MRV and CML export failed with the woodstock xml processor.
+					<a href="https://www.chemaxon.com/forum/ftopic10499.html">Forum topic</a></li>
+				</ul>
+			</li>	
+			<li><strong>InChi/InChiKey</strong>
+				<ul>
+					<li>InChi export did not return 
+					standard InChi when the absolute 
+					stereo was not set in a non-chiral 
+					molecule. 
+					<a href="https://www.chemaxon.com/forum/ftopic10424.html">Forum topic</a></li>
+				</ul>
+			</li>
+			<li><strong>Document to Structure</strong>
+				<ul>
+					<li>Documents with many consecutive names would lead to 
+					extremely long processing time (appeared as hanging, unless reaching the timeout). 
+					<a href="https://www.chemaxon.com/forum/ftopic10643.html">Forum topic</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Molecule Representation</strong>
+		<ul>
+			<li><strong>Implicit/Explicit Hydrogen Conversion</strong>
+				<ul>
+					<li> Adding explicit hydrogen to an atom being part of a Multicenter S-group added the hydrogen to the S-group as well. 
+					<a href="https://www.chemaxon.com/forum/ftopic10533.html">Forum topic</a></li>
+
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Clean 2D</strong>
+		<ul>
+			<li>Stereo clean created non-IUPAC standard depiction of certain tetrahedral configurations. 
+		        <a href="https://www.chemaxon.com/forum/ftopic10614.html">Forum topic</a></li>
+		</ul>
+	</li>
+	<li><strong>Data Transfer</strong>
+		<ul>
+			<li><strong>OLE</strong>
+				<ul>
+					<li>Redirecting ChemDraw OLE objects did not work.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Applet</strong>
+		<ul>
+			<li>Applet parameter <code>extraBonds</code> did not work therefore the bond type menu appearance could not be changed. 
+				<a href="https://www.chemaxon.com/forum/ftopic10418.html">Forum topic</a></li>
+		</ul>
+	</li>
+	<li><strong>Image I/O</strong>
+		<ul>
+			<li>The xml header information was always included in the generated SVG content during image export. 
+				SVG export now has an option "headless" to exclude this information. 
+				<a href="http://www.chemaxon.com/marvin/help/formats/svg-doc.html">Documentation</a>, 
+				<a href="https://www.chemaxon.com/forum/ftopic10002.html">Forum topic</a></li>
+		</ul>
+	</li>
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Protonation (pKa, Major Microspecies, Isoelectric Point)</strong>
+				<ul>
+					<li>"Keep explicit hydrogen" option caused exception during pKa calculation.</li>
+				</ul>
+			</li>
+			
+			<li><strong>NMR (HNMR, CNMR Prediction, ...)</strong>
+				<ul>
+					<li>When the mouse cursor was moved over an NMR peak on the chart, the relevant 
+					atom was not highlighted on NMR predictor molecule preview panel.</li>
+				</ul>
+			</li>
+			<li><strong>Services</strong>
+				<ul>
+					<li>SOAP webservices: 
+						<ul>
+							<li>Parameters did not load from WSDL properly in SOAP version 1.1 webservices.</li>
+						</ul>	
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v600" class="anchor"></a>May 17th, 2013: Marvin 6.0.0</h3>
+<h4>New features and improvements </h4>
+<ul>
+	<li><strong>MarvinSketch GUI</strong>
+		<ul>
+			<li>The default tool in MarvinSketch is Rectangle Selection instead of Single Bond.</li> 
+			<li>MarvinSketch GUI has been refreshed: Icon set has been changed in MarvinSketch. Menu items have been rearranged. Several dialogs, tooltips, menus has been renamed.</li>
+			<li>A new Marvin configuration has been added to MarvinSketch. Already existing Marvin configurations have been renamed. <a href="../sketch/gui/configurations.html">Documentation</a></li>
+			<li>MarvinSketch now starts with the native "Look & Feel" on Windows and on Mac OS X.</li>
+		</ul>
+	</li>
+	<li><strong>MarvinSketch Dialog</strong>
+		<ul>
+			<li>At the first launch of MarvinSketch after installation, a dialog asks the user to select the desired skin for the GUI configuration. <a href="../sketch/gui/configurations.html">Documentation</a></li>
+			<li>The Open dialog has been modified. Selecting molecules to load from a multistructure file happens now directly on the Open dialog.</li>
+			<li>New dialog, called "Insert file", has been introduced into MarvinSketch for adding structures from new files to the canvas contents. <a href="../sketch/sketch-basic.html#open-molecule">Documentation</a></li>
+			<li>The Save dialog has been extended with an Advanced panel to set saving options.</li>
+		</ul>
+	</li>
+	<li><strong>Painting</strong>
+		<ul>
+			<li>Drawing quality has been improved: join of single bonds has been refined.</li>
+			<li>Superatom S-group attachment points are denoted by numbers instead of asterisks.</li>
+		</ul>
+	</li>
+	<li><strong>Editing</strong>
+		<ul>
+			<li>MarvinSketch GUI can handle unlimited number of attachment points on Superatom S-groups. 
+				There are new menu options for adding and removing attachment points in the Atom menu and in the contextual menu. <a href="../sketch/sketch-basic.html#Sgoups_to_template">Documentation</a></li>
+			<li>Bond length can be scaled. Bond length and size of other objects can be set by dragging the displayed corners of the bounding rectangle. 
+					Scaling is also available on the Document Style dialog. 
+					Scaling does not work when the structure has been rotated in 3D mode (with F7). <a href="../sketch/sketc-basic.html#scalling">Documentation</a></li>
+		</ul>
+	</li>
+	<li><strong>Load/Save handling in UI</strong>
+		<ul>
+			<li>New loading mechanism has been introduced in MarvinSketch. New menu option, Insert file, has been added to the File menu; it appends the contents of the chosen file to the structure 
+					on the canvas. <a href="../sketch/sketch-basic.html#open-molecule">Documentation</a></li>
+			<li>New saving mechanism has been introduced in MarvinSketch. <a href="../sketch/sketch-basic.html#save2molformat">Documentation</a></li>
+			<li>New save mechanism has been introduced for MarvinView. <a href="../view/view-basic.html">Documentation</a></li>
+			<li>Reactions and structures containing R-group definitions cannot be saved either in separate files or separately in the same file. <a href="../sketch/sketch-basic.html#save2molformat">Documentation</a></li>
+		</ul>
+	</li>
+	<li><strong>Clipboard handling</strong>
+		<ul>
+			<li>Images of chemical structures can be imported from the clipboard via the configured image import service or locally installed OSRA.</li>
+		</ul>
+	</li>
+	<li><strong>Template Library</strong>
+		<ul>
+			<li>New template set, Organometallics, has been added to the Template Library.</li>
+			<li>New amino acid templates have been added (e.g., pyrrolysine, selenocysteine, "any/unknown/undetermined aminoacid").</li>
+			<li>The following amino acid templates have three attachment points: arginine, cysteine, histidine, lysine, selenocysteine, serine, threonine, tryptophan, tyrosine.</li>
+		</ul>
+	</li>
+	<li><strong>Integration</strong>
+		<ul>
+			<li>The new Automapper has been introduced in MarvinSketch.</li>
+		</ul>
+	</li>
+	
+	<li><strong>MarvinSpace</strong>
+		<ul>
+			<li>Copy and Paste functions have been added to MarvinSpace.</li>
+			<li>3D editor: Molecules can be edited in 2D in MarvinSketch, and aligned to the original 3D molecule.</li>
+		</ul>
+	</li>
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li> <strong>MRV/CML</strong>
+				<ul>
+					<li> Import and export of more than two
+					Superatom S-group attachment points are
+					supported. </li>
+				</ul>
+			</li>
+			<li> <strong> MRV schema </strong>
+				<ul>
+					<li> New element, AttachmentPointArray, is
+					introduced in format MRV to describe the
+					new Superatom S-group attachment point 
+					representation.
+					<a href="../formats/schema/mrvSchema_6_0_0.xsd">MRV Schema</a>, 
+					<a href="../formats/mrv-doc.html">Documentation</a> </li>
+				</ul>
+			</li>
+			<li><strong>MOL, SDF, RXN, RDF</strong>
+				<ul>
+					<li> The import of template based 
+					MDL MOL files is introduced. </li> 
+					<li>Import and export of more than two
+                                        Superatom S-group attachment points are
+                                        supported from MDL MOL based formats. </li> 
+				</ul>
+			</li>
+			<li><strong>SKC</strong>
+				<ul>
+					<li> Import and export of more than two
+                                        Superatom S-group attachment points are
+                                        supported. Superatom S-groups having 
+					at least one crossing bond are exported in
+					their expanded form. </li>
+				</ul>
+			</li>
+			<li><strong>CDX/CDXML</strong>
+				<ul>
+					<li> Import and export of more than two
+                                        Superatom S-group attachments point are
+                                        supported. </li>
+					<li> Curved lines can be imported from CDX 
+					files. </li> 	
+				</ul>
+			</li>
+			<li><strong>CXSMILES/CXSMARTS</strong>
+				<ul>
+					<li>  Generic, Polymer, and Mixture type 
+					S-groups
+					are stored in CXSMILES/CXSMARTS format. 
+					<a href="../formats/cxsmiles-doc.html">Documentation</a> </li>
+				</ul>
+			</li>
+			<li> <strong>SMILES/SMARTS</strong>
+				<ul> 
+					<li> In SMILES import, radicals are not added
+					anymore to atoms with atomic number above 
+					chlorine, except for bromine and iodine. 
+					If implicit hydrogen can not be added to or 
+					removed from the atom (as it is in brackets 
+					in the SMILES definition), then a valence 
+					property is set to correct its valence if 
+					necessary. 
+					<a href="../formats/smiles-doc.html">Documentation</a></li>
+				</ul>
+			</li>
+			<li><strong>Peptide</strong> 
+				<ul>
+					<li> Amino acids: Cysteine, Aspartic acid, 
+					Glutamic acid, Histidine, Lysine, Asparagine,
+					Glutamine, Arginine, Serine, Threonine, 
+					Selenocysteine, Tryptophane, and Tyrosine 
+					are imported with three attachment points 
+					from peptide format. </li>
+					<li> New 1-Letter and 3-letter amino acid 
+					codes were added: U and Sec for 
+					selenocysteine; O and Pyl for pyrrolysine; 
+					X and Xaa for "any/unknown/undetermined 
+					amino acid"; B and Asx for "Aspartic acid 
+					or Asparagine"; Z and Glx for 
+					"Glutamic acid or Glutamine"; J and Xle for 
+					"Leucine or Isoleucine". </li>
+				</ul>
+			</li>
+			<li><strong>FASTA</strong>
+			 	<ul>
+					<li>Peptide, DNA, and RNA import from 
+					FASTA format has been introduced.
+					<a href="../formats/fasta-doc.html">Documentation</a> </li>
+				</ul>
+			</li>
+			<li><strong>Name to Structure (n2s)</strong> 
+				<ul> 
+					<li>Custom name-to-structure webservices can now be configured to receive the 
+					name in the middle of the URL, not just at the end, by using the [NAME] marker 
+					in the configuration URL.</li>
+					<li>More forms of ranged generic names are supported, such as "-C<sub>1-6</sub>alkyl". 
+					These are found extensively as part of markush structures in patents.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Document to Structure (d2s)</strong> 
+				<ul> 
+					<li>Text document processing has become faster (around 20% speedup for typical texts with a small proportion of chemical names).</li>
+					<li>The context (surrounding text) in which names appear in the document is now available as a property of the returned structures.</li>
+					<li>The <code>osraTimeout</code> option has been added to configure the maximum time to wait 
+					for OSRA to convert an image to structure (the default is 20 seconds).</li>
+				</ul>
+			</li>
+			
+			<li><strong>Structure to Name(s2n)</strong> 
+				<ul> 
+					<li>The new format option "cas#" allows converting structures to their CAS 
+					Registry Number using a public webservice.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li> <strong>Molecule Representation</strong>
+		<ul>
+			<li><strong>S-groups </strong>
+				<ul> 
+					<li> Any number of attachment points can be 
+					added to Superatom S-groups. </li>
+					<li> S-group attachment point information 
+					can be set only to atoms being part of a 
+					Superatom S-group. </li>
+				</ul>
+			</li>
+			<li><strong>Valence Check</strong>
+				<ul>
+					<li> Valence check does not deal with 
+					free attachment points.  </li>
+					<li> New valence check option is introduced 
+					to allow/deny traditional forms of 
+					pentavalent Nitrogen. </li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Protonation (pKa, Major Microspecies, Isoelectric Point)</strong>
+			<ul>
+				<li>log[%] vs. pH distribution chart is introduced in case of pKa calculation. <a href="../calculations/protonation.html">Documentation</a></li>
+				<li>Major miscrospecies calculation is supported for molecules with coordinate bonds. <a href="https://www.chemaxon.com/forum/viewpost47864.html">Forum topic</a></li>
+			</ul>
+			</li>
+			
+			<li><strong>NMR (HNMR, CNMR Prediction, ...)</strong>
+				<ul>
+					<li>NMR predictor considers novel coupling types.</li>
+					<li>Updated trainingset has improved the NMR shift prediction accuracy in both 1H and 13C NMR predictors.</li>
+					<li>1H NMR calculation has become faster as no 3D conformer generation is applied.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Geometry (Topology Analysis, Geometry, PSA, MSA)</strong>
+				<ul>
+					<li>Setting any ChemAxon supported aromatization method (general, basic, loose)
+					is available in TopologyAnalyserPlugin which affects the result of many topology 
+					analyser calculations (e.g., aromatic atom/bond/ring count). </li>
+				</ul>
+			</li>
+			
+			<li><strong>Chemical Terms</strong>
+				<ul>
+					<li>New <code>sortableFormula()</code> function is introduced. The generated 
+					sortable formula can be used to sort formulas in alphabetical order. 
+					<a href="../chemicalterms/EvaluatorFunctions.html#sortableformula">Documentation</a></li>
+				</ul>
+			</li>			
+		</ul>	
+	</li>
+	<li><strong>cxcalc</strong>
+		<ul>
+			<li>pKa training library can be used without relying on user home. Use option 
+			<code>--correctionlibrarypath</code> to read custom training file.</li>
+			<li>New <code>sortableFormula</code> option is introduced. The generated sortable 
+			formula can be used to sort formulas in alphabetical order.</li>
+		</ul>
+	</li>
+	<li><strong>cxtrain</strong>
+		<ul>
+			<li>New option, <code>-p</code>, has been introduced to save the training result to custom path. </li>
+		</ul>
+	</li>	
+	<li><strong>Automapper</strong>
+		<ul>
+			<li>New Automapper tool is introduced. It maps reactions more accurately. <a href="../automapper/automapper.html">Documentation</a> </li>
+			<li>Automapper tool requires Standardizer license. </li>			
+			<li>API documentation: <a href="https://www.chemaxon.com/marvin/help/developer/beans/api/com/chemaxon/mapper/AutoMapper.html"><code>com.chemaxon.mapper.Automapper</code></a> </li>
+		</ul>
+	</li>
+	
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>"Traditional nitrogen representation allowed" option is available in Valence Error 
+			Checker. <a href="../structurechecker/checkerlist.html#valenceerror">Documentation</a></li>
+			<li><i>External structure checker and fixer manager</i> is integrated into Structure Checker GUI 
+			application. It is accessible from the preferences menu as 
+			"Checker/Fixer Manager". <a href="../structurechecker/structurechecker.html#externalchceckers">Documentation</a></li>
+		</ul>
+	</li>
+</ul>
+
+<h4>Known issue</h4>
+<ul>
+	<li><strong>MarvinSketch Applet</strong>
+		<ul>
+			<li>External checker classes do not load if browser uses Java SE 6. 
+			Please, use Java SE 7 for successful checker class loading.</li>
+		</ul>
+	</li>	
+</ul>
+
+<h4>Bugfixes </h4>
+<ul>
+	<li><strong>MarvinSketch Menu</strong>
+		<ul>
+			<li>The "Recent Files" list was not updated with the new file name when the file contained multiple structures and more records were selected.</li>
+		</ul>
+	</li>
+	<li><strong>Painting</strong>
+		<ul>
+			<li>There was a gap between the lines of the double bond and the single bonds when two single bonds connected to the same (non-visible) carbon atom on one end of a double bond.</li>
+			<li>Electron flow arrows partially hid lone pairs in some cases.</li>
+		</ul>
+	</li>
+	<li><strong>Clipboard handling</strong>
+		<ul>
+			<li>When copying and pasting between Marvin applications in Linux, an exception was thrown which froze the application where the copy operation had been performed. The exception originated from 
+					the applied freehep library, which has been updated.</li>
+		</ul>
+	</li>
+	<li><strong>MarvinSpace</strong>
+		<ul>
+			<li>3D alignment: MCS mode is fixed to align molecules in 3D.</li>
+		</ul>
+	</li>
+	<li><strong>Image I/O</strong>
+		<ul>
+			<li>Image export did not remember the last folder used for saving.</li>
+			<li>Molecule source was not saved in jpg, png, and svg files when "Save As Image" was selected. <a href="https://www.chemaxon.com/forum/ftopic10044.html">Forum topic</a></li>
+		</ul>
+	</li>
+	<li> <strong>Import/Export</strong>
+		<ul>
+			<li> <strong>MOL, SDF, RXN, RDF</strong>
+				<ul>
+					<li> Structures that contained two S-groups
+					with exactly the same atoms imported from 
+					MDL MOL format could cause 
+					<code>java.lang.RuntimeException</code>.
+					<a href="https://www.chemaxon.com/forum/ftopic10193.html">Forum topic</a></li>
+					<li> Property name was imported as its value
+					from SDF file when the property name 
+					contained square brackets. </li> 
+					<li> Exporting a peptide sequence containing bridge between two ungrouped amino 
+					acids to MOL format (V2000 or V3000), then importing it back, changed the 
+					coordinates of the contracted groups. </li>
+				</ul>
+			</li>
+			<li> <strong> CDX/CDXML </strong>
+				<ul>
+					<li> CDX files created by ChemDraw 9.0.1 containing abbreviated groups with no 
+					attachment points was not  
+					imported. </li>
+					<li> ChemDraw CDX files containing textboxes
+					 with Chinese characters were not imported.
+					</li> 
+					<li> Chemical formula-like subscript of a 
+					Superatom S-group was read in reverse order 
+					from CDX when the group was to the left of the fragment. </li>
+					<li> Superatom S-groups not having 
+					crossing bonds were read as textbox from 
+					CDX files.  </li>
+					<li> CDX files exported from ChemDraw 
+					5.0 and containing contracted 
+					Superatom S-group was not imported.</li>
+					<li> CDX import read half headed arrows
+					as full headed.</li>
+				</ul>
+			</li>
+			<li><strong>CXSMILES/CXSMARTS</strong>
+				<ul>
+					<li> CXSMARTS export did not keep CIS/TRANS 
+					information for symmetrical structures. </li>
+					<li>Extended part of CXSMARTS was not 
+					written correctly for any halogen query 
+					atoms.  </li>
+				</ul>
+			</li>
+			<li><strong>SMILES/SMARTS</strong>
+				<ul>
+					<li> Unique SMILES string generation for a 
+					fragment
+					could have differed depending on the fragment 
+					count of the molecule </li>
+
+				</ul>
+			</li>
+			<li><strong>Peptide</strong>
+				<ul>
+					<li> User defined custom amino acid 
+					dictionary caused wrong custom amino acid 
+					structure or
+					<code>java.lang.ArrayIndexOutOfBoundsException</code> 
+					during peptide import. </li>
+				</ul>
+			</li>
+			<li><strong>Name to Structure (n2s)</strong> 
+				<ul> 
+					<li>When calling a custom name-to-structure webservice, names with special 
+					characters (including space) were not URL encoded, possibly resulting in failed 
+					conversions for such names.</li>
+					<li>Name containing fused rings and converted to all uppercase letters were not recognized.</li>
+					<li>Name to Structure could get stuck in a deadlock during the first usage when 
+					that occurred concurrently in several threads.</li>
+					<li>When using the "name converters" API, converters were not properly removed 
+					after using thread-local converters.</li>				
+				</ul>
+			</li>
+			
+			<li><strong>Document to Structure (d2s)</strong> 
+				<ul> 
+					<li>When interrupted while doing OCR or OSR, document to structure logged an 
+					exception about the interrupt. This caused in particular a warning dialog to 
+					appear in Instant JChem during a document import.</li>
+					<li>Names were not recognized when they contained a complex bracketed bond locant 
+					followed by a comma, such as "2(7)" in tricyclo[6.3.1.0<sup>2,7</sup>]dodeca-2(7),3,5-triene.</li>
+					<li>Scrolling back in MarvinView could have caused failures for very large documents 
+					(more than 1000 structures) and names with non-ASCII characters.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Structure to Name(s2n)</strong> 
+				<ul> 
+					<li><code>name:source</code> returned an empty name for empty structures instead of the actual stored name.</li>
+					<li>The name "perimidine" was not attributed to the right structure.</li>
+				</ul>
+			</li>				
+		</ul>
+	</li>		
+	<li> <strong> Molecule Representation</strong> 
+		<ul>
+			<li> <strong>Implicit/Explicit Hydrogen Conversion</strong>
+				<ul>
+					<li> Removing explicit hydrogens on some 
+					larger PubChem compounds caused 
+					infinite loop. </li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li> <strong>Clean 2D </strong>
+		<ul>
+			<li> Partial clean misplaced the molecule when only one atom
+			 was fixed.</li>
+			<li> Clean 2D failed to preserve cis/trans stereo 
+			information in some cases. </li>
+		</ul>
+	</li>
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>NMR (HNMR, CNMR Prediction, ...)</strong>
+				<ul> 
+					<li>PDF export of NMR spectra was failed when the generated new page contained a blank line only.</li>
+					<li>When displaying NMR spectra of selected tautomers, the background of the 
+					tautomer preview window was black in Linux OS.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<h4> Deprecation </h4>
+<ul>
+	<li> <strong>Deprecated methods</strong>
+		<ul>
+			<li> <strong>Molecule Representation </strong>
+				<ul>
+					<li>Valence Check:  
+				 <code> MoleculeGraph.VALENCE_CHECK_AMBIGUOUS,
+					MoleculeGraph.ValenceCheckState,
+					MoleculeGraph.setValenceCheckState(ValenceCheckState),
+					MoleculeGraph.getValenceCheckState()
+					MoleculeGraph.getPossibleAttachmentPoints(MolAtom)
+						</code></li>
+					<li>S-groups: 
+				<code> SuperatomSgroup.getAttachAtoms(),
+                                       SuperatomSgroup.getLegalAttachAtoms(),
+                                       SuperatomSgroup.getFreeLegalAttachAtoms(),
+                                       SuperatomSgroup.isFreeLegalAttachAtom(MolAtom),
+                                       SuperatomSgroup.isLegalAttachment(MolAtom),
+                                       SuperatomSgroup.sortXBonds(),
+				       MolAtom.getAttach(),		
+				       MolAtom.setAttach(int),
+				       MolAtom.setAttach(int, Sgroup)
+				</code></li>
+					<li> Elemental Analysis:
+				<code> ElementalAnalyser.setMolecule(SMolecule) </code></li>
+					<li> Other deprecated methods  
+			    		   <code> Molecule.exportToFormat(String), 
+				   		  Molecule.exportToBinFormat(String),
+				   		  Molecule exportToObject(String) 
+			   </code> throws <code>java.lang.IOException</code>. </li>
+				</ul>
+			</li>
+		
+		<li><strong>Structure to Name (s2n)</strong>
+		<ul>
+			<li>The method 
+			<code>chemaxon.marvin.io.formats.name.nameexport.IUPACNamer.generateName(Molecule)</code>
+			, though not documented, was public for internal reasons, and used a non-thread-safe way 
+			to receive options. It is now deprecated in favor of <code>chemaxon.formats.MolExporter(Molecule, String format)</code>
+			, where format can be for instance "name" for IUPAC name, "name:t" for traditional name. 
+			See https://www.chemaxon.com/marvin/help/formats/name-doc.html#export for all possible options.</li>
+		</ul>
+		</li>
+	<li><strong>Automapper</strong>
+	<ul>
+		<li><code>chemaxon.marvin.modules.AutoMapper</code></li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li> <strong> Removed methods</strong>
+		<ul>
+			<li> <strong>Molecule Representation</strong>
+				<ul>
+					<li> <code> MolAtom.setMassnoIfKnown(String),
+						    MolAtom.isNobleGas(),
+						    MolAtom.isArrowEnd(),
+						    MolAtom.valenceCheck(),
+						    MolAtom.getEdgeCount(),
+						    MolAtom.getEdge(int),
+						    MolAtom.getEdgeTo(MolAtom),
+						    MolAtom.haveSimilarEdges(MolAtom),
+				</code></li>
+					<li> <code> MolBond.ARROW(), 
+						    MolBond.isCoordinative(), 
+						    MolBond.isArrow(),
+						    MolBond.getNode1(),
+						    MolBond.getNode2(),
+						    MolBond.getOtherNode(MolAtom),
+						    MolBond.cloneEdge(MolAtom a1, MolAtom a2)
+				</code></li>
+					<li> <code> MoleculeGraph.AROM_CHEMAXON, 
+						    MoleculeGraph.AROM_DAYLIGHT(),
+						    MoleculeGraph.setSetSeqs(int id),
+						    MoleculeGraph.getAromrings(),
+						    MoleculeGraph.getNonAromrings(),
+						    MoleculeGraph.getAromrings(int),
+						    MoleculeGraph.getNonAromrings(int),
+						    MoleculeGraph.mergeFrags(),
+						    MoleculeGraph.getFragIds(),
+						    MoleculeGraph.getfindFragById(int fragId, MoleculeGraph frag),
+						    MoleculeGraph.getNode(int),
+						    MoleculeGraph.setNode(int, MolAtom),
+						    MoleculeGraph.insertNode(int, MolAtom),
+						    MoleculeGraph.removeNode(MolAtom),
+						    MoleculeGraph.removeNode(MolAtom, int),
+						    MoleculeGraph.removeNodeVector(),
+						    MoleculeGraph.getEdgeCount(),
+						    MoleculeGraph.getEdge(int),
+						    MoleculeGraph.setEdge(int, MolBond),
+						    MoleculeGraph.insertEdge(int, MolBond),
+						    MoleculeGraph.insertEdgeInOrder(MolBond, MolBond[]),
+						    MoleculeGraph.replaceEdge(MolBond, MolBond),
+						    MoleculeGraph.removeEdge(MolBond),
+						    MoleculeGraph.getEdgeArray(),
+						    MoleculeGraph.getEdgeVector(),
+						    MoleculeGraph.getAllEdges(),
+						    MoleculeGraph.regenEdges(),
+						    MoleculeGraph.sortEdgesAccordingTo(MolBond[]),
+						    MoleculeGraph.mergeNodes(MolAtom that, MolAtom),
+						    MoleculeGraph.mergeFrags(int, int)
+						
+			       </code></li>
+					<li><code> Molecule.mergeFrags()</code></li>
+					<li> <code> RgMolecule.setAbsStereo(boolean, int, int),
+						    RgMolecule.createMol(String),
+						    RgMolecule.getBtab()
+			       </code></li>
+					<li> <code> RxnMolecule.getBtab(),
+						    RxnMolecule.getStructureCount(int),
+						    RxnMolecule.getStructure(int, int),
+						    RxnMolecule.addStructure(Molecule, int),
+						    RxnMolecule.removeStructure(int, int)
+			       </code></li>
+					<li> <code> CEdge, CNode, CGraph </code></li>
+					<li> <code> MDocument.setGUIProperyContainer(MPropertyContainer) </code></li>
+				</ul>	
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51260" class="anchor"></a>October 31st, 2013: Marvin 5.12.6</h3>
+No changes.
+
+<h3><a id="v51250" class="anchor"></a>June 21st, 2013: Marvin 5.12.5</h3>
+No changes.
+
+<h3><a id="v51240" class="anchor"></a>May 6th, 2013: Marvin 5.12.4</h3>
+<h4>Bugfixes </h4>
+<ul>
+	<li><strong>Import/Export </strong>
+		<ul>
+			<li><strong>MOL, SDF, RXN, RDF </strong>
+				<ul>
+					<li> Valid MOL file header was not recognized and therefore the file was not imported. 
+<a href="https://www.chemaxon.com/forum/ftopic10483.html">Forum topic</a> </li>
+ </li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51230" class="anchor"></a>April 9th, 2013: Marvin 5.12.3</h3>
+<h4>Bugfixes </h4>
+<ul>
+	<li><strong>Import/Export </strong>
+		<ul>
+			<li><strong>Name to Structure (n2s)</strong> 
+				<ul> 
+					<li>Names with <i>ylium</i> and <i>uide</i> suffixes are now supported.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>NMR (HNMR, CNMR Prediction, ...)</strong>
+				<ul> 
+					<li>Coupling of a nucleus with a group of magnetically equivalent nuclei was not handled properly.</li>
+					<li>NMR Predictor did not consider negative coupling constant values.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51220" class="anchor"></a>March 28th, 2013: Marvin 5.12.2</h3>
+<h4>Bugfixes </h4>
+<ul>
+	
+	<li><strong>Molecule Representation </strong>
+		<ul>	
+			<li> Conversion from explicit hydrogen to implicit one
+			     removed stereo centers not having explicit 
+			     hydrogen ligand.
+                             <a href="https://www.chemaxon.com/forum/ftopic10262.html">Forum topic</a> </li>
+		</ul>
+	</li>
+	<li><strong>Import/Export </strong>
+		<ul>
+			<li><strong>SMILES/SMARTS</strong>
+				<ul>
+					<li> Non ring bond information were imported
+					 as query strings from SMARTS. </li>
+					<li> After SMARTS import, those atoms that 
+					had no explicit aromatic property but 
+					had aromatic bond got query aromaticity 
+					property.  </li>
+
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51210" class="anchor"></a>March 20th, 2013: Marvin 5.12.1</h3>
+<h4>New features and improvements </h4>
+<ul>
+	
+	<li><strong>Import/Export </strong>
+		<ul>	
+			<li> <strong>CDX/CDXML </strong>
+				<ul>
+					<li> <i>S</i> orbitals and oval shaped <i>s</i> or <i>p</i> orbitals are imported from CDX/CDXML.  
+					     <a href="https://www.chemaxon.com/forum/ftopic9926.html">Forum topic</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Painting</strong>
+		<ul>
+			<li>Charge symbol on carbon atoms was missing when the atom numbers were visible and 
+				the display of carbon atom labels was turned off.</li>
+			<li>When two atoms had more than one electron flow arrows between them, the electron flow arrows overlapped each other.</li>
+			<li>The second electron flow arrow started from a wrong position when a single electron and an electron pair flow arrow started from an atom which had a lone pair and a radical as well.</li>
+		</ul>
+	</li>
+	<li><strong>Editing</strong>
+		<ul>
+			<li>Atom Lists and NOT Lists could not be created by typing atomic symbols separated with 
+				commas (<i>e.g.</i>, "f,br,cl" or "!f,br,cl").</li>
+		</ul>
+	</li>
+	<li><strong>Import/Export </strong>
+		<ul>	
+			<li> <strong>MRV/CML </strong>
+				<ul>
+					<li>  MRV and CML export wrote out characters incorrectly 
+					      which are not supported by the character set.  </li>
+				</ul>
+			</li>
+			<li> <strong>MOL, SDF, RXN, RDF </strong>
+				<ul>
+					<li> SDF files having invalid header could not been imported. </li>
+					<li>  Deuterium and tritium isotopes were converted to simple 
+					      hydrogen atom if a molecule was exported to 
+					      ChemAxon compressed MOL format (CSMOL). </li>
+				</ul>
+			</li>
+			<li> <strong> SMILES/SMARTS </strong>
+				<ul>
+					<li> <code>MolExporter.exportToObject()</code> added an extra newline to SMILES. </li>
+					<li> Nitrogens connecting two aromatic rings had radical after import 
+					     if nitrogen was bracketed in the SMILES representation. 
+					     <a href="https://www.chemaxon.com/forum/viewpost46950.html">Forum topic</a></li>
+				</ul>
+			</li>
+			<li> <strong>InChi/InChiKey </strong>
+				<ul>
+					<li>Absolute stereo flag was missing during 
+					   InChi export/import and InChiKey export.  
+					   <a href= "https://www.chemaxon.com/forum/ftopic9655.html ">Forum topic</a></li>
+					 
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Molecule Representation </strong>
+		<ul>	
+			<li> <strong>Valence check </strong>
+				<ul>
+					<li> Number of added implicit Hydrogen atoms were incorrect in some cases for positively charged sulfur atom.  </li>
+				</ul>
+			</li>
+		</ul>
+	</li>	
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Isomers (Tautomers, Stereoisomers)</strong>
+				<ul>
+					<li>After canonical tautomer generation, the information of "double cis or trans" bond type might have been lost in certain cases. <a href="https://www.chemaxon.com/forum/ftopic10216.html">Forum topic</a> </li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51200" class="anchor"></a>March 5th, 2013: Marvin 5.12.0</h3>
+<h4>New features and improvements</h4>
+<ul>
+	<li><strong>MarvinSketch GUI</strong>
+		<ul>
+			<li>Typing abbreviated group names is now case sensitive. <a href="../sketch/sketch-basic.html#abbreviatedgroups">Documentation</a></li>
+		</ul>
+	<li><strong>MarvinSketch Dialog</strong>
+		<ul>
+			<li>"Cancel" button has been added to the "Customize" dialog.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Painting</strong>
+		<ul>
+			<li>The font size and type of circled charge symbols can be modified on the "Display" tab of the "Preferences" dialog. <a href="../sketch/gui/dialogs.html#display">Documentation</a></li>
+			<li>Position variation bond has been recolored for better visibility in a projected presentation.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Clipboard handling</strong>
+		<ul>
+			<li>When pasting unrecognized format onto the canvas, "Import as" dialog appears, and the user can choose the correct format.</li>
+			<li>Structures can be copied as "Daylight SMARTS" and "ChemAxon SMARTS (CXSMARTS)" formats. <a href="../datatransfer.html#clipboard.formats">Documentation</a></li>
+		</ul>
+	</li>
+	
+	<li><strong>MarvinView GUI</strong>
+		<ul>
+			<li>Double-clicking on a molecule in MarvinView to open it in a separate window does not result in the disappearance of the original molecule from MarvinView while the separate window is open.</li>
+			<li>The original molecule does not disappear from MarvinView while it is edited in MarvinSketch.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Applet</strong>
+		<ul>
+			<li>New applet parameter for specifying the URL of a name recognition and import service: <a href="sketchman.html#parameters.namingWebServiceURL">namingWebServiceURL</a></li>
+		</ul>
+	</li>
+	
+	<li><strong>Import/Export</strong>
+		<ul>
+        	<li><strong>SKC</strong> 
+				<ul> 
+					<li> SKC import has been improved.</li>
+				</ul>
+			</li>
+        	<li><strong>CDX/CDXML</strong> 
+				<ul> 
+					<li> Mapping of reaction agents can be imported. </li>
+				</ul>
+			</li>
+			
+			<li><strong>Name to Structure (n2s)</strong> 
+				<ul> 
+					<li>Initial support for Chinese IUPAC and common names has been added, e.g., 2-氨基-4-硝基苯酚.</li>
+					<li>Names with extra closing brackets can be converted when OCR error correction mode is enabled.</li>
+					<li>Name to structure now also works when bridge and spiro numberings are represented by using unicode superscript numbers, such as: tetracyclo[12.4.0.0<sup>2,6</sup>.0<sup>7,12</sup>]octadecane.</li>
+					<li>Custom webservice to extend name to structure conversion - for instance using corporate IDs (e.g., ABC0001234)  or common name dictionaries in addition to the default one - is supported. <a href="../sketch/gui/dialogs.html#SaveLoad">Documentation</a></li>
+					<li>Automatically fix and import spiro names where the superscript formatting has been lost, for instance, after copy-pasting. 
+					As an example, trispiro[2.2.2.29.26.23]pentadecane will be imported as if from the correct form, 
+					trispiro[2.2.2.2<sup>9</sup>.2<sup>6</sup>.2<sup>3</sup>]pentadecane.  </li>
+					<li>Name to structure now works on names of bridged ring compounds where the superscript formatting of ring numbering is not present.</li>
+					<li>The custom dictionary can be encoded in UTF-8 - even if the system default 
+					encoding is not UTF-8 - providing a byte order mark (BOM) for the file. This can 
+					be used, for instance, to support dictionary in multiple languages on Windows OS.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Document to Structure (d2s)</strong> 
+				<ul> 
+					<li>Invalid hexadecimal character entities (e.g., "&amp;#xblah") are now ignored instead of making the document processing fail.</li>
+					<li>Image to structure conversion using OSRA is working on Mac OS X.</li>
+					<li>Text OCR for scanned documents is now supported on Mac OS X.</li>
+					<li>Documents compressed in xml.bz2 and xml.xz formats can be processed directly.</li>
+					<li>The memory usage has been reduced when processing documents with several thousand hits. This improvement is in addition to the memory improvements already present in version 5.11.</li>
+					<li>Option "<code>+/-groups</code>" has been added to enable (+) or disable (-) the conversion of groups and fragments, such as "ethyl", "nitro", "phenoxy", etc.</li>
+					<li>OCR of scanned PDF documents has been improved on Windows OS thus reaching the same performance level as that of OCR on Mac OS X and Linux OSs.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Structure to Name(s2n)</strong> 
+				<ul> 
+					<li>The speed of batch conversion using a timeout (which is enabled by default) has been increased by 
+					about 15%; the earlier instability in case of timeout relying on 
+					the deprecated Thread.stop method has been avoided.</li>
+				</ul>
+			</li>			
+		</ul>
+	</li>
+	<li><strong>Molecule Representation</strong> 
+		<ul> 
+			<li> The size of the Molecule object has been decreased.</li> 
+		</ul>
+	</li>
+	
+	<li><strong>Data Transfer</strong>
+		<ul>
+			<li><strong>OLE</strong>
+				<ul>
+					<li>New settings are available for both administrators and end-users (from the "Edit > Preferences > MarvinOLE" menu) to preset the displayed OLE document in a maximized child window.</li>
+					<li>MRV files are read and validated by DOM (document object model) in Marvin OLE.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><strong>Clean 3D</strong>
+		<ul>
+			<li> MMFF94 forcefield has been added to Generate3D. Use option &quot;[mmff94]&quot; to switch it on;
+			use &quot;molconvert -H3D&quot; for detailed help.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Isomers (Tautomers, Stereoisomers)</strong>
+				<ul>
+					<li>Performance improvement: Tautomerization will not apply &quot;Clean2D&quot; if 
+					the output result has no 2D coordinates. <a href="https://www.chemaxon.com/forum/ftopic9829.html">Forum topic</A> </li>
+					<li>Resonance structure is taken into account in dominant tautomer generation.</li>
+				</ul>
+			</li>
+							
+			<li><strong>Conformation (Conformers, Molecular Dynamics, ...)</strong>
+				<ul>
+					<li>New MMFF94 forcefield implementation has been introduced in Conformer Plugin and Molecular Dynamics Plugin. </li>
+				</ul>
+			</li>
+			
+			<li><strong>Services</strong>
+				<ul>
+					<li>Result structure of Marvin Services result panel can be copied to clipboard.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>New checkers have been introduced:
+				<ul>
+					<li><a href="../structurechecker/checkerlist.html#absolutestereoconfiguration">Absolute Stereo Configuration</a></li>
+					<li><a href="../structurechecker/checkerlist.html#chiralflag">Chiral Flag</a></li>
+					<li><a href="../structurechecker/checkerlist.html#ezdoublebond">E/Z Double Bond</a></li>
+					<li><a href="../structurechecker/checkerlist.html#multiplestereocenter">Multiple Stereocenter</a></li>
+					<li><a href="../structurechecker/checkerlist.html#relativestereo">Relative Stereo</a></li>
+					<li><a href="../structurechecker/checkerlist.html#wigglybond">Wiggly Bond</a></li>
+				</ul>
+			</li>
+			<li>Fixer of checker &quot;Query Atom&quot;: &quot;Convert to Carbon&quot; has been added.</li>
+			<li>Fixer of checker &quot;Query Bond&quot;: &quot;Convert to Single Bond&quot; has been added.</li>
+			<li>Excluded list of abbreviated groups can be specified in "Abbreviated group" checker, i.e., checker will not find (and fix) 
+				abbreviated groups that are indicated in this list. <a href="../structurechecker/checkerlist.html#abbrevgroup">Documentation</a> </li>
+			<li>Structure Checker configuration can be accessed	via URL from MarvinSketch, 
+			Structure Checker application, and via Structure Checker API call. <a href="../structurechecker/checker.html#save">Documentation</a></li>
+			<li>Integration of external structure checkers and fixers into ChemAxon products has become easier via MarvinSketch GUI. <a href="../structurechecker/checker.html#external">Documentation</a></li>
+			<li>In case of more than one fixer, a logical order of priority has been preset. 
+			The priority list of fixers can be found on page <a href="../structurechecker/checkerlist.html">List of available checkers</a>.</li>
+		</ul>
+	</li>
+
+	<li><strong>API</strong>
+		<ul>
+			<li>New property change event to indicate when an editable MarvinView component is opened in MarvinSketch: <a href="viewman.html#propchanges">sketchInView</a>.</li>
+			<li>New property change event to indicate when a new MarvinSketch or MarvinView window is opened from the viewer: <a href="viewman.html#propchanges">windowOpened</a>.</li>
+			<li>New property change event to indicate when a MarvinSketch or MarvinView window, opened from the viewer, is being closed: <a href="viewman.html#propchanges">windowClosed</a>.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Java Web Start</strong>
+		<ul>
+			<li>Name to Structure and Document to Structure are now available in the Java WebStart distribution of Marvin.</li>
+		</ul>
+	</li>
+	
+</ul>
+
+<h4>Bugfixes</h4>
+<ul>
+	<li> MarvinSketch did not deal with java property initialization bug. 
+             <a href="https://www.chemaxon.com/forum/ftopic9618.html ">Forum topic</a>
+ 	</li>
+	
+	<li><strong>MarvinSketch GUI</strong></li>
+		<ul>
+			<li>When a group abbreviation differed from an atomic symbol only in upper and lower case letters (e.g., NO and No), the abbreviated group could not be reached by typing.</li>
+		</ul>
+	
+	<li><strong>MarvinSketch Dialog</strong>
+		<ul>
+			<li>Focus did not appear on the "Source" and "Import Name" dialogs with Java 7.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Painting</strong>
+		<ul>
+			<li>The charge was not displayed in circle on the bracket of an S-group when the "Show charge in circle" was set on the "Preferences" panel.</li>
+			<li>Charge label masked the adjacent bond in several cases.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Editing</strong>
+		<ul>
+			<li>Deleting "extra" explicit hydrogens from an atom with valence error resulted in the 
+			appearance of erroneous implicit hydrogens on this atom.</li>
+			<li>When there were several disconnected structures on the canvas, partial clean was very slow.</li>
+			<li>It was possible to create a molecule with R-group definition containing a single attachment point (and no other atoms or bonds).</li>
+			<li>Sprouting did not work for Alias atoms.</li>
+			<li>The two ways of deleting implicit hydrogens (with eraser directly or selecting them first then deleting) behaved differently.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Load/Save handling in UI</strong>
+		<ul>
+			<li>"File &gt Open" dialog froze when an mrv file contained a dashed arrow and the preview pane was checked.</li>
+			<li>When opening a multi molecule file and selecting a range that is open ended, a false 
+			error message appeared, which stated that there were too many molecules selected to open.</li>
+			<li>IUPAC name with alpha or beta signs could not be imported.</li>
+			<li>MarvinView did not open when importing a file from command line failed.</li>
+			<li>It was not possible to append a name to an existing .name file in MarvinSketch.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Clipboard handling</strong>
+		<ul>
+			<li>It was not possible to drag a structure from MarvinView in "Translate or Drag" mode.</li>
+			<li>Ctrl + V shortcut for pasting structures did not work in MarvinView in case of "Spreadsheet" view.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Graphical object handling</strong>
+		<ul>
+			<li>MBracket object "BRACES" did not render correctly when the orientation was set as "SINGLE".</li>
+		</ul>
+	</li>
+		
+	<li><strong>Applet</strong>
+		<ul>
+			<li>After reloading an applet from the lifecycle cache, the propertyChange method was called in the javascript side regardless of the listenPropertyChange parameter.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Image I/O</strong>
+		<ul>
+			<li>The source was not saved from MarvinView in png, jpg, and svg formats.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Import/Export</strong>
+		<ul>
+			<li> Option -g of molconvert ignored only 
+                            <code>MolFormatException</code>. </li>
+        		<li><strong>MRV, CML</strong> 
+				<ul> 
+					<li> MRV import could not handle 
+     contracted Superatom S-groups having less atoms than crossing bonds. </li>
+					<li> MRV export used operating system 
+                                specific line ending, '\n'. </li>
+					<li> CML import failed on files that 
+                                           contained non-ASCII characters. </li>
+				</ul>
+			</li>
+        		<li><strong>MOL, SDF, RXN, RDF</strong> 
+				<ul> 
+					<li> Superatom S-group brackets were 
+                                             imported from MDL files. </li>
+				</ul>
+			</li>
+        		<li><strong>CXSMILES/CXSMARTS</strong> 
+				<ul> 
+					<li> CXSMARTS I/O lost the charge from 
+                                             generic metal atom.  </li>
+				</ul>
+			</li>
+        		<li><strong>CDX/CDXML</strong> 
+				<ul> 
+					<li> Reaction agent not having 
+reactant and product (e.g., &gt;CC1=CC=CC=C1&gt;) was read as reactant from CDXML files. 
+				</ul>
+			</li>
+			
+			<li><strong>Name to Structure (n2s)</strong> 
+				<ul> 
+					<li><em>RS</em> - as the marker of racemates - was not converted properly, for instance in (2RS)-1-(Adamantan-1-ylamino)-3-phenoxypropan-2-ol. </li>
+					<li>Lower CamelCase chemical names (such as 2-cyclopropylPiperazine) were not converted to chemical structures.</li>
+					<li>Common names, which are also non-chemical names, were recognized as chemical names 
+					during automatic format recognition, e.g., &quot;Royal Blue&quot;.</li>
+					<li>E/Z bonds were sometimes set to the opposite value (in cases of non-trivial CIP rules).</li>
+					<li>For some rare inputs, which are not valid names, n2s created invalid structures 
+					that could be exported to mol format but could not be opened.</li>
+					<li>Both &quot;phenylene&quot; and &quot;phen-1,3-ylene&quot; were wrongly converted to benzene. 
+					Now all forms convert to the correct structure with two attachment points, 
+					including &quot;m-phenylene&quot;, &quot;1,3-phenylene&quot;, and &quot;phen-1,3-ylene&quot; (similarly for the o-, p-, 1,2-, and 1,4- forms).</li>
+				</ul>
+			</li>
+			
+			<li><strong>Document to Structure (d2s)</strong> 
+				<ul> 
+					<li>Processing of multiple XML documents in concurrent threads was slow and sometimes skipped some hits.</li>
+					<li>Names separated by the &quot;non-breaking space&quot; character were not recognized.</li>
+					<li>Some names split by extra spaces were not found.</li>
+					<li>English names were not recognized in Japanese documents when the ideographic comma character followed them.</li>
+					<li>SMILES with aromatic atom after non-aromatic ones (&quot;Cc1...&quot;) and with triple(#) or explicit single(-) bonds were not recognized.</li>
+					<li>Text OCR failed when the images in PDF were encoded in a certain variant of the CMYK color space.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Structure to Name(s2n)</strong> 
+				<ul> 
+					<li>Some characteristic group names were missing when expressed as a prefix of a 
+					sulfonyl group, for instance, in &quot;propanamidosulfonyl&quot;.</li> 
+					<li>Names could not be generated for structures containing &quot;-[N+]≡&quot; substituent. 
+					They are now named using the &quot;azaniumylidyne&quot; IUPAC name component.</li>
+				</ul>
+			</li>	
+			
+			<li><strong>Peptide</strong> 
+	 			<ul>
+					<li> During automatic format 
+         recognition, non-latin characters were recognized as peptide sequences.
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Molecule Representation</strong> 
+		<ul>
+			<li> <strong> S-groups </strong>
+				<ul>
+					<li> Multiple S-group expanded 
+                  	incorrectly when it had an embedded S-group.</li>
+ 				</ul>
+			</li>
+			
+			<li><strong>S-groups/R-groups</strong>
+				<ul>
+					<li>S-group creation was not possible for a structure within an R-group definition 
+						of a reaction; a warning message was given.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><strong>Clean 2D</strong>
+		<ul>
+			<li> Wedge clean moved non-ring wedge bond between 
+                             two rings into a ring.
+             <a href="https://www.chemaxon.com/forum/ftopic8669.html">Forum topic</a>
+			</li>
+		</ul>
+	</li>
+		
+	<li><strong>Calculations</strong>
+		<ul>
+			<li><strong>Protonation (pKa, Major Microspecies, Isoelectric Point)</strong>
+				<ul>
+					<li>Microspecies calculation of furan returned incorrect molecular formula at low pH.</li>
+				</ul>
+			</li>
+			
+			<li><strong>Charge (Charge, Polarizability, ...)</strong>
+				<ul>
+					<li>Resonant charge calculation generated exception when the major form of the 
+					molecule is invoked with explicit hydrogen atoms.</li>
+				</ul>
+			</li>
+			
+			<li><strong>NMR (HNMR, CNMR Prediction, ...)</strong>
+				<ul>
+					<li>Outdated HOSE database caused NullPointerException when predicting 1H NMR 
+					spectrum for some rare diastereotpic molecules. </li>
+				</ul>
+			</li>
+			
+			<li><strong>Isomers (Tautomers, Stereoisomers)</strong>
+				<ul>
+					<li>D, T count in region labels of multifragment generic tautomers was computed incorrectly.</li>
+					<li>TautomerizationPlugin API did not clean the explicit hydrogens in the result 
+					molecule after tautomer generation which might have resulted in wrong stereo (R,S) 
+					specifiaction on chiral centers. <a href="https://www.chemaxon.com/forum/viewtopic.php?p=47105">Forum topic</a></li>
+				</ul>
+			</li>
+		
+			<li><strong>Geometry (Topology Analysis, Geometry, ...)</strong>
+				<ul>
+					<li>The result of topological polar surface area (TPSA) plugin depended on the call order of setMolecule() and setpH() methods.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><strong>cxcalc</strong>
+		<ul>
+			<li>Calculation "ringcountofatom" returned only the ring count of atom number zero. <a href="https://www.chemaxon.com/forum/ftopic10050.html">Forum topic</a></li>
+			<li>cxcalc returned irrelevant error message for calculations containing &quot;ANY&quot; bonds. <a href="https://www.chemaxon.com/forum/ftopic10095.html">Forum topic</a></li>
+			<li>Thole polarizablility (<code>tpol</code>) calculation didn't interrupt when clean3D failed.</li>
+		</ul>
+	</li>
+	
+	<li><strong>Backend / Core</strong>
+		<ul>
+			<li>Removing explicit hydrogens on some large PubChem compounds caused infinite loop. <a href="https://www.chemaxon.com/forum/ftopic10074.html">Forum topic</a></li>
+		</ul>
+	</li>
+	
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li>&quot;Remove Stereo Care Box&quot; was offered as fixer for results returned by &quot;Query Bond Checker&quot;.</li>
+			<li>Fixer "Expand group" not only expanded but also ungrouped the abbreviated groups when using it via <code>structurechecker</code> command-line.</li>
+		</ul>
+	</li>
+	
+	<li><strong>API</strong>
+		<ul>
+			<li>The default value of parameters chargeWithCircle and lonePairsAsLine has been changed. The current default value of these parameters is "false".
+				On the "Preferences" dialog, the "Restore default" button sets both parameters to "false", too.</li>
+		</ul>
+	</li>
+</ul>
+<h4>Deprecation</h4>
+<ul>
+	<li><strong>Structure Checker</strong>
+		<ul>
+			<li><a href="../structurechecker/checkerlist.html#deprecation">Deprecated checker action strings</a>: aromaticity, chiralflag, circularrgroup, missingrgroup, 
+			rare, reactionmap, unusedrgroup, valence, wedge.</li>
+			<li><a href="../structurechecker/checkerlist.html#deprecation">Deprecated fixer action strings</a>: clearabsstereo, aliastocarbon, crossedtowiggly, converttosingle.</li>
+			<li>Deprecated fixer class names: AbsentChiralFlagFixer, AbsoluteStereoFixer, 
+			CrossedDoubleBondFixer, CovalentCounterionFixer, ExplicitHydrogenFixer, IsotopeFixer, 
+			RgroupReferenceFixer, WigglyDoubleBondFixer. </li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a id="v51150" class="anchor"></a>January 14th 2013: Marvin 5.11.5</h3>
+<h4>Bugfixes</h4>
+<ul>
+	<li><strong>Datatransfer</strong>
+		<ul>
+			<li>Structures copied from ChemDraw, Accelrys Draw, or Symyx Draw could not be pasted onto MarvinSketch.</li>
+		</ul>
+	</li>
+</ul>
+
 <h3><a id="v51140" class="anchor"></a>November 19th 2012: Marvin 5.11.4</h3>
 <h4>New features and improvements</h4>
 <ul>
@@ -237,12 +2115,12 @@
 	</li>	
 	<li><strong>Chemical Terms</strong>
 		<ul>	
-			<li>The <code>-g</code> (ignore error) option of <b><code>evaluate</code></b> did not work when <code>-x</code> (extract) option was used. <a href="https://www.chemaxon.com/forum/viewtopic.php?t=9525">Forum</a></li>
+			<li>The <code>-g</code> (ignore error) option of <b><code>evaluate</code></b> did not work when <code>-x</code> (extract) option was used. <a href="https://www.chemaxon.com/forum/viewtopic.php?t=9525">Forum topic</a></li>
 		</ul>
 	</li>
 	<li><strong>Structure Checker</strong>
 		<ul>	
-			<li>WedgeCleanFixer threw ArrayIndexOutOfBoundsException when the erroneous wedge bonds were located inside an S-group. <a href="https://www.chemaxon.com/forum/ftopic9455.html">Forum</a></li>
+			<li>WedgeCleanFixer threw ArrayIndexOutOfBoundsException when the erroneous wedge bonds were located inside an S-group. <a href="https://www.chemaxon.com/forum/ftopic9455.html">Forum topic</a></li>
 		</ul>
 	</li>
 </ul>
@@ -947,7 +2825,7 @@
 <ul><li><strong>MarvinSketch</strong>
 		<ul>
 			<li>When MarvinSketch was launched from command line with -h or --help option, the application was not terminated after printing of help message.</li>
-			<li>When using MSketchPane from an application, and pop it up as a modal dialog, its children could disappear behind the main application (e.g. DialogLauncher example).</li>
+			<li>When using MSketchPane from an application, and pop it up as a modal dialog, its children could disappear behind the main application (e.g., DialogLauncher example).</li>
 		</ul>	
 	</li>
 	<li><strong>MarvinSketch GUI</strong>
@@ -1218,8 +3096,6 @@
 		</ul>
 	</li>
 </ul>
-	
-	
 
 <h3><a name="v5910" class="anchor"></a>March 22nd, 2012: Marvin 5.9.1</h3>
 
@@ -1835,13 +3711,13 @@ No changes.
 	<ul>
 	<li><strong>Structure to Name</strong>
 		<ul>
-		<li>Traditional name for known class names (e.g. acylcholine) is generated.</li>
+		<li>Traditional name for known class names (e.g., acylcholine) is generated.</li>
 		</ul>
 	</li>
 		
 	    <li><strong>Name to Structure</strong>
 	<ul>
-			<li>"Name to structure" converter supports  more systematic names (6% to 50% measured on various sets of names extracted from patents). For instance, names representing esterification with locants (e.g. 1,4-di-tert-butyl piperazine-1,4-dicarboxylate).</li>
+			<li>"Name to structure" converter supports  more systematic names (6% to 50% measured on various sets of names extracted from patents). For instance, names representing esterification with locants (e.g., 1,4-di-tert-butyl piperazine-1,4-dicarboxylate).</li>
 			<li>Optional support for CAS numbers in Document2Structure.</li>
 			<li>Faster loading of PDFs by Document to Structure (from 25% to 75% speedup in most cases). Names can be extracted from more types of PDFs.</li>
 	</ul>
@@ -1859,7 +3735,7 @@ No changes.
 		</ul>
 	<li><strong>Data transfer</strong>
 	<ul>
-	<li>Native pasteboard for Macintosh has been implemented. It solves general copy/paste issues, e.g. copy/paste between Marvin and other chemical sketcher programs (e.g., ChemDraw).</li>
+	<li>Native pasteboard for Macintosh has been implemented. It solves general copy/paste issues, e.g., copy/paste between Marvin and other chemical sketcher programs (e.g., ChemDraw).</li>
 	<li>Marvin supports conversion of other Vendors (currently ISIS and Symys) embedded OLE objects to Marvin OLE.</li>
 	</ul>
 	<li><strong>Structure Checker</strong>
@@ -1966,7 +3842,7 @@ No changes.
 </ul>
 
 <h3><a NAME="v5605" class="anchor"></a>December 13th, 2011: Marvin 5.6.0.5</h3>
-No changes.
+<p>No changes.</p>
 
 <h3><a NAME="v5604" class="anchor"></a>October 25th, 2011: Marvin 5.6.0.4</h3>
 <h4>Bugfix</h4>
@@ -5487,7 +7363,7 @@ ChemAxon force-field enhancement: planar geometry of aniline nitrogen is ensured
         	<li>Water accessible surface area of all polar atoms (ASA_P)</li>
         </ul></li>
         <li>GUI: "Restore defaults" button added to options panel</li>
-        <li>Integration of user-developed calculations made easier (see <a href="plugins.html">developers guide</a>)</li>
+        <li>Integration of user-developed calculations made easier </li>
 	</ul>
     </li>
     <li><b>Reaction auto-mapping:</b><ul>
@@ -6390,7 +8266,7 @@ ChemAxon force-field enhancement: planar geometry of aniline nitrogen is ensured
     </li>
     <li>Plugins
 	<ul>
-	<li><a href="plugins.html">Calculator plugin</a> handling is completely rewritten:
+	<li>Calculator plugin handling is completely rewritten:
             <ul>
             <li>Dynamical loading of plugins and parameter panels based on configuration by
     	    <a href="beans/api/chemaxon/marvin/plugin/PluginFactory.html">PluginFactory</a></li>
@@ -6764,8 +8640,7 @@ ChemAxon force-field enhancement: planar geometry of aniline nitrogen is ensured
 <h3><a class="anchor" name="v3401"></a>July 29, 2004: Marvin 3.4.1</h3>
     <ul>
     <li>Reaction <a href='beans/api/chemaxon/marvin/modules/AutoMapper.html'>AutoMapper</a> class API is available.</li>
-    <li><a href="plugins.html#examples">Calculator Plugin API usage examples</a>
-	in class headers.</li>
+    <li>Calculator Plugin API usage examples in class headers.</li>
     <li>Atom symbol/label font can be changed using the
 	<a HREF="viewman.html#parameters.atomFont">atomFont</a>
 	applet parameter.</li>

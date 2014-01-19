@@ -22,7 +22,7 @@ however there are some <a href="#selection.popup">additional menu elements</a> t
 <p>Please note that when a pop-up menu appears, it is usually the combination of these menus.
 For example when selecting an atom and pressing the right mouse button, a popup menu appears that contains elements
 of the context pop-up menu,in this case the Atom Pop-up Menu, the Edit Pop-up Menu, and the Selection Pop-up Menu.</p>
-<img src="gui-files/merged_popup.png" width="236" height="487">    
+<img src="gui-files/merged_popup.png" width="227" height="538">    
 
 
 <H3><a class="anchor" name="atom.popup">Atom Pop-up Menu</a></H3>
@@ -87,8 +87,12 @@ the canvas. It contains options for atom-specific activities that also can be ac
     specifies rings or chains of variable size.</p></td>
 </tr>
 <tr>
-    <td><p>S-group attachment</p></td>
-    <td><p>Creates S-group attachment point to the selected atom.</p></td>
+    <td><p>Add S-group attachment</p></td>
+    <td><p>Creates an attachment point on the selected atom of an S-group.</p></td>
+</tr>
+<tr>
+	<td><p>Remove S-group attachment</p></td>
+	<td><p>Removes the last attachment point from the selected atom of an S-group.</p><td>
 </tr>
 <!--<TR>
     <TD><P>Cut, Copy, Copy As..., Delete</P></TD>
@@ -100,17 +104,17 @@ the canvas. It contains options for atom-specific activities that also can be ac
 </TR>
 <TR>
     <TD><P>Add</P></TD>
-    <TD><P>Adds properies to the atom (explicit hydrogen, map, data,...).</P></TD>
+    <TD><P>Adds properties to the atom (explicit hydrogen, map, data,...).</P></TD>
 </TR>
 <TR>
     <TD><P>Remove</P></TD>
     <TD><P>Removes atom properties (explicit hydrogen, map, chiral falg).</P></TD>
-</TR>-->
+</TR>
 <TR>
     <TD><P>Add Branch</P></TD>
     <TD><P>Adds a new bond with implicit hydrogen to the selected atom.
 	This option is disabled for atoms that can have no more bonds.</P> </TD>
-</TR>
+</TR>-->
 <!--<TR>
     <TD><P>Format...</P></TD>
     <TD><P>Change atom drawing properties.</P></TD>
@@ -144,7 +148,7 @@ selected bond. It contains options for bond-specific activities that also can be
     </TH>
 </TR>
 <TR>
-    <TD rowspan="5"><P><a href="menubar.html#bond">Type</a></P></TD>
+    <TD rowspan="6"><P><a href="menubar.html#bond">Type</a></P></TD>
     <TD><P>Single</P></TD>
     <TD><P>Changes the selected bond type to Single.</P></TD>
 </TR>
@@ -163,8 +167,12 @@ selected bond. It contains options for bond-specific activities that also can be
 <TR>
     <TD><P>Query bond types</P></TD>
     <TD><P>Changes the selected bond to a bond type (Single Up, Single Down, Single Up or Down, Double Cis or Trans, Double C/T or
-	Unspec, Single or Double, Single or Aromatic, Any) for use in a query.</P></TD>
+	Unspec, Single or Double, Single or Aromatic, Double or Aromatic, Any) for use in a query.</P></TD>
 </TR>
+<tr>
+	<td><p>Coordinate</p></td>
+	<td><p>Changes the selected bond type to Coordinate.</p></td>
+</tr>
 <TR>
     <TD colspan="2"><P>Bold</P></TD>
 	<TD><p>Thickens the selected bond.</p></TD>
@@ -486,6 +494,10 @@ Edit pop-up menu items include:</P>
     <TD><P><a href="menubar.html#dragSelection1">Transformation</a> &gt; Drag Selection</P></TD>
   	<TD><P>The selected part of the molecule can be moved by dragging the mark box with your mouse or with the proper arrow keys.</P> </TD>
 </TR>
+<tr>
+	<td><p>Transformation &gt; Rotate in 2D</p></td>
+	<td>The selection can be rotated in the plane of the canvas with changing coordinates.</td>
+</tr>
 <TR>
 	<TD><P>Transformation &gt; <a href="menubar.html#rotateSelection3D">Rotate in 3D</a></P></TD>
 	<TD>The selected part of the molecule will be rotated according to the chosen rotation mode.</TD>
@@ -513,7 +525,7 @@ Edit pop-up menu items include:</P>
 	choose horizontally or vertically.</P>
     </TD>
 </TR>
-<TR><TD><P>Transformation &gt; Inverse</P></TD>
+<TR><TD><P>Transformation &gt; Invert</P></TD>
 <TD>Reflects the selected fragment(s) through the geometric or arbitrary center.</TD>
 </TR>
 <!--<tr>
@@ -526,7 +538,7 @@ Edit pop-up menu items include:</P>
     </tr>-->
 <TR>
     <TD>
-	<P>Format</P>
+	<P>Document Style</P>
     </TD>
     <TD>
 	<P>Change atom and bond drawing properties.</P>

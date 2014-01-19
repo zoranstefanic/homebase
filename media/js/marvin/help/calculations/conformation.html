@@ -17,7 +17,7 @@ Dreiding force field is used. </p>
 <p>
 <table>
 	<tr>
-		<td><img src="images/conform_panel.png" width="278" height="373"></td>
+		<td><img src="images/conform_panel.png" width="339" height="452"></td>
 	</tr>
 </table>
 </p>
@@ -28,7 +28,10 @@ Dreiding force field is used. </p>
 		<li><b>Store conformer information in property field:</b> the conformer data are calculated and stored with the structures. This option provides the calculations needed to select a specific conformer when using 3D cleaning (menu item Structure > Clean 3D > Display Stored Conformers). The conformers will only be stored if you select one result and click on "Select".</li>
 	</ul> 
 </li>
-<li><b>Energy unit:</b> giving results in kcal/mol or kJ/mol.</li>
+<li>
+	<b>Force field:</b> force field used for calculation.</li>
+<li>
+	<b>Energy unit:</b> giving results in kcal/mol or kJ/mol.</li>
 <li>
 	<b>Optimization limit:</b> set the optimization to loose, normal, strict very strict (in this order increasing calculation times and precisity).</li>
 <li>
@@ -45,7 +48,7 @@ Dreiding force field is used. </p>
 <li>
 	<b>Hyperfine:</b> inserts more itineration steps in the calculations, gives more precision in results but the needed time becomes longer.</li>
 <li>
-	<b>MMFF94 optimization:</b> applies MMFF94 optimization in the calculations.</li>
+	<b>Multi-fragment optimization:</b> multi-fragment optimization with MMFF94.</li>
 <li>
 	<b>Visualize H bonds</b>: marks intramolecular hydrogen bonds in the conformer where it is likely to occur.</li>
 </ul>
@@ -133,24 +136,17 @@ Options</b> panel:</p>
 <p>
 <ul>
 <li><b>Align by extended atom types:</b> Extended atom types are assigned to each atom to enable chemically relevant atomic overlay. During the alignment process the overlap of the atoms of the same type is maximized. Types differentiate atomic number, hybridization state and aromaticity, e.g. aromatic nitrogen atom is not matched against a tertiary amine. These extended atom types correspond to the ones used in Dreiding force field. </li>
-<li><b>Align by pharmacophoric properties:</b> Atoms are overlaid by their pharmacophoric properties: positive, negative, aromatic, hydrophobic, H bond donor and acceptor. Directionality is also taken into account at the H bonds. Atoms of the same types are attempted to align. </li>
-<li><b>Align by extended atom types:</b> The atom-atom pairing is obtained from the 2D maximum common substructure of the molecules. Alignment by extended atom types is applied on the non MCS atoms.</li>
-<li><b>Align by user defined atom pairs:</b> Atom pairings can be defined manually between molecules using the reaction arrow (<a href="../sketch/sketch-basic.html#howto-map.reactions">Mapping atoms</a>). These pairs will be considered to introduce user constraints into alignments above or can be used exclusively.</li>
+<li><b>Align by MCS:</b> The atom-atom pairing is obtained from the 2D maximum common substructure of the molecules. Alignment by extended atom types is applied on the non MCS atoms.</li>
 </ul>
 
 
 <p><b>Detailed options</b>
-<p>Conformation of rings or macrocycles can also be treated flexible if both of the following two criteria are fulfilled:
 <ul>
-<li><b>Minimum flexible ring size</b>: Rings are treated flexible in case their size (number of atoms) exceeds this limit.</li>
-<li><b>Minimum number of non-barred bonds in flexible rings:</b> Rings are treated flexible in case their non barred bond count exceeds this limit. Barred bonds are aromatic, amide, double, a member of another ring that is not flexible and a single bond that connects two aromatic rings.</li></ul>
+	<li><b>Initial conformation size:</b>  Number of diverse conformations to generate as an input for the alignment. </li>
+	<li><b>Accuracy</b>: low, normal, high, very high: If lower selected the calcualtion is faster. The default is normal.</li>	
+</ul>
+<b>Display in MarvinSpace:</b> the result window is a MarvinSpace 3D viewer. Molecules are visualized in different colors for better distinction of structures.
 
-<ul>
-<li><b>Common scaffold minimum size:</b> Only available at MCS based alignment. Minimum number of atoms that are required for the maximum common substructure calculation prior to the alignment.</li>
-<li><b>Accuracy</b>: low, normal, high, very high: If lower selected the calcualtion is faster. The default is normal.</li></ul>
-
-<ul>
-<li><b>Display in MarvinSpace:</b> the result window is a MarvinSpace 3D viewer. Molecules are visualized in different colors for better distinction of structures.</li></ul>
 <p>
 <table>
 	<tr>

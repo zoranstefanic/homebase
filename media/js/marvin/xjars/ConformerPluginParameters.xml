@@ -9,12 +9,12 @@
             the calculations needed to select a specific conformer when using 3D cleaning
             (menu item Structure > Clean 3D > Display Stored Conformers).
             The conformers will only be stored if you select one result and click on 'Select'."/>            
-        <Dependencies>
-		    <Item Key="mmff94optimization" Range="false"/>
-		</Dependencies> 
 	    </RadioButtonGroup>
 	</Group>
-	
+	<SingleSelection Key="forcefield" Label="Force Field" Toooltip="Type of force field used for calculation." >
+	<Choice Value="dreiding" Text="Dreiding" Selected="true"/>
+	<Choice Value="mmff94" Text="MMFF94" />
+    </SingleSelection>
     <SingleSelection Key="energyunit" Label="Energy unit" Tooltip="Gives results in kcal/mol or kJ/mol.">
     	<Choice Value="kcal/mol" Text="kcal/mol" Selected="true" />
     	<Choice Value="kJ/mol" Text="kJ/mol" />
@@ -25,9 +25,6 @@
 		<Choice Value="1" Text="Normal" Selected="true"/>
 		<Choice Value="2" Text="Strict"/>
 		<Choice Value="3" Text="Very strict"/>
-		<Dependencies>
-		    <Item Key="mmff94optimization" Range="false"/>
-		</Dependencies> 
     </SingleSelection>
     <Boolean Key="leconformercalculation" Label="Calculate lowest energy conformer"
         Tooltip="Calculates and displays only the lowest energy conformer structure. When
@@ -35,7 +32,6 @@
     <Number Key="maxconformers" Label="Maximum number of conformers" Tooltip="Limits the number of calculated structures." Range="[-1,1000000000]" Value="10">
 		<Dependencies>
 		    <Item Key="leconformercalculation" Range="false"/>
-		    <Item Key="mmff94optimization" Range="false"/>
 		</Dependencies>
     </Number>
     <Number Key="diversity" Label="Diversity limit" 
@@ -43,33 +39,27 @@
         Range="[0.1,1000|" Value="0.1">
 		<Dependencies>
 		    <Item Key="leconformercalculation" Range="false"/>
-		    <Item Key="mmff94optimization" Range="false"/>
 		</Dependencies>
     </Number>
     <Number Key="timelimit" Label="Timelimit (s)" 
         Tooltip="No conformers will be displayed if the calculation is stopped at the time limit set." Range="[0,1000000000]" Value="900">
-        <Dependencies>
-		    <Item Key="mmff94optimization" Range="false"/>
-		</Dependencies> 
 	</Number>
     <Boolean Key="prehydrogenize" Label="Prehydrogenize"
         Tooltip="If checked, converts all implicit hydrogens to explicit hydrogens without removing them after the calculation. If unchecked, no explicit hydrogens will be added."
         Value="true"/>
     <Boolean Key="hyperfine" Label="Hyperfine" Tooltip="Inserts more iteration steps in the calculations, gives more precision in results but the needed time becomes longer." Value="false">
-	    <Dependencies>
-		    <Item Key="mmff94optimization" Range="false"/>
-		</Dependencies> 
 	</Boolean>
-    <Boolean Key="mmff94optimization" Label="MMFF94 optimization" Tooltip="Sets MMFF94 optimization." Value="false">
+    <Boolean Key="multifrag" Label="Multi-fragment optimization"
+        Tooltip="Multi-fragment optimization with MMFF94." Value="false">
         <Dependencies>
-		    <Item Key="leconformercalculation" Range="true"/>
+        	<Item Key="leconformercalculation" Range="true"/>
+		    <Item Key="forcefield" Range="mmff94"/>
 		</Dependencies> 
-    </Boolean>
+    </Boolean>        
     <Boolean Key="hbonds" Label="Visualize H bonds" Tooltip="Marks intramolecular hydrogen bonds in the conformer where it is likely to occur." Value="false">
 	    <Dependencies>
 		    <Item Key="displayoptions" Range="conformers"/>
 		    <Item Key="prehydrogenize" Range="true"/>
-		    <Item Key="mmff94optimization" Range="false"/>
 		</Dependencies> 
 	</Boolean>
 </ParameterPanel>

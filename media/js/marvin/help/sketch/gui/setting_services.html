@@ -20,7 +20,6 @@
 		<li><a href="#soap">SOAP Service</a></li>
 	</ul>
 	</li>
-	<li><a href="#export">Export and Import Service configurations</li>
 	<li>Usage
 	<ul>
 	<li><a href="../../calculations/services_menu.html" target="_blank">Use Services from MarvinSketch</a></li>
@@ -44,9 +43,9 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 <h2><a class="anchor" name="setservice"></a>Set Services</h2>
 
 <ol>
-	<li>Select <b>Edit</b> > <b>Preferences</b> > <a href="dialogs.html#services"><i>Services</a></i> tab;
-	<li>Click <i>Add new Service...</i> button;
-	<p><img src="gui-files/dialogs/preferences5.png" width="" height=""></p>
+	<li>Select <b>Edit</b> > <b>Preferences</b> > <a href="dialogs.html#services"><i>Services</a></i> tab of Marvin;
+	<li>Click <i>Add new Service...</i> button  (<img src="../../structurechecker/images/msketch/add.png" width="24" height="24" alt="add" />);
+	<p><img src="gui-files/dialogs/preferences5.png" width="644" height="438"></p>
 	<li>Select the requested service:
 	<ul>
 		<li><b>Service type</b>: Select the <a href="../../developer/services.html#implement">type 
@@ -54,7 +53,7 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 			webservices are available as service type. The further options to be set will change 
 			according to your selection;
 		<p>
-		<img src="gui-files/preferences5_1.png" width="" height="">
+		<img src="gui-files/preferences5_1.png" width="644" height="438">
 		</p>
 		<p>
 		<i>Fill in the required fields, according to your service type selection. 
@@ -69,11 +68,15 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 		</li>
 	<li><b>Accept</b> your settings. The set service will appear on the <a href="dialogs.html#services"><i>Services</a></i> tab;
 		<p>
-		<img src="gui-files/preferences5_5.png" width="" height="">
+		<img src="gui-files/preferences5_5.png" width="644" height="438">
 		</p></li>
 	<li><b>Specify the order</b> of services by moving them up and down using the Up/Down buttons.</li>
 	<li><b>Add</b> a new service to the list, or <b>remove</b> the selected service from the list by the add and remove buttons. </li>  
-	<li><b>Import</b> and <b>export</b> configuration file. </li>
+	<li><a class="anchor" id="export"></a>You can <b>export</b> the set services configuration to an <code>XML</code> file and <b>import</b> 
+	it for later usage by clicking on the appropriate buttons of the Services tab. 
+	Open Service Configuration <code>XML</code> file from URL is also available; Click on button 
+	<img src="gui-files/url.png" width="24" height="24"/> and specify the URL of the configuration <code>XML</code> file. The location of the set services configuration is displayed at the bottom of the configuration window.
+ </li>
 	<b>Note</b>: <i>Restore Defaults</i> sets the configuration file to the <code>servicesconfig.xml</code> located in the users's ChemAxon folder (in <i>user's home</i> chemaxon or .chemaxon folder, depending on operating system).
 </ol>
 
@@ -83,7 +86,7 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 	<li><a class="anchor" name="local"></a>Service type: <a href="../../developer/services.html#local">Local Service</a>
 		<ul>
 			<p>
-			<img src="gui-files/preferences5_2.png" width="" height="">
+			<img src="gui-files/preferences5_2.png" width="644" height="438">
 			</p>
 			<li><b>Java Archive (JAR)</b>: Browse the JAVA Archive file, which contains the classes of 
 				the desired calculation; </li>
@@ -114,7 +117,7 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 	<li><a class="anchor" name="http"></a>Service type: <a href="../../developer/services.html#http">HTTP Service</a>
 		<ul>
 		<p>
-			<img src="gui-files/preferences5_3.png" width="" height="">
+			<img src="gui-files/preferences5_3.png" width="644" height="438" />
 		</p>
 			<li><b>Service URL</b>: Type the URL address of the appropriate service;</li>
 			<li><b>Call method</b>: 
@@ -147,7 +150,7 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 	<li><a class="anchor" name="soap"></a>Service type: <a href="../../developer/services.html#soap">SOAP Service</a>
 		<ul>
 		<p>
-		<img src="gui-files/preferences5_4.png" width="" height="">
+		<img src="gui-files/preferences5_4.png" width="644" height="438">
 		</p>
 			<li><b>WSDL URI</b>: Browse the WSDL file or type the URI of the service;</li>
 			<li><b>Port</b>: Select WSDL port which describes the interfaces (legal operations) exposed by the web service;</li>
@@ -188,13 +191,13 @@ menu of MarvinSketch. <b>Note</b>: When no Services are set in MarvinSketch, the
 	</li>
 </p>
 </ul>
-<h2><a class="anchor" id="export"></a>Export and Import Service configuration</h2>
+<!-- <h2><a class="anchor" id="export"></a>Export and Import Service configuration</h2>
 <table>
 <tr>
 <td><img src="gui-files/servicesimport_export.png"/></td>
 <td>You can export the set services configuration <code>XML</code> file to a preferred location, and import it for later usage by clicking on the appropriate buttons of the Services tab. Open Service Configuration <code>XML</code> file from URL is also available; Click on button <img src="gui-files/url.png"/> and specify the URL of configuration <code>XML</code> file.<br> The location of the set services configuration is displayed at the bottom of the configuration window.</td>
 </tr>
-</table> 
+</table> -->
 <center>
 <div class="lenia">&nbsp;</div>
 </center>

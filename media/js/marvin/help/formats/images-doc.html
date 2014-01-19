@@ -25,7 +25,7 @@ Restrictions:
 <li>These are binary file formats, so the
     applet.getMol(...) function does not work.
 <li>Instead of the molecule.toFormat(...) function, the
-    molecule.<a HREF="../developer/beans/api/chemaxon/struc/Molecule.html#toBinFormat(java.lang.String)">toBinFormat(...)</a>
+    MolExporter.<a HREF="../developer/beans/api/chemaxon/formats/MolExporter.html#exportToBinFormat(chemaxon.struc.Molecule, java.lang.String)">exportToBinFormat(...)</a>
     method should be used.</li>
 <li>Command line creation of image files using
     <a HREF="molconvert.html">MolConverter</a> works only in
@@ -140,6 +140,8 @@ The following common options are recognized by all image export modules:
     <td>Displays atom mapping.</td></tr>
 <tr VALIGN=TOP><td><a class="text" name="anum"><code>anum</code></a></td>
     <td>Displays atom numbers.</td></tr>
+<tr VALIGN=TOP><td><a class="text" name="atomNumberingType"><code>atomNumberingType...</code></a></td>
+    <td>Sets the type of atom numbering. Implies anum parameter.<br>Possible values:<ul><li>1 (Atom numbers)</li><li>2 (IUPAC numbering)</li></ul></td></tr>
 <tr VALIGN=TOP><td><a class="text" name="lp"><code>lp</code></a></td>
     <td>Displays lone pairs.</td></tr>
 <tr VALIGN=TOP><td><a class="text" name="lpexpl"><code>lpexpl</code></a></td>

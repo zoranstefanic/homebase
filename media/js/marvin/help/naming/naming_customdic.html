@@ -1,6 +1,6 @@
 <!--
     Document   : custom dictionary
-    Author     : Annamaria Jakab
+    Author     : Annamaria Jakab, Daniel Bonniot
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -21,8 +21,8 @@ custom dictionary has precedence over the standard name to structure conversion.
 </p>
 <p>Default path: CHEMAXON_DIR/custom_names.smi where CHEMAXON_DIR is located at:
         <ul>
+            <li>Windows Vista or above: C:\Users\USERNAME\chemaxon</li>
             <li>Windows XP: C:\Documents and Settings\USERNAME\chemaxon</li>
-			<li>Windows Vista or above: C:\Users\USERNAME\chemaxon</li>
             <li>Linux: /home/USERNAME/.chemaxon</li>
             <li>OS X:  /Users/USERNAME/.chemaxon</li>
         </ul>
@@ -48,6 +48,13 @@ For instance:
 #SMILES	EXACT_MASS	NAME
 C\C=C\CCC(O)=O	114.1424	gamma-hexenoic acid
 </pre>
+
+<p>
+You can download this <a href="custom_names.smi">example custom dictionary</a> to test this feature, and to use as a template.
+Once this dictionary is installed correctly, you need to restart the ChemAxon application you are using
+(for instance Marvin Sketch, Instant JChem or JChem for Excel). You should now be able to convert the
+following custom IDs: CXN000001 through CXN000008, and aspirin in four extra languages: 阿司匹林 (Chinese),
+アスピリン (Japanese), 아스피린 (Korean) and аспири́н (Russian). Note that the foreign names will only work with version 5.12 or later.
 
 <h3>Preventing a name from being converted</h3>
 

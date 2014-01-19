@@ -71,8 +71,14 @@
 	<Choice Value="cyclomaticNumber" Text="Cyclomatic number" Tooltip="The smallest number of bonds which must be removed so that no circuit remains. Also known as circuit rank." Selected="true"/>
    	<Choice Value="fragmentCount" Text="Fragment count" Tooltip="Number of fragments (disconnected parts) in the molecule." Selected="true"/>
 	<Choice Value="stericEffectIndex" Text="Steric effect index" Tooltip="Topological steric effect index (TSEI) of an atom calculated from the covalent radii values and topological distances. The stericEffectIndex is related to the steric hindrance of the given atom." Selected="true"/>
+	<Choice Value="fsp3" Text="Fsp3" Tooltip="The Fsp3 value of the molecule." Selected="true"/>
     </MultipleSelection>
 </Tab>
     <Precision Key="precision" Label="Decimal places"/>
+    <SingleSelection Key="arom" Label="Aromatization method" Tooltip="Aromatization method">
+		<Choice Value="general" Text="general" Tooltip="General aroatization method." Selected="true"/>
+		<Choice Value="basic" Text="basic" Tooltip="Basic aroatization method."/>
+		<Choice Value="loose" Text="loose" Tooltip="Loose aroatization method."/>
+    </SingleSelection>
     <Boolean Key="single" Label="Single fragment mode" Tooltip="If unchecked (default), the calculation handles unlinked molecules together, if checked, the results are displayed separately." Value="false"/>
 </ParameterPanel>

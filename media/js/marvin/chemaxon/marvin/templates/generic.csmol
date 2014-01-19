@@ -92,26 +92,6 @@ M  END
 >  <rotation.unit>
 30
 $$$$
-Benzene (aromatic)
-  class M*08021218082D
-
-  6  6  0  0  0  0  0  0  0  0999 V2000
-J8+VHE1W60
-yt-VqD0W60
-yt-VwC+V60
-J8+VTCzV60
-hOyVwC+V60
-hOyVqD0W60
-10204
-10604
-20304
-30404
-40504
-50604
-M  END
->  <rotation.unit>
-30
-$$$$
 Naphthalene
   class M*03239812522D
 

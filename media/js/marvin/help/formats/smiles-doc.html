@@ -34,7 +34,27 @@ rules:
     <li>Atoms are represented by their atomic symbols.</li>
     <li>Isotopic specifications are indicated by preceeding the atomic symbol.
 	</li>
-    <li> Any atom but not hydrogen is represented with '*'.</li>
+    <li>Any atom but not hydrogen is represented with '*'.</li>
+    <li>'[Z]' symbols are imported as R-group attachment points. The attachment 
+    orders are ascending with atom indexes. Exporting R-group attachment points 
+    is possible in <a HREF="cxsmiles-doc.html">ChemAxon Extended SMILES (CXSMILES)</a>. </li>
+    <li>Since radicals are not stored in SMILES format, they are calculated during 
+    SMILES import for atoms that tend to have radicals. It is done in the case when 
+    no implicit Hydrogens can be added because of the SMILES definition and the valence 
+    of the atom has to be corrected. E.g. for the SMILES string [Cl] no Hydrogens 
+    are allowed (because of the brackets), thus Chlorine is imported with a monovalent 
+    radical. No radicals are added to metals, for them a valence property is set if 
+    their valence differs from the usual. E.g. [AsH2] is imported with valence 
+    property 2 and two implicit Hydrogen atoms, since its usual valence would be 
+    different (it would be 3). <br> 
+    No radicals are added to the following atoms:
+    <ul>
+	<li>Helium(He), Lithium(Li), Neon(Ne) and Sodium(Na)</li> 
+    <li>All atoms above Chlorine(Cl) except Bromine(Br) and Iodine(I).</li>
+    </ul>
+    Radicals are stored in <a HREF="cxsmiles-doc.html">ChemAxon Extended SMILES (CXSMILES)</a> 
+    format, for cases when the radical would be lost is SMILES, please, use CXMSILES.
+    </li>
     </ul>
 <li> Bonds: 
     <ul>
@@ -265,8 +285,8 @@ The default bond types for import and export strongly depend on the atoms connec
 Information stored after the SMILES string separated by space or tab character are treated as 
 molecule field. (According to the SMILES definition they can be ignored or used as comment.)
 More molecule fields can be stored after the first one but they should be 
-separated by tab character (to allow space in the data field).
-By default the first additional information is the <i>molecule name</i>. 
+separated by tab character (to allow space in the data field). 
+The newline and tab characters are escaped during export. By default the first additional information is the <i>molecule name</i>. 
 However, the molecule name is never considered as a field, it is a 
 <a href=https://www.chemaxon.com/marvin/help/developer/beans/api/chemaxon/struc/MoleculeGraph.html#getName() >
  special property</a> of the molecule.

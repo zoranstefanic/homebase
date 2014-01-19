@@ -50,8 +50,7 @@ It is also possible to extend this built-in set of calculations by a
 <a href="#config">user-defined configuration</a>.</p>
 
 <p>The heart of the evaluator mechanism is the 
-<a href="http://jep.sourceforge.net/">JEP Java Expression Parser</a>, equipped with
-<a href="../developer/plugins.html">chemical plugin calculations</a>, 
+<a href="http://jep.sourceforge.net/">JEP Java Expression Parser</a>, equipped with chemical plugin calculations, 
 <a href="http://www.chemaxon.com/jchem/doc/user/queryindex.html">chemical substructure search</a> and some additional 
 <a href="Evaluator.html#functiondef">chemical and general purpose functions</a>. 
 <a href="#config">User defined functions</a> can also be added to this function set.</p>
@@ -125,12 +124,11 @@ from the following language elements:
 substraction(<code>-</code>), multiplication (<code>*</code>) and division (<code>/</code>),
 <li>the logical operators: AND (<code>&amp;&amp;</code>), OR (<code>||</code>), NOT (<code>!</code>)
 <li><a href="Evaluator.html#plugindef">structure based chemical calculations</a> with the help of 
-<a href="../developer/plugins.html">chemical calculator plugins</a> including charge, p<i>K</i><sub>a</sub>, 
+chemical calculator plugins including charge, p<i>K</i><sub>a</sub>, 
 log<i>P</i>, log<i>D</i> calculations and extendible by others 
 <li><a href="Evaluator.html#functiondef">chemical and general purpose functions</a>:
 predefined functions for taking maximum, minimum, getting atomic and molecular properties,
-performing chemical calculations that are not implemented by 
-<a href="../developer/plugins.html">chemical calculator plugins</a>, etc. The set of available 
+performing chemical calculations that are not implemented by chemical calculator plugins, etc. The set of available 
 functions can be extended by user defined functions.
 <li><a href="Evaluator.html#matchdef">matching conditions</a>:
 searches predefined functional groups or certain atoms of the functional groups 
@@ -412,8 +410,7 @@ the referenced functions and plugin calculations are listed in the <a href="Eval
 <ul>
 <li><a href="EvaluatorFunctions.html#plugindesc">Structure based calculations (plugin calculations)</a>
 
-<p>Plugin references provide access to 
-<a href="../developer/plugins.html">ChemAxon's calculator plugins</a>.
+<p>Plugin references provide access to ChemAxon's calculator plugins.
 These calculations equip our expressions with chemical meaning.</p>
 
 <ol>
@@ -690,7 +687,7 @@ match("S") &amp;&amp; (matchCount("C=O") + matchCount("CO") >= 6)
 <li><a name="pluginexamples"></a><a href="EvaluatorFunctions.html#plugindesc">Structure based calculations (plugin calculations)</a>
 
 <p>Plugin references provide access to 
-<a href="../developer/plugins.html">ChemAxon's calculator plugins</a>.
+ChemAxon's calculator plugins.
 These calculations equip our expressions with chemical meaning.</p>
 
 <ol>
@@ -952,8 +949,7 @@ match(product(1), "S") &amp;&amp; (matchCount(product(1), "C=O") + matchCount(pr
 <ul>
 <li><a href="EvaluatorFunctions.html#plugindesc">Structure based calculations (plugin calculations)</a>
 
-<p>Plugin references provide access to 
-<a href="../developer/plugins.html">ChemAxon's calculator plugins</a>.
+<p>Plugin references provide access to ChemAxon's calculator plugins.
 These calculations equip our expressions with chemical meaning.</p>
 
 <ol>
@@ -1093,7 +1089,7 @@ dissimilarity("PF:Euclidean", target(), query()) < 0.6
 
 <center>
 <font size="-2" face="helvetica">
-Copyright &copy; 1999-2012 
+Copyright &copy; 1999-2013 
 <a href="http://www.chemaxon.com">ChemAxon Ltd.</a>
 &nbsp;&nbsp;&nbsp;All rights reserved.
 </font>

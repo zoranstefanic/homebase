@@ -8,7 +8,7 @@
   <HEAD>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 	<TITLE>Document to structure</TITLE>
- <link rel=stylesheet type="text/css" href="../marvinmanuals.css">
+ <link rel="stylesheet" type="text/css" href="../marvinmanuals.css">
 </HEAD>
   <body>
   
@@ -46,13 +46,29 @@ Example:
 <h2><a name="d2s_OLE" class="anchor">Structure conversion from OLE objects</a></h2>
 D2s converts the chemical structures from OLE objects &#8211; created by various chemical sketchers such as Marvin, ChemDraw, ISIS/DRAW, SYMYX DRAW, and Accelrys Draw &#8211; embedded in office documents.
 
-<h2><a name="d2s_OSRA" class="anchor">Chemical image recognition</a></h2>
-If <a href="../formats/imageimport.html">OSRA</a> is installed on your computer, d2s will also convert the figures of compounds into editable chemical structures from PDF files.
+<h2><a name="d2s_OSR" class="anchor">Chemical image recognition</a></h2>
+
+For structures represented as images in PDF or Office documents, d2s can make use of several <b>Image to Structure</b> tools
+(also called <b>Optical Structrure Recognition</b> or <b>Chemical OCR</b>).
+When such a tool is installed and successfully recognizes the image, the chemical structure
+become part of the output of d2s; it can be visualized, edited, indexed and search just like any other structure.
+<p>
+Currently the supported Image to Structure tools are:
+<ul>
+<li>Keymodule <a href="http://www.keymodule.co.uk/products/clide/clide-batch.html">CLiDE</a>;
+<li>NIH <a href="http://cactus.nci.nih.gov/osra/">OSRA</a>; and
+<li>GGA <a href="http://ggasoftware.com/opensource/imago">Imago</a>.
+</ul>
+
+See <a href="d2s-osr.html">configuration instructions</a> to know how to make those tools recognized by d2s.
+<p>
+Note that structures present as vector graphics rather than bitmap are not converted, unless the <code>osraRendered</code>
+format option is used.
 
 <h2>See also</h2>
 <ul>
 <li><a href="../developer/d2s.html">Developer documentation for d2s</a></li>
-<li><a href="../../examples/d2s/index.html">d2s code examples</a></li>
+<li><a href="http://www.chemaxon.com/marvin/examples/d2s/index.html">d2s code examples</a></li>
 </ul>
   
 

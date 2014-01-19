@@ -10,6 +10,7 @@
     
     <SingleSelection Key="forcefield" Label="Force Field" Toooltip="Type of force field used for calculation." >
 	<Choice Value="dreiding" Text="Dreiding" Selected="true"/>
+	<Choice Value="mmff94" Text="MMFF94" />
     </SingleSelection>
     <SingleSelection Key="integrator" Label="Integrator" Tooltip="Integrator type used for solving Newton's laws of motion.">
     	<Choice Value="positionverlet" Text="Position Verlet"/>

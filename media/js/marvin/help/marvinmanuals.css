@@ -1,6 +1,6 @@
 body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: small;
+	font-size: 13px;
 	color: #333333;
 	line-height: 150%;
 	background-color: #ffffff;
@@ -8,14 +8,14 @@ body {
 
 p {	
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: small;
+	font-size: 13px;
 	color: #333333;
 	line-height: 150%;
 }
 
 ol li {
 	list-style-type: decimal;
-	font-size: small;
+	font-size: 13px;
 	color: #333333;
 	line-height: 150%;
 	margin: 2px 0px 2px 0px;
@@ -28,7 +28,7 @@ li ol li {
 
 ul li {
 	list-style-type: disc;
-	font-size: small;
+	font-size: 13px;
 	color: #333333;
 	line-height: 150%;
 	margin: 2px 0px 2px 0px;
@@ -46,7 +46,7 @@ li ul li ul li{
 
 input {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: smaller;
+	font-size: 11px;
 	font-weight: bold;
 	color: #f2f8f8;
 	text-decoration: none;
@@ -60,12 +60,12 @@ code, pre {
 }
 
 h1 {
-	font-size: larger;
+	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
 	color: #077179;
 	background-color: #E4F1F1;
-        border: thin solid #cae4e4;
+    border: thin solid #cae4e4;
 	margin: 5px 0px 5px 0px;
 	padding: 3px 3px 3px 3px;
 	line-height: 150%;
@@ -73,25 +73,25 @@ h1 {
 
 h2 {
 	color: #077179;
-	font-size: large;
-        font-weight: bold;
+	font-size: 18px;
+    font-weight: bold;
 }
 
 h3, h3 li  {
 	color: #077179;
-	font-size: medium;
+	font-size: 16px;
 	font-weight: bold;
 }
 
 h4 {
 	color: #077179;
-	font-size: small;
+	font-size: 13px;
 	font-weight: bold;
 }
 
 h5 {
 	color: #077179;
-	font-size: small;
+	font-size: 13px;
 	font-style: normal;
 	font-weight: bold;
 }
@@ -134,13 +134,13 @@ em {
 }
 
 small {
-	font-size: smaller;
+	font-size: 11px;
 	font-family: sans-serif;
 }
 
 address {
     font-family: sans-serif;
-    font-size: smaller;
+    font-size: 11px;
     font-style: normal;
 }
 sub {
@@ -155,11 +155,11 @@ dd {
 }
 
 table {
-	font-size: small;
+	font-size: 13px;
 }
 
 table.structurechecker {
-	font-size: small;
+	font-size: 13px;
     border-width: 0px 0px 1px 1px;
 	border-style: solid;
 	border-color: #077179;
@@ -167,12 +167,12 @@ table.structurechecker {
 
 table.structurechecker th {
 	font-weight: bold;
-	font-size: small;
+	font-size: 13px;
 	background-color: #e4f1f1;
 }
 
 table.grid {
-	font-size: small;
+	font-size: 13px;
     border-width: 0px 0px 1px 1px;
 	border-style: solid;
 	border-color: #077179;
@@ -188,7 +188,7 @@ table.grid th {
 }
 
 table#grid {
-	font-size: small;
+	font-size: 13px;
 	border-width: 0px 0px 1px 1px;
 	border-style: solid;
 	border-color: #077179;
@@ -209,13 +209,13 @@ table#no-grid, table#no-grid td, table#no-grid th {
 }
 
 table#colored {
-	font-size: small;
+	font-size: 13px;
 	border: thin solid #077179;
 	background-color: #e4f1f1;
 }
 
 table.colored-grid {
-	font-size: small;
+	font-size: 13px;
 	border-width: 0px 0px 1px 1px;
 	border-style: solid;
 	border-color: #077179;
@@ -233,7 +233,7 @@ table.colored-grid th {
 }
 
 table#colored-grid {
-	font-size: small;
+	font-size: 13px;
 	border-width: 0px 0px 1px 1px;
 	border-style: solid;
 	border-color: #077179;

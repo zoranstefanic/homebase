@@ -4,141 +4,166 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="description" content="List of ChemAxon's Structure Checkers">
 	<meta name="author" content="Annamaria Jakab, Viktoria Palfi">
-	<meta name="keywords" content="Structure_Checker">
+	<meta name="keywords" content="Structure, Checker, actionstring, checker list, fixer, automatic">
 	<title>List of available checkers of Structure Checker application</title>
-    <link rel="stylesheet" type="text/css" href="../marvinmanuals.css">
+    <link rel="stylesheet" type="text/css" href="../structurechecker.css">
 </head>
 <body>
 <h1><a id="checkerlist" class="anchor"></a>Examples of available checkers and their fixers</h1>
-<h3>Menu</h3>
-<ul>	
-	<li><a href="#list">List of available checkers</a></li>
-	<li><a href="#links">Links</a></li>
-</ul>
-<h4><a href="structurechecker.html">Structure Checker GUI</a></h4>
-<h4><a href="checker.html">Structure Checker in MarvinSketch</a></h4>
-<h4><a href="structurechecker_cline.html"><code>structurechecker</code> Command Line Tool</a></h4>
-
+<table>
+	<tr>	
+		<td><a class="nounderline" href="structurechecker.html"><img src="images/gui/structure_checker_16.png" /> Structure Checker GUI</a></td> 
+	</tr>
+	<tr>
+		<td><a class="nounderline" href="checker.html"><img src="images/gui/check-structure16.png" /> Structure Checker in MarvinSketch</a></td>
+	</tr>
+	<tr>
+		<td><a class="nounderline" href="structurechecker_cline.html"><img src="images/gui/structurechecker_cli16.png" /> <code>structurechecker</code> Command Line Tool</a></td>
+	</tr>
+</table>
 	
 <h3><a class="anchor" id="list"></a>Checkers</h3>
 	<ul class="floating">
-		<li><a href="#abbr">Abbreviated Group</a></li>
-		<li><a href="#absentcf">Absent Chiral Flag</a></li>
+		<li><a href="#abbrevgroup">Abbreviated Group</a></li>
+		<li><a href="#absentchiralflag">Absent Chiral Flag</a></li>
+		<li><a href="#absolutestereoconfiguration">Absolute Stereo Configuration</a></li>
 		<li><a href="#alias">Alias</a></li>
-		<li><a href="#arom">Aromaticity Error</a></li>
+		<li><a href="#aromaticityerror">Aromaticity Error</a></li>
 		<li><a href="#atommap">Atom Map</a></li>
-		<li><a href="#atomquery">Atom Query Property</a></li>
+		<li><a href="#atomqueryproperty">Atom Query Property</a></li>
 		<li><a href="#atomvalue">Atom Value</a></li>
 		<li><a href="#atropisomer">Atropisomer</a></li>
-		<li><a href="#attached">Attached Data</a></li>
+		<li><a href="#attacheddata">Attached Data</a></li>
 		<li><a href="#bondangle">Bond Angle</a></li>
 		<li><a href="#bondlength">Bond Length</a></li>
-		<li><a href="#chiralflag">Chiral Flag Error</a></li>
-		<li><a href="#circularrg">Circular R-group Reference</a></li>
+		<li><a href="#chiralflag">Chiral Flag</a></li>
+		<li><a href="#chiralflagerror">Chiral Flag Error</a></li>
 	</ul>
 	<ul class="floating">			
-		<li> <a href="#coord">Coordination System Error</a></li>
-		<li><a href="#cov_counter">Covalent Counterion</a></li>
-		<li><a href="#crosseddouble">Crossed Double-Bond</a></li>
+		<li><a href="#circularrgroupreference">Circular R-group Reference</a></li>
+		<li><a href="#coordsystem">Coordination System Error</a></li>
+		<li><a href="#covalentcounterion">Covalent Counterion</a></li>
+		<li><a href="#crosseddoublebond">Crossed Double-Bond</a></li>
 		<li><a href="#empty">Empty Structure</a></li>
-		<li><a href="#explh">Explicit Hydrogen</a></li>
-		<li><a href="#expllp">Explicit Lone Pairs</a></li>
+		<li><a href="#explicith">Explicit Hydrogen</a></li>
+		<li><a href="#explicitlp">Explicit Lone Pairs</a></li>
+		<li><a href="#ezdoublebond">E/Z Double Bond</a></li>
 		<li><a href="#isotope">Isotope</a></li>
-		<li> <a href="#metallocene">Metallocene</a></li>
+		<li><a href="#metallocene">Metallocene Error</a></li>
 		<li><a href="#missingatommap">Missing Atom Map</a></li>
-		<li><a href="#missingrg">Missing R-group Reference</a></li>
-		<li> <a href="#molcharge">Molecule Charge</a></li>
+		<li><a href="#missingrgroupreference">Missing R-group</a></li>
+		<li><a href="#moleculecharge">Molecule Charge</a></li>
 		<li><a href="#multicenter">Multicenter</a></li>
-		<li><a href="#multicomponent">Multicomponent</a></li>
+		<li><a href="#multicomponent">Multicomponent</a></li>		
 	</ul>
-	<ul class="floating">
+	<ul class="floating">	
+		<li><a href="#multiplestereocenter">Multiple Stereocenter</a></li>	
 		<li><a href="#ocr">OCR Error</a></li>		
 		<li><a href="#overlappingatoms">Overlapping Atoms</a></li>
 		<li><a href="#overlappingbonds">Overlapping Bonds</a></li>
-		<li><a href="#pseudo">Pseudo Atom</a></li>
+		<li><a href="#pseudoatom">Pseudo Atom</a></li>
 		<li><a href="#queryatom">Query Atom</a></li>
 		<li><a href="#querybond">Query Bond</a></li>
 		<li><a href="#ratom">R-atom</a></li>
-		<li><a href="#rgattach">R-group Attachment Error</a></li>
+		<li><a href="#rgroupattachmenterror">R-group Attachment Error</a></li>
 		<li><a href="#rgref">R-group Reference Error</a></li>
 		<li><a href="#racemate">Racemate</a></li>
 		<li><a href="#radical">Radical</a></li>
 		<li><a href="#rareelement">Rare Element</a></li>
-		<li><a href="#reactionmap">Reaction Map Error</a></li>		
+		<li><a href="#reactionmaperror">Reaction Map Error</a></li>		
+		<li><a href="#relativestereo">Relative Stereo</a></li>
 	</ul>
 	<ul class="floating">
-		<li><a href="#ringstrain">Ring Strain Error</a></li>
+		<li><a href="#ringstrainerror">Ring Strain Error</a></li>
 		<li><a href="#solvent">Solvent</a></li>		
 		<li><a href="#staratom">Star Atom</a></li>
-		<li><a href="#stereocb">Stereo Care Box</a></li>
+		<li><a href="#stereocarebox">Stereo Care Box</a></li>
+		<li><a href="#straightdoublebond">Straight Double Bond</a></li>
 		<li><a href="#substructure">Substructure</a></li>
 		<li><a href="#3d">Three Dimension(3D)</a></li>
-		<li><a href="#unbalreact">Unbalanced Reaction</a></li>
-		<li><a href="#unusedrg">Unused R-group Reference</a></li>
-		<li><a href="#valence">Valence Error</a></li>
-		<li><a href="#valenceqp">Valence Property</a></li>
-		<li><a href="#wedge">Wedge Error</a></li>
-		<li><a href="#wigglydouble">Wiggly Double Bond</a></li>
+		<li><a href="#unbalancedreaction">Unbalanced Reaction</a></li>
+		<li><a href="#unusedrgroupreference">Unused R-group</a></li>
+		<li><a href="#valenceerror">Valence Error</a></li>
+		<li><a href="#valenceproperty">Valence Property</a></li>
+		<li><a href="#wedgeerror">Wedge Error</a></li>
+		<li><a href="#wigglybond">Wiggly Bond</a></li>
+		<li><a href="#wigglydoublebond">Wiggly Double Bond</a></li>
 	</ul>
 	<div class="clear"></div>
-	
+	<h3><a class="nounderline" href="#deprecation">Deprecation</a></h3>
 	<center><div class="lenia">&nbsp;</div></center>	
-	
+	<div>
+	<p>Please note that in case of more than one fixer they are listed in a preset logical order of priority. </p>
+	</div>
 	<dl>
-        <dt><a id="abbr" class="anchor"></a><h4>Abbreviated Group Checker</h4></dt>
+        <dt><a id="abbrevgroup" class="anchor"></a><h4>Abbreviated Group Checker (<code>abbrevgroup</code>)</h4></dt>
         <dd>
             <ul>
-                <li>Checker searches for <a href="../sketch/sketch-chem.html#sgroups">abbreviated groups</a> in the structure: 
+                <li>Checker searches for <a href="../sketch/sketch-chem.html#sgroups">abbreviated groups</a> in the structure <a href="#note1"><sup>*</sup></a>. Options: 
 				<ul>
-					<li>contracted;</li> 
-					<li>expanded; or</li>
-					<li>both.</li>
+					<li>expanded (<code>:expanded=true</code>);</li> 
+					<li>contracted (<code>:contracted=true</code>); </li>
+					<li>both expanded and contracted groups (default).</li>
 				</ul>
+				You can specify a list of <strong>excluded</strong> abbreviated groups, i.e., checker will not find (and fix) 
+				abbreviated groups that are indicated in this list. Default and custom abbreviations are also possible to set. The excluded list elements are case 
+				sensitive and should be separated by commas (,). (<code>:excluded=Ph,Ala,Gly,MyGroup</code>)
+				<br><img border="1px" src="images/examples/ex_abbrev_excluded01.png" width="221" height="108" alt="excluded list" />
 				</li>
-                <li>Fixer offers:
-				<ul>
-					<li>ungroup abbreviated groups;</li>
-					<li>expand abbreviated groups;</li>
-					<li>contract abbreviated groups.</li>
-				</ul>
+                <li>Fixer offers - in order of priority -:
+				<ol>
+					<li>ungroup abbreviated groups (<code>ungroup</code>);</li>
+					<li>expand abbreviated groups (<code>expandgroup</code>);</li>
+					<li>contract abbreviated groups (<code>contractgroup</code>).</li>
+				</ol>
 				</li>					
             </ul>
 			<br>
 			<b>Example</b>:
             <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 				<tr>
-					<th rowspan="2" width="15%">Abbreviated Group Checker</th>
+					<th rowspan="2" width="15%">Abbreviated Group Checker (<code>abbrevgroup</code>)</th>
 					<th rowspan="2" width="22%">Warning:</th>			
 					<th colspan="3">Fix</th> 
 				</tr>
 				<tr>
-					<th width="21%">Ungroup</th>
-					<th width="21%">Contract Group</th>
-					<th width="21%">Expand Group</th>
+					<th width="21%">Ungroup (<code>ungroup</code>)</th>
+					<th width="21%">Expand Group (<code>expandgroup</code>)</th>
+					<th width="21%">Contract Group (<code>contractgroup</code>)</th>					
 				</tr>
 			    <tr>
                     <th align="left">Detect Expanded Groups</th>
                     <td align="center"><img src="images/examples/ex_abbrev_exp_ch.png" width="169" height="117" alt="ex_abbrev_exp_ch"/></td>
 					<td align="center"><img src="images/examples/ex_abbrev_exp_f.png" width="159" height="91" alt="ex_abbrev_contr_f"/></td>
-					<td align="center"><img src="images/examples/ex_abbrev_exp_fcont.png" width="94" height="30" alt="ex_abbrev_contr_f"/></td>
 					<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="unavailable"/></td>
-                </tr>
+					<td align="center"><img src="images/examples/ex_abbrev_exp_fcont.png" width="94" height="30" alt="ex_abbrev_contr_f"/></td>
+				</tr>
                 <tr>
                     <th align="left">Detect Contracted Groups</th>
                     <td align="center"><img src="images/examples/ex_abbrev_contr_ch.png" width="44" height="71" alt="ex_abbrev_contr_f"/></td>
 					<td align="center"><img src="images/examples/ex_abbrev_contr_f.png" width="93" height="144" alt="ex_abbrev_contr_f"/></td>
-					<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="unavailable"/></td>
 					<td align="center"><img src="images/examples/ex_abbrev_contr_fex.png" width="127" height="168" alt="ex_abbrev_contr_f"/></td>
+					<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="unavailable"/></td>					
                 </tr>
 				<tr>
                     <th align="left">Detect All Groups</th>
                     <td align="center"><img src="images/examples/ex_abbrev_both_ch.png" width="156" height="77" alt="ex_abbrev_both_ch"/></td>
 					<td align="center"><img src="images/examples/ex_abbrev_both_f.png" width="150" height="93" alt="ex_abbrev_both_f"/></td>
-					<td align="center"><img src="images/examples/ex_abbrev_both_fcont.png" width="108" height="40" alt="ex_abbrev_both_fcontr"/></td>
 					<td align="center"><img src="images/examples/ex_abbrev_both_fex.png" width="155" height="101" alt="ex_abbrev_both_fex"/></td>
+					<td align="center"><img src="images/examples/ex_abbrev_both_fcont.png" width="108" height="40" alt="ex_abbrev_both_fcontr"/></td>	
+                </tr>
+				<tr>
+                    <th align="left">Detect Contracted Groups with excluded list</th>
+                    <td align="center"><img src="images/examples/ex_abbrev_excluded02_ex.png" width="297" height="33" alt="ex_abbrev_exclude_ch"/></td>
+					<td align="center"><img src="images/examples/ex_abbrev_excluded02_fung.png" width="272" height="150" alt="ex_abbrev_exclude_f"/></td>
+					<td align="center"><img src="images/examples/ex_abbrev_excluded02_fex.png" width="316" height="156" alt="ex_abbrev_exclude_f"/></td>
+					<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="ex_abbrev_both_fcontr"/></td>	
                 </tr>
             </table>
 			<br>
+			<a id="note1"></a><sup>*</sup><b>Note</b>: <a href="../sketch/sketch-basic.html#User_defined_abbreviated_groups">
+			User defined abbreviated groups</a> are also available to be applied as recognizable abbreviated 
+			group set.<br>
 			<b>Note</b>: If attachment point is not connected to any atom, 
 			ungrouping removes attachment points of the abbreviated group and 
 			adds an implicit hydrogen.
@@ -146,26 +171,26 @@
 
 		<dt>
 		<a href="#list">List of checkers</a>
-		<a id="absentcf" class="anchor"></a><h4>Absent Chiral Flag Checker</h4></dt>
+		<a id="absentchiralflag" class="anchor"></a><h4>Absent Chiral Flag Checker (<code>absentchiralflag</code>)</h4></dt>
         <dd>
             <ul>
                 <li>Checker searches for <i>Absolute</i> chiral flag attached to
 				the molecule if the molecule is chiral and all stereo centers 
 				are precisely marked.
 				</li>
-                <li>Fixer adds chiral flag (<i>Absolute</i>) to the molecule.
+                <li>Fixer adds chiral flag (<i>Absolute</i>) to the molecule (<code>addchiralflag</code>).
 				</li>					
             </ul>
 			<br>
 			<b>Example</b>:
             <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 				<tr>
-					<th rowspan="2" width="15%">Absent Chiral Flag Checker</th>
+					<th rowspan="2" width="15%">Absent Chiral Flag Checker (<code>absentchiralflag</code>)</th>
 					<th rowspan="2" width="22%">Warning:</th>
 					<th>Fix</th> 
 				</tr>
 				<tr>
-					<th width="21%">Add Chiral Flag</th>
+					<th width="21%">Add Chiral Flag (<code>addchiralflag</code>)</th>
 				</tr>
 			    <tr>
                     <th align="left">Detect Absent Chiral Flag</th>
@@ -177,57 +202,87 @@
 		
         <dt>
 		<a href="#list">List of checkers</a>
-		<a id="alias" class="anchor"></a><h4>Alias Checker</h4></dt>
+		<a id="absolutestereoconfiguration" class="anchor"></a><h4>Absolute Stereo Configuration Checker (<code>absolutestereoconfiguration</code>)</h4></dt>
+            <dd>
+                <ul>
+                    <li>Checker searches for molecules in which all asymmetric centers have absolute stereo configuration.</li>
+                    <li>Fixer: no fixer is available for this checker.</li>
+                </ul>
+                <br>
+				<b>Example</b>: 
+				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+						<tr>
+							<th align="left" width="15%">Absolute Stereo Configuration (<code>absolutestereoconfiguration</code>)</th>
+							<th>Warning:</th>
+							<th>Fix</th> 
+						</tr>
+						<tr>
+                            <th align="left">Detect Absolute Stereo Configuration</th>
+                            <td align="center"><img src="images/examples/ex_absolutestereoconfig_ch.png" width="193" height="91" alt="ex_absolutestereoconfig_ch"/></td>
+                            <td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+						</tr>                    
+                </table>
+				
+			</dd>
+			
+			<dt>
+		<a href="#list">List of checkers</a>
+		<a id="alias" class="anchor"></a><h4>Alias Checker (<code>alias</code>)</h4></dt>
             <dd>
                 <ul>
                     <li>Checker searches for <b>aliases</b> in the structure.</li>
                     <li>Fixer offers:
-						<ul>
-							<li>converting the alias to atom if the alias value 
-							corresponds to an element (e.g. Ar);</li>
-							<li>converting the alias to abbreviated group if the
-							alias values corresponds to a group in the 
-							abbreviated group list;</li>
+						<ol>
+							<li>converting alias to abbreviated group if the
+							alias value corresponds to a group in the 
+							abbreviated group list <a href="#note4"><sup>*</sup></a> (<code>aliastogroup</code>);</li>
+							<li>converting alias to atom if the alias value 
+							corresponds to an element (e.g., Ar) (<code>aliastoatom</code>); </li>							
 							<li>removing alias (revealing the atom under the 
-							alias); or</li>
-							<li>deleting the alias atom.</li>
-						</ul>
+							alias) <a href="#note5"><sup>**</sup></a> (<code>removealias</code>); </li>
+							<li>deleting the atom having alias information (<code>removeatom</code>).</li>
+						</ol>
 					</li>
                 </ul>
                 <br>
 				<b>Example</b>: 
 				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 						<tr>
-							<th align="left" rowspan="2" width="15%">Alias Checker</th>
+							<th align="left" rowspan="2" width="15%">Alias Checker (<code>alias</code>)</th>
 							<th rowspan="2" width="20">Warning:</th>
 							<th colspan="4">Fix</th> 
 						</tr>
 						<tr>
-							<th width="20">Convert to Atom</th>
-							<th width="20">Convert Alias to Group</th>
-							<th width="20">Remove Alias</th>
-							<th width="20">Delete Atom</th>
+							<th width="20">Convert Alias to Group (<code>aliastogroup</code>)</th>
+							<th width="20">Convert to Atom (<code>aliastoatom</code>)</th>
+							<th width="20">Remove Alias (<code>removealias</code>)</th>
+							<th width="20">Delete Atom (<code>removeatom</code>)</th>
 						</tr>
                         <tr>
                             <th align="left">Detect Alias</th>
                             <td align="center"><img src="images/examples/ex_alias_ch.png" width="131" height="86" alt="ex_alias_ch"/></td>
-							<td align="center"><img src="images/examples/ex_alias_fcona.png" width="126" height="86" alt="convert to atom"/></td>
 							<td align="center"><img src="images/examples/ex_alias_fcong.png" width="131" height="81" alt="convert ot group"/></td>
+							<td align="center"><img src="images/examples/ex_alias_fcona.png" width="126" height="86" alt="convert to atom"/></td>
 							<td align="center"><img src="images/examples/ex_alias_frem.png" width="121" height="76" alt="ex_alias_frem"/></td>
 							<td align="center"><img src="images/examples/ex_alias_fdel.png" width="85" height="37" alt="ex_alias_fdel"/></td>
                         </tr>                    
                 </table>
 				<br>				          
-                <b>Notes</b>: "OMe" and "CL" were defined as alias. After 
+                <b>Note</b>: "OMe" and "CL" were defined as alias. After 
 				converting "OMe" to methoxy group, the abbreviated group is 
 				linked correctly to the chain, i.e., bond through the oxygen atom.
-                <br>Alias only covers the atom, and fixer removes this alias 
+				<br>
+				<a id="note4"></a><sup>*</sup><b>Note</b>: <a href="../sketch/sketch-basic.html#User_defined_abbreviated_groups">User defined 
+				abbreviated groups</a> are also available to be applied as recognizable abbreviated group set.
+                <br>
+				<a id="note5"></a><sup>**</sup><b>Note</b>: Alias only covers the atom, and fixer removes this alias 
 				from the original atom.
+				
 			</dd>
 			
             <dt>
 			<a href="#checkerlist">List of checkers</a>
-			<a id="arom" class="anchor"></a><h4>Aromaticity Error Checker</h4></dt>
+			<a id="aromaticityerror" class="anchor"></a><h4>Aromaticity Error Checker (<code>aromaticityerror</code>)</h4></dt>
             <dd>
                 <ul>
                     <li>Checker searches for <b>General</b>, <b>Basic</b>, or 
@@ -236,23 +291,23 @@
 					initial molecule. <a href="../sci/aromatization-doc.html">
 					Details on aromaticity detection.</a></li>
                     <li>Fixer offers:
-						<ul>
-							<li>rearomatizing or;</li>
-							<li>dearomatizing the aromatic system.</li>
-						</ul>
+						<ol>
+							<li>rearomatizing (<code>rearomatize</code>);</li>
+							<li>dearomatizing the aromatic system (<code>dearomatize</code>).</li>
+						</ol>
 					</li>
 				</ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 						<tr>
 							<th align="left" rowspan="2" width="15%">Aromaticity
-							Error checker</th>
+							Error checker (<code>aromaticity</code>)</th>
 							<th rowspan="2">Warning:</th>
 							<th colspan="2">Fix</th> 
 						</tr>
 						<tr>
-							<th>Rearomatize</th>
-							<th>Dearomatize</th>
+							<th>Rearomatize (<code>rearomatize</code>)</th>
+							<th>Dearomatize (<code>dearomatize</code>)</th>
 						</tr>
 					    <tr>
                             <th align="left" rowspan="2">General</th>
@@ -296,23 +351,23 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="atommap" class="anchor"></a><h4>Atom Map Checker</h4></dt>
+			<a id="atommap" class="anchor"></a><h4>Atom Map Checker (<code>atommap</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for atom maps.</li>
-                    <li>Fixer offers removing atom maps.</li>
+                    <li>Fixer offers removing atom maps (<code>removeatommap</code>).</li>
                 </ul>
                 <br><b>Example</b>:
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					
 						<tr>
 							<th align="left" rowspan="2" width="15%">Atom Map 
-							Checker</th>
+							Checker (<code>atommap</code>)</th>
 							<th rowspan="2">Warning:</th>
 							<th>Fix</th> 
 						</tr>
 						<tr>
-							<th>Remove Atom Map</th>
+							<th>Remove Atom Map (<code>removeatommap</code>)</th>
 						</tr>
 					
                         <tr>
@@ -325,37 +380,37 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="atomquery" class="anchor"></a><h4>Atom Query Property Checker</h4></dt>
+			<a id="atomqueryproperty"></a><h4>Atom Query Property Checker (<code>atomqueryproperty</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for atoms having query properties. Tick
 					options for searching:
                         <ul>
-                            <li>Hydrogen Count</li>
-                            <li>Connection Count</li>
-                            <li>Ring Bond Count</li>
-                            <li>Ring Count</li>
-                            <li>Implicit Hydrogen Count</li>
-                            <li>Smallest Ring Size</li>
-							<li>Aromaticity</li>
-							<li>Substitution Count</li>
-							<li>Unsaturation</li>
-							<li>Explicit Connection Count</li>
+                            <li>Hydrogen Count (<code>:H=true</code>);</li>
+                            <li>Connection Count (<code>:X=true</code>);</li>
+                            <li>Ring Bond Count (<code>:rb=true</code>);</li>
+                            <li>Ring Count (<code>:R=true</code>);</li>
+                            <li>Implicit Hydrogen Count (<code>:h=true</code>);</li>
+                            <li>Smallest Ring Size (<code>:r=true</code>);</li>
+							<li>Aromaticity (<code>:a=true</code>);</li>
+							<li>Substitution Count (<code>:s=true</code>);</li>
+							<li>Unsaturation (<code>:u=true</code>);</li>
+							<li>Explicit Connection Count (<code>:D=true</code>)</li>
                         </ul> atom query properties.
 					</li> 
-                    <li>Fixer offers removing the identified query properties.</li>
+                    <li>Fixer offers removing the identified query properties (<code>removeatomqueryproperty</code>).</li>
                 </ul>
 				<br>
                 <b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
 						<th align="left" rowspan="2" width="15%">Atom Query 
-						Property Checker</th>
+						Property Checker (<code>atomqueryproperty</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Removing query property</th>
+						<th>Removing query property (<code>removeatomqueryproperty</code>)</th>
 					</tr>
 				    <tr>
                         <th align="left">Detect Atom Query Property</th>
@@ -367,25 +422,29 @@
 			            
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="atomvalue" class="anchor"></a><h4>Atom Value Checker</h4></dt>
+			<a id="atomvalue" class="anchor"></a><h4>Atom Value Checker (<code>atomvalue</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for atom values.</li>
-                    <li>Fixer offers removing atom values or deleting the atom 
-					with value.</li>
+                    <li>Fixer offers:
+						<ol>
+							<li>removing set atom values (<code>removeatomvalue</code>);</li> 
+							<li>deleting the atom with value (<code>removeatom</code>).</li>
+						</ol>
+					</li>
                 </ul>
 				<br>
                 <b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
 						<th align="left" rowspan="2" width="15%">Atom Value 
-						Checker</th>
+						Checker (<code>atomvalue</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th colspan="2">Fix</th> 
 					</tr>
 					<tr>
-						<th>Remove Atom Value</th>
-						<th>Delete Atom</th>
+						<th>Remove Atom Value (<code>removeatomvalue</code>)</th>
+						<th>Delete Atom (<code>removeatom</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect Atom Value</th>
@@ -398,7 +457,7 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="atropisomer" class="anchor"></a><h4>Atropisomer Checker</h4></dt>
+			<a id="atropisomer" class="anchor"></a><h4>Atropisomer Checker (<code>atropisomer</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for stereoisomers containing two aromatic
@@ -410,7 +469,7 @@
                 <b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" width="15%">Atropisomer Checker</th>
+						<th align="left" width="15%">Atropisomer Checker (<code>atropisomer</code>)</th>
 						<th>Warning:</th>							
 						<th>Fix</th> 
 					</tr>
@@ -424,24 +483,28 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="attached" class="anchor"></a><h4>Attached Data Checker</h4></dt>
+			<a id="attacheddata" class="anchor"></a><h4>Attached Data Checker (<code>attacheddata</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for attached data.</li>
-                    <li>Fixer offers removing attached data or deleting the atom
-					with attached data.</li>
+                    <li>Fixer offers:
+						<ol>
+							<li>removing attached data (<code>removeattacheddata</code>);</li>
+							<li>deleting the atom having attached data (<code>removeatom</code>).</li>
+						</ol>
+					</li>					
                 </ul>
 				<br>
                 <b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Attached Data Checker</th>
+						<th align="left" rowspan="2" width="15%">Attached Data Checker (<code>attacheddata</code>)</th>
 						<th rowspan="2" width="25%">Warning:</th>							
 						<th colspan="2">Fix</th> 
 					</tr>
 					<tr>
-						<th width="30%">Remove Attached Data</th>
-						<th width="30%">Delete Atom</th>
+						<th width="30%">Remove Attached Data (<code>removeattacheddata</code>)</th>
+						<th width="30%">Delete Atom (<code>removeatom</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect Attached Data</th>
@@ -454,7 +517,7 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="bondangle" class="anchor"></a><h4>Bond Angle Checker</h4></dt>
+			<a id="bondangle" class="anchor"></a><h4>Bond Angle Checker (<code>bondangle</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for bonds NOT matching the following rules:
@@ -478,18 +541,24 @@
                                    </td>
                             </tr>
                         </table>
-                    <li>Fixer offers cleaning the structure by 2D clean or partial clean.</li>
+					</li>
+                    <li>Fixer offers cleaning the structure by:
+						<ol>
+							<li>2D clean or (<code>clean</code>);</li> 
+							<li>partial clean (<code>partialclean</code>).</li>
+						</ol>
+					</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					
 						<tr>
-							<th align="left" rowspan="2" width="15%">Bond Angle Checker</th>
+							<th align="left" rowspan="2" width="15%">Bond Angle Checker (<code>bondangle</code>)</th>
 							<th rowspan="2">Warning:</th>							
 							<th>Fix</th> 
 						</tr>
 						<tr>
-							<th>Clean</th>
+							<th>Clean (<code>clean</code>)</th>
 						</tr>
 					
 					
@@ -506,21 +575,26 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="bondlength" class="anchor"></a><h4>Bond Length Checker</h4></dt>
+			<a id="bondlength" class="anchor"></a><h4>Bond Length Checker (<code>bondlength</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for bond lengths different than the default setting.</li>
-                    <li>Fixer offers cleaning the structures by 2D clean or partial clean.</li>
+                    <li>Fixer offers cleaning the structure by:
+						<ol>
+							<li>2D clean or (<code>clean</code>);</li> 
+							<li>partial clean (<code>partialclean</code>).</li>
+						</ol>
+					</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Bond Length Checker</th>
+						<th align="left" rowspan="2" width="15%">Bond Length Checker (<code>bondlength</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Clean</th>
+						<th>Clean (<code>clean</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect short bonds</th>
@@ -543,25 +617,58 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="chiralflag" class="anchor"></a><h4>Chiral Flag Error Checker</h4></dt>
+			<a id="chiralflag" class="anchor"></a><h4>Chiral Flag Checker (<code>chiralflag</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for incorrectly <b>set chiral flags</b>: "Absolute" flag can only be set when all chirality information is specified for the given molecule.</li>
-                    <li>Fixer offers <b>removing</b> the chiral flag</b>.</li>
+                    <li>Checker searches for set chiral flags.</li>
+                    <li>Fixer offers removing the chiral flag (<code>removechiralflag</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Chiral Flag Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Chiral Flag Checker (<code>chiralflag</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Fix Chiral Flag</th>
+						<th>Fix Chiral Flag (<code>removechiralflag</code>)</th>
+					</tr>
+					<tr>
+						<th align="left">Detect set chiral flag</th>
+						<td align="center"><img src="images/examples/ex_chiralflag_ch.png" width="105" height="101" alt="ex_chiralflag_ch01"/></td>
+						<td align="center"><img src="images/examples/ex_chiralflag_f01.png" width="102" height="82" alt="ex_chiralflag_f"/></td>
+                    </tr> 
+					<tr>
+						<th align="left">Detect set chiral flag</th>
+						<td align="center"><img src="images/examples/ex_chiralflag_ch02.png" width="203" height="106" alt="ex_chiralflag_ch02"/></td>
+						<td align="center"><img src="images/examples/ex_chiralflag_f02.png" width="203" height="106" alt="ex_chiralflag_f"/></td>
+                    </tr>               
+                </table><br>
+                <b>Note</b>: Checker will find correctly AND incorrectly set chiral flags. Incorrectly 
+				set chiral flags will be find by <a href="#chiralflagerror">Chiral Flag Error Checker</a>.
+			</dd>
+			
+			<dt>
+			<a href="#list">List of checkers</a>
+			<a id="chiralflagerror" class="anchor"></a><h4>Chiral Flag Error Checker (<code>chiralflagerror</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for incorrectly set chiral flags: "Absolute" flag can only be set when all chirality information is specified for the given molecule.</li>
+                    <li><a id="removeinvalidchiralflag"></a>Fixer offers removing the chiral flag (<code>removeinvalidchiralflag</code>).</li>
+                </ul>
+                <br><b>Example</b>: 
+                <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+					<tr>
+						<th align="left" rowspan="2" width="15%">Chiral Flag Error Checker (<code>chiralflagerror</code>)</th>
+						<th rowspan="2">Warning:</th>							
+						<th>Fix</th> 
+					</tr>
+					<tr>
+						<th>Fix Chiral Flag (<code>removeinvalidchiralflag</code>)</th>
 					</tr>
 					<tr>
 						<th align="left">Detect invalid chiral flag</th>
-						<td align="center"><img src="images/examples/ex_chiralflag_ch01.png" width="105" height="107" alt="ex_chiralflag_ch"/></td>
+						<td align="center"><img src="images/examples/ex_chiralflag_ch01.png" width="108" height="105" alt="ex_chiralflag_ch"/></td>
 						<td align="center"><img src="images/examples/ex_chiralflag_f01.png" width="102" height="82" alt="ex_chiralflag_f"/></td>
                     </tr>               
                 </table>
@@ -569,7 +676,7 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a class="anchor" id="circularrg"></a><h4>Circular R-group Reference Checker</h4></dt>
+			<a id="circularrgroupreference"></a><h4>Circular R-group Reference Checker (<code>circularrgroupreference</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for series of R-group references where the R-groups refer to each other resulting in a closed loop.</li>
@@ -578,7 +685,7 @@
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" width="15%">Circular R-group Reference Checker</th>
+						<th align="left" width="15%">Circular R-group Reference Checker (<code>circularrgroupreference</code>)</th>
 						<th>Warning:</th>							
 						<th>Fix</th> 
 					</tr>
@@ -592,26 +699,26 @@
             
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="coord" class="anchor"></a><h4>Coordination System Error Checker</h4></dt>
+			<a id="coordsystem"></a><h4>Coordination System Error Checker (<code>coordsystem</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for errors in the use of coordinative bonds:
-                        <ul><li>2 multicenters connected with a bond</li>
-                            <li>coordinated atom is connected to an atom of the same multicenter with a coordinative bond</li>
-                            <li>multicenter merged with one of its atoms</li>
+                        <ul><li>2 multicenters connected with a bond;</li>
+                            <li>coordinated atom is connected to an atom of the same multicenter with a coordinative bond;</li>
+                            <li>multicenter merged with one of its atoms.</li>
                         </ul>
 					</li>
-                    <li>Fixer offers deleting the wrong bond or the multicenter</li>
+                    <li>Fixer offers deleting the wrong bond (<code>removebond</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Coordination System Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Coordination System Error Checker (<code>coordsystem</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Delete bond </th>
+						<th>Delete bond (<code>removebond</code>)</th>
 					</tr>	
                     <tr>
                         <th align="left">Detect coordinative bond</th>
@@ -628,21 +735,21 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="cov_counter" class="anchor"></a><h4>Covalent Counterion Checker</h4></dt>
+			<a id="covalentcounterion" class="anchor"></a><h4>Covalent Counterion Checker (<code>covalentcounterion</code>)</h4></dt>
             <dd>	
 				<ul>
                     <li>Checker searches for covalently bound counter ions.</li>
-                    <li>Fixer offers changing the structure to the ionic form.</li>
+                    <li>Fixer offers changing the structure to the ionic form (<code>converttoionicform</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Covalent Counterion Checker</th>
+						<th align="left" rowspan="2" width="15%">Covalent Counterion Checker (<code>covalentcounterion</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Ionic Form</th>
+						<th>Convert to Ionic Form (<code>converttoionicform</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect Covalent Counterion</th>
@@ -654,21 +761,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="crosseddouble" class="anchor"></a><h4>Crossed Double Bond Checker</h4></dt>
+			<a id="crosseddoublebond" class="anchor"></a><h4>Crossed Double-Bond Checker (<code>crosseddoublebond</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for crossed double bond types (molecules with unknown or unspecified configuration).</li>
-                    <li>Fixer offers changing crossed double bond to wiggly double bond type.</li>
+                    <li><a id="converttowigglydoublebond"></a>Fixer offers changing crossed double bond to wiggly double bond type (<code>converttowigglydoublebond</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Crossed Double Bond Checker</th>
+						<th align="left" rowspan="2" width="15%">Crossed Double Bond Checker (<code>crosseddoublebond</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Wiggly Double Bond</th>
+						<th>Convert to Wiggly Double Bond (<code>converttowigglydoublebond</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect crossed double bond</th>
@@ -682,7 +789,7 @@
              
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="empty" class="anchor"></a><h4>Empty Structure Checker</h4></dt>
+			<a id="empty" class="anchor"></a><h4>Empty Structure Checker (<code>empty</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for empty structure fields (available in multiple structures files).</li>
@@ -691,45 +798,38 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="explh" class="anchor"></a><h4>Explicit Hydrogen Checker</h4></dt>
+			<a id="explicith" class="anchor"></a><h4>Explicit Hydrogen Checker (<code>explicith</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for explicit hydrogens. Tick options for searching:
-                        <table>
-                            <tr>
-								<td>&loz; <a style="cursor:help" title="hydrogen atom without connection">Lonely</a></td>
-								<td>&loz; <a style="cursor:help" title="isotope hydrogen atoms">Isotopic</td>
-								<td>&loz; <a style="cursor:help" title="charged hydrogen atoms">Charged</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen radicals">Radical</td>
-							</tr>
-                            <tr>						                            
-								<td>&loz; <a style="cursor:help" title="hydrogen with atom map">Mapped</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen with wedged bond">Wedged</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen connected to a hydrogen atom">H Connected</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen connected to SRU S-group">Polymer End Group</td>
-							</tr> 
-							<tr>						                            
-								<td>&loz; <a style="cursor:help" title="hydrogen connected to a Superatom S-group">S-group End</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen which is the only atom in an S-group">S-group</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen connected to an atom which has valence error">Valence Error</td>
-								<td>&loz; <a style="cursor:help" title="hydrogen connected to a bridgehead atom">Bridgehead</td>
-							</tr>
-						</table>
-                         
+                        <ul>                       
+							<li><b>Lonely</b>: hydrogen atom without connection (<code>:lonely=true</code>)</li>
+							<li><b>Isotopic</b>: hydrogen isotopes (<code>:isotopic=true</code>)</li>
+							<li><b>Charged</b>: charged hydrogen atoms (<code>:charged=true</code>)</li>
+							<li><b>Radical</b>: hydrogen radicals (<code>:radical=true</code>)</li>										                            
+							<li><b>Mapped</b>: mapped hydrogens (<code>:mapped=true</code>)</li>
+							<li><b>Wedged</b>: hydrogen connecting with wedged bond (<code>:wedged=true</code>)</li>
+							<li><b>H Connected</b>: hydrogen connected to a hydrogen atom (<code>:hconnected=true</code>)</li>
+							<li><b>Polymer End Group</b>: hydrogen connected to a SRU S-group (<code>:polymerendgroup=true</code>)</li>													                            
+							<li><b>S-group End</b>: hydrogen connected to a Superatom S-group (<code>:sgroupend=true</code>)</li>
+							<li><b>S-group</b>: hydrogen which is the only atom in a S-group (<code>:sgroup=true</code>)</li>
+							<li><b>Valence Error</b>: hydrogen connected to an atom which has valence error (<code>:valenceerror=true</code>)</li>
+							<li><b>Bridgehead</b>: hydrogen connected to a bridgehead atom (<code>:bridgehead=true</code>)</li>
+						</ul>                         
 						explicit hydrogens.
 					</li>
-                    <li>Fixer offers removing explicit hydrogens and the selected special atoms.</li>
+                    <li>Fixer offers removing explicit hydrogens and the selected special atoms (<code>removeexplicith</code>).</li>
                 </ul>
 				<br>
                 <b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Explicit Hydrogen Checker</th>
+						<th align="left" rowspan="2" width="15%">Explicit Hydrogen Checker </a> (<code>explicith</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>	
-						<th>Remove Explicit Hydrogen</th>
+						<th>Remove Explicit Hydrogen </a> (<code>removeexplicith</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect Explicit Hydrogen</th>
@@ -741,21 +841,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="expllp" class="anchor"></a><h4>Explicit Lone Pairs Checker</h4></dt>
+			<a id="explicitlp" class="anchor"></a><h4>Explicit Lone Pairs Checker (<code>explicitlp</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for explicitly drawn lone pairs (inserted as Special node from the Advanced tab of the Periodic Table).</li>
-                    <li>Fixer offers removing the explicit lone pair.</li>
+                    <li>Fixer offers removing the explicit lone pair (<code>removeatom</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 						<tr>
-							<th align="left" rowspan="2" width="15%">Explicit Lone Pairs checker</th>
+							<th align="left" rowspan="2" width="15%">Explicit Lone Pairs checker (<code>explicitlp</code>)</th>
 							<th rowspan="2">Warning:</th>							
 							<th>Fix</th> 
 						</tr>
 						<tr>	
-							<th>Delete Atom</th>
+							<th>Delete Atom (<code>removeatom</code>)</th>
 						</tr>
                         <tr>
                             <th align="left">Detect Explicit Lone Pair</th>
@@ -763,25 +863,55 @@
 							<td align="center"><img src="images/examples/ex_expllp_f.png" width="210" height="137" alt="ex_expllp_f"/></td>
                         </tr>
                 </table>
+			</dd> 
+			
+			<dt>
+			<a href="#list">List of checkers</a>
+			<a id="ezdoublebond" class="anchor"></a><h4>E/Z Double Bond Checker (<code>ezdoublebond</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for marked <em>E</em> or <em>Z</em> double bond configuraion.</li>
+                    <li>Fixer: no fixer is available for this checker.</li>
+                </ul>
+                <br><b>Example</b>: 
+                <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+						<tr>
+							<th align="left" width="15%">E/Z Double Bond checker (<code>ezdoublebond</code>)</th>
+							<th>Warning:</th>							
+							<th>Fix</th> 
+						</tr>
+						
+                        <tr>
+                            <th align="left">Detect E/Z Double Bond</th>
+                            <td align="center"><img src="images/examples/ex_ezdb_ch.png" width="239" height="135" alt="ex_ezdb_ch"/></td>
+							<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                        </tr>
+						
+						<tr>
+                            <th align="left">Detect E/Z Double Bond</th>
+                            <td align="center"><img src="images/examples/ex_ezdb_ch02.png" width="174" height="127" alt="ex_ezdb_ch"/></td>
+							<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                        </tr>
+                </table>
 			</dd>
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="isotope" class="anchor"></a><h4>Isotope Checker</h4></dt>
+			<a id="isotope" class="anchor"></a><h4>Isotope Checker (<code>isotope</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for isotopic atoms.</li>
-                    <li>Fixer offers changing the isotopic atom to the most abundant natural isotope of that element.</li>
+                    <li>Fixer offers changing the isotopic atom to the most abundant natural isotope of that element (<code>converttoelementalform</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Isotope Checker</th>
+						<th align="left" rowspan="2" width="15%">Isotope Checker (<code>isotope</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Element</th>
+						<th>Convert to Element (<code>converttoelementalform</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect Isotopic Atom</th>
@@ -795,21 +925,21 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="metallocene" class="anchor"></a><h4>Metallocene Error Checker</h4></dt>
+			<a id="metallocene" class="anchor"></a><h4>Metallocene Error Checker (<code>metallocene</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for incorrect metallocene representations.</li> 
-                    <li>Fixer offers converting to a valid structure: aromatizing the rings, inserting coordination bonds, and fixing charge values.</li>
+                    <li>Fixer offers converting to a valid structure: aromatizing the rings, inserting coordination bonds, and fixing charge values (<code>fixmetallocene</code>).</li>
                 </ul>
 				<br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Metallocene Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Metallocene Error Checker (<code>metallocene</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Fix Multiple Metallocenes </th>
+						<th>Fix Multiple Metallocenes (<code>fixmetallocene</code>)</th>
 					</tr>
 		            <tr>
                         <th align="left">Detect Metallcoene</th>
@@ -822,21 +952,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="missingatommap" class="anchor"></a><h4>Missing Atom Map Checker</h4></dt>
+			<a id="missingatommap" class="anchor"></a><h4>Missing Atom Map Checker (<code>missingatommap</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for missing atom maps.</li>
-                    <li>Fixer offers mapping all atoms in the sketch.</li>
+                    <li>Fixer offers mapping all atoms in the sketch (<code>mapmolecule</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Missing Atom Map Checker</th>
+						<th align="left" rowspan="2" width="15%">Missing Atom Map Checker (<code>missingatommap</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Map Atoms </th>
+						<th>Map Atoms (<code>mapmolecule</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect atoms without atom maps</th>
@@ -848,7 +978,7 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="missingrg" class="anchor"></a><h4>Missing R-group Reference Checker</h4></dt>
+			<a id="missingrgroupreference" class="anchor"></a><h4>Missing R-group Checker (<code>missingrgroup</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for undefined R-groups.</li>
@@ -857,7 +987,7 @@
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" width="15%">Missing R-group Reference Checker</th>
+						<th align="left" width="15%">Missing R-group Reference Checker (<code>missingrgroup</code>)</th>
 						<th>Warning:</th>							
 						<th>Fix</th> 
 					</tr>
@@ -871,21 +1001,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="molcharge" class="anchor"></a><h4>Molecule Charge Checker</h4></dt>
+			<a id="moleculecharge" class="anchor"></a><h4>Molecule Charge Checker (<code>moleculecharge</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches molecules in which total charge is not zero.</li>
-                    <li>Fixer offers removing the charge by adding or removing hydrogens.</li>
+                    <li>Fixer offers removing the charge by adding or removing hydrogens (<code>neutralize</code>).</li>
                 </ul>
                 <br><b>Example</b>: <!--removing charge along with adding a proton.-->
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Molecule Charge Checker</th>
+						<th align="left" rowspan="2" width="15%">Molecule Charge Checker (<code>moleculecharge</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Neutralize </th>
+						<th>Neutralize (<code>neutralize</code>)</th>
 					</tr>
                     <tr>
                         <th align="left">Detect Charged Molecule</th>
@@ -899,21 +1029,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="multicenter" class="anchor"></a><h4>Multicenter Checker</h4></dt>
+			<a id="multicenter" class="anchor"></a><h4>Multicenter Checker (<code>multicenter</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for multicenter drawing.</li>
-                    <li>Fixer offers removing the multicenter from the molecule.</li>
+                    <li>Fixer offers removing the multicenter from the molecule (<code>removeatom</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Multicenter Checker</th>
+						<th align="left" rowspan="2" width="15%">Multicenter Checker (<code>multicenter</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Delete Atom</th>
+						<th>Delete Atom (<code>removeatom</code>)</th>
 					</tr>	
                     <tr>
                         <th align="left">Detect Multicenter drawing</th>
@@ -925,7 +1055,7 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="multicomponent" class="anchor"></a><h4>Multicomponent Checker</h4></dt>
+			<a id="multicomponent" class="anchor"></a><h4>Multicomponent Checker (<code>multicomponent</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for multiple components in the drawing.</li>
@@ -935,7 +1065,7 @@
 				<b>Example</b>:
 				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" width="15%">Multicomponent Checker</th>
+						<th align="left" width="15%">Multicomponent Checker (<code>multicomponent</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -946,10 +1076,34 @@
                     </tr>
                 </table>
             </dd>
+			
+		<dt>
+			<a href="#list">List of checkers</a>
+			<a id="multiplestereocenter" class="anchor"></a><h4>Multiple Stereocenter Checker (<code>multiplestereocenter</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for molecules having multiple stereocenters.</li>
+                    <li>Fixer: no fixer is available for this checker.</li>
+                </ul>
+				<br>
+				<b>Example</b>:
+				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+					<tr>
+						<th align="left" width="15%">Multiple Stereocenter Checker (<code>multiplestereocenter</code>)</th>
+						<th>Warning:</th>							
+						<th width="15%">Fix</th> 
+					</tr>
+                    <tr>
+                        <th align="left">Detect Multiple Stereocenter</th>
+                        <td align="center"><img src="images/examples/ex_multiplestereocenter_ch.png" width="142" height="166" alt="ex_multicenter_ch"/></td>
+						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                    </tr>
+                </table>
+            </dd>
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="ocr" class="anchor"></a><h4>OCR Error</h4></dt>
+			<a id="ocr" class="anchor"></a><h4>OCR Error Checker (<code>ocr</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for structures imported incorrectly from optical character recognition procedure.</li>
@@ -959,7 +1113,7 @@
 				<b>Example</b>:
 				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">OCR Error</th>
+						<th align="left" width="15%">OCR Error (<code>ocr</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -973,21 +1127,21 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="overlappingatoms" class="anchor"></a><h4>Overlapping Atoms Checker</h4></dt>
+			<a id="overlappingatoms" class="anchor"></a><h4>Overlapping Atoms Checker (<code>overlappingAtoms</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for overlapping atoms, i.e., atoms closer than the pre-set percentage of the default atom radius.</li>
-                    <li>Fixer offers cleaning the structures by 2D clean.</li>
+                    <li>Fixer offers cleaning the structures by 2D clean (<code>clean</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                 	<tr>
-						<th align="left" rowspan="2" width="15%">Overlapping Atoms Checker</th>
+						<th align="left" rowspan="2" width="15%">Overlapping Atoms Checker (<code>overlappingAtoms</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Clean</th>
+						<th>Clean (<code>clean</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect Overlapping Atoms</th>
@@ -999,21 +1153,26 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="overlappingbonds" class="anchor"></a><h4>Overlapping Bonds Checker</h4></dt>
+			<a id="overlappingbonds" class="anchor"></a><h4>Overlapping Bonds Checker (<code>overlappingBonds</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for overlapping bonds: bonds crossing each other or bonds closer to each other than the set minimal value.</li>
-                    <li>Fixer offers cleaning the structures by 2D clean or partial clean.</li>
+                    <li>Fixer offers cleaning the structure by:
+						<ol>
+							<li>2D clean or (<code>clean</code>);</li> 
+							<li>partial clean (<code>partialclean</code>).</li>
+						</ol>
+					</li>
                 </ul>
                 <br><b>Example</b>:
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Overlapping Bonds Checker</th>
+						<th align="left" rowspan="2" width="15%">Overlapping Bonds Checker (<code>overlappingBonds</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Clean</th>
+						<th>Clean (<code>clean</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect Overlapping Bonds</th>
@@ -1027,105 +1186,123 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="pseudo" class="anchor"></a><h4>Pseudo Atom Checker</h4></dt>
+			<a id="pseudoatom" class="anchor"></a><h4>Pseudo Atom Checker (<code>pseudoatom</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for pseudo atoms in the molecule.</li>
-                    <li>Fixer offers 
-                        <ul>
-                            <li>converting to abbreviated group if the name is in the abbreviated group list (e.g. Et for ethyl);</li>
-                            <li>converting to a carbon atom;</li>
-                            <li>deleting atom.</li>
-                        </ul>
+                    <li>Fixer offers: 
+                        <ol>
+                            <li>converting to abbreviated group if the name is in the abbreviated group list (e.g., Et for ethyl) <a href="#note14"><sup>*</sup></a> (<code>pseudotogroup</code>);</li>
+							<li><a id="converttocarbon"></a>converting to carbon atom (<code>converttocarbon</code>);</li>
+							<li>deleting atom (<code>removeatom</code>).</li>
+                        </ol>
 					</li>	
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Pseudo Atom Checker</th>
+						<th align="left" rowspan="2" width="15%">Pseudo Atom Checker (<code>pseudoatom</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th colspan="3">Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Carbon</th>
-						<th>Delete Atom</th>
-						<th>Convert Pseudo Atom to Group</th>
+						<th>Convert Pseudo Atom to Group (<code>pseudotogroup</code>)</th>
+						<th>Convert to Carbon (<code>converttocarbon</code>)</th>
+						<th>Delete Atom (<code>removeatom</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Detect Pseudo Atom</th>
                         <td align="center"><img src="images/examples/ex_pseudo_ch.png" width="157" height="78" alt="ex_pseudo_ch"/></td>
-						<td align="center"><img src="images/examples/ex_pseudo_f.png" width="163" height="95" alt="ex_pseudo_f"/></td>
-						<td align="center"><img src="images/examples/ex_pseudo_fdel.png" width="92" height="46" alt="ex_pseudo_f"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="not available"/></td>
+						<td align="center"><img src="images/examples/ex_pseudo_f.png" width="163" height="95" alt="ex_pseudo_f"/></td>
+						<td align="center"><img src="images/examples/ex_pseudo_fdel.png" width="92" height="46" alt="ex_pseudo_f"/></td>						
 					</tr>
 					<tr>
 						<th align="left">Detect Pseudo Atom</th>
 						<td align="center"><img src="images/examples/ex_pseudo_ch2.png" width="70" height="90" alt="ex_pseudo_ch"/></td>
+						<td align="center"><img src="images/examples/ex_pseudo_fgroup.png" width="64" height="83" alt="ex_pseudo_f"/></td>
 						<td align="center"><img src="images/examples/ex_pseudo_fconv.png" width="64" height="77" alt="ex_pseudo_f"/></td>
 						<td align="center"><img src="images/examples/ex_pseudo_fdel2.png" width="58" height="43" alt="ex_pseudo_f"/></td>
-						<td align="center"><img src="images/examples/ex_pseudo_fgroup.png" width="64" height="83" alt="ex_pseudo_f"/></td>
 					</tr>
                 </table>
+				<a id="note14"></a><sup>*</sup><b>Note</b>: <a href="../sketch/sketch-basic.html#User_defined_abbreviated_groups">
+			User defined abbreviated groups</a> are also available to be applied as recognizable abbreviated 
+			group set.
 			</dd>
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="queryatom" class="anchor"></a><h4>Query Atom Checker</h4></dt>
+			<a id="queryatom" class="anchor"></a><h4>Query Atom Checker (<code>queryatom</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for query atoms.</li>
-                    <li>Fixer: no fixer is available for this checker.</li>
+                    <li>Checker searches for query atoms and atom query properties.</li>
+                    <li>Fixer offers converting query atom to carbon atom <a href="#note15"><sup>*</sup></a> (<code>converttocarbon</code>).</li>
+						</ul>
+					</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                  	<tr>
-						<th align="left" width="15%">Query Atom Checker</th>
-						<th>Warning:</th>							
-						<th width="15%">Fix</th> 
+						<th rowspan="2" align="left" width="15%">Query Atom Checker (<code>queryatom</code>)</th>
+						<th rowspan="2">Warning:</th>							
+						<th>Fix</th> 
+					</tr>
+					<tr>
+						<th>Convert to Carbon (<code>converttocarbon</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Find Query Atoms</th>
-                        <td align="center"><img src="images/examples/ex_queryatom_ch.png" width="393" height="167" alt="ex_queryatom_ch"/></td>
-						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                        <td align="center"><img src="images/examples/ex_queryatom_ch.png" width="360" height="142" alt="ex_queryatom_ch"/></td>
+						<td align="center"><img src="images/examples/ex_queryatom_fconvert.png" width="317" height="121" alt="convert to carbon"/></td>
                     </tr>
                 </table>
+				<a id="note15"></a><sup>*</sup><b>Note</b>: Fixer &quot;Convert to Carbon&quot; will not remove 
+				any atom query property found by the &quot;Query Atom&quot; checker, but converts related atoms to carbon atoms. 
+				<br><b>Suggestion</b>: To overcome the unwanted conversion of atoms having atom query 
+				property to carbon, apply checker &quot;<a href="#atomquery">Atom Query Property</a>&quot; and its fixer before &quot;Query Atom&quot; checker. 
 			</dd>
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="querybond" class="anchor"></a><h4>Query Bond Checker</h4></dt>
+			<a id="querybond" class="anchor"></a><h4>Query Bond Checker (<code>querybond</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for query bonds.</li>
-                    <li>Fixer: no fixer is available for this checker.</li>
+                    <li><a id="converttosinglebond"></a>Fixer offers converting query bond to single bond (<code>converttosinglebond</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">Query Bond Checker</th>
-						<th>Warning:</th>							
-						<th width="15%">Fix</th> 
+						<th rowspan="2" align="left" width="15%">Query Bond Checker (<code>querybond</code>)</th>
+						<th rowspan="2">Warning:</th>							
+						<th>Fix</th> 
 					</tr>
 					<tr>
-                        <th align="left">Find Query Bonds</th>
-                        <td align="center"><img src="images/examples/ex_querybond_ch.png" width="484" height="160" alt="ex_querybond_ch"/></td>
-						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                        <th align="center">Convert to Single Bond (<code>converttosinglebond</code>)</th>						
                     </tr>
+					<tr>
+                        <th align="left">Find Query Bonds </th>
+                        <td align="center"><img src="images/examples/ex_querybond_ch.png" width="311" height="134" alt="ex_querybond_ch"/></td>
+						<td align="center"><img src="images/examples/ex_querybond_fconvert.png" width="300" height="125" alt="convert to single"/></td>
+					</tr>
                 </table>
+				<b>Note</b>: Fixer &quot;Convert to Single Bond&quot; will not effect topology query 
+				bonds found by &quot;Query Bond&quot; checker. 
+				
 			</dd>
 				
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="ratom" class="anchor"></a><h4>R-atom Checker</h4></dt>
+			<a id="ratom" class="anchor"></a><h4>R-atom Checker (<code>ratom</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for R-atoms. Tick options for searching:
                         <ul>
-                            <li>All;</li>
-                            <li>Disconnected;</li>
-                            <li>Generic;</li>
-                            <li>Linker, or;</li>
-                            <li>Nested R-atoms.</li>
+                            <li>All (<code>:all=true</code>);</li>
+                            <li>Disconnected (<code>:disconnected=true</code>);</li>
+                            <li>Generic (<code>:generic=true</code>);</li>
+                            <li>Linker (<code>:linker=true</code>);</li>
+                            <li>Nested R-atoms (<code>:nested=true</code>).</li>
                         </ul> 
 					</li>
                     <li>Fixer: no fixer is available for this checker.</li>
@@ -1133,32 +1310,32 @@
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">R-atom Checker</th>
+						<th align="left" width="15%">R-atom Checker (<code>ratom</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th>
 					</tr>	
 					<tr>
-                        <th align="left">Find All R-atoms</th>
+                        <th align="left">Find All R-atoms (<code>:all=true</code>)</th>
                         <td align="center"><img src="images/examples/ex_ratom_ch.png" width="327" height="123" alt="ex_ratom_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
                     </tr>
 					<tr>
-                        <th align="left">Find Disconnected R-atoms</th>
+                        <th align="left">Find Disconnected R-atoms (<code>:disconnected=true</code>)</th>
                         <td align="center"><img src="images/examples/ex_ratom_chdisc.png" width="229" height="100" alt="ex_ratom_disconnected_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
                     </tr>
 					<tr>
-                        <th align="left">Find Generic R-atoms</th>
+                        <th align="left">Find Generic R-atoms (<code>:generic=true</code>)</th>
                         <td align="center"><img src="images/examples/ex_ratom_chgener.png" width="85" height="89" alt="ex_ratom_generic_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
                     </tr>
 					<tr>
-                        <th align="left">Find Linker R-atoms</th>
+                        <th align="left">Find Linker R-atoms (<code>:linker=true</code>)</th>
                         <td align="center"><img src="images/examples/ex_ratom_chlink.png" width="89" height="182" alt="ex_ratom_linker_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
                     </tr>
 					<tr>
-                        <th align="left">Find Nested R-atoms</th>
+                        <th align="left">Find Nested R-atoms (<code>:nested=true</code>)</th>
                         <td align="center"><img src="images/examples/ex_ratom_chnest.png" width="298" height="155" alt="ex_ratom_linker_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
                     </tr>
@@ -1167,20 +1344,20 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="rgattach" class="anchor"></a><h4>R-group Attachment Error Checker</h4></dt>
+			<a id="rgroupattachmenterror" class="anchor"></a><h4>R-group Attachment Error Checker (<code>rgroupattachmenterror</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for missing attachment points among R-group elements. </li> 
-                    <li>Fixer offers adding R-group attachment points only in unambiguous cases.</li>
+                    <li>Fixer offers adding R-group attachment points only in unambiguous cases (<code>fixrgroupattachment</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">R-group Attachment Error Checker</th>
+						<th align="left" rowspan="2" width="15%">R-group Attachment Error Checker (<code>rgroupattachmenterror</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
-						<th>Add attachment point</th>
+						<th>Add attachment point (<code>fixrgroupattachment</code>)</th>
 					<tr>
                         <th align="left">Find missing attachment points</th>
                         <td align="center"><img src="images/examples/ex_rgattach_ch.png" width="208" height="145" alt="ex_rgattach_ch"/></td>
@@ -1191,15 +1368,16 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="rgref" class="anchor"></a><h4>Deprecated - R-group Reference Error Checker </h4></dt>
+			<a id="rgref" class="anchor"></a><h4>Deprecated - R-group Reference Error Checker</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for:
 						<ul>
 							<li>Unused R-group;</li>
-							<li>Missing R-group, or;</li> 
+							<li>Missing R-group;</li> 
 							<li>Circular R-group references.</li>
 						</ul>
+					</li>
                     <li>Fixer: no fixer is available for this checker.</li>
                 </ul>
                 <br>
@@ -1227,7 +1405,7 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="racemate" class="anchor"></a><h4>Racemate Checker</h4></dt>
+			<a id="racemate" class="anchor"></a><h4>Racemate Checker (<code>racemate</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for chiral centers without set configuration.</li>
@@ -1236,7 +1414,7 @@
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">Racemate Checker</th>
+						<th align="left" width="15%">Racemate Checker (<code>racemate</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -1250,21 +1428,21 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="radical" class="anchor"></a><h4>Radical Checker</h4></dt>
+			<a id="radical" class="anchor"></a><h4>Radical Checker (<code>radical</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for radical information on molecules.</li>
-                    <li>Fixer offers removing the radical information.</li>
+                    <li>Checker searches for radical information on molecules .</li>
+                    <li>Fixer offers removing the radical information (<code>removeradical</code>).</li>
                 </ul>
                 <br><b>Example</b>:
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Radical Checker</th>
+						<th align="left" rowspan="2" width="15%">Radical Checker (<code>radical</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Remove Radical</th>
+						<th>Remove Radical (<code>removeradical</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Find Radical Information</th>
@@ -1276,7 +1454,7 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="rareelement" class="anchor"></a><h4>Rare Element Checker</h4></dt>
+			<a id="rareelement" class="anchor"></a><h4>Rare Element Checker (<code>rareelement</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for rare elements in the structures. Atoms generally present in organic compounds are: H, Li, Na, K, Mg, Ca, B, C, N, O, F, Cl, Br, I, Al, P, S, Cr, Mn, Fe, Co, Ni, Cu, Zn. Any elements outside this selection are considered rare elements.</li>
@@ -1285,7 +1463,7 @@
 				<br><b>Example</b>: 
 				<table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">Rare element Checker</th>
+						<th align="left" width="15%">Rare element Checker (<code>rareelement</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -1299,23 +1477,23 @@
 
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="reactionmap" class="anchor"></a><h4>Reaction Map Error Checker</h4></dt>
+			<a id="reactionmaperror" class="anchor"></a><h4>Reaction Map Error Checker (<code>reactionmaperror</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for incomplete reaction map.
                         A reaction with two or less atom maps (both on the reactant and the product side)
                         is considered an incompletely mapped reaction.</li>
-                    <li>Fixer offers mapping the reaction.</li>
+                    <li>Fixer offers mapping the reaction (<code>mapreaction</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                    <tr>
-						<th align="left" rowspan="2" width="15%">Reaction Map Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Reaction Map Error Checker (<code>reactionmap</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Mapping</th>
+						<th>Mapping (<code>mapreaction</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Find incomplete reaction map</th>
@@ -1325,9 +1503,33 @@
 				</table>
 			</dd>
 			
+			<dt>
+			<a href="#list">List of checkers</a>
+			<a id="relativestereo" class="anchor"></a><h4>Relative Stereo Checker (<code>relativestereo</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for multiple enchanced stereogenic center flags.</li>
+                    <li>Fixer: no fixer is available for this checker.</li>
+                </ul>
+                <br><b>Example</b>: 
+                <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+                   <tr>
+						<th align="left" width="15%">Relative Stereo Checker (<code>relativestereo</code>)</th>
+						<th>Warning:</th>							
+						<th>Fix</th> 
+					</tr>
+					
+					<tr>
+                        <th align="left">Find relative stereo configuration</th>
+                        <td align="center"><img src="images/examples/ex_relativestereo_ch.png" width="234" height="128" alt="ex_relativestereo_ch"/></td>
+						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no fixer"/></td>
+                    </tr>
+				</table>
+			</dd>
+			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="ringstrain" class="anchor"></a><h4>Ring Strain Error Checker</h4></dt>
+			<a id="ringstrainerror" class="anchor"></a><h4>Ring Strain Error Checker (<code>ringstrainerror</code>)</h4></dt>
             <dd>
                 <ul>
                     <li>Checker searches for:
@@ -1342,7 +1544,7 @@
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">Ring Strain Error Checker</th>
+						<th align="left" width="15%">Ring Strain Error Checker (<code>ringstrainerror</code>)</th>
 						<th >Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -1366,21 +1568,21 @@
 
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="solvent" class="anchor"></a><h4>Solvent Checker</h4></dt>
+			<a id="solvent" class="anchor"></a><h4>Solvent Checker (<code>solvent</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for fragments in the molecule file defined as solvent molecules if more than one fragment is present. The list is customizable and is stored in a configuration file.</li>
-                    <li>Fixer offers removing solvent fragments in case only one type of solvent is present.</li>
+                    <li>Fixer offers removing solvent fragments in case only one type of solvent is present (<code>removeatom</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Solvent Checker</th>
+						<th align="left" rowspan="2" width="15%">Solvent Checker (<code>solvent</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Delete Atom</th>
+						<th>Delete Atom (<code>removeatom</code>)</th>
 					</tr>					
 					<tr>
 						<th align="left">Find Solvent Molecules</th>
@@ -1393,22 +1595,27 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="staratom" class="anchor"></a><h4>Star Atom Checker</h4></dt>
+			<a id="staratom" class="anchor"></a><h4>Star Atom Checker (<code>staratom</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for star atoms, inserted as Special node from the Advanced tab of the Periodic Table.</li>
-                    <li>Fixer offers removing the star atom.</li>
+                    <li>Fixer offers:
+						<ol>
+							<li>converting star atom to carbon atom (<code>converttocarbon</code>);</li>
+							<li>removing the star atom (<code>removeatom</code>).</li>
+						</ol>
+					</li>
                 </ul>
 				<br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Star Atom Checker</th>
+						<th align="left" rowspan="2" width="15%">Star Atom Checker (<code>staratom</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th colspan="2">Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Carbon</th>
-						<th>Delete Atom</th>
+						<th>Convert to Carbon (<code>converttocarbon</code>)</th>
+						<th>Delete Atom (<code>removeatom</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Find Star Atom</th>
@@ -1421,21 +1628,21 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="stereocb" class="anchor"></a><h4>Stereo Care Box Checker</h4></dt>
+			<a id="stereocarebox" class="anchor"></a><h4>Stereo Care Box Checker (<code>stereocarebox</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for stereo care boxes placed on query bonds.</li>
-                    <li>Fixer offers removing care boxes from bonds.</li>
+                    <li>Fixer offers removing care boxes from bonds (<code>removestereocarebox</code>).</li>
                 </ul>
 				<br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Stereo Care Box Checker</th>
+						<th align="left" rowspan="2" width="15%">Stereo Care Box Checker (<code>stereocarebox</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Remove Stereo Care Box</th>
+						<th>Remove Stereo Care Box (<code>removestereocarebox</code>)</th>
 					</tr>
 					<tr>
                         <th align="left">Find Stereo Care Box</th>
@@ -1443,11 +1650,44 @@
 						<td align="center"><img src="images/examples/ex_stereocb_f.png" width="163" height="120" alt="ex_stereocb_f"/></td>
                     </tr>
 				</table>
-			</dd>			
+			</dd>
+
+						<dt>
+			<a href="#list">List of checkers</a>
+			<a id="straightdoublebond"></a><h4>Straight Double Bond Checker (<code>straightdoublebond</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for undefined double bond stereo representations.</li>
+                    <li>Fixer offers:
+						<ol>
+							<li>changing crossed double bond to wiggly double bond type (<code>converttowigglydoublebond</code>);</li>
+							<li>changing wiggly double bond to crossed double bond type (<code>converttocrosseddoublebond</code>).</li>
+						</ol>
+					</li>				
+				</ul>
+				<br><b>Example</b>: 
+                <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+                    <tr>
+						<th align="left" rowspan="2" width="15%">Straight Double Bond Checker (<code>straightdoublebond</code>)</th>
+						<th rowspan="2">Warning:</th>							
+						<th colspan="2">Fix</th> 
+					</tr>
+					<tr>
+						<th>Convert to Crossed Double Bond (<code>converttocrosseddoublebond</code>)</th>
+						<th>Convert to Wiggly Double Bond (<code>converttowigglydoublebond</code>)</th>
+					</tr>
+					<tr>
+                        <th align="left">Find Straight Double Bond</th>
+                        <td align="center"><img src="images/examples/ex_straightdb_ch.png" width="172" height="46" alt="ex_s_ch"/></td>
+						<td align="center"><img src="images/examples/ex_straightdb_fcrossed.png" width="172" height="45" alt="ex_s_f"/></td>
+						<td align="center"><img src="images/examples/ex_straightdb_fwiggly.png" width="175" height="45" alt="ex_s_f"/></td>
+                    </tr>
+				</table>
+			</dd>
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="substructure" class="anchor"></a><h4>Substructure Checker</h4></b></dt>
+			<a id="substructure" class="anchor"></a><h4>Substructure Checker (<code>substructure:[smarts]</code>)</h4></b></dt>
             <dd>
 				<ul>
 					<li>Checker searches for SMARTS defined substructures. Substructure Checkers can be set individually.</li>
@@ -1470,41 +1710,48 @@
 						<td align="center"><img src="images/examples/ex_sub_f.png" width="166" height="142" alt="substructure_fixed"/></td>
 					</tr>
                 </table>
-			<br>
-			<b>Note</b>: This checker is available only in JChem. The checker can also be accessed from MarvinSketch if MarvinSketch is run from the JChem\bin folder (e.g, c:\Program Files\ChemAxon\Jchem\bin\msketch.bat).
+				<br />
+				<b>Note</b>: You can rename "substructure checker" in Structure 
+				Checker GUI. Click on the name field of the configured checker and rename it by typing a new name.<br />
+				<img src="images/examples/rename.png" />
             </dd>
   
 			<dt>
 			<a href="#list">List of checkers</a>  
-			<a id="3d" class="anchor"></a><h4>Three Dimension Checker</h4></dt>
+			<a id="3d" class="anchor"></a><h4>Three Dimension Checker (<code>3d</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for 3rd dimension (Z) coordinates.</li>
-                    <li>Fixer offers cleaning the structures by 2D clean or setting the atomic z-coordinates to zero.</li>
+                    <li>Checker searches for 3D (Z) coordinates.</li>
+                    <li>Fixer offers:
+						<ol>
+							<li>cleaning the structures by 2D clean (<code>clean</code>);</li>
+							<li>setting the atomic z-coordinates to zero (<code>removezcoordinate</code>). </li>
+						</ol>
+					</li>
                 </ul>
                 <br><b>Example</b>: 
                  <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Three Dimension Checker</th>
+						<th align="left" rowspan="2" width="15%">Three Dimension Checker (<code>3d</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th colspan="2">Fix</th> 
 					</tr>
 					<tr>
-						<th>Remove Z-Coordinate</th>
-						<th>Clean</th>							
+						<th>Clean (<code>clean</code>)</th>	
+						<th>Remove Z-Coordinate (<code>removezcoordinate</code>)</th>												
 					</tr>
                     <tr>
                         <th align="left">Detect 3D coordinates</th>
                         <td align="center"><img src="images/examples/ex_3d_ch.png" width="203" height="166" alt="ex_3d_ch"/></td>
-						<td align="center"><img src="images/examples/ex_3d_fz.png" width="193" height="156" alt="ex_3d_fz"/></td>
 						<td align="center"><img src="images/examples/ex_3d_f.png" width="129" height="133" alt="ex_3d_f"/></td>
+						<td align="center"><img src="images/examples/ex_3d_fz.png" width="193" height="156" alt="ex_3d_fz"/></td>
                     </tr>						
                 </table>
 			</dd>
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="unbalreact" class="anchor"></a><h4>Unbalanced Reaction Checker</h4></dt>
+			<a id="unbalancedreaction" class="anchor"></a><h4>Unbalanced Reaction Checker (<code>unbalancedreaction</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker detects reaction scheme with differing total atom numbers or atom types 
@@ -1514,7 +1761,7 @@
 				<br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" width="15%">Unbalanced Reaction Checker</th>
+						<th align="left" width="15%">Unbalanced Reaction Checker (<code>unbalancedreaction</code>)</th>
 						<th>Warning:</th>							
 						<th width="15%">Fix</th> 
 					</tr>
@@ -1533,21 +1780,21 @@
 			
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="unusedrg" class="anchor"></a><h4>Unused R-group Reference Checker</a></li></h4></dt>
+			<a id="unusedrgroupreference" class="anchor"></a><h4>Unused R-group Checker (<code>unusedrgroup</code>)</h4></dt>
             <dd>
 				<ul>
 					<li>Checker searches for R-group definitions that are not used.</li>
-					<li>Fixer removes unused R-group definitions.</li>
+					<li>Fixer removes unused R-group definitions (<code>fixunusedrgroups</code>).</li>
 				</ul>
 				<br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Unused R-group Reference Checker</th>
+						<th align="left" rowspan="2" width="15%">Unused R-group Reference Checker (<code>unusedrgroup</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-					<th>Remove unused R-group definition</th>
+					<th>Remove unused R-group definitions (<code>fixunusedrgroups</code>)</th>
 					</tr>
 					<tr>
 						<th align="left">Detect unused R-groups</th>
@@ -1559,26 +1806,31 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="valence" class="anchor"></a><h4>Valence Error Checker</h4></dt>
+			<a id="valenceerror" class="anchor"></a><h4>Valence Error Checker (<code>valenceerror</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for valence errors.</li>
-                    <li>Fixer offers removing explicit hydrogens if applicable.</li>
+                    <li>Checker searches for valence errors.  
+						<ul>
+							<li>Allow traditional N representation: checking this option will allow 
+							the presence of pentavalent nitrogen. <a href="../sci/ValenceCalculator.html#nitrogen">Details on valence calculation of nitrogen</a> (<code>:allowTraditionalNitrogen=true</code>)</li>
+						</ul>
+					</li>
+                    <li>Fixer offers removing explicit hydrogens if applicable (<code>fixvalence</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                  <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
                     <tr>
-						<th align="left" rowspan="2" width="15%">Valence Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Valence Error Checker (<code>valenceerror</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Fix Valence</th>							
+						<th>Fix Valence (<code>fixvalence</code>)</th>							
 					</tr>
                     <tr>
                         <th align="left" rowspan="3">Detect Valence Error</th>
-                        <td align="center"><img src="images/examples/ex_valence_ch.png" width="131" height="78" alt="ex_valence_ch"/></td>
-						<td align="center"><img src="images/examples/ex_valence_f.png" width="131" height="79" alt="ex_valence_f"/></td>
+                        <td align="center"><img src="images/examples/ex_valence_ch.png" width="79" height="91" alt="ex_valence_ch"/></td>
+						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="no error"/></td>
                     </tr>
 					<tr>
                         <td align="center"><img src="images/examples/ex_valence_chc2.png" width="129" height="112" alt="ex_valence_ch"/></td>
@@ -1586,6 +1838,11 @@
                     </tr>
 					<tr>
                         <td align="center"><img src="images/examples/ex_valence_chc.png" width="128" height="111" alt="ex_valence_ch"/></td>
+						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="not available"/></td>
+                    </tr>
+					<tr>
+                        <th align="left" rowspan="3">Detect Valence Error:<br>Allow traditional N representation<br>(<code>:allowTraditionalNitrogen=true</code>)</th>
+                        <td align="center"><img src="images/examples/ex_valence_ch1.png" width="79" height="91" alt="ex_valence_ch"/></td>
 						<td align="center"><img src="images/examples/no.png" width="24" height="24" alt="not available"/></td>
                     </tr>					
                 </table>
@@ -1595,21 +1852,21 @@
 
 			<dt>
 			<a href="#list">List of checkers</a>
-			<a id="valenceqp" class="anchor"></a><h4>Valence Property Checker</h4></dt>
+			<a id="valenceproperty" class="anchor"></a><h4>Valence Property Checker (<code>valenceproperty</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for atoms with marked default and non-default valence properties.</li>
-                    <li>Fixer offers removing the identified valence properties.</li>
+                    <li>Fixer offers removing the identified valence properties (<code>removevalenceproperty</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Valence Property Checker</th>
+						<th align="left" rowspan="2" width="15%">Valence Property Checker (<code>valenceproperty</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Remove Valence Property</th>							
+						<th>Remove Valence Property (<code>removevalenceproperty</code>)</th>							
 					</tr>
                     <tr>
                         <th align="left">Detect Marked Valence Property</th>
@@ -1621,21 +1878,21 @@
 			
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="wedge" class="anchor"></a><h4>Wedge Error Checker</h4></dt>
+			<a id="wedgeerror" class="anchor"></a><h4>Wedge Error Checker (<code>wedgeerror</code>)</h4></dt>
             <dd>
 				<ul>
                     <li>Checker searches for irregular wedge bonds.</li> 
-                    <li>Fixer offers removing all wedge bonds and replacing them with a single bond.</li>
+                    <li>Fixer offers removing all wedge bonds and replacing them with a single bond (<code>wedgeclean</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Wedge Error Checker</th>
+						<th align="left" rowspan="2" width="15%">Wedge Error Checker (<code>wedgeerror</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Clean Wedge</th>							
+						<th>Clean Wedge (<code>wedgeclean</code>)</th>							
 					</tr>
                     <tr>
                         <th align="left">Detect irregular wedge bond</th>
@@ -1649,21 +1906,47 @@
 
             <dt>
 			<a href="#list">List of checkers</a>
-			<a id="wigglydouble" class="anchor"></a><h4>Wiggly Double Bond Checker</h4></dt>
+			<a id="wigglybond" class="anchor"></a><h4>Wiggly Bond Checker (<code>wigglybond</code>)</h4></dt>
             <dd>
 				<ul>
-                    <li>Checker searches for wiggly double bond (molecules with unknown or unspecified configuration).</li>
-                    <li>Fixer offers changing wiggly double bond to crossed double bond type.</li>
+                    <li>Checker searches for wiggly bond (molecules with unknown or unspecified configuration) starting from chiral centers.</li>
+                    <li>Fixer offers changing wiggly bond to single bond (<code>converttosinglebond</code>).</li>
                 </ul>
                 <br><b>Example</b>: 
                 <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
 					<tr>
-						<th align="left" rowspan="2" width="15%">Wiggly Double Bond Checker</th>
+						<th align="left" rowspan="2" width="15%">Wiggly Double Bond Checker (<code>wigglybond</code>)</th>
 						<th rowspan="2">Warning:</th>							
 						<th>Fix</th> 
 					</tr>
 					<tr>
-						<th>Convert to Crossed Double Bond</th>							
+						<th>Convert to Single Bond (<code>converttosinglebond</code>)</th>							
+					</tr>
+                    <tr>
+                        <th align="left">Detect Wiggly Bond</th>
+                        <td align="center"><img src="images/examples/ex_wigglychiral_ch.png" width="124" height="104" alt="ex_wigglychiral_ch"/></td>
+						<td align="center"><img src="images/examples/ex_wigglychiral_f.png" width="115" height="98" alt="ex_wigglychiral_f"/></td>
+                    </tr>
+                </table>			
+			</dd>
+			
+			<dt>
+			<a href="#list">List of checkers</a>
+			<a id="wigglydoublebond" class="anchor"></a><h4>Wiggly Double Bond Checker (<code>wigglydoublebond</code>)</h4></dt>
+            <dd>
+				<ul>
+                    <li>Checker searches for wiggly double bond (molecules with unknown or unspecified configuration).</li>
+                    <li>Fixer offers changing wiggly double bond to crossed double bond type (<code>converttocrosseddoublebond</code>).</li>
+                </ul>
+                <br><b>Example</b>: 
+                <table class="grid structurechecker" cellspacing="0" cellpadding="3" width="100%">
+					<tr>
+						<th align="left" rowspan="2" width="15%">Wiggly Double Bond Checker (<code>wigglydoublebond</code>)</th>
+						<th rowspan="2">Warning:</th>							
+						<th>Fix</th> 
+					</tr>
+					<tr>
+						<th>Convert to Crossed Double Bond (<code>converttocrosseddoublebond</code>)</th>							
 					</tr>
                     <tr>
                         <th align="left">Detect Wiggly Double Bond</th>
@@ -1676,24 +1959,98 @@
 			</dd>
         </dl>
 		
+		<hr />
+		<h3><a id="deprecation"></a>Deprecation</h3>
 		<p>
-		<center><div class="lenia">&nbsp;</div></center>	
+		The following action strings are deprecated from version 5.12.0:
+		<table class="grid">
+			<tr>
+				<th><a id="deprecatedchecker"></a>Deprecated checker action strings</th>
+				<th>New checker action strings</th>
+			</tr>
+			<tr>
+				<td>aromaticity</td>
+				<td><a href="#aromaticityerror">aromaticityerror</a></td>
+			</tr>
+			<tr>
+				<td>chiralflag</td>
+				<td><a href="#chiralflagerror">chiralflagerror</a></td>
+			</tr>
+			<tr>
+				<td>circularrgroup</td>
+				<td><a href="#circularrgroupreference">circularrgroupreference</a></td>
+			</tr>
+			<tr>
+				<td>missingrgroup</td>
+				<td><a href="#missingrgroupreference">missingrgroupreference</a></td>
+			</tr>
+			<tr> 
+				<td>rare</td>
+				<td><a href="#rareelement">rareelement</a></td>
+			</tr>
+			<tr>
+				<td>reactionmap</td>
+				<td><a href="#reactionmaperror">reactionmaperror</a></td>
+			</tr>
+			<tr>
+				<td>unusedrgroup</td>
+				<td><a href="#unusedrgroupreference">unusedrgroupreference</a></td>
+			</tr>
+			<tr>
+				<td>valence</td>
+				<td><a href="#valenceerror">valenceerror</a></td>			
+			</tr>
+			<tr>
+				<td>wedge</td> 
+				<td><a href="#wedgeerror">wedgeerror</a></td>
+			</tr>
+			</table><br/>
+			<table class="grid">
+			<tr>
+				<th><a id="deprecatedfixer"></a>Deprecated fixer action strings</th>
+				<th>New fixer action strings</th>
+			</tr>
+			<tr> 
+				<td>clearabsstereo</td>
+				<td><a href="#removeinvalidchiralflag">removeinvalidchiralflag</a></td>
+			</tr>
+			<tr>
+				<td>aliastocarbon</td>
+				<td><a href="#converttocarbon">converttocarbon</a></td>
+			</tr>
+			<tr>
+				<td>crossedtowiggly</td>
+				<td><a href="#converttowigglydoublebond">converttowigglydoublebond</a></td>
+			</tr>
+			<tr>
+				<td>converttosingle</td>
+				<td><a href="#converttosinglebond">converttosinglebond</a></td>
+			</tr>
+		</table>
 		</p>
 		
 		<a href="#list">List of checkers</a>
+		<hr />
 		<h3><a class="anchor" id="links"></a>Links</h3>
-		<p>
-		<a href="https://www.chemaxon.com/jchem/doc/user/structurechecker.html">Structure Checker GUI</a>
-		<br>
-		<a href="https://www.chemaxon.com/jchem/doc/user/structurecheck_cline.html"><code>structurecheck</code> Command Line Tool</a><br>
-		<a href="checker.html">Structure Checker in MarvinSketch</a><br>
-		<a href="../developer/checker.html">Structure Checker Developer Guide</a><br>
+		<table>
+			<tr>
+				<td><a href="structurechecker.html"><img src="images/gui/structure_checker_16.png" /> Structure Checker GUI</a></td>
+			</tr>
+			<tr>
+				<td><a href="checker.html"><img src="images/gui/check-structure16.png" /> Structure Checker in MarvinSketch</a></td>
+			</tr>
+			<tr>
+				<td><a href="structurechecker_cline.html"><img src="images/gui/structurechecker_cli16.png" /> <code>structurechecker</code> Command Line Tool</a></td>
+			</tr>
+			<tr>
+				<td><a href="structurechecker_examples.html">Examples of structure checking in various ChemAxon products</a></td>
+			</tr>
+			<tr>
+				<td><a href="../developer/checker.html">Structure Checker Developer Guide</a></td>
+			</tr>
+		</table>
 		
-		<p>
-		<center><div class="lenia">&nbsp;</div></center>	
-		</p>	
-		
-		
+		<hr>		
 		
 	</body>
 </html>

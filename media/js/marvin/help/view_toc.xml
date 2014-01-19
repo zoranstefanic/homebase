@@ -60,7 +60,7 @@
         </tocitem>
         <tocitem target="Plugins.geometrygroup" text="Geometry">
             <tocitem target="Plugins.geometrygroup.topolanal" text="Topology Analysis Plugin"/>
-            <tocitem target="Plugins.geometrygroup.geometry" text="Geometry Plugin"/>
+            <tocitem target="Plugins.geometrygroup.geometry" text="Geometrical Descriptors Plugin"/>
             <tocitem target="Plugins.geometrygroup.TPSA" text="Polar Surface Area Plugin (2D)"/>
             <tocitem target="Plugins.geometrygroup.MSA" text="Molecular Surface Area Plugin (3D)"/>
         </tocitem>

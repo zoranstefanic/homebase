@@ -21,8 +21,10 @@ Importing IUPAC names is available from version 5.1.</p>
 
 <p>You can generate either the "Traditional Name" or the "Preferred IUPAC Name" of
 the molecules; you can change between these options in the <b class="buttonname">Naming Options</b> panel. By default, 
-the "Preferred IUPAC Name" option is set. If the traditional name cannot be achieved, the preferred 
-IUPAC Name will be generated automatically.<br>By default, molecules are handled separately if more 
+the "Preferred IUPAC Name" option is set. If the traditional name is requested but cannot be generated, the preferred 
+IUPAC Name will be generated instead.
+
+<p>By default, molecules are handled separately if more 
 than one molecule are drawn in the sketcher. However, sometimes a single molecule consists of more 
 fragments (e.g. salt molecules), where the fragments should be treated as one molecule. This can be 
 reached by switching off the "Single fragment mode" option in the <b class="buttonname">Naming Options</b> panel.
@@ -38,7 +40,7 @@ The snapshot below shows a molecule taken from the IUPAC specification, with its
 name computed by Marvin.
 <p><table>
 	<tr>
-		<td><img src="images/iupacnaming.png" width="500" height="446"></td>
+		<td><img src="images/iupacnaming.png" width="423" height="383"></td>
 	</tr>
 </table>
 </p>
@@ -49,10 +51,10 @@ a context menu when right-clicking on it.
 <p>
 The next snapshot below shows a functionality that is available from version 5.0:
 the IUPAC name can be inserted into the sketch, and it changes with the structure
-dynamically. This functionality is available from the <b>Insert</b> menu by
-selecting the <b>IUPAC Name</b> option.
+dynamically. This functionality is available from the <b>Structure</b> menu by
+selecting the <b>Structure to Name</b> > <b>Place IUPAC Name</b> option.
 <p align="left">
-<img src="images/iupacnaming_insert.png" width="699" height="296">
+<img src="images/iupacnaming_insert.png" width="714" height="399">
 
 <h3>Features</h3>
 Supported nomenclatures include:
@@ -88,10 +90,11 @@ name will be generated.
 
 <h3>Individual molecules</h3>
 
-You can name molecules by using the <b>Naming</b> menu entry of <b>Tools</b> menu in <a href="../applications/mview.html">MarvinView</a>, or <b>Calculations</b> > <b>Naming</b> in <a href="../applications/msketch.html">MarvinSketch</a>.
+You can name molecules by using the <b>Naming</b> menu entry of <b>Tools</b> menu in 
+<a href="../applications/mview.html">MarvinView</a>, or <b>Structure</b> > <b>Structure to Name</b> > <b>Generate Name</b> in <a href="../applications/msketch.html">MarvinSketch</a>.
 <p>
 In <a href="../applications/msketch.html">MarvinSketch</a>, the name can be added to the canvas
-by using the "IUPAC Name" entry in the "Insert" menu. The name will be displayed below the molecule,
+by using the <b>Structure to Name</b> > <b>Place IUPAC Name</b> entry in the <b>Structure</b> menu. The name will be displayed below the molecule,
 and updated in real-time when the molecule is modified.
 
 <h3>Batch naming</h3>

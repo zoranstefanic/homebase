@@ -34,7 +34,6 @@ The main menus are groups of functionally similar commands shown in the followin
     <dt><a href="#insert">Insert Menu</a></dt>
     <dd>The Insert menu allows drawing structure templates, bonds, reaction arrows, graphics, text boxes, and more on
         the canvas.
-        It is also possible to add a special text box containing the IUPAC Name of the structure.<BR>
         See also: <a href="../sketch-basic.html#howto.draw.graphic">
         How To Draw Graphic Objects and Text Boxes</a>.
 
@@ -52,7 +51,7 @@ The main menus are groups of functionally similar commands shown in the followin
 
     <dt><a href="#structure">Structure Menu</a></dt>
     <dd>
-        Provides chemical functions relating to structures like molecule cleaning, aromatization, reaction-handling, and more.
+        Provides chemical functions relating to structures like molecule cleaning, aromatization, reaction-handling, naming and more.
     </dd>
 
     <dt><a href="#calculations">Calculations Menu</a></dt>
@@ -87,39 +86,63 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="open">Open</a></td>
         <td>Loads your saved molecule file into Marvin and discard any unsaved changes to the molecule you were previously working with.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="openImage">Open Image</a></td>
-        <td>Tries to convert an image file to a structure using OSRA.</td>
+	<tr>
+        <td><a class="text" name="insert_file">Insert File</a></td>
+        <td>Inserts your saved molecule file into the canvas whitout erasing its former content.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="recentItems">Recent Files</a></td>
-        <td>List of recently used file names.</td>
-    </tr>
-    <tr>
-        <td><a class="text" name="close">Close</a></td>
-        <td>Finishes working with the currently open molecule.</td>
-    </tr>
-    <tr>
+	<tr>
         <td><a class="text" name="save">Save</a></td>
         <td>Saves the molecule to the same file it was opened from and in the same format. If you are working with a new molecule, Save will function as Save As.</td>
     </tr>
     <tr>
         <td><a class="text" name="saveAs">Save As</a></td>
-        <td>Save the molecule in a different location or with a different file name or format.</td>
+        <td>Saves the molecule in a different location or with a different file name or format.</td>
+    </tr>	
+	<tr>
+        <td><a class="text" name="iupac">Import Name</a></td>
+        <td>Opens the Source window in IUPAC Name format, and enables you to enter directly a IUPAC Name and convert it to structure.</td>
     </tr>
     <tr>
-        <td><a class="text" name="saveAsImage">Save As Image</a></td>
-        <td>Save an image of the molecule in the required location in required format. A saved image cannot be opened for later editing in Marvin.</td>
+        <td><a class="text" name="openImage">Import Image</a></td>
+        <td>Tries to convert an image file to a structure using <a href="../../formats/imageimport.html">OSRA</a>.</td>
+    </tr>
+	<tr>
+        <td><a class="text" name="Export to Image">Export to Image</a></td>
+        <td>Exports the molecule to the required location in the required image format.</td>
+    </tr>
+	<tr>
+        <td><a class="text" name="openWithChemSpider">Find Structure Online &gt Find Structure in ChemSpider</a></td>
+        <td>If ChemSpider contains the structure, it opens the records in your default browser.</td>
+    </tr>
+	<tr>
+        <td><a class="text" name="openWithChemicalizeOrg">Find Structure Online &gt Find Structure in Chemicalize</a></td>
+        <td>If Chemicalize.org contains the structure, it opens the records in your default browser.</td>
     </tr>
     <tr>
-        <td><a class="text" name="documentSettings">Document Settings</a></td>
-        <td>Create a multipage molecular document that helps to work with large drawings by dividing them into pages.</td>
+        <td><a class="text" name="openWithPubChem">Find Structure Online &gt Find Structure in PubChem</a></td>
+        <td>If PubChem contains the structure, it opens the records in your default browser.</td>
     </tr>
     <tr>
         <td><a class="text" name="print">Print</a></td>
         <td>Prints an image of the current molecule.</td>
     </tr>
+	<tr>
+	    <td><a class="text" name="formatObject">Document Style</a></td>
+        <td>Changes atom and bond drawing properties in the document.</td>
+    </tr>
     <tr>
+        <td><a class="text" name="documentSettings">Multipage Settings</a></td>
+        <td>Creates a multipage molecular document that helps to work with large drawings by dividing them into pages.</td>
+    </tr>
+   <tr>
+        <td><a class="text" name="recentItems">Recent</a></td>
+        <td>Lists of recently used file names.</td>
+    </tr>
+	 <tr>
+        <td><a class="text" name="close">Close</a></td>
+        <td>Finishes working with the currently open molecule.</td>
+    </tr>
+	<tr>
         <td><a class="text" name="exit">Exit</a></td>
         <td>Saves GUI settings, preferences and My Templates before exiting the application.</td>
     </tr>
@@ -155,97 +178,97 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="paste">Paste</a></td>
         <td>Inserts the contents of the clipboard at the location of the cursor, without replacing selection.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="delete">Delete</a></td>
-        <td>Removes the selection from the canvas.</td>
-    </tr>
-    <tr>
+	 <tr>
         <td><a class="text" name="selectAll">Select All</a></td>
         <td>Selects the structure being on the canvas including all fragments and graphical objects.</td>
     </tr>
+       <tr>
+        <td><a class="text" name="delete">Delete</a></td>
+        <td>Removes the selection from the canvas.</td>
+    </tr>
      <tr>
-        <td><a class="text" name="dragSelection1">Transformation</a></td>
+        <td><a class="text" name="dragSelection1">Transform</a></td>
         <td>These transformations affect the molecular coordinates. Note: The structure will be saved with the altered coordinates.</td>
     </tr>
 	<tr>
-        <td><a class="text" name="dragSelection">Transformation &gt; Drag Selection</a></td>
+        <td><a class="text" name="dragSelection">Transform &gt; Drag Selection</a></td>
         <td>Moves selection on the canvas with changing coordinates. </td>
     </tr>
     <tr>
-        <td><a class="text" name="rotateSelection">Transformation &gt; Rotate in 2D</a></td>
+        <td><a class="text" name="rotateSelection">Transform &gt; Rotate in 2D</a></td>
         <td>Rotates selection in the plane of the canvas with changing coordinates. </td>
     </tr>
     <tr>
-        <td><a class="text" name="rotateSelection3D">Transformation &gt; Rotate in 3D &gt; Around arbitrary axis</a></td>
+        <td><a class="text" name="rotateSelection3D">Transform &gt; Rotate in 3D &gt; Around arbitrary axis</a></td>
         <td>Rotates selection in 3D around an axis defined by two atoms selected by the user.</td>
     </tr>
     <tr>
-        <td><a class="text" name="rotateSelection3D0">Transformation &gt; Rotate in 3D &gt; Around X axis</a></td>
-        <td>Rotates selection in 3D around a horizontal axis placed in the canvas..</td>
+        <td><a class="text" name="rotateSelection3D0">Transform &gt; Rotate in 3D &gt; Around X axis</a></td>
+        <td>Rotates selection in 3D around a horizontal axis placed in the canvas.</td>
     </tr>
  <tr>
-        <td><a class="text" name="rotateSelection3D1">Transformation &gt; Rotate in 3D &gt; Around Y axis</a></td>
+        <td><a class="text" name="rotateSelection3D1">Transform &gt; Rotate in 3D &gt; Around Y axis</a></td>
         <td>Rotates selection in 3D around a vertical axis placed in the canvas.</td>
     </tr>
  <tr>
-        <td><a class="text" name="rotateSelection3D2">Transformation &gt; Rotate in 3D &gt; Around Z axis</a></td>
+        <td><a class="text" name="rotateSelection3D2">Transform &gt; Rotate in 3D &gt; Around Z axis</a></td>
         <td>Rotates the selection in 3D around an axis perpendicular to the canvas.</td>
     </tr>
  <tr>
-        <td><a class="text" name="rotateSelection3D3">Transformation &gt; Rotate in 3D &gt; Free 3D rotation</a></td>
+        <td><a class="text" name="rotateSelection3D3">Transform &gt; Rotate in 3D &gt; Free 3D rotation</a></td>
         <td>Rotates selection in 3D with changing coordinates. Compare it to the <a href="#rotate3DMode">Rotate in 3D</a> transformation of View Menu, which affects only the position of observation.</td>
     </tr>
  <tr>
-        <td><a class="text" name="rotateSelection3D4">Transformation &gt; Rotate in 3D &gt; Group rotation</a></td>
+        <td><a class="text" name="rotateSelection3D4">Transform &gt; Rotate in 3D &gt; Group rotation</a></td>
         <td>The selected group rotates around the bond that connects it to the molecule.</td>
     </tr>
     <tr>
-        <td><a class="text" name="switchSelectionTransformation">Transformation &gt; Switch Transformation</a></td>
+        <td><a class="text" name="switchSelectionTransformation">Transform &gt; Switch Transformation</a></td>
         <td>Changes transformation mode from Drag to Rotate in 2D, Rotate in 2D to Rotate in 3D, while Rotate in 3D to Drag.</td>
     </tr>
    
     <tr>
-        <td><a class="text" name="flipHorizontally">Transformation &gt; Flip &gt; Flip Horizontally</a></td>
+        <td><a class="text" name="flipHorizontally">Transform &gt; Flip &gt; Flip Horizontally</a></td>
         <td>Flips the selected object(s) horizontally, preserving the configuration of all enantiomers.</td>
     </tr>
     <tr>
-        <td><a class="text" name="flipVertically">Transformation &gt; Flip &gt; Flip Vertically</a></td>
+        <td><a class="text" name="flipVertically">Transform &gt; Flip &gt; Flip Vertically</a></td>
         <td>Flips the selected object(s) vertically, preserving the configuration of all enantiomers.</td>
     </tr>
     <tr>
-        <td><a class="text" name="flipPlane">Transformation &gt; Flip &gt; Rotate 180&deg; in Canvas</a></td>
+        <td><a class="text" name="flipPlane">Transform &gt; Flip &gt; Rotate 180&deg; in Canvas</a></td>
         <td>Rotates the selected object(s) on the canvas plane, preserving the configuration of all enantiomers.</td>
     </tr>
     <tr>
-        <td><a class="text" name="flipGroup">Transformation &gt; Flip &gt; Group Flip</a></td>
+        <td><a class="text" name="flipGroup">Transform &gt; Flip &gt; Group Flip</a></td>
         <td>Rotates the selected structure group by 180&deg; around an axis set on the bond connecting the selection to the rest of the molecule. Stereocenters in the molecules are retained, the wedge bond styles change to keep the stereo information.</td>
     </tr>
     <tr>
-        <td><a class="text" name="mirrorHorizontally">Transformation &gt; Mirror  &gt; Mirror Horizontally </a></td>
+        <td><a class="text" name="mirrorHorizontally">Transform &gt; Mirror  &gt; Mirror Horizontally </a></td>
         <td>Mirrors the selected object(s) horizontally, inverting the configuration of all enantiomers.</td>
     </tr>
     <tr>
-        <td><a class="text" name="mirrorVertically">Transformation &gt; Mirror  &gt; Mirror Vertically</a></td>
+        <td><a class="text" name="mirrorVertically">Transform &gt; Mirror  &gt; Mirror Vertically</a></td>
         <td>Mirrors the selected object(s) vertically, inverting the configuration of all enantiomers.</td>
     </tr>
    <tr>
-        <td><a class="text" name="mirrorCanvas">Transformation &gt; Mirror  &gt; Mirror to Canvas Plane</a></td>
+        <td><a class="text" name="mirrorCanvas">Transform &gt; Mirror  &gt; Mirror to Canvas Plane</a></td>
         <td>Mirrors the selected object(s) to the canvas plane, inverting the configuration of all enantiomers.</td>
     </tr>
    <tr>
-        <td><a class="text" name="mirrorGroup">Transformation &gt; Mirror  &gt; Group Mirror</a></td>
+        <td><a class="text" name="mirrorGroup">Transform &gt; Mirror  &gt; Group Mirror</a></td>
         <td>Mirrors the selected group if it has only one connecting bond to the structure.</td>
     </tr>
    <tr>
-        <td><a class="text" name="inverseCenter">Transformation &gt; Inverse  &gt; Inverse to geometric center</a></td>
+        <td><a class="text" name="inverseCenter">Transform &gt; Invert  &gt; Invert to geometric center</a></td>
         <td>Reflects the selected fragment(s) through the geometric center point.</td>
     </tr>
    <tr>
-        <td><a class="text" name="inverseArb">Transformation &gt; Inverse  &gt; Inverse to an arbitrary center</a></td>
+        <td><a class="text" name="inverseArb">Transform &gt; Invert  &gt; Invert to an arbitrary center</a></td>
         <td>Reflects the selected fragment(s) through the chosen point in any fragment (an atom).</td>
     </tr>
    <tr>
-        <td><a class="text" name="3dPlane">Transformation &gt; 3D plane</a></td>
+        <td><a class="text" name="3dPlane">Transform &gt; 3D plane</a></td>
         <td>Rotates the molecule to place the selected 3 atoms into the plane of the canvas.</td>
     </tr>
     <tr>
@@ -268,17 +291,13 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="moveToBack">Object &gt; Align and Distribute</a></td>
         <td>Performs alignment and distribution horizontally or vertically. </td>
     </tr>
-    <tr>
-        <td><a class="text" name="formatObject">Format</a></td>
-        <td>Changes atom and bond drawing properties.</td>
+	 <tr>
+        <td width="25%"><a class="text" name="templates">Template Library</a></td>
+        <td width="75%">Organized collection of template molecules can be edited.</td>
     </tr>
-    <tr>
+	<tr>
         <td><a class="text" name="source">Source</a></td>
         <td>You can alter a molecule by directly editing its source in the Edit Source Window. You can view and edit the source in any of the supported file formats.</td>
-    </tr>
-    <tr>
-        <td><a class="text" name="iupac">Import Name</a></td>
-        <td>Opens the Source window in IUPAC Name format, and enables you to enter directly a IUPAC Name and convert it to structure.</td>
     </tr>
     <tr>
         <td><a class="text" name="preferences">Preferences</a></td>
@@ -289,55 +308,55 @@ The main menus are groups of functionally similar commands shown in the followin
 <h3><a class="anchor" name="view">View Menu</a></h3>
 <table cellspacing="0" class="grid">
     <tr>
-        <td width="25%"><a class="text" name="normalMode">Transform &gt; Sketch</a></td>
+        <td width="25%"><a class="text" name="normalMode">Mouse Mode &gt; Sketch</a></td>
         <td width="75%">The Sketch mode allows drawing into the canvas.</td>
     </tr>
     <tr>
-        <td><a class="text" name="zoomMode">Transform &gt; Zoom</a></td>
+        <td><a class="text" name="zoomMode">Mouse Mode &gt; Zoom</a></td>
         <td>Zoom the content of the canvas by dragging the mouse without modifying atom coordinates.</td>
     </tr>
     <tr>
-        <td><a class="text" name="rotate3DMode">Transform &gt; Rotate in 3D</a></td>
+        <td><a class="text" name="rotate3DMode">Mouse Mode &gt; Rotate in 3D</a></td>
         <td>Spin the structure around its central point in 3 dimension with the help of the mouse without modifying atom coordinates. Compare it to the <a href="#rotateSelection3D3">Free 3D rotation</a> of Edit Menu, which affects the molecular coordinates.</td>
     </tr>
     <tr>
-        <td><a class="text" name="resetView">Transform &gt; Reset View</a></td>
+        <td><a class="text" name="resetView">Mouse Mode &gt; Reset View</a></td>
         <td>Restores the starting view as modified by rotation and zoom.</td>
     </tr>
     <tr>
-        <td><a class="text" name="zoomTool">Zoom</a></td>
+        <td><a class="text" name="zoomTool">Zoom Level</a></td>
         <td>Allows you to select a magnification percentage from the list or to type a custom percentage.</td>
     </tr>
     <tr>
-        <td><a class="text" name="atomSymbols">Display &gt; Atom Symbols in 3D</a></td>
+        <td><a class="text" name="atomSymbols">Structure Display &gt; Atom Symbols in 3D</a></td>
         <td>Sets atom symbol visibility in 3D mode. Note that in 3D mode, atoms may become invisible in Wireframe and Stick mode by hiding atom symbols.</td>
     </tr>
     <tr>
-        <td><a class="text" name="wireframe">Display &gt; Wireframe</a></td>
+        <td><a class="text" name="wireframe">Structure Display &gt; Wireframe</a></td>
         <td>Displays bonds as thin lines, and atoms (except Carbon) as symbols.</td>
     </tr>
     <tr>
-        <td><a class="text" name="wireframeAndKnobs">Display &gt; Wireframe with Knobs</a></td>
+        <td><a class="text" name="wireframeAndKnobs">Structure Display &gt; Wireframe with Knobs</a></td>
         <td>Displays bonds as thin lines, Carbon atoms as knobs, and other atoms as symbols.</td>
     </tr>
     <tr>
-        <td><a class="text" name="stick">Display &gt; Stick</a></td>
+        <td><a class="text" name="stick">Structure Display &gt; Stick</a></td>
         <td>Displays bonds as thick lines, and atoms (except Carbon) as symbols.</td>
     </tr>
     <tr>
-        <td><a class="text" name="ballAndStick">Display &gt; Ball and Stick</a></td>
+        <td><a class="text" name="ballAndStick">Structure Display &gt; Ball and Stick</a></td>
         <td>Displays bonds as thick lines, atoms as shaded balls, and atoms (except Carbon and Hydrogen) as symbols on balls.</td>
     </tr>
     <tr>
-        <td><a class="text" name="spacefill">Display &gt; Spacefill</a></td>
+        <td><a class="text" name="spacefill">Structure Display &gt; Spacefill</a></td>
         <td>Displays atoms as large shaded balls, and atoms (except Carbon and Hydrogen) as symbols on the balls.</td>
     </tr>
     <tr>
-        <td><a class="text" name="lowQuality">Display &gt; Quality &gt; Low Quality</a></td>
+        <td><a class="text" name="lowQuality">Structure Display &gt; Quality &gt; Low Quality</a></td>
         <td>Disables line anti-aliasing.</td>
     </tr>
     <tr>
-        <td><a class="text" name="highQuality">Display &gt; Quality &gt; High Quality</a></td>
+        <td><a class="text" name="highQuality">Structure Display &gt; Quality &gt; High Quality</a></td>
         <td>Enables line anti-aliasing.</td>
     </tr>
     <tr>
@@ -417,43 +436,51 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>View peptide sequence with 3-letter aminoacid codes.</td>
     </tr>
     <tr>
-        <td><a class="text" name="atomNumbersVisible">Misc &gt; Atom Numbers</a></td>
-        <td>Toggles the visibility of unique internal atom indices. The indices are continuous starting from 1.</td>
+        <td><a class="text" name="atomNumbersVisible.Off">Advanced &gt; Atom Numbering &gt; Off</a></td>
+        <td>Disable the visibility of atom indices.</td>
+    </tr>
+	 <tr>
+        <td><a class="text" name="atomNumbersVisible.Indeces">Advanced &gt; Atom Numbering &gt; Atom Number</a></td>
+        <td>Enable the visibility of unique internal atom indices. The indices are continuous starting from 1.</td>
+    </tr>
+	 <tr>
+        <td><a class="text" name="atomNumbersVisible.IUPAC">Advanced &gt; Atom Numbering &gt; IUPAC Numbering</a></td>
+        <td>Enable the visibility of IUPAC numbering of atoms in a molecule. It is synchronized with the numbering of "Structure to name" option.</td>
     </tr>
     <tr>
-        <td><a class="text" name="atomPropertiesVisible">Misc &gt; Atom Properties</a></td>
+        <td><a class="text" name="atomPropertiesVisible">Advanced &gt; Atom Properties</a></td>
         <td>Toggles the visibility of atom properties.</td>
     </tr>
     <tr>
-        <td><a class="text" name="atomMappingVisible">Misc &gt; Atom Mapping</a></td>
+        <td><a class="text" name="atomMappingVisible">Advanced &gt; Atom Mapping</a></td>
         <td>Toggles the visibility of atom mapping labels.</td>
     </tr>
     <tr>
-        <td><a class="text" name="graphInvariantsVisible">Misc &gt; Graph Invariants</a></td>
+        <td><a class="text" name="graphInvariantsVisible">Advanced &gt; Graph Invariants</a></td>
         <td>Toggles the display of graph invariants (canonical labels).</td>
     </tr>
     <tr>
-        <td><a class="text" name="bondLengthsVisible">Misc &gt; Bond Lengths</a></td>
+        <td><a class="text" name="bondLengthsVisible">Advanced &gt; Bond Lengths</a></td>
         <td>Toggles the display of bond lengths in Angstroms on the middle of the bonds.</td>
     </tr>
     <tr>
-        <td><a class="text" name="lonePairsVisible">Misc &gt; Lone Pairs</a></td>
+        <td><a class="text" name="lonePairsVisible">Advanced &gt; Lone Pairs</a></td>
         <td>Toggles the display of lone pairs.</td>
     </tr>
     <tr>
-        <td><a class="text" name="rGroupsVisible">Misc &gt; R-groups</a></td>
+        <td><a class="text" name="rGroupsVisible">Advanced &gt; R-groups</a></td>
         <td>Toggles the display of R-group definitions.</td>
     </tr>
    <tr>
-        <td><a class="text" name="rLogicVisible">Misc &gt; R-logic</a></td>
+        <td><a class="text" name="rLogicVisible">Advanced &gt; R-logic</a></td>
         <td>Toggles the display of R-logic definitions.</td>
     </tr>
      <tr>
-        <td><a class="text" name="valence">Misc &gt; Valence</a></td>
+        <td><a class="text" name="valence">Advanced &gt; Valence</a></td>
         <td>Toggles the display of valence numbers. Default setting is On.</td>
     </tr>
 	<tr>
-        <td><a class="text" name="ligandError">Misc &gt; Ligand Error</a></td>
+        <td><a class="text" name="ligandError">Advanced &gt; Ligand Error</a></td>
         <td>Toggles the display of ligand errors. Default setting is On.</td>
     </tr>
     <tr>
@@ -489,18 +516,6 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>Goes directly to a specific page by entering a number in the appearing dialog window.</td>
     </tr>
     <tr>
-        <td><a class="text" name="periodicSystem">Periodic System</a></td>
-        <td>Shows periodic system and query/atom property drawing window.</td>
-    </tr>
-    <tr>
-        <td><a class="text" name="marvinView2D">Open MarvinView2D</a></td>
-        <td>Launches a MarvinView window in 2D mode containing the current molecule from the Sketcher.</td>
-    </tr>
-    <tr>
-        <td><a class="text" name="marvinView3D">Open MarvinView3D</a></td>
-        <td>Launches a MarvinView window in 3D mode containing the current molecule from the Sketcher.</td>
-    </tr>
-    <tr>
         <td><a class="text" name="marvinSpace">Open MarvinSpace</a></td>
         <td>Launches a MarvinSpace window containing the current molecule from the Sketcher.</td>
     </tr>
@@ -517,19 +532,19 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>Sets the visibility of the status bar.</td>
     </tr>
     <tr>
-        <td><a class="text" name="configurations">Configurations &gt; Configurations</a></td>
+        <td><a class="text" name="configurations">Editor Style &gt; Configurations</a></td>
         <td>Lists the available configurations, and allows quick switch.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="resetConfiguration">Configurations &gt; Reset Current Configuration</a></td>
-        <td>Removes all local modifications made on the active GUI configuration. Note that this action cannot be undone.</td>
-    </tr>
-    <tr>
-        <td><a class="text" name="configurationsDialog">Configurations &gt; Configuration Settings</a></td>
+	<tr>
+        <td><a class="text" name="configurationsDialog">Editor Style &gt; Configuration Settings</a></td>
         <td>Configurations are GUI alternatives storing whole menu, toolbar and popup personalizations. This makes easy to define and quickly change the GUI for various purposes like sketching, publishing, teaching, etc.</td>
     </tr>
     <tr>
-        <td><a class="text" name="customize">Customize</a></td>
+        <td><a class="text" name="resetConfiguration">Editor Style  &gt; Reset Current Configuration</a></td>
+        <td>Removes all local modifications made on the active GUI configuration. Note that this action cannot be undone.</td>
+    </tr>
+    <tr>
+        <td><a class="text" name="customize">Editor Style &gt; Customize</a></td>
         <td>Customization allows you to personalize the GUI of MarvinSketch including menus, toolbars and keyboard shortcuts.</td>
     </tr>
 </table>
@@ -546,7 +561,7 @@ The main menus are groups of functionally similar commands shown in the followin
     </tr>
 
     <tr>
-        <td><a class="text" name="nemSubst">New substiuent</a></td>
+        <td><a class="text" name="nemSubst">New Structure</a></td>
         <td>Opens a new MarvinSketch window to add new fragments to tha canvas without having to change e.g. the 3D view mode.</td>
     </tr>
     <tr>
@@ -605,7 +620,15 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="bond.coord">Bond &gt; Coordinate</a></td>
         <td>Places Coordinate type bond on the canvas.</td>
     </tr>
-    <tr>
+	  <tr>
+        <td><a class="text" name="insertChain">Chain &gt; Chain</a></td>
+        <td>Places a carbon chain on the canvas. The number of carbon atoms can be increased or decreased by dragging the mouse. The chain drawing direction is mirrored based on the direction of the mouse movements.</td>
+    </tr>
+	<tr>
+        <td><a class="text" name="insertChain">Chain &gt; Curved Chain</a></td>
+        <td>Places a curved carbon chain on the canvas. The direction of the chain growth follows the mouse path. The number of carbon atoms can be increased or decreased by dragging the mouse. The chain drawing direction is mirrored based on the direction of the mouse movements.</td>
+    </tr>
+      <tr>
         <td><a class="text" name="reactionArrow0">Arrow &gt; Single Reaction Arrow</a></td>
         <td>Places a Single Reaction Arrow object on the canvas.</td>
     </tr>
@@ -679,12 +702,32 @@ The main menus are groups of functionally similar commands shown in the followin
     </tr>
     <tr>
         <td><a class="text" name="insertArrow">Graphics &gt; Single Arrow</a></td>
-        <td>Places a Single Arrow object on the canvas.</td>
+        <td>Places a Single Arrow graphical object on the canvas.</td>
     </tr>
     <tr>
-        <td><a class="text" name="insertTwoHeadedArrow">Graphics &gt; Two-headed Arrow</a></td>
-        <td>Places a Two-headed Arrow object on the canvas.</td>
+		<td><a class="text" name="reactionArrow5">Graphics &gt; Graph. Retrosynthetic Arrow</a></td>
+		<td>Places a Retrosynthetic Arrow graphical object on the canvas.</td>
+	</tr>
+	<tr>
+		<td><a class="text" name="reactionArrow6">Graphics &gt; Graph. Equilibrium Arrow</a></td>
+		<td>Places an Equilibrium Arrow graphical object on the canvas.</td>
+	</tr>
+    <tr>
+        <td><a class="text" name="reactionArrow7">Graphics &gt; Resonance Arrow</a></td>
+        <td>Places a Resonance Arrow graphical object on the canvas.</td>
     </tr>
+	<tr>
+		<td><a class="text" name="reactionArrow8">Graphics &gt; Curved Arrow</a></td>
+		<td>Places a Curved Arrow graphical object on the canvas.</td>
+	</tr>
+	<tr>
+		<td><a class="text" name="reactionArrow9">Graphics &gt; Dashed Arrow</a></td>
+		<td>Places a Dashed Arrow graphical object on the canvas.</td>
+	</tr>
+	<tr>
+		<td><a class="text" name="reactionArrow10">Graphics &gt; Crossed Arrow</a></td>
+		<td>Places a Crossed Arrow graphical object on the canvas.</td>
+	</tr>
     <tr>
         <td><a class="text" name="insertPolyline">Graphics &gt; Polyline</a></td>
         <td>Places a Polyline object on the canvas.</td>
@@ -702,22 +745,10 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>Places an Ellipse object (Circle object in case the Shift button is pressed) on the canvas.</td>
     </tr>
     <tr>
-        <td><a class="text" name="insertChain">Chain &gt; Chain</a></td>
-        <td>Places a carbon chain on the canvas. The number of carbon atoms can be increased or decreased by dragging the mouse. The chain drawing direction is mirrored based on the direction of the mouse movements.</td>
-    </tr>
-	<tr>
-        <td><a class="text" name="insertChain">Chain &gt; Curved Chain</a></td>
-        <td>Places a curved carbon chain on the canvas. The direction of the chain growth follows the mouse path. The number of carbon atoms can be increased or decreased by dragging the mouse. The chain drawing direction is mirrored based on the direction of the mouse movements.</td>
-    </tr>
-    <tr>
         <td><a class="text" name="insertText">Text</a></td>
         <td>Places a Text object on the canvas. Allows changing text properties on the appearing toolbar.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="insertName">IUPAC Name</a></td>
-        <td>Places a Text object containing the preferred IUPAC name of the molecule being drawn.</td>
-    </tr>
-</table>
+ </table>
 
 <h3><a class="anchor" name="atom">Atom Menu</a></h3>
 <table cellspacing="0" class="grid">
@@ -809,21 +840,25 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="atomRgroup">R-group Attachment Order</a></td>
         <td>Changes the order (numbering) of the attachment points.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="attachmentPoint">Group &gt; S-group Attachment Point</a></td>
-        <td>If the selected atom is part of an  S-group, you can specify an attachment point.</td>
-    </tr>
-    <tr>
+       <tr>
         <td><a class="text" name="atomLinkNode">Link Node</a></td>
         <td>Specifies query structures containing rings or chains of variable size.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="branchAtom">Add Branch</a></td>
-        <td>Adds a new bond with implicit hydrogens to the selected atom. This option is disabled for atoms that can have no more bonds.</td>
-    </tr>
 	<tr>
+        <td><a class="text" name="periodicSystem">Periodic Table</a></td>
+        <td>Shows Periodic Table and query/atom property drawing window.</td>
+    </tr>
+    <tr>
         <td><a class="text" name="branchAtom">Edit Properties</a></td>
         <td>Specifies the property of an atom.</td>
+    </tr>
+	 <tr>
+        <td><a class="text" name="attachmentPoint">Add S-group attachment</a></td>
+        <td>If the selected atom is part of an  S-group, you can specify an attachment point.</td>
+    </tr>
+	 <tr>
+        <td><a class="text" name="attachmentPoint">Remove S-group attachment</a></td>
+        <td>Removes the highest-numbered attachment point from an atom of an S-group.</td>
     </tr>
 	</table>
 
@@ -949,6 +984,10 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="ligand.order">Ligand order</a></td>
         <td>Changes the order of the attachment of R-group ligands.</td>
     </tr>
+	<tr>
+        <td><a class="text" name="ligand.order">Edit Properties</a></td>
+        <td>Bond properties can be edited from this menu.</td>
+    </tr>
 </table>
 
 <h3><a class="anchor" name="structure">Structure Menu</a></h3>
@@ -977,7 +1016,7 @@ The main menus are groups of functionally similar commands shown in the followin
     </tr>
     <tr>
         <td><a class="text" name="clean3DOption.fineWithHydrogenize">Clean 3D &gt; Cleaning Method &gt; Fine with Hydrogenize</a></td>
-        <td>The build process always adds explicit Hydrogens to the structures which are removed if not present in the original molecule. This option prevents the removal of extra Hydrogen atoms, otherwise gives the same results than Fine build.</td>
+        <td>The build process always adds explicit hydrogens to the structures which are removed if not present in the original molecule. This option prevents the removal of extra hydrogen atoms, otherwise gives the same results than Fine build.</td>
     </tr>
     <tr>
         <td><a class="text" name="clean3DOption.fastBuild">Clean 3D &gt; Cleaning Method &gt; Fast Build</a></td>
@@ -1025,7 +1064,7 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>Create a variable point of attachment to represent a connection point to a group of atoms.</td>
     </tr>
     <tr>
-        <td><a class="text" name="dehydrogenize">Remove &gt; Remove Explicit Hydrogens</a></td>
+        <td><a class="text" name="dehydrogenize">Remove &gt; Explicit Hydrogens</a></td>
         <td>Removes explicit H atoms and increases the number of implicit hydrogens.</td>
     </tr>
     <tr>
@@ -1039,6 +1078,10 @@ The main menus are groups of functionally similar commands shown in the followin
     <tr>
         <td><a class="text" name="editData">Edit data</a></td>
         <td>Changes a previously attached data like stoichiometry coefficient of the molecule.</td>
+    </tr>
+	<tr>
+        <td><a class="text" name="editData">Edit properties</a></td>
+        <td>Bond properties can be edited from this menu.</td>
     </tr>
     <tr>
         <td><a class="text" name="aromatize">Aromatic Form &gt; Convert to Aromatic Form</a></td>
@@ -1123,18 +1166,22 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a class="text" name="rlogic">Attribute &gt; R-Logic</a></td>
         <td>Allows setting additional R-group conditions such as occurrence, rest H and if-then expressions to R-groups in the R-logic dialog window.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="openWithChemSpider">Find Structure Online &gt Find Structure in ChemSpider</a></td>
-        <td>If ChemSpider contains the structure, it opens the records in your default browser.</td>
+	<tr>
+        <td><a class="text" name="s2n">Structure to Name &gt; Place IUPAC Name</a></td>
+        <td>Inserts IUPAC Name onto the canvas.</td>
     </tr>
-    <tr>
-        <td><a class="text" name="openWithPubChem">Find Structure Online &gt Find Structure in PubChem</a></td>
-        <td>If PubChem contains the structure, it opens the records in your default browser.</td>
+	<tr>
+        <td><a class="text" name="s2n">Structure to Name &gt; Generate Name</a></td>
+        <td>Generates IUPAC and/or Traditional Name.</td>
     </tr>
+	<tr>
+		<td><a class="text" name="n2s">Name to Structure</a></td>
+		<td>Opens the Source window in IUPAC Name format, and enables you to enter directly a IUPAC Name and convert it to structure.</td>
+	</tr>
     <tr>
-        <td><a class="text" name="openWithChemicalizeOrg">Find Structure Online &gt Find Structure in Chemicalize</a></td>
-        <td>If Chemicalize.org contains the structure, it opens the records in your default browser.</td>
-    </tr> 
+        <td><a href="../../calculations/markush.html">Markush Enumeration</a></td>
+        <td>Generates a whole or a subset of the library of a generic Markush structure.</td>
+    </tr>
     <tr>
         <td><a class="text" name="checkStructure">Check Structure</a></td>
         <td>Checks and corrects chemical structures. See <a href="../../structurechecker/checker.html">Structure Checker in MarvinSketch</a> for more details.</td>
@@ -1145,15 +1192,11 @@ The main menus are groups of functionally similar commands shown in the followin
     </tr>
 </table>
 
-<h3><a class="anchor" name="calculations"></a>Calculations Menu</h3>
+<h3><a class="anchor" name="calculations">Calculations Menu</a></h3>
 <table cellspacing="0" class="grid">
     <tr>
         <td width="25%"><a href="../../calculations/elemanal.html">Elemental Analysis</a></td>
         <td width="75%">Calculates the elemental composition of the molecule.</td>
-    </tr>
-    <tr>
-        <td><a href="../../calculations/s2n.html">Naming</a></td>
-        <td>Generates IUPAC or traditional name of the molecule.</td>
     </tr>
     <tr>
         <td><a href="../../calculations/protonation.html#pka">Protonation &gt; pKa</a></td>
@@ -1184,14 +1227,14 @@ The main menus are groups of functionally similar commands shown in the followin
         <td>Calculates the polarizability of each atoms.</td>
     </tr>
     <tr>
-        <td><a href="../../calculations/chargegroup.html#oen">Charge &gt; Orbital Electronegativity </a></td>
+        <td><a href="../../calculations/chargegroup.html#oen">Charge &gt; Orbital Electronegativity</a></td>
         <td>Calculates electronegativity of each atoms.</td>
     </tr>
 	<tr>
-        <td><a href="../../calculations/chargegroup.html#dipole">Charge &gt; Dipole Moment Calculation</a></td>
-        <td>Calculates the dipole moment of the molceule.</td>
-    </tr>
-  <tr>
+		<td><a href="../../calculations/chargegroup.html#dipole">Charge &gt; Dipole Moment Calculation</a></td>
+		<td>Calculates the electric dipole moment of the molecule</td>
+	</tr>
+	<tr>
         <td><a href="../../calculations/nmr.html">NMR &gt; CNMR Prediction</a></td>
         <td>Predicts <sup>13</sup>C NMR chemical shifts of the molecule.</td>
     </tr>
@@ -1240,11 +1283,7 @@ The main menus are groups of functionally similar commands shown in the followin
         <td><a href="../../calculations/geometrygroup.html#MSA">Geometry &gt; Molecular Surface Area (3D)</a></td>
         <td>Calculates van der Waals or solvent accessible molecular surface area.</td>
     </tr>
-    <tr>
-        <td><a href="../../calculations/markush.html">Markush Enumeration</a></td>
-        <td>Generates a whole or a subset of the library of a generic Markush structure.</td>
-    </tr>
-    <tr>
+       <tr>
         <td><a href="../../calculations/predictor.html">Predictor</a></td>
         <td>Predicts molecular properties based on its structure. The method is based on QSAR algorithm using a multiple linear regression model and a least squares fitting.</td>
     </tr>

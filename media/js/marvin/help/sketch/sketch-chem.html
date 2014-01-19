@@ -31,7 +31,9 @@ hydrogens to let the charge remain neutral. You may change the charge
 of any atom using the <A HREF="gui/popups.html#atom.popup" class="buttonName">'Atom'
 popup menu</A>. The number of implicit hydrogens will
 be adjusted, if possible, to accommodate the new charge. MarvinSketch will
-then perform a valence check and highlight the atom if an error is found. </P>
+then perform a valence check and highlight the atom if an error is found. Optionally, it is possible to display the charge symbols 
+in circles. To set this option, go to the <a href="gui/dialogs.html#display">Display</a> tab of the <b>Preferences</b> dialog 
+located in the <b>Edit</b> menu. Here, you can also change the font type/size of the circled charge symbols.</P>
 
 <H2><A class="anchor" NAME="radicals">Working with Radicals</A></H2>
 
@@ -78,13 +80,13 @@ can be very useful when drawing reactions. It allows you to specify
 that specific reactant atoms will become specific product atoms. 
 You can assign the same free map number to both of these atoms by pressing the
 <A HREF="gui/toolbars.html#reaction" class="buttonName">'Reaction' Button</A>
-on the toolbar, then drawing the arrow from the first atom to the second one.
-You can also select a Map for an atom from the 
-<A HREF="gui/popups.html#atom.popup" class="buttonName">'Atom' popup menu</A>,
-or else you can use the <A HREF="gui/popups.html#edit.popup" class="buttonName">'Edit' popup menu</A> to automatically assign map numbers to selected atoms.
-You can also use the <A HREF="gui/shortcuts.html">shortcuts</A> M1, M2, ...
-to assign map labels, M0 to remove map labels, M= or M+ to assign unique map numbers.</P>
-
+on the toolbar then drawing the arrow from the first atom to the second one.
+You can also select a map number for an atom from the 
+<A HREF="gui/popups.html#atom.popup" class="buttonName">'Atom' popup menu</A> or use the <A HREF="gui/shortcuts.html">shortcuts</A> M1, M2, ...
+to assign map labels, M0 to remove map labels, and M= or M+ to assign unique map numbers.<br>
+Alternatively, you can use the built-in automapper tool of Marvin, available from the <b>Structure &gt;Mapping &gt; Map Atoms</b> menu 
+or from the <A HREF="gui/popups.html#selection.popup" class="buttonName">'Selection' popup menu</A>, to assign map numbers to atoms in a reaction automatically.</P>
+  
 <H2><A class="anchor" NAME="sgroups">Abbreviated groups (Superatom group)</A></H2>
 
 <P>MarvinSketch has a rich collection of features related to
@@ -231,7 +233,7 @@ The property key and the value is free to set by the user in the Edit properties
 First select an atom in the molecule, right-click and choose Edit properties... In the dialog 
 box double-click the blue text field and type the property key then the value. Press Enter 
 after each entry. The visibility of the atom properties can be switched on and off: go to 
-View -> Misc -> Atom properties.</p>
+View &gt; Advanced &gt; Atom properties.</p>
 
 <P><b>Query properties:</b> You can define the chemical neighborhood for an atom within a
 query structure. MarvinSketch allows you to set properties, such as
@@ -239,10 +241,9 @@ hydrogen count, valence count, ring size, and aromaticity, which must
 be matched by the corresponding atom in the target structure to
 produce a hit.</p>
  <ul>
-<li>First select atoms, then periodic system buttons to apply to all.
-<li>First click periodic system buttons, then click individual atoms to increase/decrease property value.
-<li>Each query property can be drawn typing .&lt;query property name&gt; (e.g. .H2) for one atom with the mouse pointer over the atom 
-or selected atoms.
+<li>First select one or more atoms then go to the Advanced tab of Periodic Table to add the propertiy to every selected atom.
+<li>First go to the Periodic Table then click individual atoms to increase/decrease property value.
+<li>Each query property can be drawn typing .&lt;query property name&gt; (e.g., .H2) while the mouse pointer is over the relevant atom or there is active selection containing atoms.
 </ul>
 <p>The list of available query properties can be found <a href="gui/dialogs.html#queryprops">here</a>.</P>
 
@@ -292,7 +293,7 @@ to objects can not be moved separately.</p>
 
 <P ALIGN=CENTER><A HREF="#">Return to Top</A></P>
 <p ALIGN=CENTER>
-Copyright &copy; 1998-2012
+Copyright &copy; 1998-2013
 <a HREF="http://www.chemaxon.com">ChemAxon Ltd.</a>
 </p>
 <p ALIGN=CENTER>

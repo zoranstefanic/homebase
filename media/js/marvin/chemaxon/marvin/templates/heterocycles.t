@@ -14,7 +14,7 @@ Furan
   4  5  2  0  0  0  0
 M  END
 $$$$
-Tiophene
+Thiophene
   Marvin  06250610252D          
 
   5  5  0  0  0  0            999 V2000

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>ChemAxon SMILES Abbreviated Groups</h1>
+<h1>ChemAxon CXSMILES Abbreviated Groups</h1>
 
 <p>
 Codename: <strong>abbrevgroup</strong>
@@ -20,9 +20,13 @@ Codename: <strong>abbrevgroup</strong>
 </p>
 <pre>
     Ac	CC=O	2
-    AcAc	CC(=O)CC(=O)	5
+    AcAc	CC(=O)CC(=O)	5	<!--leavingGroup=O -->
     Acet	CC=O	2
     Ade	NC1=C2N=CNC2=NC=N1	6	1
+    J	C*.CCC[C@H](N)C=O |r,m:1:3.4|	7	8
+<!--
+    G NC1=NC2=C(N=CN2[C@H]2CC(O)[C@@H](COP(O)O)O2)C(=O)N1 12 leavingGroup=H alternativeName="3'" 16 leavingGroup="O" alternativeName="5'" 
+-->
 </pre>
 <p>
     <b>Please make sure the words are separated by TAB characters not by
@@ -30,13 +34,17 @@ Codename: <strong>abbrevgroup</strong>
 </p>
 <p>
     In these lines the very first word is the abbreviation, the second is the
-    SMILES string representing the molecule fragment depicted by the
-    abbreviation. These are followed by one or two numbers that are the
-    number(s) of link nodes (atoms) in the SMILES string. In the first
-    line using the <b>Ac</b> abbreviation the second carbon is the
-    link when the group is connected to an other molecule. If there is no number
-    following the the SMILES string the abbreviated group can not be linked to
-    other atoms. Furtheremore the maximal number of link nodes are two.
+    CXSMILES string representing the molecule fragment depicted by the
+    abbreviation. These are followed by the attachment atom numbers 
+    (in the CXSMILES string) <!--and leaving group informations.--> In the first
+    line using the <b>Ac</b> abbreviation the second carbon is the attachment 
+    atom so if we have a connection to an other molecule part then this atom will 
+    make the connection.
+ <!-- In the second molecule we have a leaving group which is 
+    in this case an oxygen and the fifth molecule has (beyond these) alternative names 
+    for its leaving groups: 3' and 5' (as for DNS components). --> If there is no number
+    following the the CXSMILES string the abbreviated group can not be connected to
+    other atoms. (However their number is not limited too since Marvin 6.0.)
 </p>
 <p>
     Usually the bond points towards the middle of the abbreviation but when
@@ -113,7 +121,7 @@ Codename: <strong>abbrevgroup</strong>
 
 <h2>See also</h2>
 <ul>
-<li><a HREF="smiles-doc.html">SMILES and SMARTS</a></li>
+<li><a HREF="CXSMILES-doc.html">CXSMILES and CXSMARTS</a></li>
 </ul>
 
 </body>

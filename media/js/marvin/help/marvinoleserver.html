@@ -63,7 +63,7 @@
 				<pre>installole.bat /c "C:\Program Files\ChemAxon\MarvinBeans\lib" 5.3.4</pre></li>
 				</li>
 			</ul>
-			If installation has been successful, you will find OLE Server resource in the <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder.</p>
+			If installation has been successful, you will find OLE Server resource in the</br> <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder.</p>
 			</p>
 			<h4>Uninstallation</h4>
 		<p>When you uninstall JChem_NET_API, OLE server is also unregistered and the C:\Program Files\ChemAxon\Shared folder is also deleted 
@@ -86,7 +86,7 @@
                 (right-click on the icon of the application and choose
                 <code>Run As Administrator</code> option). After selecting
                 this option, Vista will ask for confirmation to run the application
-                with high privileges, click <strong>Allow</strong>. The application will run in admin mode.<br>
+                with high privileges, click <strong>Allow</strong>. The application will run in admin mode.<br></p>
                 <p>Although ChemAxon installer/uninstaller does not
                 require admin rights, it detects the highest running level and
                 tries to run in administrator mode automatically (if it is possible). If the
@@ -105,7 +105,7 @@
 		<ul>
 			<li>Make sure JChem_NET_API is installed on your machine. (If you
 		open Add/Remove Programs section in Control Panel, you can check easily whether the required component is in the list.</li>
-			<li>Open the <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder to check whether OLE server exe is there.</li>
+			<li>Open the <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder to check whether <code>MarvinOLEserver.exe</code> is there.</li>
 			<li>Check whether the OLE copy option is enabled in the Copy As dialog in the Edit menu of Marvin. If not, OLE server is not registered.
 			Uninstalling and reinstalling JChem_NET_API can help in this case.</li>
 		</ul>
@@ -118,8 +118,7 @@
 		<p>By default, when OLE object is edited the editor opens embedded into the MS-Office application. If you would like
 		to see MarvinSketch in a standalone window during editing the OLE object, you have to modify OLE server settings in the 
 		 registry.</p>
-		<p>In the C:\Program Files\ChemAxon\Shared\Marvin OLE folder, you will find various registry files that can help you to 
-		 modify registry:
+		<p>In the <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder, you will find different registry entries that can help you to modify the registry:
 		<ul>
 			<li><strong>StandaloneModeForAdministrators.reg</strong>: this registry file is defined for administrators to 
 			deploy Stand Alone Mode data editing company wide as default for all users. This setting cannot be applied by 
@@ -133,50 +132,75 @@
 			<li><strong>StandaloneModeOff.reg</strong>: this registry file is to reset the default approach of data editing 
 			(as is after installation) when in-place mode is the default data editing mode in the container applications.</li>		
 		</ul>
-		Just install the desired regfile to modify the edit settings of the OLE server, as follows:</p>
+		Just install the desired regfile to modify the edit settings of the OLE server as described below.</p>
 <h4><a class="anchor" name="regfile_installation">Installation of a regfile</a></h4>
 		<ul>
 			<li>Navigate into the directory in file Explorer where the desired regfile is located and take a right mouse-click on 
 			the file.</li>
 			<li>Select <strong>Open With...</strong> option from the popup menu. If regedit.exe is available in the list, select it.
 			If not, commit the <strong>Browse</strong> button in the Open With dialog and find regedit.exe to select it.
-			In default, it is located in the <code>C:\Windows</code> folder.</li>
+			By default, it is located in the <code>C:\Windows</code> folder.</li>
 			<li>After selecting <strong>regedit.exe</strong>, submit the Open With dialog to run desired regfile with regedit.exe.</li>
 		</ul>
+<h4>UI settings for Standalone mode</h4>
+		<p>Marvin OLE represents a multi-document interface, which means that the users can edit more than one single document at a time.
+		   When using standalone mode all opened documents can be seen in child windows hosted in a main window frame.</br>
+		   From version 5.12 a new setting is avilable for both administrators an users: for setting that these OLE documents should be opened in maximized window state.
+		   (Maximized window state is when the active document window overlaps, covers all other document windows.)</br>
+		   Alt+Tab helps switching among all opened documents as normally, but the active document child gets into focus with full size in the host.
+		   <ul>
+		        <p>Registry key for this feature is</p> 
+		        <p><code>[Maximized = DWORD value]</code></p>
+		        <p> where 0x1 value means True (display in maximized way) and 0x0 value is the default False (display in normal way)</p>
+			    <li>For administrators we have a key to set and change this setting by <code>HKEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE\Settings</code> </li>
+			    <li>For the current user this setting is </br>
+				<code>HKEY_CURRENT_USER\Software\ChemAxon\MarvinOLE\Settings</code>  <br>
+				which overrides the administrator value.</li>
+		   </ul>
+		</p>
 		
-<h3><a class="anchor" name="redirecting"></a>Redirect other Vendors OLE objects to Marvin OLE</h3>
-		In 5.7 version Marvin OLE started supporting conversion of other Vendors embedded OLE objects to Marvin OLE. 
-		It means an in-place migration of OLE contents generated by other chemical OLE objects.
+<h3><a class="anchor" name="redirecting"></a>Redirecting other Vendors' OLE objects to Marvin OLE</h3>
+		From version 5.7 Marvin OLE started supporting conversion of other Vendors' embedded OLE objects to Marvin OLE. 
+		This means an in-place migration of OLE contents generated by other chemical OLE objects.
 		The list of currently supported OLE:
 		<ul>
-		    <li>ISIS OLE content;</li>
-		    <li>Symyx OLE content.</li>
+		    <li>ISISDraw, SymyxDraw, AccelrysDraw OLE content - <code>(MDLDrawOLE.MDLDrawObject)</code></li>
+		    <li>ChemDraw OLE content - <code>(ChemDraw.Document)</code></li>
 		</ul>
 		Installation of this capability requires administrator skills and privileges strictly.
-        In the C:\Program Files\ChemAxon\Shared\Marvin OLE folder, you will find the relevant registry file (Install_ISIS_Symyx_OLE_Redirection.reg), which helps you to modify the registry accrodingly. 
+        In the <code>C:\Program Files\ChemAxon\Shared\MarvinOLE</code> folder, you will find the relevant registry file (Install_ISIS_Symyx_OLE_Redirection.reg or Install_ChemDraw_OLE_Redirection.reg) which helps you to modify the registry accordingly. 
         The administrator should do the following steps to get this feature installed properly:
 		<ul>
-		    <li>BEFORE the OLE redirection, the following registry keys should be exported (and saved) for backup purposes.<br/>
-	        For .skc files/32-bit system:<br>
-	        HKEY_CLASSES_ROOT\CLSID\{0004AFF7-0000-0000-C000-000000000046}<br/>
-	        For .skc files/64bit system: the above and <br/>
-	        HKEY_CLASSES_ROOT\Wow6432Node</li>
-		    <li>When the above entries are saved, the "Install_ISIS_Symyx_OLE_Redirection.reg" regfile can be executed. <a href="#regfile_installation">(See it in the previous section)</a></li>
-	        <li>AFTER the OLE redirection, to restore the original state of the system (i.e. without OLE redirection), the above keys should be deleted from the registry, 
-	        and the exported keys should be imported again.</li>		    
+		    <li><b>BEFORE the OLE redirection</b>, the following registry keys should be exported (and saved) for backup purposes.<br/>
+	        On a 32-bit system:<br>
+	        - for MDLDrawOLE objects:	 <code>HKEY_CLASSES_ROOT\CLSID\{0004AFF7-0000-0000-C000-000000000046}</code><br/>
+			- for ChemDraw documents:	<code>HKEY_CLASSES_ROOT\CLSID\{41BA6D21-A02E-11CE-8FD9-0020AFD1F20C}</code>
+			</br>
+	        On a 64bit system: the above and <br/>
+	        - for MDLDrawOLE objects:		<code>HKEY_CLASSES_ROOT\Wow6432Node</code></br>
+			- for ChemDraw documents:		<code>HKEY_CLASSES_ROOT\Wow6432Node</code></br>
+			</li>
+		    <li>When the above entries are saved, the "Install_ISIS_Symyx_OLE_Redirection.reg" or the "Install_ChemDraw_OLE_Redirection.reg" regfile can be executed. <a href="#regfile_installation">(See it in the previous section)</a></li>
+	        <li>AFTER the OLE redirection, to restore the original state of the system (i.e. without OLE redirection), the above keys should be deleted from the registry, and the exported keys should be imported again.</li>		    
 		</ul>
-        If the installation of this feature was successful the third-party OLE content will be converted during the OLE editing process.
-        <br/><strong>Important: After running the Install_ISIS_Symyx_OLE_Redirection.reg file, your OLE object will be opened by Marvin in the future. </strong></br>
-        </ul>
+        If the installation of this feature was successful the third-party OLE content will be converted during the OLE editing process.<br/>
+		<p>
+		<strong>Important!</strong><br>
+		After executing the 
+		Install_ISIS_Symyx_OLE_Redirection.reg , or the <br>
+		Install_ChemDraw_OLE_Redirection.reg file<br>
+		<strong>your OLE object will be opened by Marvin in the future. </strong></br>
+        </p>
+		</ul>
         In each case when a user is about to open the third-party OLE content, an automatic confirmation dialog will be dropped to get this conversion confirmed. (If a structure is selected and copied in SymyxDraw, when it is pasted to an MS Office document, the confirmation dialog appears, too.)</br>
         On the dialog, the user should allow (or disallow) the redirection operation and also can apply his decision for all similar cases (check box): how should the same OLE type be edited in the future. If the checkbox was selected, the confirmation dialog will not be dropped for that OLE content type any more.
         The decision is stored for each OLE content type in the following registry path: HKEY_CURRENT_USER\Software\ChemAxon\MarvinOLE\Settings </br>
         If the appropriate registry key (e.g. the \SKCConversion) is deleted, the confirmation dialog will appear next time again at editing the third-party OLE.
         
-<h4><a class="anchor" name="file_associations"></a>Redirect file associations to MarvinView or MarvinSketch</h4>
+<h4><a class="anchor" name="file_associations"></a>Redirect file associations to MarvinView </h4>
 		File associations can be modified according to the standard Windows procedure, as described above in the <a href="#regfile_installation"> Installation of a regfile</a> paragraph. </br>
-		But there is another way to redirect the .SKC file associations from IsisDraw or SymyxDraw to <strong>MarvinView</strong>: on installing (or reinstalling) MarvinBeans, the 'Allow file associations' checkbox should be checked, and on the next, 'Select File Associations' popup the 'Isis/Draw molecule file (*.skc)' checkbox should be checked. </br>
-		This file association-redirection can be reverted when MarvinBeans is reninstalled again, and the 'Isis/Draw molecule file (*.skc)' checkbox remains unchecked (default), or when MarvinBeans is uninstalled.<ul>
+		But there is another way to redirect the .SKC file associations (from IsisDraw or SymyxDraw) or the .CDX file associations (from ChemDraw) to <strong>MarvinView</strong>: on installing (or reinstalling) MarvinBeans, the 'Allow file associations' checkbox should be checked, and on the next, 'Select File Associations' popup the 'Isis/Draw molecule file (*.skc)' or/and the 'ChemDraw chemical structure exchange file (*.cdx)' checkbox should be checked. </br>
+		This file association-redirection can be reverted when MarvinBeans is reninstalled again, and the 'Isis/Draw molecule file (*.skc)' or/and the 'ChemDraw chemical structure exchange file (*.cdx)' checkbox remains unchecked (default) - or when MarvinBeans is uninstalled.<ul>
                 
         <h3><a class="anchor" name="logging">Logging</a></h3>
         Basically there are five components relating to Marvin OLE which the user can expect log files generated from.
@@ -187,8 +211,8 @@
         <li><p><strong>CXNOLEClient</strong>: OLE Client component is used in thick client applciations for Marvin OLE conversions, e.g. JChem for Excel.</li>
         Component specific folders can be found in the ChemAxon root folder under the following locations:
         <ul>
-			<li>Windows XP: C:\Documents and Settings\{CURRENT USER}\Application Data\ChemAxon</li>
-			<li>Windows Vista or above: C:\Users\{CURRENT USER}\AppData\Roaming\ChemAxon</li>
+			<li>Windows XP: <code>C:\Documents and Settings\{CURRENT USER}\Application Data\ChemAxon</code></li>
+			<li>Windows Vista or above: <code>C:\Users\{CURRENT USER}\AppData\Roaming\ChemAxon</code></li>
 		</ul>
 		If the users turn to support help, these folders need to be zipped and sent to the relevant support team/department. 
 		Please take care of that log files might contain confidential local information (molecules) therefore log files are better to be sent directly to the support teams. 
@@ -238,7 +262,7 @@
         HKEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE
         <li>This registry key is accessible only for administrators.</li>
         
-        HKEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE\Settings\RunningMode is decimal value numbering from 1. 
+        <code>HKEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE\Settings\RunningMode</code> is decimal value numbering from 1. 
         <ul>
             <li>RunningMode key is deleted! - Marvin OLE will be running in .NET mode by default.</li>
             <li>Java Mode (1) - Marvin OLE is running in Java mode.</li>
@@ -247,8 +271,8 @@
         </ul>     
         If RunningMode is set to Java (1), Marvin OLE will search for the Java infrastructure, the Marvin Beans. 
         To be able to find it, the following registry path should contain the referenced Marvin Beans isntallation folder and its version:
-        <li>HKEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE\ReferenceFolders</li>
-        <li>e.g. C:/Program Files/ChemAxon/MarvinBeans/lib 5.4.0.0</li>
+        <li><code>KEY_LOCAL_MACHINE\SOFTWARE\ChemAxon\MarvinOLE\ReferenceFolders</code></li>
+        <li>e.g. <code>C:/Program Files/ChemAxon/MarvinBeans/lib 5.4.0.0</code></li>
         
         If it is not there, Marvin OLE cannot be launched in Java mode. 
         <li>In this case the administrator should either make correction in the referential folder by adding the correct path with '/' slash,
@@ -294,7 +318,7 @@
 		<center><div class="lenia">&nbsp;</div></center>
 		<center>
 			<font size="-2" face="helvetica">
-				Copyright &copy; 1999-2012
+				Copyright &copy; 1999-2013
 				<a href="http://www.chemaxon.com">ChemAxon Ltd.</a>
 				&nbsp;&nbsp;&nbsp;All rights reserved.
 			</font>

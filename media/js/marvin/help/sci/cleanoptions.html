@@ -40,13 +40,13 @@ Marvin Beans API.</p>
   <li><a class="text" name="extra.2d"><b>Extra:</b></a>
     <p> <i>e</i> Keep verbose either flag<br>
     </p>
-    <ul>
-If it is not possible to decide whether
+    <blockquote> If the 'e' parameter is given and it is not possible to decide whether
 the double bond is CIS or TRANS, the double
-bond either flag (crossed double bond) is kept.<br>
-Otherwise, the flag is removed and converted to double bond
+bond either flag (crossed double bond) is kept. <br>
+Otherwise,  it the 'e' option is not given the double
+bond either flag is removed and converted to double bond
 with a wiggly bond.
-    </ul>
+    </blockquote>
     <p> <i>E</i> Error output:</p>
     <ul>
 	0 - no output (default)<br>
@@ -61,7 +61,7 @@ with a wiggly bond.
     </ul>
     <p> <i>H</i> add Hydrogens</p>
     <ul> Add Hydrogen atoms to chiral centers<br> 
-         having no terminal atoms.
+         having no terminal atoms, and not being part of an Sgroup.
     </ul>
     <p> <i>w</i> wedge clean</p>
     <ul> Do not try to keep the actual wedge arrangement,<br>

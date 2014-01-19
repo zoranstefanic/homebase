@@ -8,18 +8,20 @@
 </head>
 <body>
 
-<h1>Peptide import and export</h1>
+<h1>Sequence import and export</h1>
 
 <p>
-    Codename: <strong>peptide</strong>
+    Codename: <strong>peptide, rna, dna</strong>
 </p>
 <h2>Contents</h2>
 <ul>
     <li><a href="#peptide_general">Peptide sequence format</a></li>
+    <ul>
     <li><a href="#import">Import options</a></li>
     <li><a href="#export">Export options</a></li>
     <li><a href="#custom_aas">Custom amino acids</a></li>
-
+	</ul>
+	<li><a href="#dna">DNA/RNA format</a></li>
 </ul>
 
 <h2><a class="anchor" name="peptide_general">Peptide sequence format</a></h2>
@@ -32,15 +34,16 @@ Abbreviations used:
 </p>
     <table align="left">
 	<tr>
-	    <td>Ala</td><td>Arg</td><td>Asn</td><td>Asp</td><td>Cys</td><td>Gln</td>
-	    <td>Glu</td><td>Gly</td><td>His</td><td>Ile</td><td>Leu</td><td>Lys</td>
-	    <td>Met</td><td>Phe</td><td>Pro</td><td>Ser</td><td>Thr</td><td>Try</td>
-	    <td>Tyr</td><td>Val</td>
+	    <td>Ala</td><td>Arg</td><td>Asn</td><td>Asp</td><td>Asx</td><td>Cys</td><td>Gln</td>
+	    <td>Glu</td><td>Glx</td><td>Gly</td><td>His</td><td>Ile</td><td>Leu</td><td>Lys</td>
+	    <td>Met</td><td>Phe</td><td>Pro</td><td>Pyl</td><td>Sec</td><td>Ser</td><td>Thr</td>
+	    <td>Try</td><td>Tyr</td><td>Val</td><td>Xaa</td><td>Xle</td>
 	</tr>
 	<tr>
-	    <td>A</td><td>R</td><td>N</td><td>D</td><td>C</td><td>Q</td><td>E</td>
-	    <td>G</td><td>H</td><td>I</td><td>L</td><td>K</td><td>M</td><td>F</td>
-	    <td>P</td><td>S</td><td>T</td><td>W</td><td>Y</td><td>V</td>
+	    <td>A</td><td>R</td><td>N</td><td>D</td><td>B</td><td>C</td><td>Q</td><td>E</td>
+	    <td>Z</td><td>G</td><td>H</td><td>I</td><td>L</td><td>K</td><td>M</td><td>F</td>
+	    <td>P</td><td>O</td><td>U</td><td>S</td><td>T</td><td>W</td><td>Y</td><td>V</td>
+	    <td>X</td><td>J</td>
 	</tr>
     </table>
 
@@ -72,7 +75,7 @@ Abbreviations used:
 	<tr><td>AlaProThrMetPPPLPP</td></tr>
     </table>
 
-<h2><a class="anchor" name="import">Import options</a></h2>
+<h3><a class="anchor" name="import">Import options</a></h3>
 <blockquote>
     <table CELLSPACING=0 CELLPADDING=5 border="0">
 	<tr VALIGN="TOP">
@@ -91,7 +94,7 @@ Abbreviations used:
 	    </td></tr>
     </table>
 </blockquote>
-<h2><a class="anchor" name="export">Export options</a></h2>
+<h3><a class="anchor" name="export">Export options</a></h3>
 <blockquote>
     <table CELLSPACING=0 CELLPADDING=5 border="0">
 	<tr VALIGN="TOP">
@@ -130,7 +133,7 @@ Abbreviations used:
 	    </td></tr>
     </table>
 </blockquote>
-<h2><a class="anchor" name="custom_aas">Custom amino acids</a></h2>
+<h3><a class="anchor" name="custom_aas">Custom amino acids</a></h3>
 <p>
     Apart from the essential amino acids that are already recognizable, it is
     possible to define custom amino acids with non-standard sidechains or with
@@ -176,6 +179,51 @@ Abbreviations used:
     <font face="monospaced">.chemaxon</font> directory (UNIX) or the user's
     <font face="monospaced">chemaxon</font> directory using MS Windows.
 </p>
+<h2><a class="anchor" name="dna">DNA/RNA sequence format</a></h2>
+<p>
+DNA/RNA sequences can be entered using one letter nucleic acid abbreviations.
+Each line must have one and only one continuous line in the text file without spaces.
+Abbreviations used:
+</p>
+    <table align="left">
+	<tr>
+	    <td>DNA</td><td>A</td><td>C</td><td>G</td><td>T</td>
+	</tr>
+	<tr>
+	    <td>RNA</td><td>A</td><td>C</td><td>G</td><td>U</td>
+	</tr>
+    </table>
+
+<br><br>
+<p>
+    Valid files are like:
+</p>
+
+    <table bgcolor="#E4F1F1">
+	<tr><td>ACGTACGT</td></tr>
+	<tr><td>ACCCCGTGGGT</td></tr>
+    </table>
+    <br>
+    <table bgcolor="#E4F1F1">
+	<tr><td>A-C-G-T-A-C-G-T</td></tr>
+	<tr><td>A-C-C-C-C-G-T-G-G-G-T</td></tr>
+    </table>
+<br>    
+        <table bgcolor="#E4F1F1">
+	<tr><td>dA-dC-dG-dT-dA-dC-dG-dT</td></tr>
+	<tr><td>dA-dC-dC-dC-dC-dG-dT-dG-dG-dG-dT</td></tr>
+    </table>
+    
+<p>
+    but these are incorrect:
+</p>
+
+    <table bgcolor="#E4F1F1">
+    <tr><td>acgtacgt</td></tr>
+	</table>
+
+
+
 <blockquote>
 
 </blockquote>

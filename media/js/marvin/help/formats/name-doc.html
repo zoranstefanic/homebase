@@ -64,11 +64,28 @@ Even though "carbon" is not converted, "methane" still is, since it is a molecul
 </tr>
 
 <tr VALIGN="TOP">
-<td><a class="text"><strong>dict=PATH</strong></a></td>
-<td>specify the location of the <a href="../naming/naming_customdic.html">custom dictionary</a>.
-For instance: <code>dict=C:\Users\Me\MyDictionary.smi</code>.
+<td><a class="text"><strong>-groups</strong></a></td>
+<td>disable conversion of groups and fragments, such as "oxo" or "methyl".
 </td>
 </tr>
+
+<tr VALIGN="TOP">
+<td><a class="text"><strong>dict=PATH</strong></a></td>
+<td>specify the location of the <a href="../naming/naming_customdic.html">custom dictionary</a>.
+Example: <code>name:dict=C:\Users\Me\MyDictionary.smi</code>.
+</td>
+</tr>
+
+<!-- Not sure if we want this at all, that won't work with format recognition.
+<tr VALIGN="TOP">
+<td><a class="text"><strong>webservice=URL</strong></a></td>
+<td>specify the location of a webservice which will be called to extend the name to structure conversion.
+For instance, this webservice might convert corporate IDs into structures, or
+access a database of common names.
+Example: <code>name:webservice=http://my.company.com/corporateID?input="</code>.
+</td>
+</tr>
+-->
 
 </table>
 
@@ -93,7 +110,7 @@ Some of these options are mainly useful when configuring which names
 	</td>
 	</tr>
 	<tr>
-	<td><a class="text" NAME="export_allcommon"><strong>common</strong></a><br>
+	<td><a class="text" NAME="export_common"><strong>common</strong></a><br>
 		</td>
 		 <td>generates the most popular common name of a structure. (It fails if none is known.)<br>
 	</td>
@@ -113,6 +130,27 @@ Some of these options are mainly useful when configuring which names
 	</td>
 
     </tr>
+    
+    <tr>
+	<td><a class="text" NAME="export_casNum"><strong>cas#</strong></a><br>
+	</td>
+	 <td>Fetches the CAS Registry Number(s) of the structure, using a public internet webservice.
+	     In case the structure corresponds to several CAS Registry Numbers, they are all returned, separated by commas.<br>
+	</td>
+    </tr>
+    
+    
+    <tr>
+	<td><a class="text" NAME="export_timeout"><strong>timeout=&lt;N&gt;</strong></a><br>
+	</td>
+	 <td>Use at most N seconds for the name to be computed.
+	 	The default timeout is currently 20 seconds
+	 	(which should normally be reached exceptionally, for very large structures).
+	 	A value of 0 means no timeout.
+	 	<br>
+	</td>
+    </tr>
+
 </table>
 </blockquote>		 
  <h3><a class="anchor" name="see_also">See also</h3>

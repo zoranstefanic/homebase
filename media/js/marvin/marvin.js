@@ -80,7 +80,7 @@ deployJava.locale=loc;}}}};deployJava.do_initialize();
 
 //////////////////////////////////////////////////////////////////////////
 //// Marvin utility functions
-//// Copyright (c) 1998-2012 ChemAxon Ltd., Peter Csizmadia,
+//// Copyright (c) 1998-2013 ChemAxon Ltd., Peter Csizmadia,
 ////                          Ferenc Csizmadia, Tamas Vertse, Gabor Bartha
 //////////////////////////////////////////////////////////////////////////
 
@@ -171,6 +171,8 @@ var mspace_name = "";
 var msketch_legacy=!isLeopardSafari();
 var mview_legacy=!isLeopardSafari();
 var mspace_legacy=!isLeopardSafari();
+
+var humanreadable=false;
 
 // Applet can use these additional jar files. If more then one additional
 // file are used, files has to be separated by colon. 
@@ -430,6 +432,9 @@ function applet_end(type)
 {
 	if(java_error_msg != "") {
 		s0 = _appletstrbuf;
+		if (!humanreadable){
+			s0 = s0.replace(/\n/g,"");
+		}
 		return s0;
 	}
 	var s;
@@ -449,7 +454,7 @@ function applet_end(type)
             } else {
                 s = '';                
             }
-                s += ' java_arguments="-Djnlp.packEnabled=true"\n';
+                s += ' java_arguments="-Djnlp.packEnabled=true -Xmx512m"\n';
 		s += ' codebase_lookup="false"\n';
 		s += '>\n<noembed>\n';
 		s += msg;
@@ -460,7 +465,7 @@ function applet_end(type)
                 } else {
                     s = '';
                 }
-                s += '<param name="java_arguments" value="-Djnlp.packEnabled=true"/>\n';
+                s += '<param name="java_arguments" value="-Djnlp.packEnabled=true -Xmx512m"/>\n';
 		s += '<param name="codebase_lookup" value="false"/>\n';
 		s += msg;
 		s += '</object>\n';
@@ -470,7 +475,7 @@ function applet_end(type)
                 } else {
                     s = '';
                 }
-                s += '<param name="java_arguments" value="-Djnlp.packEnabled=true"/>\n';
+                s += '<param name="java_arguments" value="-Djnlp.packEnabled=true -Xmx512m"/>\n';
                 if(mayscrDefined && !skinDefined && isLeopardSafari()) {
                     s += '<param name="skin" value="javax.swing.plaf.metal.MetalLookAndFeel"/>\n'+msg;
                 } else {
@@ -480,8 +485,11 @@ function applet_end(type)
 		s += '</applet>\n';
 	}
 	_appletstrbuf += s;
-        s = _appletstrbuf;
-        _appletstrbuf = "";
+  	s = _appletstrbuf;
+   	_appletstrbuf = "";
+	if (!humanreadable){
+		s = s.replace(/\n/g,"");
+	}
 	return s;
 }
 
@@ -634,7 +642,7 @@ function mspace_begin(name,codebase, width, height)
 	return _appletsrtbuf;
     }
     var jvm = marvin_get_jvm();
-    var archive = "mspace.jar,jmarvin.jar, jextexp.jar,dist/lib/applet-launcher.jar,dist/lib/nativewindow.all.jar,dist/lib/jogl.all.jar,dist/lib/gluegen-rt.jar";
+    var archive = "mspace.jar";
     var code = "chemaxon/marvin/applet/MSpaceApplet";
     var netscape = browser_NetscapeMozilla();
     var mayscr = mspace_mayscript;

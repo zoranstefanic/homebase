@@ -17,14 +17,18 @@ are described by the Markush structure.
 The Markush enumeration plugin can be used to generate a whole or a subset of
 the library of a generic Markush structure. It is also capable of calculating
 the total number of specific structures present in a Markush library. The plugin
-is accessible from the Marvin GUI (Tools > Markush Enumeration), through the
-<a href="../applications/calc.html">cxcalc
-    command-line program</a> (See <a 
-        href="../applications/cxcalc-calculations.html#Enumerations">this
-    link</a> for the detailed usage of the plugin in command line.), via 
-    API 
-    and in the <a href="../chemicalterms/EvaluatorFunctions.html">
-	Chemical Terms functions in JChem</a>.
+is accessible from the followings:
+<ul>
+	<li>Marvin GUI (Structure > Markush Enumeration)</li>
+	<li><a href="http://www.chemaxon.com/instantjchem/ijc_latest/docs/user/help/htmlfiles/chemistry_functions/markush_enumeration.html">Instant JChem </a></li>
+	<li><a href="http://www.chemaxon.com/jchem/doc/user/markush_viewer.html#nesting">Markush viewer</a></li>
+	<li><a href="../applications/calc.html">cxcalc
+    command-line program</a> (see <a href="../applications/cxcalc-calculations.html#Enumerations">this
+    link</a> for the detailed usage of the plugin in command line)</li>
+	<li>via <a href="http://www.chemaxon.com/marvin/help/developer/beans/api/chemaxon/marvin/calculations/MarkushEnumerationPlugin.html">API</a></li>
+	<li>Markush search example <a href="http://www.chemaxon.com/jchem/examples/db_search/index.jsp">JSP web application</a></li>
+	<li><a href="../chemicalterms/EvaluatorFunctions.html">Chemical Terms functions in JChem</a></li>
+
     <p>
 <table border="0" width="600" cellpadding="1">
         <th>
@@ -273,7 +277,7 @@ GUI.
     user interface allows the enumeration of all library members, or a specified
     number.
     <p>
-    <img src="images/markush09.png" align="middle" width="580" height="717">
+    <img src="images/markush09.png" align="middle" width="663" height="853">
 </dd>
 <dt><a name="function_random" type="anchor"></a><b>Random enumeration</b></dt> <dd>This mode generates a random subset of the
     Markush library to give a quick sampling. It is especially helpful for huge
@@ -283,7 +287,7 @@ GUI.
     definition generates. This ensures the generation of uniform distribution of representatives
     over the Markush library space.
     <p>
-    <img src="images/markush10.png" align="middle" width="580" height="688">
+    <img src="images/markush10.png" align="middle" width="668" height="844">
 </dd>
 <dt><a name="function_libsize" type="anchor"></a><b>Calculate library size</b></dt> <dd>The size of the Markush
     library can be calculated by arbitrary precision. On the user interface,
@@ -293,7 +297,7 @@ GUI.
     <p>If the 'Enumerate homology groups' option is enabled, the number of enumerated
         molecules increases accordingly, multiplied by the number of built-in species.
     <p>
-    <img src="images/markush11.png" align="middle" width="580 height="686">
+    <img src="images/markush11.png" align="middle" width="630 height="800">
 </dd>
 <dt><a name="function_selected" type="anchor"></a><b>Selected part enumeration</b></dt> <dd>If part of the Markush structure is
     selected, only the generic features in the selected part are considered for
@@ -301,14 +305,14 @@ GUI.
     Markush structure. Enumeration of selected parts only may result in
     generating (more specific) Markush structures.
     <p>
-    <img src="images/markush12.png" align="middle" width="580" height="688">
+    <img src="images/markush12.png" align="middle" width="763" height="844">
 </dd>
 <dt><a name="function_valence" type="anchor"></a><b>Valence filter</b></dt> <dd>If the Markush structure is not properly
     (or too generally) formulated, it is possible that it describes structures
     with valence errors. In this case, the valence filter setting is useful to
     filter out the offending result structures. The default value is off (no filtering).
     <p>
-    <img src="images/markush13.png" align="middle" width="580" height="641">
+    <img src="images/markush13.png" align="middle" width="860" height="720">
 </dd>
 
 <dt><a name="function_homology" type="anchor"></a><b>Homology group enumeration</b></dt> <dd>Version 5.2 introduced the
@@ -317,7 +321,7 @@ atoms - with the names covering a set of R-groups either built-in or user-define
 For detailed information on homology groups
 <a href="homologygroups.html">click here</a>.
 <p>
-<img src="images/markush20.png" align="middle" width="580" height="729"></dd>
+<img src="images/markush20.png" align="middle" width="533" height="680"></dd>
 
 <dt><a name="function_aligncolor" type="anchor"></a><b>Scaffold alignment and coloring</b></dt> <dd>Coloring the scaffold
 (part of the structure containg no Markush features) and/or the R-groups in
@@ -325,7 +329,7 @@ enumerated structures can help visual recognition of parts of the molecules.
 Differentiation of the structures is aided by alignment of all structures to 
 the original scaffold. These options are available in sequential and random enumeration.
     <p>
-    <img src="images/markush16.png" align="middle" width="580" height="743">
+    <img src="images/markush16.png" align="middle" width="534" height="801">
 </dd>
 
 <dt><a name="function_markushcode" type="anchor"></a><b>Markush code generation</b></dt> <dd>A special ID number can be generated
@@ -354,7 +358,7 @@ the plugin result window as well. It gives the following information:
     <li><b>An:x</b>  atom nr. <i>n</i> is nr. <i>x</i> from the atom list</li>
 </ol>
     <p>
-    <img src="images/markush17.png" align="middle" width="580" height="761"/>
+    <img src="images/markush17.png" align="middle" width="534" height="800"/>
 
 </dd>
 </dl>

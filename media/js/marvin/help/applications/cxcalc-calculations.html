@@ -8,7 +8,7 @@
 <body>
 <h1><code>cxcalc</code> calculations</h1>
 <ul>
-<center><h3>Version 5.11.4</h3></center>
+<center><h3>Version 6.1.6</h3></center>
 <table>
 <tr>
 	<th align="left" valign="top">&nbsp;<a href="#Elemental_Analysis">Elemental&nbsp;Analysis</a>:&nbsp;&nbsp;&nbsp;</th>
@@ -24,7 +24,8 @@
 	<a href="#iformula">iformula</a>, 
 	<a href="#isotopecomposition">isotopecomposition</a>, 
 	<a href="#isotopeformula">isotopeformula</a>, 
-	<a href="#mass">mass</a></td></tr>
+	<a href="#mass">mass</a>, 
+	<a href="#sortableformula">sortableformula</a></td></tr>
 <tr>
 	<th align="left" valign="top">&nbsp;<a href="#Charge">Charge</a>:&nbsp;&nbsp;&nbsp;</th>
 	<td><a href="#atomicpolarizability">atomicpolarizability</a>, 
@@ -53,7 +54,6 @@
 	<a href="#hasvalidconformer">hasvalidconformer</a>, 
 	<a href="#leconformer">leconformer</a>, 
 	<a href="#lowestenergyconformer">lowestenergyconformer</a>, 
-	<a href="#mmff94optimizedstructure">mmff94optimizedstructure</a>, 
 	<a href="#moldyn">moldyn</a>, 
 	<a href="#moleculardynamics">moleculardynamics</a></td></tr>
 <tr>
@@ -95,6 +95,7 @@
 	<a href="#dreidingenergy">dreidingenergy</a>, 
 	<a href="#eccentricity">eccentricity</a>, 
 	<a href="#fragmentcount">fragmentcount</a>, 
+	<a href="#fsp3">fsp3</a>, 
 	<a href="#fusedaliphaticringcount">fusedaliphaticringcount</a>, 
 	<a href="#fusedaromaticringcount">fusedaromaticringcount</a>, 
 	<a href="#fusedringcount">fusedringcount</a>, 
@@ -488,6 +489,25 @@ takes whole molecule if false (default: false)</td>
 	</table>
 	<h5>Example:</h5>
 	<pre>cxcalc mass test.mol</pre>
+<p>&nbsp;</p>
+	<a class="anchor" name="sortableformula"><h3>sortableformula</h3></a>
+	<p>Calculates a fixed digit sortable molecular formula.</p>
+	<h5>Options:</h5>
+	<table>
+	<tr>
+		<th align="left" valign="top">-d,&nbsp;--digits&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">&lt;minimum number of digits in proportionate
+number of atoms&gt; (default: 5)</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[true|false] in case of multi-fragment molecules:
+takes largest fragment if true,
+takes whole molecule if false (default: false)</td>
+	</tr>
+	</table>
+	<h5>Example:</h5>
+	<pre>cxcalc sortableformula -d 4 test.mol</pre>
 <p>&nbsp;</p>
 <hr />
 <a class="anchor" name="Charge"><h2>Charge</h2></a>
@@ -922,6 +942,11 @@ fractional digits: 0-8 or inf&gt; (default: 2)</td>
 		<td  valign="top">&lt;output format&gt; should be a 3D format (default: sdf)</td>
 	</tr>
 	<tr>
+		<th align="left" valign="top">-x,&nbsp;--forcefield&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[dreiding|mmff94] forcefield used for calculation
+(default: dreiding)</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-m,&nbsp;--maxconformers&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">&lt;maximum number of conformers to be generated&gt;
 (default: 100)</td>
@@ -980,6 +1005,11 @@ No options	<h5>Example:</h5>
 		<td  valign="top">&lt;output format&gt; should be a 3D format (default: sdf)</td>
 	</tr>
 	<tr>
+		<th align="left" valign="top">-x,&nbsp;--forcefield&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[dreiding|mmff94] forcefield used for calculation
+(default: dreiding)</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-e,&nbsp;--hyperfine&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] if true hyperfine option is set
 (default: false)</td>
@@ -1003,6 +1033,13 @@ different enviroments
 {2}: strict      (limit=1.0E-4)
 {3}: very strict (limit=1.0E-5)
 (default: 1)</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">-m,&nbsp;--multifrag&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[true|false]  in case of multi-fragment molecules and
+if mmff94 forcefield selected:
+takes largest fragment if false,
+takes whole molecule if true (default: false)</td>
 	</tr>
 	</table>
 	<h5>Example:</h5>
@@ -1017,6 +1054,11 @@ different enviroments
 		<td  valign="top">&lt;output format&gt; should be a 3D format (default: sdf)</td>
 	</tr>
 	<tr>
+		<th align="left" valign="top">-x,&nbsp;--forcefield&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[dreiding|mmff94] forcefield used for calculation
+(default: dreiding)</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-e,&nbsp;--hyperfine&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] if true hyperfine option is set
 (default: false)</td>
@@ -1041,27 +1083,16 @@ different enviroments
 {3}: very strict (limit=1.0E-5)
 (default: 1)</td>
 	</tr>
+	<tr>
+		<th align="left" valign="top">-m,&nbsp;--multifrag&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[true|false] in case of multi-fragment molecules and
+if mmff94 forcefield selected:
+takes largest fragment if false,
+takes whole molecule if true (default: false)</td>
+	</tr>
 	</table>
 	<h5>Example:</h5>
 	<pre>cxcalc lowestenergyconformer -f mrv test.sdf</pre>
-<p>&nbsp;</p>
-	<a class="anchor" name="mmff94optimizedstructure"><h3>mmff94optimizedstructure</h3></a>
-	<p>Calculates the MMFF94 optimized lowest energy conformer.</p>
-	<h5>Options:</h5>
-	<table>
-	<tr>
-		<th align="left" valign="top">-f,&nbsp;--format&nbsp;&nbsp;&nbsp;</th>
-		<td  valign="top">&lt;output format&gt; should be a 3D format (default: sdf)</td>
-	</tr>
-	<tr>
-		<th align="left" valign="top">-y,&nbsp;--prehydrogenize&nbsp;&nbsp;&nbsp;</th>
-		<td  valign="top">[true|false] if true prehydrogenize is done before
-calculation, if false calculation is done without
-hydrogens (default: true)</td>
-	</tr>
-	</table>
-	<h5>Example:</h5>
-	<pre>cxcalc mmff94optimizedstructure -f mrv test.sdf</pre>
 <p>&nbsp;</p>
 	<a class="anchor" name="moldyn"><h3>moldyn</h3></a>
 	<p>Molecular Dynamics.</p>
@@ -1073,7 +1104,7 @@ hydrogens (default: true)</td>
 	</tr>
 	<tr>
 		<th align="left" valign="top">-x,&nbsp;--forcefield&nbsp;&nbsp;&nbsp;</th>
-		<td  valign="top">[dreiding] forcefield used for calculation
+		<td  valign="top">[dreiding|mmff94] forcefield used for calculation
 (default: dreiding)</td>
 	</tr>
 	<tr>
@@ -1112,7 +1143,7 @@ integrator type used for calculation
 	</tr>
 	<tr>
 		<th align="left" valign="top">-x,&nbsp;--forcefield&nbsp;&nbsp;&nbsp;</th>
-		<td  valign="top">[dreiding] forcefield used for calculation
+		<td  valign="top">[dreiding|mmff94] forcefield used for calculation
 (default: dreiding)</td>
 	</tr>
 	<tr>
@@ -1148,6 +1179,10 @@ integrator type used for calculation
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1161,6 +1196,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Aliphatic atom count.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1176,6 +1215,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1190,6 +1233,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1203,6 +1250,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Aliphatic ring count of size.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1254,6 +1305,10 @@ different enviroments
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1267,6 +1322,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Aromatic atom count.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1282,6 +1341,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1296,6 +1359,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1309,6 +1376,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Aromatic ring count of size.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1430,6 +1501,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-a,&nbsp;--atoms&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[&lt;atom1&gt;-&lt;atom2&gt;] (1-based) atom indexes of the bond atoms</td>
 	</tr>
@@ -1441,6 +1516,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Carboaliphatic ring count.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1455,6 +1534,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Carboaromatic ring count.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1731,10 +1814,20 @@ takes whole molecule if false (default: false)</td>
 No options	<h5>Example:</h5>
 	<pre>cxcalc fragmentcount test.mol</pre>
 <p>&nbsp;</p>
+	<a class="anchor" name="fsp3"><h3>fsp3</h3></a>
+	<p>Fsp3 value of the molecule.</p>
+	<h5>Options:</h5>
+No options	<h5>Example:</h5>
+	<pre>cxcalc fsp3 test.mol</pre>
+<p>&nbsp;</p>
 	<a class="anchor" name="fusedaliphaticringcount"><h3>fusedaliphaticringcount</h3></a>
 	<p>The number of fused aliphatic rings (SSSR smallest set of smallest aliphatic rings).</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1749,6 +1842,10 @@ takes whole molecule if false (default: false)</td>
 	<p>The number of fused aromatic rings (SSSR smallest set of smallest aromatic rings).</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -1797,6 +1894,10 @@ takes whole molecule if false (default: false)</td>
 	<h5>Options:</h5>
 	<table>
 	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
+	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
 takes largest fragment if true,
@@ -1810,6 +1911,10 @@ takes whole molecule if false (default: false)</td>
 	<p>Heteroaromatic ring count.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -2364,12 +2469,16 @@ takes whole molecule if false (default: false)</td>
 	<p>Ring counts of atoms.</p>
 	<h5>Options:</h5>
 No options	<h5>Example:</h5>
-	<pre>cxcalc ringcountofatoms -a 2-3 test.mol</pre>
+	<pre>cxcalc ringcountofatom test.mol</pre>
 <p>&nbsp;</p>
 	<a class="anchor" name="ringcountofsize"><h3>ringcountofsize</h3></a>
 	<p>Ring count of size.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[true|false] in case of multi-fragment molecules:
@@ -2571,9 +2680,13 @@ takes whole molecule if false (default: false)</td>
 	<pre>cxcalc szegedindex test.mol</pre>
 <p>&nbsp;</p>
 	<a class="anchor" name="topanal"><h3>topanal</h3></a>
-	<p>Molecule topology data calculation: atomcount,aliphaticatomcount, aromaticatomcount,bondcount,aliphaticbondcount,aromaticbondcount, rotatablebondcount,ringcount,aliphaticringcount,aromaticringcount, heteroringcount,heteroaliphaticringcount,heteroaromaticringcount, ringatomcount,ringbondcount,chainatomcount,chainbondcount, smallestringsize,largestringsize.</p>
+	<p>Molecule topology data calculation: atomcount,aliphaticatomcount, aromaticatomcount,bondcount,aliphaticbondcount,aromaticbondcount, rotatablebondcount,ringcount,aliphaticringcount,aromaticringcount, heteroringcount,heteroaliphaticringcount,heteroaromaticringcount, ringatomcount,ringbondcount,chainatomcount,chainbondcount, smallestringsize,largestringsize,fsp3.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-t,&nbsp;--type&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[atomcount|aliphaticatomcount|aromaticatomcount|
@@ -2582,7 +2695,7 @@ rotatablebondcount|ringcount|aliphaticringcount|
 aromaticringcount|heteroringcount|heteroaliphaticringcount|
 heteroaromaticringcount|ringatomcount|ringbondcount|
 chainatomcount|chainbondcount|
-smallestringsize|largestringsize] (default: all)</td>
+smallestringsize|largestringsize|fsp3] (default: all)</td>
 	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
@@ -2595,9 +2708,13 @@ takes whole molecule if false (default: false)</td>
 	<pre>cxcalc topanal test.mol</pre>
 <p>&nbsp;</p>
 	<a class="anchor" name="topologyanalysistable"><h3>topologyanalysistable</h3></a>
-	<p>Molecule topology data calculation: atomcount,aliphaticatomcount, aromaticatomcount,bondcount,aliphaticbondcount,aromaticbondcount, rotatablebondcount,ringcount,aliphaticringcount,aromaticringcount, heteroringcount,heteroaliphaticringcount,heteroaromaticringcount, ringatomcount,ringbondcount,chainatomcount,chainbondcount, smallestringsize,largestringsize.</p>
+	<p>Molecule topology data calculation: atomcount,aliphaticatomcount, aromaticatomcount,bondcount,aliphaticbondcount,aromaticbondcount, rotatablebondcount,ringcount,aliphaticringcount,aromaticringcount, heteroringcount,heteroaliphaticringcount,heteroaromaticringcount, ringatomcount,ringbondcount,chainatomcount,chainbondcount, smallestringsize,largestringsize,fsp3.</p>
 	<h5>Options:</h5>
 	<table>
+	<tr>
+		<th align="left" valign="top">-a&nbsp;--arom&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">[general|basic|loose] sets aromatization method</td>
+	</tr>
 	<tr>
 		<th align="left" valign="top">-t,&nbsp;--type&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">[atomcount|aliphaticatomcount|aromaticatomcount|
@@ -2606,7 +2723,7 @@ rotatablebondcount|ringcount|aliphaticringcount|
 aromaticringcount|heteroringcount|heteroaliphaticringcount|
 heteroaromaticringcount|ringatomcount|ringbondcount|
 chainatomcount|chainbondcount|
-smallestringsize|largestringsize] (default: all)</td>
+smallestringsize|largestringsize|fsp3] (default: all)</td>
 	</tr>
 	<tr>
 		<th align="left" valign="top">-s,&nbsp;--single&nbsp;&nbsp;&nbsp;</th>
@@ -4126,6 +4243,12 @@ and resonance (default: false)</td>
 	<tr>
 		<th align="left" valign="top">-L,&nbsp;--correctionlibrary&nbsp;&nbsp;&nbsp;</th>
 		<td  valign="top">&lt;correction library ID&gt;</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">-P,&nbsp;--correctionlibrarypath&nbsp;&nbsp;&nbsp;</th>
+		<td  valign="top">&lt;path of the correction library&gt;
+use this parameter when the correction library
+not stored on the default location</td>
 	</tr>
 	</table>
 	<h5>Example:</h5>

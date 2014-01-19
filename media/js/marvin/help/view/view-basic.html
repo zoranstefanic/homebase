@@ -8,16 +8,50 @@
 <a href="view-index.html">Table Of Contents</a>
 
 <a name="loading"></a><h2>Loading Molecules into MarvinView</h2>
-Marvin can open molecule files saved in any of the <a href="../formats/formats.html">supported formats </a>for viewing.
+MarvinView can open molecule files saved in any of the <a href="../formats/formats.html">supported formats</a> for viewing. Choose 
+<b>File &gt; Open...</b> and browse for the file in the <b>Open file</b> dialog.<br>
+Tick the <b>Show preview</b> checkbox to see the contents of the file (molecules, reactions, queries). A single item is dispalyed in the 
+preview window; the text field at the bottom shows the index of the current structure and the number of structures in the file. When a 
+multiple structure file is selected (<i>e.g.</i>, MRV or SDF), the navigation buttons become active. Their functions are: go to first, go 
+to previous, go to next, go to last. Note that the preview window allows you only to check the file content, but not to select the molecules 
+you would like to open. For this purpose the <b>Select</b> textbox has to be used, where you can write the serial numbers of the molecules to 
+open. The numbers have to be separated either by commas or by a dash. (Clicking on the <b>Info</b> button in this row will present tips for 
+specifying the desired molecules.) Leaving this textbox empty means that every molecule in the file will be loaded into MarvinView. Currently 
+this is the default behavior of file loading in Marvin.<br>
+Importing image files containing chemical structures is also possible with the help of OSRA (since version 5.3.0). Please 
+<a href="../formats/imageimport.html">consult this page for details</a>. The supported image formats are: bmp, png, jpg, gif, svg, and tif. 
+Furthermore, you can import chemical structures from ps and pdf files, too. In order to open an image file go to the <b>File &gt; Open...</b> 
+menu and select <b>All Files</b> from the list of <b>Files of Type</b>.<br>
 You can also take advantage of the <a href="../datatransfer.html">Cut/Copy/Paste and Drag &amp; Drop Functionality</a>
 of Marvin to move a molecule from another chemical drawing application into MarvinView.
 
 <a name="save"></a><h2>Saving Molecules</h2>
-MarvinView allows you to save an image of the molecule in the Viewer. You can 
-select from JPEG, PNG, PPM, POVRay, and SVG file types. 
-<BR>Because MarvinView is designed for viewing and not editing, you cannot save
-into molecule format files from MarvinView.  If you would like to edit and save 
-the molecule, you should launch a <a href="#edit.sketch">MarvinSketch</a> window.
+<P>First and foremost, MarvinView is designed for viewing molecules and for editing them. However, you can save your molecules in any of the 
+<a href="../formats/formats.html">supported structure file formats</a> in MarvinView, too. In case your have multiple chemical 
+objects you would like to save, you should use the <b>File &gt; Save All...</b> menu option.<br>
+In the dialog window used for saving a <b>Saving method</b> tab can be opened with the help of the <b>Advanced</b> checkbox. The first half of the 
+tab offers the following choices:
+<ul>
+	<li><b>All structures SEPARATELY:</b> Saves all structures separately in a single file.<br>
+			This is the deafult behavior of saving. Without opening the <b>Saving method</b> tab, this option will be applied.</li>
+	<li><b>Into SEPARATE FILES:</b> Saves each structure to a separate file.<br>
+			In this option the numbering of molecule files begins with the molecule in the upper left corner.</li>
+</ul>
+<img src="gui/save_view.png"></P>
+<P>The first option remains inactive unless the chosen file type supports multimolecule files (such as MRV or SDF). Similarly, for one molecule only 
+files these options are disabled.<br>
+When the given parameters for saving (filename, format, and route) are the same as for an already existing file, the outcome will be determined by the 
+other two radio buttons of the dialog window. If you select the <b>Overwrite file</b> option, the original contents of the file will be replaced. 
+However, selecting the <b>Append to end of file</b> radio button will add the new structures to the original file, so its contents will be preserved. 
+In the first case, a new dialog window will be displayed, where you can reinforce or change your 
+decision about overwriting the file. If the chosen file format does not support multiple structures, the <b>Overwrite</b> option is applied automatically.</P>
+
+<P>You can create a new file from a subset of molecules selected from a larger file. Choosing the <b>File &gt; Save Selection...</b> menu point opens a dialog 
+window where you can specify the molecules you want to save in the new file. Please note that if you have selected a molecule previously in your MarvinView table, 
+the dialog window will not appear, and only the selected molecule will be saved in the new file.</P>
+
+<P>MarvinView allows you to save an image of a selected molecule in the Viewer. When you have selected a molecule, go to <b>File &gt; Save As Image...</b>. 
+You can select from JPEG, PNG, PPM, SVG, BMP, and EMF image file formats.</P>
 
 <a name="print"></a><h2>Printing Molecules</h2>
 You can print the molecule using the <B>Print</B> item in either the
@@ -28,7 +62,7 @@ You can print the molecule using the <B>Print</B> item in either the
  
 
 <a name="edit"></a><h2>Editing Molecules</h2>
-MarvinView is intended to be used mainly to display molecules.  However, there
+MarvinView is intended to be used mainly to display molecules. However, there
 is a limited set of functionality available to edit the molecule while you view 
 it.  To make major changes to the molecule, it can be opened in either a 
 MarvinSketch window or a Source window.  In either case, the alterations made
@@ -278,7 +312,7 @@ centralized within the canvas.
 
 <P ALIGN=CENTER><A HREF="#">Return to Top</A></P>
 <p ALIGN=CENTER>
-Copyright &copy; 1998-2012
+Copyright &copy; 1998-2013
 <a HREF="http://www.chemaxon.com">ChemAxon Ltd.</a>
 </p>
 <p ALIGN=CENTER>

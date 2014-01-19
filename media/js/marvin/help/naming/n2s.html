@@ -47,9 +47,12 @@
 <ul>
 <li>Molecules containing multiple radicals (e.g. <code>ethane-1,2-diyl</code>) are not supported yet.
 </ul>
-<h3>Notes</h3> 
+<h3>Supporting corporate IDs and custom dictionaries</h3> 
 <ul>
-<li>You can extend the name to structure conversion by creating a custom dictionary file. Detailed description of the setting up of a custom dictionary is described in <a href="../naming/naming_customdic.html">this page</a>
+<li>It is possible to extend the name to structure conversion, for instance
+to support corporate IDs such as ABC0001234, or to make use of common name dictionaries
+in addition to the default one. This can be done by <a href="n2s_webservice.html">connecting to a webservice</a> or
+by <a href="../naming/naming_customdic.html">creating a custom dictionary file</a>.
 </ul>
 
  
@@ -61,8 +64,8 @@
     <li>A simple method is to select the name in the text of any page and drag&amp;drop or copy&amp;paste 
       it to MarvinSketch.
      </li> OR<br>
-    <li>Select the "Import Name" (Ctrl+Shift+N) option from the Edit menu, and write the name into the text field and click the "Import" button (Ctrl+I).
-    <p><img src="iupac_images/importsource_55.png" width="481" height="498" alt="importsource"></p>
+    <li>Select the "Import Name" (Ctrl+Shift+N) option from the File menu, and write the name into the text field and click the "Import" button (Ctrl+I).
+    <p><img src="iupac_images/importsource_66.png" width="482" height="505" alt="importsource"></p>
     </li>
   </ul>
 	<h2><a name="name2str_MView" class="anchor">Name to Structure Conversion in MarvinView</a></h2>
@@ -78,9 +81,20 @@ Examples:
 <li>Converting "test.name" name file to "test.smi" SMILES file which also contains the name of the structures:
 <pre>molconvert smiles:n test.name>test.smi</pre>
 </ol>
+
+The behavior of name to structure can be controlled using
+<a href="../formats/name-doc.html#import">format options</a>.
+
   </ul>
   
 <h3>Marvin can also convert <a href="../calculations/s2n.html">structures to names</a>.<h3>
+
+<h2>See also</h2>
+<ul>
+<li><a href="../formats/name-doc.html#import">name format options</a></li>
+<li><a href="../developer/naming.html">Developer documentation for naming</a></li>
+<li><a href="../d2s/d2s.html">Document to Structure</a> is used to find names in documents and free text</li>
+</ul>
 
 <h2>License information</h2>
 </ul>

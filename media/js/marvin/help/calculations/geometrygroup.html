@@ -3,7 +3,7 @@
 <head>
 <meta HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 <title>Geometry</title>
-<link rel=stylesheet type="text/css" href="../marvinmanuals.css">
+<link rel="stylesheet" type="text/css" href="../marvinmanuals.css">
 </head>
 <body>
 <h1>Geometry</h1>
@@ -127,11 +127,12 @@ in the <b>Topology Analysis Options</b> panel, here shown with the Atom/bond tab
 	<li><b>Cyclomatic number:</b> the smallest number of bonds which
 	must be removed so that no circuit remains. Also known as circuit
 	rank.</li>
-        <li><b>Fragment count</b>: number of fragments in the sketch.</li>
+    <li><b>Fragment count</b>: number of fragments in the sketch.</li>
 	<li><b>Steric effect index:</b> topological steric effect index
 	(TSEI) of an atom calculated from the covalent radii values and
 	topological distances. The stericEffectIndex is related to the steric
 	hindrance of the given atom.</li>
+	<li><b>Fsp3</b>: number of sp<sup>3</sup> hybridized carbons diveded by the total carbon count</li>
 </ul>
 </p>
 <p>The result is shown in a separate window:
@@ -149,16 +150,16 @@ the structure fields offers a MarvinView context menu.
 
 
 
-<h2><a class="anchor" NAME="geometry">Geometry Plugin</a></h2>
-<p>The Geometry plugin provides characteristic values related to the
+<h2><a class="anchor" NAME="geometry">Geometrical Descriptors Plugin</a></h2>
+<p>The Geometrical Descriptors plugin provides characteristic values related to the
 geometrical structure of a molecule. It can calculate steric hindrance and Dreiding
 energy. The calculation can predict and use the lowest energy conformer 
-of the input structure.</p><p>The calculation and the display options can be set in the <b>Geometry
-Options</b> panel:</p>
+of the input structure.</p><p>The calculation and the display options can be set in the <b>Geometrical 
+Descriptors Options</b> panel:</p>
 <p>
 <table>
 	<tr>
-		<td><img src="images/geometry_panel.png" width="499" height="589"/></td>
+		<td><img src="images/geometry_panel.png" width="444" height="592"/></td>
 	</tr>
 </table>
 </p>
@@ -212,7 +213,7 @@ Options</b> panel:</p>
 
 <table cellpadding="4">
 	<tr>
-		<td><img src="images/geometry.png" width="777" height="581"></td>
+		<td><img src="images/geometry.png" width="815" height="586"></td>
 	</tr>
 </table>
 

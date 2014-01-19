@@ -10,15 +10,23 @@
 
 <h3>Contents</h3>
 <ul>
+	<li><a href="#customize">Customize</a></li>
     <li><a href="#preferences">Preferences</a></li>
     <li><a href="#source">Edit Source</a></li>
     <li><a href="#format">Format</a></li>
-    <li><a href="#periodic">Periodic System</a></li>
+    <li><a href="#periodic">Periodic Table</a></li>
     <li><a href="#template_library">Template Library Manager</a></li>
     <li><a href="#group">Create Group</a></li>
     <li><a href="#attachdata">Attach data</a></li>
     <li><a href="#document_settings">Document Settings</a></li>
 </ul>
+
+<h2><a class="anchor" name="customize">Customize</a></h2>
+<p>
+	The Customize dialog window, located in the <b>View &gt; Editor style</b> menu, provides options for altering the user interface by adding, removing, or reorganizing its elements. 
+	For a detailed description, please consult <a href="customization.html">this page.</a>
+</p>
+	<blockquote><img src="gui-files/dialogs/customize.png"></blockquote>
 
 <h2><a class="anchor" name="preferences">Preferences</a></h2>
 <p>The Preferences dialog window is located at the <b>Edit</b> menu.
@@ -26,8 +34,8 @@ It allows you to change many of the MarvinSketch display settings, including loo
 All settings are saved and used when the application is restarted.
 </p>
 
-<h4>Display</h4>
-    <blockquote><img src="gui-files/dialogs/preferences_1.png" width="477" height="347"></blockquote>
+<h4><a class="anchor" name="display">Display</a></h4>
+    <blockquote><img src="gui-files/dialogs/preferences1.png"></blockquote>
 <ul>
     <li><b>Atom & Bond labels</b> are used as the default font type and size to labels
         such as C/T label of bonds, atom query property labels of atoms, etc.</li>
@@ -38,14 +46,14 @@ All settings are saved and used when the application is restarted.
     <li><b>Look & Feel</b> allows changing the visual appearance of GUI components.
         The available options are: Java Metal, Motif, JGoodies Plastic, JGoodies Plastic XP,
         and the native Look & Feels (Windows, Aqua) based on the underlying operating system.</li>
-    <li><b>Show Bond in Hand</b> when checked bond types are shown under the mouse cursor like template structures.</li>
-	<li><b>Show Lone Pair as Line</b> when checked lone pairs on the canvas are shown as lines.</li>
-	<li><b>Show Charge in Circle</b> when checked a circle is displayed around the charge.</li>
-    <li><b>MarvinView Layout</b> sets the default layout to Automatic, Molecule matrix or Spreadsheet.</li>
-<li><b>Automatic fog effect</b> turns on the display mode of fading the bonds and atoms corresponding to the changes of the <i>z</i> coordinate in 3D.</li>
-<li><b>Fog effect factor:</b> manual setting of the fading strength. No fog: all regions of the structure is displayed with the same line strength and color. Strong effect: the fading is at its maximum (molecule is only slightly visible at the far end).</li></ul>
+	<li><b>MarvinView Layout</b> sets the default layout to Automatic, Molecule matrix or Spreadsheet.</li>	
+    <li><b>Show Bond in Hand</b> when checked, bond types are shown under the mouse cursor like template structures.</li>
+	<li><b>Show Lone Pair as Line</b> when checked, lone pairs on the canvas are shown as lines.</li>
+	<li><b>Show Charge in Circle</b> when checked, a circle is displayed around the charge.</li>
+    <li><b>Circled Charge labels</b> are used as the font type and size of the circled charge symbols.
+	<li><b>Fog effect factor:</b> manual setting of the fading strength. No fog: all regions of the structure is displayed with the same line strength and color. Strong effect: the fading is at its maximum (molecule is only slightly visible at the far end).</li></ul>
 <h4>Bonds</h4>
-    <blockquote><img src="gui-files/dialogs/preferences2.png" width="477" height="363"><br></blockquote>
+    <blockquote><img src="gui-files/dialogs/preferences2.png"><br></blockquote>
     <ul>
         <li><b>Down Wedge Orientation</b> allows changing the wedge bond display convention.
         Down wedge points downward in MDL's convention, upward (at the chiral center) in Daylight's.</li>
@@ -56,7 +64,7 @@ All settings are saved and used when the application is restarted.
     	<li><b>"Coordinate" Bond Line Style</b> allows changing the type of coordinate bonds from the default ones (arrow for single atom and hashed for multicenter) to solid.</li>
 	</ul>
 <h4>Structure</h4>
-    <blockquote><img src="gui-files/dialogs/preferences3.png" width="477" height="380"><br></blockquote>
+    <blockquote><img src="gui-files/dialogs/preferences3.png"><br></blockquote>
     <ul>
         <li><b>Highlighting Valence Errors</b> highlights atoms having wrong valences with red underline when it is checked.</li>
         <li><b>Automatic Lone Pair Calculation</b> calculates lone pairs automatically. Make sure 
@@ -79,18 +87,20 @@ All settings are saved and used when the application is restarted.
         </li>
     </ul>
 <h4>Checkers</h4>
-    <blockquote><img src="gui-files/dialogs/preferences4.png" width="477" height="380"><br></blockquote>
+    <blockquote><img src="gui-files/dialogs/preferences4.png"><br></blockquote>
     <ul>
         <li><b>Move up/down the checker items:</b> the fixing process may
             depend on the sequence of the checkers. Checking order can be
             set using the Up/Down buttons on selected checkers.</li>
         <li><b>Add checkers to the list:</b> the default list can be modified by adding other checkers.
         <li><b>Remove checkers from the list:</b> the default list can be modified by removing checkers not needed.
-        <li><b>Save checking list configuration:</b> save your custom checking list
-        <li><b>Open checking list configuration:</b> open your custom checking list
+        <li><b>Open checker configuration from URL</b> open a checker configuration from URL.
+        <li><b>Open checker configuration:</b> open your custom checker configuration from file.
+		<li><b>Save checker configuration:</b> save your custom checker configuration to file.
+		<li><b>Configure external checkers/fixers:</b> add external checkers/fixers; save or load external checker/fixer configuration.</li>
     </ul>
 <h4><a class="anchor" name="services"></a>Services</h4>	
-	<blockquote><img src="gui-files/dialogs/preferences5.png" width="" height=""><br></blockquote>
+	<blockquote><img src="gui-files/dialogs/preferences5.png"><br></blockquote>
 	<p>The <a href="../../developer/services.html">Services module</a> provides seamless 
 		integration of third-party calculations into Marvin Sketch. You can add and configure the desired 
 		calculations in the <i>Services</i> tab. The set service(s) can be used from the <a href="../../calculations/services_menu.html">Tools > Services</a> menu afterwards. 
@@ -98,13 +108,14 @@ All settings are saved and used when the application is restarted.
 		<li><b>Set the order</b> of services by moving them up and down using the Up/Down buttons.</li>
 		<li><b>Add a new service</b> to the list by the add button. The preference window of the new service will pop up. Read more about <a href="setting_services.html">setting different services</a>.</li>  
 		<li><b>Remove the selected service</b> from the list by the remove button.</li>
+		<li><b>Open</b> Service Configuration from URL. Specify a previously set configuration of services with its URL.</li>
 		<li><b>Import</b> Service Configuration from file. Import a previously set configuration <code>XML</code> file.</li>
 		<li><b>Export</b> Service Configuration to file. You can export the set services to a 
 			configuration <code>XML</code> file.</li>
 	</ul>
 
 <h4><a class="anchor" name="SaveLoad">Save/Load</a></h4>
-    <blockquote><img src="gui-files/dialogs/preferences_6.png" width="477" height="347"><br></blockquote>
+    <blockquote><img src="gui-files/dialogs/preferences6.png"><br></blockquote>
     <ul>
         <li><b>Default location:</b> the folder from which to load or to save molecules may be set by the user.
         <ul><li>Startup directory: the folder where the command to start the application was given.</li>
@@ -114,20 +125,21 @@ All settings are saved and used when the application is restarted.
         </li>
         <li><b>Default file format</b> determines which type is offered by default when structures are saved to file.</li>
         <li><b>Save/Load settings</b>
-            <ul><li><b>Save/Load GUI settings (.MRV format)</b> allows storing and loading
-            parameters like background color, font type, etc. beside the structures.
-            This option can only be used with the
-            <a href="../../formats/mrv-doc.html">MRV format</a>.</li>
-            <li><b>Save/Load zoom factor (.MRV format)</b> stores and loads the
-            zooming scale of the structures.
-        This option can only be used with the <a href="../../formats/mrv-doc.html">MRV format</a>.</li></ul>
+            <ul><li><b>Save/Load GUI settings (.MRV, .PDF format)</b> allows storing and loading of 
+				display options like background color, font type, stereo labels, atom indices <i>etc.</i> in addition to the chemical structure itself. This option can only be used with <a href="../../formats/mrv-doc.html">MRV</a> and <a href="../../formats/pdf-doc.html">PDF</a> formats.</li>
+            <li><b>Save/Load zoom factor (.MRV format)</b> stores and loads the zooming scale of the structures. 
+				This option can only be used with the <a href="../../formats/mrv-doc.html">MRV format</a>.</li>
+			<li><b><a class="anchor" name="Zoom2Scaffold">Zoom to scaffold</a> on load (Sketch only)</b> 
+				sets the zooming scale to 'Scaffold' if the loaded file contains defined R-groups, so the R-group definitions might not be seen on the canvas without scrolling. The 'Zoom level' dropdown list on the General Toolbar is supplemented with 'Scaffold' and 'R1, R2, R3...' only when there are defined R-group(s). Without R-group definitions the zooming scale for the loaded structure(s) will not be modified, the last zooming scale will be used.<br>
+				When this option is switched off in the 'Preferences' menu then MSketch opens the new file with the last zoom level. </li></ul>
         </li>
         <li><b>Recent file entries</b> defines the number of files in the Recent files list in the File menu,
         with values between 1 and 10.</li>
 		<li><b>Image import service URL</b> URL of a server on which a chemical structure recognition program runs can be given.</li>
+		<li><b>Name import service URL</b> URL of a server on which a chemical name recognition program runs can be given.</li>
     </ul>
 <h4>OLEServer</h4>
-    <p><blockquote><img src="gui-files/dialogs/preferences7.png" width="477" height="380"><br></blockquote></p>
+    <p><blockquote><img src="gui-files/dialogs/preferences7.png"><br></blockquote></p>
     
     
 <h2><a class="anchor" name="source">Edit Source</a></h2>
@@ -137,19 +149,21 @@ You can view and edit the source in any of the supported file formats.
 You can also convert it to Java String which allows easy integration of the structure to a custom Java application code.<br>
 To change the format of the source, simply select one from the <B class="buttonName">View</B>
 Menu. If there are more than one molecule on the canvas, setting <b>View as multiple molecules</b> in the <B class="buttonName">View</B> Menu causes 
-each molecule to appear in a separate block in the source. This feature works only in those cases where the selected format is able to handle multiple fragments. 
-After editing the source text, you can send the structure back to the
+each molecule to appear in a separate block in the source. This feature works only in those cases where the selected format is able to handle multiple 
+fragments.</P>
+<blockquote><img src ="gui-files/dialogs/edit_source2.png"></blockquote>
+<P>After editing the source text, you can send the structure back to the
 MarvinSketch canvas by invoking <B class="buttonName">File &gt;
-Import As</B>, and pressing <b>Import</b> on the appearing dialog window. This will close the Edit Source dialog window.
+Import As</B>, and pressing <b>Import</b> on the appearing <a class="anchor" name="import_dialog">dialog window</a>. This will close the Edit Source dialog window.
 </P>
-<blockquote><img src="gui-files/dialogs/edit_source2.png" width="443" height="425"></blockquote>
+<blockquote><img src="gui-files/dialogs/edit_source3.png"></blockquote>
 
 <h2><a class="anchor" name="format">Format</a></h2>
 <h4>Atoms and Bonds</h4>
 <p>
 On this panel there are many options to change the drawing properties of atoms and bonds.
 </p>
-<blockquote><img src="gui-files/dialogs/format1.png" width="499" height="390"></blockquote>
+<blockquote><img src="gui-files/dialogs/format1.png"></blockquote>
 <p>For more information about using structure drawing styles, please
     visit <a href="../sketch-basic.html#styles">this link</a>.
 </p>
@@ -158,12 +172,12 @@ On this panel there are many options to change the drawing properties of atoms a
 <p>
 The drawing properties of graphics objects (text boxes, brackets, lines, etc.) can be changed on this panel.
 </p>
-<blockquote><img src="gui-files/dialogs/format2.png" width="499" height="453"><br></blockquote>
+<blockquote><img src="gui-files/dialogs/format2.png"><br></blockquote>
 
-<h2><a class="anchor" name="periodic">Periodic System</a></h2>
+<h2><a class="anchor" name="periodic">Periodic Table of Chemical Elements</a></h2>
 <h4>Periodic Table</h4>
 
-    <blockquote><img src="gui-files/dialogs/periodic1.png" width="544" height="522"><br></blockquote>
+    <blockquote><img src="gui-files/dialogs/periodic1.png"><br></blockquote>
 <p>Chemical elements are available as buttons on the Periodic Table panel of MarvinSketch.<br>
 Atom buttons are arranged according to the standard periodic table layout.<br>
 When the mouse cursor is over a specific atom button, the information panel displays
@@ -190,7 +204,7 @@ See <a href="http://www.chemaxon.com/jchem/doc/user/query_features.html#atlist">
 
 
 <h4><a class="anchor" name="advanced">Advanced</a></h4>
-<blockquote><img src="gui-files/dialogs/periodic2.png" width="544" height="522"><br></blockquote>
+<blockquote><img src="gui-files/dialogs/periodic2.png"><br></blockquote>
 <p>
 For the meanings of the buttons on the Advanced tab please refer to the <a href="http://www.chemaxon.com/jchem/doc/user/query_features.html">Query Guide</a>.<br>
 When the mouse cursor is over a button, a short description appears on the information panel.
@@ -325,13 +339,12 @@ When the mouse cursor is over a button, a short description appears on the infor
 </table>
 </blockquote>
 
-<h5>Special nodes</h5>
+<h5><a class="anchor" name="special.nodes">Special nodes</a></h5>
 <blockquote>
     <table class="grid" cellspacing="0" cellpadding="4">
     <tr>
         <th>Name</th><th>Description</th>
     </tr>
-    <tr><td>LP</td><td>Lone Pair. This button changes the selected atom to an explicit lone electron pair.</td></tr>
     <tr><td>Pol</td><td>Pseudo atom 'Pol'. This button changes the selected atom to a pseudo atom labelled Pol (polymer).</td></tr>
     <tr><td>*</td><td>This button creates a '*' atom, which indicates an unspecified end group in polymers.</td></tr>    
     <tr><td>homology groups</td><td>The drop-down list contains the default homology groups. <a href="../../calculations/homologygroups.html">Detailed list.</a></td></tr>
@@ -361,7 +374,7 @@ These atoms can be used to describe unknown or unspecified molecule parts or to 
 <p>It contains several template sets by default (such as Generic, Rings, Amino Acids, etc),
     and a special set called My Templates.</p>
 
-<blockquote><img src="gui-files/dialogs/template_library.png" width="600" height="369"></blockquote>
+<blockquote><img src="gui-files/dialogs/template_library.png"></blockquote>
 The  dialog has buttons to customize template handling. With the help of these buttons you can add and remove template sets to/from the template library, can change order of a given template  set, or open the "Options" dialog.
 The cleaning options of the templates can be set using the last 
 three buttons on the toolbar. With these buttons you can specify how the template will be placed onto the canvas (NoClean, 2D, or 3D). These options can be set separately for each template category. Note, that the 
@@ -369,7 +382,7 @@ buttons are synchronized with the "Template Options" dialog settings.
 
 <h4>Template Options</h4>
 
-<blockquote><img src="gui-files/dialogs/template_options.png" width="373" height="200"></blockquote>
+<blockquote><img src="gui-files/dialogs/template_options.png"></blockquote>
 <ul>
     <li><b>Maximum number of molecules:</b> template sets can contain large number of molecules.
         This option maximizes the number of structures being loaded from a template set when
@@ -397,23 +410,23 @@ It is possible to add new template sets to the library using the Add Template Se
 Using the Browse button you can select a directory or a file of the file system.
 Specifying a directory will create a hierarchic template set containing all subdirectories and files.
 <br>
-<blockquote><img src="gui-files/dialogs/template_add1.png" width="368" height="109"></blockquote>
+<blockquote><img src="gui-files/dialogs/template_add1.png"></blockquote>
 <p>It is also possible to specify a location with ftp protocol. The underlying subdirectories
     and files will be displayed as with the local file system.</p>
 <p>Please note that protocols other than file and ftp are not supported. However remote file systems can help to overcome this restriction.</p>
-<blockquote><img src="gui-files/dialogs/template_add2.png" width="368" height="109"></blockquote>
+<blockquote><img src="gui-files/dialogs/template_add2.png"></blockquote>
 
 <h4>Removing a template set from the library</h4>
 
 You can remove template sets from the library using the Remove Template Set button on the tool bar.<br>
 The template set will only be removed from the library, without modifying files on the file system.
 <br>
-<blockquote><img src="gui-files/dialogs/template_remove.png" width="311" height="115"></blockquote>
+<blockquote><img src="gui-files/dialogs/template_remove.png"></blockquote>
 
 <h2><a class="anchor" name="group">Create Group</a></h2>
 This dialog makes it possible to create a number of groups along with setting their properties. 
 <a href="../sketch-basic.html#howto-draw.sgroups">Group drawing in MarvinSketch.</a>
-<blockquote><img src="gui-files/dialogs/group.png" width="471" height="211"></blockquote>
+<blockquote><img src="gui-files/dialogs/group.png"></blockquote>
 The available groups and their detailed description are available by clicking on the links below:
 <ul>
     <li>Anypolymer (anyp)</li>

@@ -3,7 +3,7 @@
  **** molcompress.c - version 2.6
  **** Molfile Compression/Decompression routines
  ****
- **** Copyright (c) 1998-2012 ChemAxon Ltd., Peter Csizmadia
+ **** Copyright (c) 1998-2013 ChemAxon Ltd., Peter Csizmadia
  **** All Rights Reserved.
  ****
  **** This software is free for noncommercial use.

@@ -51,8 +51,7 @@
 </ul>
 <p>
     <b>Marvin Applets</b> are tools for building chemical web pages, which are compatible with most browsers
-    (Internet Explorer, Firefox, Safari, Opera, etc.). They offer access from/to JavaScript and are
-    customizable by applet parameters.<br>
+    (Chrome, Firefox, Internet Explorer, Safari, Opera, etc.). They offer access from/to JavaScript and are customizable by applet parameters.<br>
     Note, that the applets are <a href="../developer/applets/signing.html">signed</a> that allows the same feature set as the applications.
 </p>
 
@@ -63,14 +62,14 @@
 <h2><a name="requirements" class="anchor">2. System Requirements</a></h2>
 <h3><a name="applet_req">2.1. Marvin Applets</a></h3>
 <ul>
-    <li><a href="#getJava">Java</a> distributed by Sun (or Apple's Mac OS X built-in Java)</li>
-    <li>Version: Java 6 or higher version</li>
+    <li><a href="#getJava">Java</a> distributed by Oracle (or Apple's Mac OS X built-in Java)</li>
+    <li>Version: Java 1.6.0_13 or higher</li>
     <li><A HREF="../developer/applets/browsers.html">Java 2 enabled browser</A></li>
 </ul>
 <h3><a name="beans_java_req">2.2. Marvin Beans for Java</a></h3>
 <ul>
-    <li><a href="#getJava">Java</a> distributed by Sun (or Apple's Mac OS X built-in Java)</li>
-    <li>Version: Java 6 or higher version</li>
+    <li><a href="#getJava">Java</a> distributed by Oracle (or Apple's Mac OS X built-in Java)</li>
+    <li>Version: Java 1.6.0_13 or higher</li>
 </ul>
 <h3><a name="beans_net_req">2.3. Marvin Beans for .NET</a></h3>
 <ul>
@@ -78,11 +77,17 @@
 </ul>
 
 <h3><a name="getJava" class="anchor">2.4. How to get Java?</a></h3>
-<p>You can download <strong>Sun's</strong> Java from Sun's <a HREF="http://java.sun.com/j2se/downloads.html">official site</a> or contact your OS manufacturer.</p>
+<p>You can download <strong>Java</strong> from Oracle's <a HREF="http://www.oracle.com/technetwork/java/javase/downloads/index.html">official site</a> or contact your OS manufacturer.</p>
 <p>If you use <strong>Mac OS X</strong>, probably Java is already installed on your machine. If not, select <strong>Java</strong> in the <strong>Software Update</strong> center to install or update.</p>
-<p><b>Which Java do I need?</b> You must have a copy of the Java Runtime Environment (JRE) on your system to <b>run</b> applications and applets. To <b>develop</b> applications and applets, you need the Java Development Kit, which includes the JRE.</p>
 
-<p>If you are not sure whether Java is installed or not on Windows, you can check it the following way:
+<h4><b>Which Java do I need?</b> </h4>
+<p><li>You need <b>Java Runtime Environment (JRE)</b> installed on your system to <u>run</u> applications and applets. </li>
+<li>To <u>develop</u> applications and applets, you need the <b>Java Development Kit (JDK)</b>, which includes the <b>JRE</b>.</li>
+<li>Version: Java 1.6.0_13 or higher</li>
+</p>
+
+<h4>Testing Java</h4>
+<p><li>If you are not sure whether Java is installed or not on Windows, you can check it the following way:
 <ol>
     <li>Select <em>Command Prompt</em> from the <em>Accessories</em>
     sub-menu in the <em>Start</em> menu.</li>
@@ -96,8 +101,10 @@
     <em><pre>java version "1.6.0_24"
 Java(TM) SE Runtime Environment (build 1.6.0_24-b07)
 Java HotSpot(TM) 64-Bit Server VM (build 19.1-b02, mixed mode)</pre></em></li>
-</ol>
+</ol></li>
 
+
+<li>You can <b>test</b> whether Java is working on your computer on Oracle's official <a HREF="http://java.com/en/download/testjava.jsp">testing site</a>, too.</li></p>
 
 <h3><a name="getNET" class="anchor">2.5. How to get .NET framework?</a></h3>
 .NET framework 3.5 SP1 is included in Windows 7 by default. For other Windows OS you can download the .NET framework from Microsoft's official site.
@@ -133,6 +140,15 @@ Download the package according to your platform from one of the links below:
     <li><a href="../../download-user.html"><b>Download Marvin for End Users</b></a> to install desktop applications</li>
     <li><a href="../../download-dev.html#marvinbeans"><b>Download Marvin for Developers</b></a> to use the tools for application development</li>
 </ul>
+
+<p>
+<b>Notes:</b>
+<ul><li>After installation, at the first launch of MarvinSketch, a dialog asks the user to select the desired skin for the GUI <A HREF="../sketch/gui/configurations.html">configuration</A>:
+<br>
+    <img src="../sketch/gui/gui-files/config-skins_60.png">
+<br>
+<li>The selected <A HREF="../sketch/gui/configurations.html"><b>configuration</b></A> can be changed later any time.</ul>
+</p>
 
 <h4><a name="install_windows">3.2.1. Windows</a></h4>
 <p>If you have a 64-bit Windows, you can choose both the normal (32-bit) Marvin Beans installer or its 64-bit version.</p>
@@ -243,9 +259,9 @@ To enable this mode, use the <code>-q</code> option.</li>
          is in PATH (where JAVA_HOME is the directory of Java).<br>
         To check it, type the "<b>which&nbsp;java</b>" command that shows the
         location of the Java launcher. You should get something like this:
-        <pre>/usr/java/jdk1.5/bin/java</pre>
+        <pre>/usr/java/jdk1.6/bin/java</pre>
         If Java is missing from PATH, you will see something like that:
-        <pre>/usr/bin/which: no java in (/usr/java/jdk1.5/bin:/opt/apache-ant-1.6.1/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/vertset/bin)</pre></li>
+        <pre>/usr/bin/which: no java in (/usr/java/jdk1.6/bin:/opt/apache-ant-1.6.1/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/vertset/bin)</pre></li>
         <li>You can run the installer in <b>silent/non-interactive mode</b>, which means that in case Marvin is already installed, it will be overwritten with the update without the need of confirmation.
         To enable this mode, use the <code>-q</code> option. If you are in terminal mode (GUI is not accessible), we recommend to use this option.</li>
     </ul>
@@ -276,8 +292,7 @@ by running the uninstaller, it will run in silent mode (no GUI, non-interactive 
         <em>Add / Remove programs</em> list on
         <em>Control Panel</em>.</li>
 	<li><b>OS X: </b>
-	Double click on <code>uninstall</code> in the Marvin Beans' home
-        directory.</li>
+	Double click on <code>ChemAxon Marvin Beans Uninstaller</code> in the Marvin Beans' home directory.</li>
 	<li><b>Linux / Solaris: </b>
 	Launch the <code>uninstall</code> script in the Marvin Beans' home
         directory.</li>
@@ -290,8 +305,7 @@ by running the uninstaller, it will run in silent mode (no GUI, non-interactive 
     if you need the <em>signed version</em> of the Marvin Beans package.<br>
     If you would like to launch Marvin applications via Java Web Start
     from your server, you will need the signed version for security reasons.<br>
-    Please note that this archive can only be used as an extension of the already installed 
-    Marvin Beans package.
+    Please note that this archive can only be used as an extension of the already installed Marvin Beans package.
     </p>
     <b>Installation</b>
 <ol>
@@ -324,7 +338,7 @@ From the Marvin version 5.7, in the file name of any downloadable artifacts, an 
 <p>&nbsp;</p>
 
 <center><div class="lenia">&nbsp;</div></center>
-<p align="center"><small>Copyright &copy; 1998-2012
+<p align="center"><small>Copyright &copy; 1998-2013
 <a href="http://www.chemaxon.com" target="_top">ChemAxon Ltd.</a>
 &nbsp;&nbsp;&nbsp;All rights reserved.</small></p>
 
