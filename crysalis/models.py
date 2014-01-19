@@ -43,14 +43,14 @@ class LogDir(models.Model):
 	checked		= models.DateTimeField(help_text='When was log dir last checked')
 	numlogs		= models.IntegerField(help_text='Number of ccd log files in log directory')
 	
-	# def __init__(self,*args,**kwargs):
-	# 	#self.update()
+	#def __init__(self,*args,**kwargs):
 	# 	super(LogDir,self).__init__(*args,**kwargs)
+	#	self.update()
 
 	def __unicode__(self):
 		return "%s" %self.directory
 	
-	def check(self):
+	def update(self):
 		"""
 		Checks wheather any new ccd log files appeared
 		"""
@@ -83,7 +83,7 @@ class LogDir(models.Model):
 		Watches the log directory for newly created log files
 		"""
 		while True:
-			if self.check():
+			if self.update():
 				print 'Number of logs changed to %d' % self.numlogs 
 			else:
 				print 'Number of logs the same = %d' % self.numlogs 
@@ -420,6 +420,76 @@ class LogDataset(models.Model):
 		d = self.patterns['DCSTRT'].match(line).groupdict()
 		return bool(d['pre'])
 
+class Folders(models.Model):
+	"""
+	"""
+	name	 	= models.CharField('name',help_text='Full path to folder',max_length=300)
+	modified	= models.DateTimeField(help_text='Log directory last modified time')
+	local		= models.BooleanField(help_text='Exists on remote?',default=False)
+	remote		= models.BooleanField(help_text='Exists on local?',default=False)
+
+	def is_dataset(self,dirs):
+		return 'frames' in dirs and 'log' in dirs
+
+	def check(self):
+		top = REMOTE_MNT
+		l = self.remote_dirs
+		new = []
+		for (d, dirs, files) in os.walk(REMOTE_MNT):
+			if self.is_dataset(dirs) and not d in l:
+				print d
+				new.append(d)
+		self.remote_dirs += new	
+		pickle.dump(self.remote_dirs,open('remote.pkl','w'))
+		return new
+
+	def sorted_by_mtimes(self):
+		return sorted(self.remote_dirs,key=os.path.getmtime)
+
+	def populate_database_with_new(self):
+		print '%d experiments in the database' % Experiment.objects.count()
+		dirs = self.check_new_on_remote()
+		for d in dirs:
+			ds = Dataset(d)
+			try:
+				exp = self.exp_from_dataset(ds)
+				exp.save()
+				print 'Saved %s' %exp.name
+			except:
+				exp = self.exp_from_dataset(ds)
+				print 'Made %s but could not save it!' %exp.name
+	
+	def populate_database(self):
+		print '%d experiments in the database' % Experiment.objects.count()
+		dirs = self.remote_dirs
+		#dirs = self.local_dirs
+		for d in dirs:
+			ds = Dataset(d)
+			exp = self.exp_from_dataset(ds)
+			try:
+				exp.save()
+				print 'Saved %s' %exp.name
+			except:
+				print 'Made %s but could not save it!' %exp.name
+
+	def exp_from_dataset(self,ds):
+		"""Make a new Experiment from Dataset class
+		in crysalis application"""
+		exp = Experiment()
+		exp.name 		= ds.name
+		exp.origdir		= ds.d
+		exp.type		= ds.type
+		exp.start 		= ds.get_datetime('start time') 
+		exp.end			= ds.get_datetime('any end time') 
+		exp.a, exp.b, exp.c, exp.alpha, exp.beta, exp.gamma, exp.volumen = ds.get_cell()
+		exp.sg			= ds.get_space_group() 
+	
+		exp.notes		= ds.notes()
+		exp.comment		= ds.get_comment()
+		if ds.get_user():
+			exp.user, created	= User.objects.get_or_create(username=ds.get_user())
+		return exp
+
 class HistoryLog:
 	"""
 	In directory /mnt/xcalibur_C/Xcalibur/CrysAlisINI there 
@@ -479,7 +549,7 @@ class HistoryLog:
 def test_all_datasets():
 	success = []
 	fail =	[]
-	ld = LogDir()
+	ld = LogDir.objects.get(pk = LOG_FILE_DIR)
 	ld.update()
 	for ccd in ld.logs:
 		print ccd
@@ -497,6 +567,9 @@ def test_all_datasets():
 	# group_datasets_by(success,'name')
 	return success, fail
 
+def run():
+	pass
+
 if __name__ == '__main__':
 	ld = LogDir()
-	ld.watch_log_dir()
+	ld.watch()
