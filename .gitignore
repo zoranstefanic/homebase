@@ -1,5 +1,6 @@
 # use glob syntax.
 test_data
+marvin
 *.pyc
 *.swp
 *.swf
