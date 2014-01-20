@@ -1,5 +1,4 @@
 # use glob syntax.
-local_settings.py
 test_data
 *.pyc
 *.swp

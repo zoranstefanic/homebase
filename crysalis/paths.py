@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import os
 from homebase.settings import PROJECT_DIR
-from local_settings import *
 
 REMOTE_WIN 	= 'C:\\XcaliburData\\'				# This is a remote directory on the diffractometer where the original data goes
 
@@ -10,9 +9,6 @@ REMOTE_MNT	= 	'/mnt/xcalibur/XcaliburData/'	# This is the same directory mount p
 SERVICE 	= 	'/mnt/xcalibur/Xcalibur/Service/'	# Service directory 
 LOG_FILE_DIR = 	'/mnt/xcalibur/Xcalibur/log'		#Log file directory
 #LOG_FILE_DIR = 	'/media/usbdisk/xcalibur/Xcalibur/log'		#Log file directory
-TESTING = True
-if TESTING:
-	from local_settings import *
 
 LOCAL 		= 	'/media/usbdisk/xcalibur/XcaliburData'	# This is a backup directory on the server machine where the data are rsync-ed
 DATA_DIR	=	'XcaliburData'
