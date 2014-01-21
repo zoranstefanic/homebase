@@ -1,6 +1,7 @@
 # use glob syntax.
-test_data
+testing
 marvin
+media
 *.pyc
 *.swp
 *.swf
